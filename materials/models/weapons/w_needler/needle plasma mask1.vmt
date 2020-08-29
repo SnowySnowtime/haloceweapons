@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"models/Weapons/w_needler/needler_ref"
+	"$translucent" 1
+}

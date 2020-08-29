@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/Weapons/w_needler/needler1"
+	"$envmap"	"models/Weapons/w_needler/needler_ref"
+	"$envmaptint" 					"[0.2 .01 .2]"
+	"$envmapfresnel" 					"0.3"
+}

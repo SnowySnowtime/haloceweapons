@@ -1,0 +1,10 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/weapons/haloweapons/shotgunbolt"
+	"$phong" "1"
+	"$phongexponent" "45"
+	"$phongboost"	"2"
+	"$phongfresnelranges"	"[.2 4 1]"
+	"$translucent" 1
+	"$decal" 1
+}

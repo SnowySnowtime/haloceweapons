@@ -1,0 +1,10 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "snowysnowtime/rocket_cea"
+	"$phong" "1"
+	"$phongexponent" "60"
+	"$phongboost"	"1"
+	"$phongfresnelranges"	"[4 6 1]"
+	"$translucent" "1"
+	"$decals" "1
+}

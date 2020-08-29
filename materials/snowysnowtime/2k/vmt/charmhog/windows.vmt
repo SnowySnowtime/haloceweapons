@@ -1,0 +1,18 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "snowysnowtime/2k/charmhog/ch"
+	"$additive" "1"
+	"$nocull" "1"
+	"$bumpmap" "snowysnowtime/2k/charmhog/ch_n"
+	"$envmap" "snowysnowtime/cyborg_reflection_armor"
+	"$envmaptint" "[ 0.03 0.05 0.17 ]"
+	"$envmapfresnel" "1"
+	"$normalmapalphaenvmapmask" "1"
+	"$phong" "1" 
+	"$phongboost" "4"
+	"$phongexponent" "100"
+	"$phongexponenttexture" "snowysnowtime\2k\charmhog\pch"
+	"$phongalbedotint" "1"
+	"$phongfresnelranges" "[3 24 2]"
+	"$phongdisablehalflambert" "1"
+}

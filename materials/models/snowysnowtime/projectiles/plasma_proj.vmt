@@ -1,0 +1,5 @@
+"UnlitGeneric"
+{
+	"$baseTexture" "models/snowysnowtime/projectiles/plasma_proj"
+	"$translucent" 1
+}

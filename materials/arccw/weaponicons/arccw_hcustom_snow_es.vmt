@@ -1,0 +1,5 @@
+"UnlitGeneric" 
+{ 
+    "$basetexture" "arccw/weaponicons/arccw_hcustom_snow_es" 
+    "$translucent" 1 
+} 

@@ -1,0 +1,26 @@
+"VertexLitGeneric"
+{
+"$basetexture" "snowysnowtime\ma5e\svp3_ar_d"
+"$bumpmap" "snowysnowtime\ma5e\svp3_ar_n"
+	
+"$envmap" "env_cubemap"
+"$envmaptint" "[0.1 0.1 0.1]"
+"$envmapfresnel" "1"
+"$normalmapalphaenvmapmask" "1"
+
+"$phong" "1" 
+"$phongboost" "3"
+"$phongexponent" "5"
+"$phongexponenttexture" "snowysnowtime\ma5e\phongexp255"
+"$phongalbedotint" "1"
+"$phongfresnelranges" "[1 1.25 1.75]"
+"$phongdisablehalflambert" "1"
+
+"$detail" "snowysnowtime\ma5e\detail_paint"
+"$detailscale" "20"
+"$detailblendfactor" "3"
+"$detailblendmode" "0"
+
+"$blendtintbybasealpha" "1"
+"$color2" "[0.8 0.8 0.8]"
+}

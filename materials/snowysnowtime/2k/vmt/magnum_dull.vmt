@@ -1,0 +1,10 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "snowysnowtime/magnum_cea"
+	"$bumpmap" "snowysnowtime/magnum_cean"
+	"$phongexponenttexture" "snowysnowtime/phongexp200"
+	"$phong" "1"
+	"$phongexponent" "20"
+	"$phongboost"	"0.4"
+	"$phongfresnelranges"	"[4 6 1]"
+}

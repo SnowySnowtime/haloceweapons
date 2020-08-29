@@ -1,0 +1,12 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/weapons/v_m6d/pistol1"
+	"$bumpmap" "models/weapons/v_m6d/body_NRM"
+	"$normalmapalphaenvmapmask" 1
+	"$envmap" "pistol cubemap1"
+	"$envmaptint" "[ 0.7 0.7 0.7 ]"
+	"$phong" "1"
+	"$phongexponent" "45"
+	"$phongboost"	"2"
+	"$phongfresnelranges"	"[.2 4 1]"
+}

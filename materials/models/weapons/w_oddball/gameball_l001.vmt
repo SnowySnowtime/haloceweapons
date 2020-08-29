@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/Weapons/w_oddball/gameball_l001"
+	"$detail" "models/Weapons/w_oddball/gameball_l00 detail1"
+	"$detailscale" 10
+}

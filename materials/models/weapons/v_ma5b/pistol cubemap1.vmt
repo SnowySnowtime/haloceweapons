@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/Weapons/v_m6d/pistol cubemap1"
+	"$envmapsphere" 1
+	"$envmapmode" 1
+}

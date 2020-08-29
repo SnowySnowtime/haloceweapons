@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$baseTexture" "snowysnowtime/ammo/sgammo"
+	"$translucent" 1
+}

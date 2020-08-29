@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "dev/pistol_reticle"
+	"$translucent" 1
+}

@@ -1,0 +1,8 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/Weapons/w_plasmapistol/plasma pistol1"
+	"$selfillum" 1
+	"$bumpmap" "models/weapons/w_plasmapistol/plasma pistol_normal"
+	"$envmap" "env_cubemap"
+	"$normalmapalphaenvmapmask" 1
+}

@@ -1,0 +1,20 @@
+"UnlitGeneric"
+{
+	"$basetexture" "models/weapons/haloweapons/sr decal"
+	"$translucent" 1
+	"Proxies" 
+    {
+        UniformNoise
+        {
+            resultVar    $alpha
+            minVal    .035
+            maxVal    .035
+        }
+        "TextureScroll"
+        {
+            "texturescrollvar" "$basetexturetransform"
+            "texturescrollrate" 0.2
+            "texturescrollangle" 0
+        }
+    }
+}

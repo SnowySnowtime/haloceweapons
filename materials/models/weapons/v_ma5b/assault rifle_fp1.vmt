@@ -1,0 +1,15 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "snowysnowtime/2k/assaultrifle"
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[ 0.05 0.05 0.05 ]"
+//	"$normalmapalphaenvmapmask" 1
+	"$nocull" 1
+//	"$bumpmap" "models/Weapons/v_ma5b/assault rifle_fp1_normal"
+	"$bumpmap" "snowysnowtime/2k/assaultrifle_n"
+//	"$phong" "1"
+//	"$phongboost" "1"
+//	"$phongexponent" "15"
+//	"$phongalbedotint" "1"								
+//	"$phongfresnelranges"	"[.1 5 1]"
+}

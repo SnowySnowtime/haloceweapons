@@ -1,0 +1,5 @@
+"UnlitGeneric"
+{
+	"$basetexture" "models/weapons/haloweapons/sr decal"
+	"$translucent" 1
+}

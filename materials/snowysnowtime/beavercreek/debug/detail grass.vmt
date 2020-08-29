@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "snowysnowtime/beavercreek/debug/detail grass"
+	"$basetexturetransform" "center 0 0 scale 100 100 rotate 0 translate 0 0"
+}

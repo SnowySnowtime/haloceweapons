@@ -1,0 +1,306 @@
+SWEP.Base = "arccw_base"
+SWEP.Spawnable = true -- this obviously has to be set to true
+SWEP.Category = "ArcCW - Halo 3" -- edit this if you like
+SWEP.AdminOnly = false
+
+SWEP.PrintName = "Magnum"
+SWEP.TrueName = "M6G PDWS"
+SWEP.Trivia_Class = "Pistol"
+SWEP.Trivia_Desc = "The M6D is a recoil-operated, magazine-fed handgun, chambered in 12.7x40mm ammunition, typically employed with semi-armor-piercing, high-explosive (SAPHE) rounds of that chambering, and feeding from 12-round detachable box magazines. It has also been known to be chambered in the .450 Magnum load.[The weapon is somewhat unusual for a handgun in that it is capable of both semi-automatic and automatic firing. The M6D is one of the M6 series’ upscaled variants, being larger than non-upscaled M6s by roughly 117%. The M6D is also an officer’s model, and in this capacity was employed by Captain Jacob Keyes on the UNSC Pillar of Autumn. Like other officer’s model M6s, the weapon is fitted with smart-linked KFA-2 optic for utilization by those employing a heads-up display."
+SWEP.Trivia_Manufacturer = "Misriah Armory"
+SWEP.Trivia_Calibre = "12.7x40mmn M225 SAP-HE"
+SWEP.Trivia_Mechanism = "Semi-Auto"
+SWEP.Trivia_Country = "never heard of her"
+SWEP.Trivia_Year = 2460
+
+SWEP.Slot = 1
+
+if GetConVar("arccw_truenames"):GetBool() then SWEP.PrintName = SWEP.TrueName end
+
+SWEP.UseHands = true
+
+SWEP.ViewModel = "models/snowysnowtime/vuthakral/c_hum_m6g.mdl"
+SWEP.WorldModel = "models/snowysnowtime/vuthakral/w_m6g.mdl"
+SWEP.ViewModelFOV = 70
+
+if GetConVar("arccw_hce_bal"):GetInt() == 0 then -- HaloCW
+    SWEP.Recoil = 2
+	SWEP.RecoilSide = 1
+	SWEP.Damage = 65
+	SWEP.DamageMin = 65
+	SWEP.AccuracyMOA = 0.04
+	SWEP.HipDispersion = 0.09
+	SWEP.MoveDispersion = 0
+	SWEP.JumpDispersion = 0
+	SWEP.ChamberSize = 0
+elseif GetConVar("arccw_hce_bal"):GetInt() == 1 then -- halo purist
+	SWEP.Recoil = 0
+	SWEP.RecoilSide = 0
+	SWEP.Damage = 50
+	SWEP.DamageMin = 50
+	SWEP.AccuracyMOA = 0
+	SWEP.HipDispersion = 0
+	SWEP.MoveDispersion = 0
+	SWEP.JumpDispersion = 0
+	SWEP.ChamberSize = 0
+elseif GetConVar("arccw_hce_bal"):GetInt() == 2 then -- arccw
+    SWEP.Recoil = 2
+	SWEP.RecoilSide = 1
+	SWEP.Damage = 74
+	SWEP.DamageMin = 49
+	SWEP.AccuracyMOA = 0.06
+	SWEP.HipDispersion = 55
+	SWEP.MoveDispersion = 150
+	SWEP.JumpDispersion = 1
+	SWEP.ChamberSize = 1
+end
+
+SWEP.Range =  100 -- in METRES
+SWEP.Penetration = 100
+SWEP.DamageType = DMG_BULLET
+SWEP.ShootEntity = nil -- entity to fire, if any
+SWEP.MuzzleVelocity = 6000 -- projectile or phys bullet muzzle velocity
+-- IN M/S
+
+SWEP.Primary.ClipSize = 8 -- DefaultClip is automatically set.
+SWEP.ExtendedClipSize = 12
+SWEP.ReducedClipSize = 6
+
+SWEP.Delay = 60 / 160 -- 60 / RPM.
+SWEP.Num = 1 -- number of shots per trigger pull.
+SWEP.Firemodes = {
+    {
+        Mode = 1,
+    },
+    {
+        Mode = 0
+    }
+}
+
+SWEP.NPCWeaponType = {"weapon_357","weapon_pistol"}
+SWEP.NPCWeight = 25
+
+SWEP.ManualAction = false
+
+
+SWEP.Primary.Ammo = "357" -- what ammo type the gun uses
+SWEP.MagID = "hs338" -- the magazine pool this gun draws from
+
+SWEP.ShootVol = 140 -- volume of shoot sound
+SWEP.ShootPitch = 100 -- pitch of shoot sound
+
+SWEP.ShootSound = "h3_magnumfire"
+SWEP.ShootSoundSilenced = "hcesup"
+SWEP.DistantShootSound = "m6d_lod"
+
+SWEP.TracerNum = 1 -- tracer every X
+SWEP.Tracer = nil
+SWEP.MuzzleEffect = "astw2_halo_3_muzzle_magnum"
+SWEP.ShellModel = "models/shells/shell_338mag.mdl"
+SWEP.ShellPitch = 80
+SWEP.ShellScale = 1.5
+
+SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
+SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
+
+SWEP.SightTime = 0.15
+SWEP.SpeedMult = 0.95
+SWEP.SightedSpeedMult = 0.25
+SWEP.MeleeTime = 1
+SWEP.MeleeSwingSound = ""
+SWEP.MeleeMissSound = ""
+SWEP.MeleeHitSound = "hceworld"
+SWEP.MeleeHitNPCSound = "hceslap"
+
+SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
+    -- [0] = "bulletchamber",
+    -- [1] = "bullet1"
+}
+
+SWEP.ProceduralRegularFire = false
+SWEP.ProceduralIronFire = false
+
+SWEP.CaseBones = {}
+
+SWEP.IronSightStruct = {
+    Pos = Vector(0, 2, -1.99),
+    Ang = Angle(0.792, 0.017, 0),
+    Magnification = 1.5,
+}
+
+SWEP.HoldtypeHolstered = "normal"
+SWEP.HoldtypeActive = "pistol"
+SWEP.HoldtypeSights = "revolver"
+
+SWEP.RejectAttachments = {
+    ["ammo_cerberus"] = true, -- fuck cerberus
+    ["acwatt_perk_fastbolt"] = true, -- whats the point of this on my weapons?
+    ["acwatt_perk_beefficient"] = true, -- never heard of her
+}
+
+SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_RPG
+
+SWEP.ActivePos = Vector(0, -4, -1)
+SWEP.ActiveAng = Angle(0, 0, 0)
+
+SWEP.HolsterPos = Vector(0, -10, -10)
+SWEP.HolsterAng = Angle(40, 0, 0)
+
+SWEP.BarrelOffsetSighted = Vector(0, 0, -1)
+SWEP.BarrelOffsetHip = Vector(2, 0, -2)
+
+SWEP.BarrelLength = 17
+SWEP.AttachmentElements = {
+    ["yeet"] = {
+        VMSkin = 1,
+        WMSkin = 1,
+    },
+    ["gold"] = {
+        VMSkin = 2,
+        WMSkin = 2,
+    },
+    ["oj"] = {
+        VMSkin = 3,
+        WMSkin = 3,
+    },
+    ["wornblue"] = {
+        VMSkin = 4,
+        WMSkin = 4,
+    },
+	["color"] = {
+        VMSkin = 5,
+        WMSkin = 5,
+    },
+}
+
+SWEP.ExtraSightDist = 15
+
+SWEP.Attachments = {
+	{
+        PrintName = "Optic", -- print name
+        DefaultAttName = "10x Scope",
+        Slot = {"optic_lp"}, -- what kind of attachments can fit here, can be string or table
+        Bone = "gun", -- relevant bone any attachments will be mostly referring to
+        Offset = {
+            vpos = Vector(4, 0, 4.2), -- offset that the attachment will be relative to the bone
+            vang = Angle(0, 0, 0),
+            wpos = Vector(6, 2, -4.4),
+            wang = Angle(-8.829, 0, 180)
+        },
+    },
+	{
+        PrintName = "Muzzle",
+        DefaultAttName = "Standard Muzzle",
+        Slot = {"muzzle"},
+        Bone = "gun",
+        Offset = {
+            vpos = Vector(4, 0, 2.65),
+            vang = Angle(0, 0, 0),
+            wpos = Vector(8.1, 2, -3.6),
+            wang = Angle(0, 0, 180)
+        },
+		VMScale = Vector(0.7, 0.7, 0.7),
+    },
+    {
+        PrintName = "Stock",
+        Slot = "stock",
+        DefaultAttName = "Standard Stock"
+    },
+	{
+        PrintName = "Grip",
+        Slot = "grip",
+        DefaultAttName = "Standard Grip"
+    },
+	{
+        PrintName = "Fire Group",
+        Slot = "fcg",
+        DefaultAttName = "Standard FCG"
+    },
+	{
+        PrintName = "Tactical",
+        Slot = "tac",
+        Bone = "gun",
+        Offset = {
+            vpos = Vector(3, -0.1, 3.64), -- offset that the attachment will be relative to the bone
+            vang = Angle(0, 0, -90),
+            wpos = Vector(6, 1.25, -3),
+            wang = Angle(-8.829, -0.556, 90)
+        },
+		VMScale = Vector(0.1, 0.1, 0.1),
+    },
+    {
+        PrintName = "Ammo Type",
+        Slot = {"ammo_bullet", "ammo_hce"}
+    },
+    {
+        PrintName = "Perk",
+        Slot = "perk"
+    },
+    {
+        PrintName = "Charm",
+        Slot = "charm",
+        FreeSlot = true,
+        Bone = "gun", -- relevant bone any attachments will be mostly referring to
+        Offset = {
+            vpos = Vector(3.25, -0.45, 2.8), -- offset that the attachment will be relative to the bone
+            vang = Angle(0, 0, 10),
+            wpos = Vector(6, 2.4, -3.5),
+            wang = Angle(-10.393, 0, 180)
+        },
+		VMScale = Vector(0.7, 0.7, 0.7),
+    },
+	{
+        PrintName = "Skin",
+        Slot = {"skin_h3m6"},
+        DefaultAttName = "Factory Default",
+        FreeSlot = true
+    },
+}
+
+SWEP.Animations = {
+    ["idle"] = {
+        Source = "idle",
+        Time = 4
+    },
+	["fire_iron"] = {
+        Source = "fire",
+    },
+    ["draw"] = {
+        Source = "draw",
+        Time = 1,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 0.25,
+    },
+    ["fire"] = {
+        Source = { "fire_rand1","fire_rand2","fire_rand3" },
+        Time = 0.8,
+    },
+	["bash"] = {
+        Source = "melee",
+		Time = 0.9,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 0.6,
+    },
+    ["reload"] = {
+        Source = "reload",
+        Time = 1.7,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+        Checkpoints = {24, 33, 51, 58, 62, 74, 80},
+        FrameRate = 30,
+        LHIK = true,
+        LHIKIn = 0.5,
+        LHIKOut = 0.5,
+    },
+    ["reload_empty"] = {
+        Source = "reload",
+        Time = 1.7,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+        Checkpoints = {24, 33, 51},
+        FrameRate = 30,
+        LHIK = true,
+        LHIKIn = 0.5,
+        LHIKOut = 0.5,
+    },
+}

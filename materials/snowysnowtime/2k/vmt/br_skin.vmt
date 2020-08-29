@@ -1,0 +1,21 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "snowysnowtime/br_hq"
+	"$detail" "snowysnowtime/br_diff"
+	"$detailscale" "1"
+	"$bumpmap" "snowysnowtime/br_hqn"
+	"$phong" "1"
+	"$nocull" "1"
+	"$phongexponent" "60"
+	"$phongboost"	"1"
+	"$phongfresnelranges"	"[4 6 1]"
+	"$blendtintbybasealpha" "1"
+	"Proxies"
+	{
+		"haloPlayerWeaponColorNOPULSE"
+		{
+			"resultVar"			"$color2"
+			"$default" 		"0.75 0.75 0.75"
+		}
+	}
+}

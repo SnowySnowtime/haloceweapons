@@ -1,0 +1,18 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "snowysnowtime/2k/rl/corrosion_decal"
+	"$bumpmap" "snowysnowtime/2k/rl/corrosion_decal_n"
+	"$envmap" "snowysnowtime/cyborg_reflection_armor"
+	"$envmaptint" "[ 0.01 0.01 0.01 ]"
+	"$envmapfresnel" "1"
+	"$normalmapalphaenvmapmask" "1"
+	"$phong" "1" 
+	"$phongboost" "50"
+	"$phongexponent" "25"
+	"$phongexponenttexture" "snowysnowtime\ma5e\phongexp255"
+	"$phongalbedotint" "1"
+	"$phongfresnelranges" "[1 1.25 1.75]"
+	"$phongdisablehalflambert" "1"
+	"$translucent" "1"
+	"$decals" "1"
+}

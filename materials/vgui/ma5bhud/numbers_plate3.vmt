@@ -1,0 +1,7 @@
+"UnLitGeneric"
+{
+	"$basetexture" "VGUI/ma5bhud/numbers_plate3"
+	"$selfillum" 	"1"
+	"$ignorez"	"1"
+	"$model"		"1"
+}

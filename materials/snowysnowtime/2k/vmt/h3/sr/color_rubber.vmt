@@ -1,0 +1,22 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "snowysnowtime/2k/h3/sr/sr_c"
+	"$bumpmap" "snowysnowtime/2k/h3/sr_n"
+	"$phong" "1" 
+	"$phongboost" "1"
+	"$phongexponent" "3"
+	"$phongexponenttexture" "snowysnowtime/2k/h3/sr_phong"
+	"$phongalbedotint" "1"
+	"$phongfresnelranges" "[1.5 3 5]"
+	"$phongdisablehalflambert" "1"
+	"$color2" "[ 0.7 0.7 0.7 ]"
+	"$blendtintbybasealpha" "1"
+	"Proxies"
+	{
+		"haloPlayerWeaponColorNOPULSE"
+		{
+			"resultVar"			"$color2"
+			"$default" 		"0.75 0.75 0.75"
+		}
+	}
+}

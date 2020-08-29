@@ -1,0 +1,6 @@
+UnlitGeneric
+{
+	"$basetexture"	"snowysnowtime/wpn_sniper_screen_02"
+	"$translucent" "1"
+	$color2	"[ 0 0 0 ]"
+}

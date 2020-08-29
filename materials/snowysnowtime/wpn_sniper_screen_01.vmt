@@ -1,0 +1,9 @@
+"UnlitGeneric"
+{
+	"$basetexture" "snowysnowtime/wpn_sniper_screen_01"
+	"$color2" "{0 200 0"
+	"$phong" "1"
+	"$phongexponent" "60"
+	"$phongboost"	"1"
+	"$phongfresnelranges"	"[4 6 1]"
+}

@@ -1,0 +1,7 @@
+"UnlitGeneric"
+{
+"$basetexture" "snowysnowtime\ma5e\display_items_d"
+"blendtintbybasealpha" "0"
+"$additive" "1"
+"$color2" "[0 .58 .88]"
+}

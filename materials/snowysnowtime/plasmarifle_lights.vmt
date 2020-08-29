@@ -1,0 +1,10 @@
+"UnlitGeneric"
+{
+	"$basetexture" "snowysnowtime/lights"
+	"$nocull" "1"
+	"$phong" "1"
+	"$phongexponent" "45"
+	"$phongboost"	"2"
+	"$phongfresnelranges"	"[.2 4 1]"
+	"$color2"		"{70 150 900}"
+}

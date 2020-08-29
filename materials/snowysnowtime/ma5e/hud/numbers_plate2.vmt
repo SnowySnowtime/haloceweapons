@@ -1,0 +1,8 @@
+"UnLitGeneric"
+{
+	"$basetexture" "snowysnowtime/ma5e/hud/2"
+	
+	"blendtintbybasealpha" "0"
+	"$additive" "1"
+	"$color2" "[0 .58 .88]"
+}

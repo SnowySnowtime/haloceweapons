@@ -1,0 +1,6 @@
+"UnlitGeneric"
+{
+	"$basetexture" "snowysnowtime/sprites/plasma_flare"
+	"$nocull" "1"
+	"$additive" "1"
+}

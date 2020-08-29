@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/weapons/v_needler/pp display"
+	"$translucent" 1
+}

@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/weapons/v_needler/plasma pistol"
+	"$translucent" 1
+}

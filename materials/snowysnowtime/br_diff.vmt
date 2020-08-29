@@ -1,0 +1,13 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "snowysnowtime/br_diff"
+	"$detail" "snowysnowtime/br_hq"
+	"$detailscale" "1"
+	"$bumpmap" "snowysnowtime/br_hqn"
+	"$phongexponenttexture" "snowysnowtime/br_spec"
+	"$phong" "1"
+	"$phongexponent" "60"
+	"$phongboost"	"1"
+	"$phongfresnelranges"	"[4 6 1]"
+	"$nocull" "1"
+}

@@ -1,0 +1,17 @@
+"UnlitGeneric"
+{
+	"$basetexture" "snowysnowtime/innerlights"
+	"$nocull" "1"
+	"$phong" "1"
+	"$phongexponent" "45"
+	"$phongboost"	"2"
+	"$phongfresnelranges"	"[.2 4 1]"
+	"Proxies"
+	{
+		"haloPlayerWeaponColorNOPULSE"
+		{
+			"resultVar"			"$color2"
+			"$default" 		"0.75 0.75 0.75"
+		}
+	}
+}

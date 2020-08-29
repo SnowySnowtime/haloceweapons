@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/Weapons/v_ma5b/cyborg hands1"
+	"$bumpmap" "models/Weapons/v_ma5b/cyborg hands1_normal"
+	"$detail" "models/Weapons/v_m6d/detail"
+	"$detailscale" 2.5
+}

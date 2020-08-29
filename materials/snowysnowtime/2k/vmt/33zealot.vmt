@@ -1,0 +1,14 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "snowysnowtime/2k/33/zealot"
+	"$bumpmap" "snowysnowtime/2k/needler_n"
+	"$selfillum" "1"
+	"$selfillummask" "snowysnowtime/needler_illum"
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[0.02 0.02 0.02]"
+	"$envmapfresnel" "0.01"
+	"$phong" "1"
+	"$phongexponent" "45"
+	"$phongboost"	"2"
+	"$phongfresnelranges"	"[.2 4 1]"
+}

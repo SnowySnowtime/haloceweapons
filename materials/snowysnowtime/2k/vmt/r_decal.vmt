@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "snowysnowtime/2k/rl_decal"
+	"$translucent" "1"
+	"$decals" "1"
+}

@@ -1,0 +1,14 @@
+"UnLitGeneric"
+{
+	"$basetexture" "snowysnowtime/2k/h3/sg"
+	"$envmapfresnel" "1"
+	"$normalmapalphaenvmapmask" "1"
+	"$phong" "1" 
+	"$phongboost" "1"
+	"$phongexponent" "3"
+	"$phongexponenttexture" "snowysnowtime/2k/h3/sg_p"
+	"$phongalbedotint" "1"
+	"$phongfresnelranges" "[1.5 3 5]"
+	"$color2" "[1.5 3 5]"
+	"$phongdisablehalflambert" "1"
+}

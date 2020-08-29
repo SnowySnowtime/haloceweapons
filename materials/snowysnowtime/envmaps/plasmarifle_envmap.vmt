@@ -1,0 +1,6 @@
+"UnlitGeneric"
+{
+	"$basetexture" "snowysnowtime/envmaps/plasmarifle_envmap"
+	"$envmapsphere" 1
+	"$envmapmode" 1
+}

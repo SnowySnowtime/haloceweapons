@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "snowysnowtime/compass_plate1"
+	"$additive" 1
+	"$selfillum" 1
+}

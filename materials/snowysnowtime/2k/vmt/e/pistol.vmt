@@ -1,0 +1,18 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "snowysnowtime/2k/m6d/gold"
+	"$bumpmap" "snowysnowtime/2k/m6d/gold_normal"
+	"$selfillum" "1"
+	"$selfillummask" "snowysnowtime/2k/m6d_selfillum"
+	"$envmap" "snowysnowtime/cyborg_reflection_armor"
+	"$envmaptint" "[0.16 0.135 0.05]"
+	"$envmapfresnel" "1"
+	"$normalmapalphaenvmapmask" "1"
+	"$phong" "1" 
+	"$phongboost" "12"
+	"$phongexponent" "90"
+	"$phongexponenttexture" "snowysnowtime\2k\wephong\phong_m6dgold"
+	"$phongalbedotint" "1"
+	"$phongfresnelranges" "[4 0.5 8]"
+	"$phongdisablehalflambert" "1"
+}

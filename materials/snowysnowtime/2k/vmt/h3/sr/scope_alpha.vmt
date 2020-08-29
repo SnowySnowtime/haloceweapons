@@ -1,0 +1,18 @@
+UnlitGeneric
+{
+	"$basetexture"	"snowysnowtime\2k\h3\sr decal"
+
+	$translucent 1
+
+	$color2	"[ 0 0.33 0 ]"
+
+	Proxies
+	{
+		TextureScroll
+		{
+			textureScrollVar	$basetexturetransform
+			textureScrollRate	.15
+			textureScrollAngle	90
+		}
+	}
+}

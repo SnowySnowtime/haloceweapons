@@ -1,0 +1,17 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "snowysnowtime/2k/magnum"
+	"$bumpmap" "snowysnowtime/2k/magnum_n"
+	"$selfillum" "1"
+	"$selfillummask" "snowysnowtime/2k/m6d_selfillum"
+	"$envmap" "snowysnowtime/cyborg_reflection_armor"
+	"$envmaptint" "[ 0.1 0.1 0.1 ]"
+	"$normalmapalphaenvmapmask" "1"
+	"$phong" "1" 
+	"$phongboost" "8"
+	"$phongexponent" "10"
+	"$phongexponenttexture" "snowysnowtime\ma5e\phongexp255"
+	"$phongalbedotint" "1"
+	"$phongfresnelranges" "[1 1.25 1.75]"
+	"$phongdisablehalflambert" "1"
+}

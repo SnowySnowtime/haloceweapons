@@ -1,0 +1,19 @@
+"VertexlitGeneric"
+{
+"$basetexture" "snowysnowtime\smg_d"
+"$bumpmap" "snowysnowtime\smg_n"
+
+"$normalmapalphaenvmapmask" "1"
+
+"$phong" "1"
+"$phongexponent" "17"
+"$phongexponenttexture" "snowysnowtime\phongexp230"
+"$phongboost"	"22"
+"$phongalbedotint" "1"
+"$phongfresnelranges" "[1 1.25 1.8]"
+"$phongdisablehalflambert" "1"
+
+"$blendTintByBaseAlpha"	"1"
+"$color"	"[0.8 0.8 0.8]"
+	
+}

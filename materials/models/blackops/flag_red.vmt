@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/blackops/flag_red"
+	"$translucent" 1
+}

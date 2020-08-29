@@ -1,0 +1,21 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "snowysnowtime/cmt_arms"
+	"$bumpmap" "snowysnowtime/cmt_arms_norm"
+	"$phong" "1"
+	"$phongexponent" "45"
+	"$phongboost"	"2"
+	"$phongfresnelranges"	"[.2 4 1]"
+	"$envmap" "snowysnowtime/cyborg_reflection_armor"
+	"$normalmapalphaenvmapmask" "1"
+	"$envmaptint" "[ 0.05 0.05 0.05 ]"
+	"$blendtintbybasealpha" "1"
+	"Proxies"
+	{
+		"haloPlayerWeaponColorNOPULSE"
+		{
+			"resultVar"			"$color2"
+			"$default" 		"0.75 0.75 0.75"
+		}
+	}
+}

@@ -1,0 +1,6 @@
+"UnlitGeneric"
+{
+	"$basetexture" "snowysnowtime/base_gradient"
+	"$translucent" "1"
+	"$nocull" "1"
+}

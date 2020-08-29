@@ -1,0 +1,31 @@
+UnlitGeneric
+{
+	"$basetexture"	"snowysnowtime/2k/h3/sr subscreen decal"
+
+	$translucent 1
+
+	$angle		0
+	$translate		 "[0 0]"
+	$center		 "[.5 .5]"
+
+	$selfillum 0
+
+	Proxies
+	{
+		LinearRamp
+		{
+			rate 70
+			resultVar $angle
+		}
+
+		TextureTransform
+		{
+			"translateVar" "$translate"
+                		"rotateVar" "$angle"
+                		"centerVar" "$center"
+                		"resultVar" "$basetexturetransform"
+		}
+	}
+}
+
+

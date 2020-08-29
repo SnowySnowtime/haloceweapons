@@ -1,0 +1,5 @@
+"UnlitGeneric"
+{
+	"$basetexture" "snowysnowtime/assaultrifle_cea_display"
+	"$nocull" "1"
+}

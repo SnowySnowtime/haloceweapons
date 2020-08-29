@@ -1,0 +1,9 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "snowysnowtime/cmt_pistol"
+	"$bumpmap" "snowysnowtime/cmt_pistol_norm"
+	"$phong" "1"
+	"$phongexponent" "45"
+	"$phongboost"	"2"
+	"$phongfresnelranges"	"[.2 4 1]""
+}

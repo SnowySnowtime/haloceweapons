@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "snowysnowtime/scope3"
+	"$translucent" "1"
+	"$nocull" "1"
+}

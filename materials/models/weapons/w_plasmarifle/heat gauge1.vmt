@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/Weapons/w_plasmarifle/heat gauge1"
+	"$translucent" 1
+}

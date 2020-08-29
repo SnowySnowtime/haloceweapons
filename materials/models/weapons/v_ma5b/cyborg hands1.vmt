@@ -1,0 +1,23 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/Weapons/v_ma5b/cyborg hands1"
+	"$nodecal" "1"
+	"$detail" "models/Weapons/v_ma5b/detail"
+	"$bumpmap" "snowysnowtime/ce_armsn"
+	"$envmap" "snowysnowtime/cyborg_reflection_armor"
+	"$envmaptint" "[ 0.05 0.05 0.05 ]"
+	"$detailscale" 10.0
+	"$phong" "1"
+	"$phongexponent" "150"
+	"$phongboost"	"30"
+	"$phongfresnelranges"	"[.2 4 1]"
+	"$blendtintbybasealpha" "1"
+	"Proxies"
+	{
+		"haloPlayerWeaponColorNOPULSE"
+		{
+			"resultVar"			"$color2"
+			"$default" 		"0.75 0.75 0.75"
+		}
+	}
+}

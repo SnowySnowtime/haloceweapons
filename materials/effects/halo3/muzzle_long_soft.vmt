@@ -1,0 +1,19 @@
+"UnlitGeneric"
+{
+	"$basetexture"	"effects/halo3/muzzle_long_soft"
+	"$additive"	0
+	"$vertexcolor"	1
+	"$vertexalpha"	1
+	"$translucent" 				"0"
+
+"Proxies"
+   {
+      "AnimatedTexture"
+      {
+         "animatedtexturevar" "$basetexture"
+         "animatedtextureframenumvar" "$frame"
+         "animatedtextureframerate" "45"
+      }
+   }
+
+}

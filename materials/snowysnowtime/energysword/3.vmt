@@ -1,0 +1,17 @@
+"UnlitGeneric"
+{
+	"$basetexture" "snowysnowtime/energysword/energy_sword_blade_mask"
+	"$detail" "snowysnowtime/sword_det"
+
+	"$phong" "1" 
+	"$phongboost" "3"
+	"$phongexponent" "5"
+	"$phongexponenttexture" "snowysnowtime\ma5e\phongexp255"
+	"$phongalbedotint" "1"
+	"$phongfresnelranges" "[1 1.25 1.75]"
+	"$phongdisablehalflambert" "1"
+	"$color2" "[ 0 0 0 ]"
+	"$nocull" "1"
+	"$translucent" "1"
+	"$additive" "1"
+}

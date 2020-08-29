@@ -1,0 +1,26 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "snowysnowtime/2k/sg/woodlands"
+	"$bumpmap" "snowysnowtime/2k/shotgun_n"
+	"$selfillum" "1"
+	"$selfillummask" "snowysnowtime/2k/sg_selfillum"
+	"$envmap" "snowysnowtime/cyborg_reflection_armor"
+	"$envmaptint" "[ 1 1 1 ]"
+	"$cubemaptint"	"[ 0 0 0 ]"
+	"$cubemappower"	0.3
+	"$normalmapalphaenvmapmask" "1"
+	"$phong" "1" 
+	"$phongboost" "6"
+	"$phongexponent" "155"
+	"$phongexponenttexture" "snowysnowtime\ma5e\phongexp255"
+	"$phongalbedotint" "1"
+	"$phongfresnelranges" "[2 2 8]"
+	"$phongdisablehalflambert" "1"
+	"Proxies"
+	{
+		vuth_ReflectionTint
+		{
+			resultVar $envmaptint
+		}
+	}
+}

@@ -1,0 +1,7 @@
+"UnlitGeneric"
+{
+	"$basetexture" "snowysnowtime/pp display"
+	"$translucent" 1
+	"$additive" "1"
+	"$decal" 1
+}

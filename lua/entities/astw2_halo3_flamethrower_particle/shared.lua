@@ -1,0 +1,10 @@
+ENT.Type = "anim"
+ENT.Base = "base_entity"
+ENT.PrintName = "Scorcher Projectile"
+ENT.Author = "Karltroid51"
+ENT.Spawnable = false
+ENT.AdminSpawnable = true 
+ENT.Category	= "Fortifications (Emplacements)"
+ENT.AmmoType = "fs2_5mm"
+ENT.Amount = 100
+ENT.ModelBox = "models/ammo/fs2_ammo_5mm.mdl"

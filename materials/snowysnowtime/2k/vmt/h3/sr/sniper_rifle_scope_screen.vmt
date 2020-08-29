@@ -1,0 +1,10 @@
+UnlitGeneric
+{
+	"$basetexture"	"snowysnowtime/2k/h3/sr_mask"
+
+	$translucent 1
+
+	$color2	"[ 0 1 0 ]"
+}
+
+

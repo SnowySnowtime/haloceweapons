@@ -1,0 +1,13 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "snowysnowtime/carbine"
+	"$bumpmap" "snowysnowtime/carbinen"
+	"$detailscale" "1"
+	"$nocull" "1"
+	"$selfillum" "1"
+    "$selfillummask" "snowysnowtime/carbine_selfillum"
+	"$phong" "1"
+	"$phongexponent" "45"
+	"$phongboost"	"2"
+	"$phongfresnelranges"	"[.2 4 1]"
+}
