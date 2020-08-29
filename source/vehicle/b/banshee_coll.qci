@@ -1,0 +1,8 @@
+$collisionmodel "banshee_coll.smd"
+{
+	$mass 2500
+	$inertia 1
+	$damping 0
+	$rotdamping 0
+	$concave
+}

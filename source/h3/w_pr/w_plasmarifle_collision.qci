@@ -1,0 +1,12 @@
+
+$collisionmodel "w_plasmarifle_physics.smd"
+{
+	$mass 3.000847
+	$inertia 1
+	$damping 0
+	$rotdamping 0
+	$rootbone " "
+	$concave
+	$maxconvexpieces 1
+
+}

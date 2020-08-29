@@ -1,0 +1,83 @@
+
+$sectionframes 30 128
+
+$sequence "idle" {
+	"c_hum_m7_anims\idle.smd"
+	activity "ACT_VM_IDLE" 1
+	fadein 0.1
+	fadeout 0
+	fps 30
+	loop
+}
+
+$sequence "aim" {
+	"c_hum_m7_anims\aim.smd"
+	activity "ACT_VM_IDLE" 1
+	fadein 0.1
+	fadeout 0
+	fps 30
+	loop
+}
+
+$sequence "fire_fp" {
+	"c_hum_m7_anims\fire_fp.smd"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	fadein 0
+	fadeout 0
+	fps 30
+}
+
+$sequence "reload" {
+	"c_hum_m7_anims\reload.smd"
+	activity "ACT_VM_RELOAD" 1
+	{ event AE_CL_PLAYSOUND 7 "h3.m7_reload1" }
+	{ event AE_CL_PLAYSOUND 30 "h3.m7_reload2" }
+	{ event AE_CL_PLAYSOUND 46 "h3.m7_reload3" }
+	fadein 0.3
+	fadeout 0.3
+	fps 30
+}
+
+$sequence "draw" {
+	"c_hum_m7_anims\draw.smd"
+	activity "ACT_VM_DRAW" 1
+	{ event AE_CL_PLAYSOUND 3 "h3.m7_ready" }
+	fadein 0.3
+	fadeout 0.3
+	fps 30
+}
+
+$sequence "throw_grenade" {
+	"c_hum_m7_anims\throw_grenade.smd"
+	activity "ACT_VM_SECONDARYATTACK" 1
+	fadein 0.05
+	fadeout 0.3
+	fps 30
+}
+
+$sequence "melee" {
+	"c_hum_m7_anims\melee.smd"
+	activity "ACT_VM_HITCENTER" 1
+	{ event AE_CL_PLAYSOUND 0 "h3.m7_melee" }
+	fadein 0.1
+	fadeout 0.3
+	fps 30
+}
+
+$sequence "pose1" {
+	"c_hum_m7_anims\pose1.smd"
+	activity "ACT_VM_FIDGET" 1
+	{ event AE_CL_PLAYSOUND 0 "h3.pose1" }
+	fadein 0.3
+	fadeout 0.3
+	fps 30
+}
+
+$sequence "pose2" {
+	"c_hum_m7_anims\pose2.smd"
+	activity "ACT_VM_FIDGET" 1
+	{ event AE_CL_PLAYSOUND 0 "h3.pose2" }
+	fadein 0.3
+	fadeout 0.3
+	fps 30
+}

@@ -1,0 +1,300 @@
+
+$weightlist "weights_ophandle_fix" {
+	 "base" 0
+	 "l upperarm" 0
+	 "l forearm" 0
+	 "l hand" 0
+	 "l index low" 0
+	 "l index mid" 0
+	 "l index tip" 0
+	 "ValveBiped.Bip01_L_Finger12" 0
+	 "ValveBiped.Bip01_L_Finger11" 0
+	 "ValveBiped.Bip01_L_Finger1" 0
+	 "l middle low" 0
+	 "l middle mid" 0
+	 "l middle tip" 0
+	 "ValveBiped.Bip01_L_Finger22" 0
+	 "ValveBiped.Bip01_L_Finger21" 0
+	 "ValveBiped.Bip01_L_Finger2" 0
+	 "l pinky low" 0
+	 "l pinky mid" 0
+	 "l pinky tip" 0
+	 "ValveBiped.Bip01_L_Finger42" 0
+	 "ValveBiped.Bip01_L_Finger41" 0
+	 "ValveBiped.Bip01_L_Finger4" 0
+	 "l ring low" 0
+	 "l ring mid" 0
+	 "l ring tip" 0
+	 "ValveBiped.Bip01_L_Finger32" 0
+	 "ValveBiped.Bip01_L_Finger31" 0
+	 "ValveBiped.Bip01_L_Finger3" 0
+	 "l thumb low" 0
+	 "l thumb mid" 0
+	 "l thumb tip" 0
+	 "ValveBiped.Bip01_L_Finger02" 0
+	 "ValveBiped.Bip01_L_Finger01" 0
+	 "ValveBiped.Bip01_L_Finger0" 0
+	 "ValveBiped.Bip01_L_Hand" 0
+	 "ValveBiped.Bip01_L_Forearm" 0
+	 "ValveBiped.Bip01_L_UpperArm" 0
+	 "r upperarm" 0
+	 "r forearm" 0
+	 "r hand" 0
+	 "r index low" 0
+	 "r index mid" 0
+	 "r index tip" 0
+	 "ValveBiped.Bip01_R_Finger12" 0
+	 "ValveBiped.Bip01_R_Finger11" 0
+	 "ValveBiped.Bip01_R_Finger1" 0
+	 "r middle low" 0
+	 "r middle mid" 0
+	 "r middle tip" 0
+	 "ValveBiped.Bip01_R_Finger22" 0
+	 "ValveBiped.Bip01_R_Finger21" 0
+	 "ValveBiped.Bip01_R_Finger2" 0
+	 "r pinky low" 0
+	 "r pinky mid" 0
+	 "r pinky tip" 0
+	 "ValveBiped.Bip01_R_Finger42" 0
+	 "ValveBiped.Bip01_R_Finger41" 0
+	 "ValveBiped.Bip01_R_Finger4" 0
+	 "r ring low" 0
+	 "r ring mid" 0
+	 "r ring tip" 0
+	 "ValveBiped.Bip01_R_Finger32" 0
+	 "ValveBiped.Bip01_R_Finger31" 0
+	 "ValveBiped.Bip01_R_Finger3" 0
+	 "r thumb low" 0
+	 "r thumb mid" 0
+	 "r thumb tip" 0
+	 "ValveBiped.Bip01_R_Finger02" 0
+	 "ValveBiped.Bip01_R_Finger01" 0
+	 "ValveBiped.Bip01_R_Finger0" 0
+	 "ValveBiped.Bip01_R_Hand" 0
+	 "ValveBiped.Bip01_R_Forearm" 0
+	 "ValveBiped.Bip01_R_UpperArm" 0
+	 "gun" 0
+	 "ophandle" 1
+	 "safety" 0
+	 "magazine" 0
+}
+
+$weightlist "weights_fix_mag_position" {
+	 "base" 0
+	 "l upperarm" 0
+	 "l forearm" 0
+	 "l hand" 0
+	 "l index low" 0
+	 "l index mid" 0
+	 "l index tip" 0
+	 "ValveBiped.Bip01_L_Finger12" 0
+	 "ValveBiped.Bip01_L_Finger11" 0
+	 "ValveBiped.Bip01_L_Finger1" 0
+	 "l middle low" 0
+	 "l middle mid" 0
+	 "l middle tip" 0
+	 "ValveBiped.Bip01_L_Finger22" 0
+	 "ValveBiped.Bip01_L_Finger21" 0
+	 "ValveBiped.Bip01_L_Finger2" 0
+	 "l pinky low" 0
+	 "l pinky mid" 0
+	 "l pinky tip" 0
+	 "ValveBiped.Bip01_L_Finger42" 0
+	 "ValveBiped.Bip01_L_Finger41" 0
+	 "ValveBiped.Bip01_L_Finger4" 0
+	 "l ring low" 0
+	 "l ring mid" 0
+	 "l ring tip" 0
+	 "ValveBiped.Bip01_L_Finger32" 0
+	 "ValveBiped.Bip01_L_Finger31" 0
+	 "ValveBiped.Bip01_L_Finger3" 0
+	 "l thumb low" 0
+	 "l thumb mid" 0
+	 "l thumb tip" 0
+	 "ValveBiped.Bip01_L_Finger02" 0
+	 "ValveBiped.Bip01_L_Finger01" 0
+	 "ValveBiped.Bip01_L_Finger0" 0
+	 "ValveBiped.Bip01_L_Hand" 0
+	 "ValveBiped.Bip01_L_Forearm" 0
+	 "ValveBiped.Bip01_L_UpperArm" 0
+	 "r upperarm" 0
+	 "r forearm" 0
+	 "r hand" 0
+	 "r index low" 0
+	 "r index mid" 0
+	 "r index tip" 0
+	 "ValveBiped.Bip01_R_Finger12" 0
+	 "ValveBiped.Bip01_R_Finger11" 0
+	 "ValveBiped.Bip01_R_Finger1" 0
+	 "r middle low" 0
+	 "r middle mid" 0
+	 "r middle tip" 0
+	 "ValveBiped.Bip01_R_Finger22" 0
+	 "ValveBiped.Bip01_R_Finger21" 0
+	 "ValveBiped.Bip01_R_Finger2" 0
+	 "r pinky low" 0
+	 "r pinky mid" 0
+	 "r pinky tip" 0
+	 "ValveBiped.Bip01_R_Finger42" 0
+	 "ValveBiped.Bip01_R_Finger41" 0
+	 "ValveBiped.Bip01_R_Finger4" 0
+	 "r ring low" 0
+	 "r ring mid" 0
+	 "r ring tip" 0
+	 "ValveBiped.Bip01_R_Finger32" 0
+	 "ValveBiped.Bip01_R_Finger31" 0
+	 "ValveBiped.Bip01_R_Finger3" 0
+	 "r thumb low" 0
+	 "r thumb mid" 0
+	 "r thumb tip" 0
+	 "ValveBiped.Bip01_R_Finger02" 0
+	 "ValveBiped.Bip01_R_Finger01" 0
+	 "ValveBiped.Bip01_R_Finger0" 0
+	 "ValveBiped.Bip01_R_Hand" 0
+	 "ValveBiped.Bip01_R_Forearm" 0
+	 "ValveBiped.Bip01_R_UpperArm" 0
+	 "gun" 0
+	 "ophandle" 0
+	 "safety" 0
+	 "magazine" 0.45
+}
+
+$sequence "ophandle_fix" {
+	"c_hum_br55hb_anims\ophandle_fix.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 1
+	weightlist "weights_ophandle_fix"
+}
+
+$sequence "fix_mag_position" {
+	"c_hum_br55hb_anims\fix_mag_position.smd"
+	delta
+	fadein 0.1
+	fadeout 0
+	fps 30
+	weightlist "weights_fix_mag_position"
+}
+
+$sequence "idle" {
+	"c_hum_br55hb_anims\idle.smd"
+	activity "ACT_VM_IDLE" 1
+	fadein 0.1
+	fadeout 0
+	addlayer "fix_mag_position"
+	addlayer "ophandle_fix"
+	fps 30
+}
+
+$sequence "fire0" {
+	"c_hum_br55hb_anims\fire0.smd"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	{ event AE_CL_PLAYSOUND 0 "h3.halo_eject_rifle" }
+	{ event 6001 0 "1" }
+	fadein 0.08
+	fadeout 0.1
+	addlayer "fix_mag_position"
+	addlayer "ophandle_fix"
+	node "1"
+	fps 30
+}
+
+$sequence "fire1" {
+	"c_hum_br55hb_anims\fire1.smd"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	{ event AE_CL_PLAYSOUND 0 "h3.halo_eject_rifle" }
+	{ event 6001 0 "1" }
+	fadein 0.08
+	fadeout 0.1
+	addlayer "fix_mag_position"
+	addlayer "ophandle_fix"
+	node "1"
+	fps 30
+}
+
+$sequence "fire2" {
+	"c_hum_br55hb_anims\fire2.smd"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	{ event AE_CL_PLAYSOUND 0 "h3.halo_eject_rifle" }
+	{ event 6001 0 "1" }
+	fadein 0.08
+	fadeout 0.1
+	addlayer "fix_mag_position"
+	addlayer "ophandle_fix"
+	node "1"
+	fps 30
+}
+
+$sequence "reload" {
+	"c_hum_br55hb_anims\reload.smd"
+	activity "ACT_VM_RELOAD" 1
+	{ event AE_CL_PLAYSOUND 0 "h3.br55hb_reload" }
+	fadein 0.3
+	fadeout 0.3
+	fps 30
+}
+
+$sequence "draw" {
+	"c_hum_br55hb_anims\draw.smd"
+	activity "ACT_VM_DRAW" 1
+	{ event AE_CL_PLAYSOUND 0 "h3.br55hb_ready" }
+	fadein 0.3
+	fadeout 0.3
+	addlayer "fix_mag_position"
+	addlayer "ophandle_fix"
+	fps 30
+}
+
+$sequence "throw_grenade" {
+	"c_hum_br55hb_anims\throw_grenade.smd"
+	activity "ACT_VM_SECONDARYATTACK" 1
+	fadein 0.05
+	fadeout 0.3
+	addlayer "fix_mag_position"
+	addlayer "ophandle_fix"
+	fps 30
+}
+
+$sequence "melee" {
+	"c_hum_br55hb_anims\melee.smd"
+	activity "ACT_VM_HITCENTER" 1
+	{ event AE_CL_PLAYSOUND 0 "h3.br55hb_melee0" }
+	fadein 0.1
+	fadeout 0.3
+	addlayer "fix_mag_position"
+	addlayer "ophandle_fix"
+	fps 30
+}
+
+$sequence "melee1" {
+	"c_hum_br55hb_anims\melee1.smd"
+	activity "ACT_VM_HITCENTER" 1
+	{ event AE_CL_PLAYSOUND 0 "h3.br55hb_melee1" }
+	fadein 0.1
+	fadeout 0.3
+	addlayer "fix_mag_position"
+	addlayer "ophandle_fix"
+	fps 30
+}
+
+$sequence "pose" {
+	"c_hum_br55hb_anims\pose.smd"
+	activity "ACT_VM_FIDGET" 1
+	{ event AE_CL_PLAYSOUND 0 "h3.br55hb_pose0" }
+	fadein 0.3
+	fadeout 0.3
+	addlayer "fix_mag_position"
+	addlayer "ophandle_fix"
+	fps 30
+}
+
+$sequence "pose1" {
+	"c_hum_br55hb_anims\pose1.smd"
+	activity "ACT_VM_FIDGET" 1
+	{ event AE_CL_PLAYSOUND 0 "h3.br55hb_pose1" }
+	fadein 0.3
+	fadeout 0.3
+	addlayer "fix_mag_position"
+	addlayer "ophandle_fix"
+	fps 30
+}

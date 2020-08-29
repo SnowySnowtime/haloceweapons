@@ -1,0 +1,8 @@
+
+$definebone "ValveBiped.Bip01_R_Hand" "" -0.533639 2.30619 0.555099 12.237905 -91.351001 -179.929082 0 0 0 0 0 0
+$definebone "gun" "ValveBiped.Bip01_R_Hand" 2.054404 -0.587394 -1.002446 12.232763 -1.39773 179.634482 0 0 0 0 0 0
+$definebone "lever" "gun" -0.262766 0.702428 2.098518 0 0 0 0 0 0 0 0 0
+$definebone "magazine" "gun" -0.010796 0 -0.000766 10.500028 0 0 0 0 0 0 0 0
+$definebone "safety" "gun" 0.553918 0.702428 2.005807 0 0 0 0 0 0 0 0 0
+$definebone "slide" "gun" -1.364877 0 2.858873 0 0 0 0 0 0 0 0 0
+

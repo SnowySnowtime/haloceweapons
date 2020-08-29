@@ -1,0 +1,111 @@
+
+$sequence "idle" {
+	"c_hum_m90_anims\idle.smd"
+	activity "ACT_VM_IDLE" 1
+	fadein 0.1
+	fadeout 0
+	fps 30
+}
+
+$sequence "fire1" {
+	"c_hum_m90_anims\fire1.smd"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	{ event AE_CL_PLAYSOUND 0 "h3.m90_fire" }
+	{ event AE_CL_PLAYSOUND 0 "h3.m90_firepump" }
+	{ event 6001 0 "2" }
+	fadein 0
+	fadeout 0
+	node "1"
+	fps 30
+}
+
+$sequence "fire2" {
+	"c_hum_m90_anims\fire2.smd"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	{ event AE_CL_PLAYSOUND 0 "h3.m90_fire" }
+	{ event AE_CL_PLAYSOUND 0 "h3.m90_firepump" }
+	fadein 0
+	fadeout 0
+	fps 30
+}
+
+$sequence "fire3" {
+	"c_hum_m90_anims\fire3.smd"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	{ event AE_CL_PLAYSOUND 0 "h3.m90_fire" }
+	{ event AE_CL_PLAYSOUND 0 "h3.m90_firepump" }
+	fadein 0
+	fadeout 0
+	fps 30
+}
+
+$sequence "reload_enter" {
+	"c_hum_m90_anims\reload_enter.smd"
+	activity "ACT_SHOTGUN_RELOAD_START" 1
+	fadein 0.3
+	fadeout 0.3
+	fps 30
+}
+
+$sequence "reload_loop" {
+	"c_hum_m90_anims\reload_loop.smd"
+	activity "ACT_VM_RELOAD" 1
+	{ event AE_CL_PLAYSOUND 0 "h3.m90_shellinsert" }
+	fadein 0.3
+	fadeout 0.3
+	fps 30
+}
+
+$sequence "reload_exit" {
+	"c_hum_m90_anims\reload_exit.smd"
+	activity "ACT_SHOTGUN_RELOAD_FINISH" 1
+	{ event AE_CL_PLAYSOUND 0 "h3.m90_reloadexit" }
+	fadein 0.3
+	fadeout 0.3
+	fps 30
+}
+
+$sequence "draw" {
+	"c_hum_m90_anims\draw.smd"
+	activity "ACT_VM_DRAW" 1
+	{ event AE_CL_PLAYSOUND 0 "h3.m90_ready" }
+	fadein 0.3
+	fadeout 0.3
+	fps 30
+}
+
+$sequence "melee" {
+	"c_hum_m90_anims\melee.smd"
+	activity "ACT_VM_HITCENTER" 1
+	{ event AE_CL_PLAYSOUND 0 "h3.m90_melee1" }
+	fadein 0.1
+	fadeout 0.3
+	fps 30
+}
+
+$sequence "melee1" {
+	"c_hum_m90_anims\melee1.smd"
+	activity "ACT_VM_HITCENTER" 1
+	{ event AE_CL_PLAYSOUND 0 "h3.m90_melee2" }
+	fadein 0.1
+	fadeout 0.3
+	fps 30
+}
+
+$sequence "pose1" {
+	"c_hum_m90_anims\pose1.smd"
+	activity "ACT_VM_FIDGET" 1
+	{ event AE_CL_PLAYSOUND 0 "h3.m90_pose1" }
+	fadein 0.3
+	fadeout 0.3
+	fps 30
+}
+
+$sequence "pose2" {
+	"c_hum_m90_anims\pose2.smd"
+	activity "ACT_VM_FIDGET" 1
+	{ event AE_CL_PLAYSOUND 0 "h3.m90_pose2" }
+	fadein 0.3
+	fadeout 0.3
+	fps 30
+}

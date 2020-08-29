@@ -1,0 +1,12 @@
+
+$collisionmodel "w_br55hb_physics.smd"
+{
+	$mass 2.918256
+	$inertia 1
+	$damping 0
+	$rotdamping 0
+	$rootbone " "
+	$concave
+	$maxconvexpieces 1
+
+}

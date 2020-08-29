@@ -1,0 +1,20 @@
+
+$sequence "idle" {
+	"w_halosniperrifle_anims\idle.smd"
+	activity "ACT_VM_IDLE" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "attack1" {
+	"w_halosniperrifle_anims\attack1.smd"
+	activity "ACT_RANGE_ATTACK_PISTOL" 1
+	{ event 3014 1 "" }
+	{ event AE_NPC_MUZZLEFLASH 0 "PISTOL MUZZLE" }
+	{ event 6001 0 "0" }
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}

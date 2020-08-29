@@ -1,0 +1,5 @@
+
+$definebone "ValveBiped.Bip01_R_Hand" "" 0.312503 -16.71932 0.282627 12.461603 88.326429 177.528803 0 0 0 0 0 0
+$definebone "ValveBiped.Weapon_bone" "ValveBiped.Bip01_R_Hand" 5 -1.5 -5.000001 -0.000001 0 0 0 0 0 0 0 0
+$definebone "ValveBiped.muzzle" "ValveBiped.Weapon_bone" 28.579777 0.623145 -5.976272 12.956009 -0.38921 -91.965868 0 0 0 0 0 0
+

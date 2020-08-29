@@ -1,0 +1,101 @@
+
+$sequence "idle" {
+	"c_hum_plasmarifle_anims\idle.smd"
+	activity "ACT_VM_IDLE" 1
+	fadein 0.1
+	fadeout 0
+	fps 30
+}
+
+$sequence "fire_fp" {
+	"c_hum_plasmarifle_anims\fire_fp.smd"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	fadein 0
+	fadeout 0
+	fps 30
+}
+
+$sequence "fire_fp1" {
+	"c_hum_plasmarifle_anims\fire_fp1.smd"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	fadein 0
+	fadeout 0
+	fps 30
+}
+
+$sequence "fire_fp2" {
+	"c_hum_plasmarifle_anims\fire_fp2.smd"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	fadein 0
+	fadeout 0
+	fps 30
+}
+
+$sequence "overheat_start" {
+	"c_hum_plasmarifle_anims\overheat_start.smd"
+	activity "ACT_SHOTGUN_RELOAD_START" 1
+	fadein 0.3
+	fadeout 0.3
+	fps 30
+}
+
+$sequence "overheat_loop" {
+	"c_hum_plasmarifle_anims\reload.smd"
+	activity "ACT_VM_RELOAD" 1
+	{ event AE_CL_PLAYSOUND 0 "h3.plasmarifle_reload" }
+	fadein 0.3
+	fadeout 0.3
+	fps 30
+}
+
+$sequence "overheat_finish" {
+	"c_hum_plasmarifle_anims\overheat_finish.smd"
+	activity "ACT_SHOTGUN_RELOAD_FINISH" 1
+	fadein 0.3
+	fadeout 0.3
+	fps 30
+}
+
+$sequence "draw" {
+	"c_hum_plasmarifle_anims\draw.smd"
+	activity "ACT_VM_DRAW" 1
+	{ event AE_CL_PLAYSOUND 0 "h3.plasmarifle_ready" }
+	fadein 0.3
+	fadeout 0.3
+	fps 30
+}
+
+$sequence "throw_grenade" {
+	"c_hum_plasmarifle_anims\throw_grenade.smd"
+	activity "ACT_VM_SECONDARYATTACK" 1
+	fadein 0.05
+	fadeout 0.3
+	fps 30
+}
+
+$sequence "melee" {
+	"c_hum_plasmarifle_anims\melee.smd"
+	activity "ACT_VM_HITCENTER" 1
+	{ event AE_CL_PLAYSOUND 0 "h3.pr_melee" }
+	fadein 0.1
+	fadeout 0.3
+	fps 30
+}
+
+$sequence "pose1" {
+	"c_hum_plasmarifle_anims\pose1.smd"
+	activity "ACT_VM_FIDGET" 1
+	{ event AE_CL_PLAYSOUND 0 "h3.plasmarifle_pose0" }
+	fadein 0.3
+	fadeout 0.75
+	fps 30
+}
+
+$sequence "pose2" {
+	"c_hum_plasmarifle_anims\pose2.smd"
+	activity "ACT_VM_FIDGET" 1
+	{ event AE_CL_PLAYSOUND 0 "h3.plasmarifle_pose1" }
+	fadein 0.3
+	fadeout 0.75
+	fps 30
+}

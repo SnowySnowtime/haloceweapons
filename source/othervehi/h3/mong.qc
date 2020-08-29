@@ -1,0 +1,369 @@
+$modelname "models/snowysnowtime/vehicles/halo3/mongoose.mdl"
+$include "mong_coll.qci"
+
+$bodygroup "studio"
+{
+	studio "mongoose.smd"
+}
+
+$bodygroup "wheels"
+{
+	studio "mongoose_speedless.smd"
+	studio "mongoose_speed.smd"
+}
+
+$texturegroup "skinfamilies"
+{
+	{ "mongoose_hull" "mongoose_wheel" "mongoose_chain" }
+	{ "snow_goose" "snow_goose_whel" "snow_goose_chan" }
+}
+
+$surfaceprop "metalvehicle"
+
+$contents "solid"
+
+$illumposition 0 0 20
+
+$cdmaterials "snowysnowtime/halo/vmt/h3/w"
+
+$attachment "wheel_fl" "wheel_lf" 0 0 0
+$attachment "wheel_fr" "wheel_rf" 0 0 0
+$attachment "wheel_rl" "wheel_lb" 0 0 0
+$attachment "wheel_rr" "wheel_rb" 0 0 0
+
+$cbox 0 0 0 0 0 0
+
+$bbox 0 0 0 0 0 0
+
+$definebone "hull" "" 0 0 0 0 0 0 0 0 0 0 -90 0
+$definebone "suspension_lb" "hull" 0 0 0 0 0 0 0 0 0 0 -90 0
+$definebone "wheel_lb" "suspension_lb" 0 0 0 0 0 0 0 0 0 0 -90 0
+$definebone "suspension_lf" "hull" 0 0 0 0 0 0 0 0 0 0 -90 0
+$definebone "universal_lf" "suspension_lf" 0 0 0 0 0 0 0 0 0 0 -90 0
+$definebone "wheel_lf" "universal_lf" 0 0 0 0 0 0 0 0 0 0 -90 0
+$definebone "suspension_rb" "hull" 0 0 0 0 0 0 0 0 0 0 -90 0
+$definebone "wheel_rb" "suspension_rb" 0 0 0 0 0 0 0 0 0 0 -90 0
+$definebone "suspension_rf" "hull" 0 0 0 0 0 0 0 0 0 0 -90 0
+$definebone "universal_rf" "suspension_rf" 0 0 0 0 0 0 0 0 0 0 -90 0
+$definebone "wheel_rf" "universal_rf" 0 0 0 0 0 0 0 0 0 0 -90 0
+$definebone "steering" "hull" 0 0 0 0 0 0 0 0 0 0 -90 0
+
+$sequence "idle" {
+	"manim\e.smd"
+	rotate -90
+}
+
+$animation neutral "manim\e.smd" frames 0 0
+
+$weightlist "weights_wheel_fr_spin" {
+	 "wheel_rf" 1
+}
+
+$weightlist "steering" {
+	 "universal_lf" 1
+	 "universal_rf" 1
+	 "steering" 1
+}
+
+$weightlist "weights_wheel_fl_spin" {
+	 "wheel_lf" 1
+}
+
+$weightlist "weights_wheel_rr_spin" {
+	 "wheel_rb" 1
+}
+
+$weightlist "weights_wheel_rl_spin" {
+	 "wheel_lb" 1
+}
+
+$weightlist "susp_rl" {
+	 "suspension_lb" 1
+}
+
+$weightlist "susp_rr" {
+	 "suspension_rb" 1
+}
+
+$weightlist "susp_fl" {
+	 "suspension_lf" 1
+}
+
+$weightlist "susp_fr" {
+	 "suspension_rf" 1
+}
+
+
+$poseparameter "vehicle_steer" -1 1
+$poseparameter "vehicle_wheel_fl_spin" -180 180 loop 360
+$poseparameter "vehicle_wheel_fr_spin" -180 180 loop 360
+$poseparameter "vehicle_wheel_rr_spin" -180 180 loop 360
+$poseparameter "vehicle_wheel_rl_spin" -180 180 loop 360
+$poseparameter "vehicle_wheel_fl_height" -1 1 loop 360
+$poseparameter "vehicle_wheel_fr_height" -1 1 loop 360
+$poseparameter "vehicle_wheel_rr_height" -1 1 loop 360
+$poseparameter "vehicle_wheel_rl_height" -1 1 loop 360
+
+$animation "frwheel_spin0" "manim\w0.smd" {
+	fps 1
+	weightlist "weights_wheel_fr_spin"
+	subtract neutral 0
+}
+$animation "flwheel_spin0" "manim\w0.smd" {
+	fps 1
+	weightlist "weights_wheel_fl_spin"
+	subtract neutral 0
+}
+$animation "rrwheel_spin0" "manim\w0.smd" {
+	fps 1
+	weightlist "weights_wheel_rr_spin"
+	subtract neutral 0
+}
+$animation "rlwheel_spin0" "manim\w0.smd" {
+	fps 1
+	weightlist "weights_wheel_rl_spin"
+	subtract neutral 0
+}
+
+$animation "frwheel_spin90" "manim\w90.smd" {
+	fps 1
+	weightlist "weights_wheel_fr_spin"
+	subtract neutral 0
+}
+$animation "flwheel_spin90" "manim\w90.smd" {
+	fps 1
+	weightlist "weights_wheel_fl_spin"
+	subtract neutral 0
+}
+$animation "rrwheel_spin90" "manim\w90.smd" {
+	fps 1
+	weightlist "weights_wheel_rr_spin"
+	subtract neutral 0
+}
+$animation "rlwheel_spin90" "manim\w90.smd" {
+	fps 1
+	weightlist "weights_wheel_rl_spin"
+	subtract neutral 0
+}
+
+$animation "frwheel_spin180" "manim\w180.smd" {
+	fps 1
+	weightlist "weights_wheel_fr_spin"
+	subtract neutral 0
+}
+$animation "flwheel_spin180" "manim\w180.smd" {
+	fps 1
+	weightlist "weights_wheel_fl_spin"
+	subtract neutral 0
+}
+$animation "rrwheel_spin180" "manim\w180.smd" {
+	fps 1
+	weightlist "weights_wheel_rr_spin"
+	subtract neutral 0
+}
+$animation "rlwheel_spin180" "manim\w180.smd" {
+	fps 1
+	weightlist "weights_wheel_rl_spin"
+	subtract neutral 0
+}
+
+$animation "frwheel_spin270" "manim\w270.smd" {
+	fps 1
+	weightlist "weights_wheel_fr_spin"
+	subtract neutral 0
+}
+$animation "flwheel_spin270" "manim\w270.smd" {
+	fps 1
+	weightlist "weights_wheel_fl_spin"
+	subtract neutral 0
+}
+$animation "rrwheel_spin270" "manim\w270.smd" {
+	fps 1
+	weightlist "weights_wheel_rr_spin"
+	subtract neutral 0
+}
+$animation "rlwheel_spin270" "manim\w270.smd" {
+	fps 1
+	weightlist "weights_wheel_rl_spin"
+	subtract neutral 0
+}
+
+$animation "wheel_fr_low" "manim\susmin.smd" {
+	fps 1
+	subtract neutral 0
+	weightlist "susp_fr"
+}
+
+$animation "wheel_fr_high" "manim\susmax.smd" {
+	fps 1
+	subtract neutral 0
+	weightlist "susp_fr"
+}
+
+$animation "wheel_fl_low" "manim\susmin.smd" {
+	fps 1
+	subtract neutral 0
+	weightlist "susp_fl"
+}
+
+$animation "wheel_fl_high" "manim\susmax.smd" {
+	fps 1
+	subtract neutral 0
+	weightlist "susp_fl"
+}
+
+$animation "wheel_rr_low" "manim\susmin.smd" {
+	fps 1
+	subtract neutral 0
+	weightlist "susp_rr"
+}
+
+$animation "wheel_rr_high" "manim\susmax.smd" {
+	fps 1
+	subtract neutral 0
+	weightlist "susp_rr"
+}
+
+$animation "wheel_rl_low" "manim\susmin.smd" {
+	fps 1
+	subtract neutral 0
+	weightlist "susp_rl"
+}
+
+$animation "wheel_rl_high" "manim\susmax.smd" {
+	fps 1
+	subtract neutral 0
+	weightlist "susp_rl"
+}
+
+$animation "steeringl" "manim\steeringl.smd" {
+	fps 1
+	subtract neutral 0
+	weightlist "steering"
+}
+
+$animation "steeringr" "manim\steeringr.smd" {
+	fps 1
+	subtract neutral 0
+	weightlist "steering"
+}
+
+$sequence "turning" {
+	"steeringl"
+	"steeringr"
+	autoplay
+	blend "vehicle_steer" -1 1
+	blendwidth 2
+	delta
+	fadein 0.2
+	fadeout 0.2
+	hidden
+}
+
+$sequence "wheel_fr_suspension" {
+	"wheel_fr_low"
+	"wheel_fr_high"
+	autoplay
+	blend "vehicle_wheel_fr_height" -1 1
+	blendwidth 2
+	delta
+	fadein 0.2
+	fadeout 0.2
+	hidden
+}
+
+$sequence "wheel_fr_spin" {
+	"frwheel_spin0"
+	"frwheel_spin90"
+	"frwheel_spin180"
+	"frwheel_spin270"
+	"flwheel_spin0"
+	autoplay
+	blend "vehicle_wheel_fr_spin" -180 180
+	blendwidth 5
+	delta
+	fadein 0.2
+	fadeout 0.2
+	hidden
+}
+
+$sequence "wheel_fl_suspension" {
+	"wheel_fl_low"
+	"wheel_fl_high"
+	autoplay
+	blend "vehicle_wheel_fl_height" -1 1
+	blendwidth 2
+	delta
+	fadein 0.2
+	fadeout 0.2
+	hidden
+}
+
+$sequence "wheel_fl_spin" {
+	"flwheel_spin0"
+	"flwheel_spin90"
+	"flwheel_spin180"
+	"flwheel_spin270"
+	"flwheel_spin0"
+	autoplay
+	blend "vehicle_wheel_fl_spin" -180 180
+	blendwidth 5
+	delta
+	fadein 0.2
+	fadeout 0.2
+	hidden
+}
+
+$sequence "wheel_rr_suspension" {
+	"wheel_rr_low"
+	"wheel_rr_high"
+	autoplay
+	blend "vehicle_wheel_rr_height" -1 1
+	blendwidth 2
+	delta
+	fadein 0.2
+	fadeout 0.2
+	hidden
+}
+
+$sequence "wheel_rr_spin" {
+	"rrwheel_spin0"
+	"rrwheel_spin90"
+	"rrwheel_spin180"
+	"rrwheel_spin270"
+	"flwheel_spin0"
+	autoplay
+	blend "vehicle_wheel_rr_spin" -180 180
+	blendwidth 5
+	delta
+	fadein 0.2
+	fadeout 0.2
+	hidden
+}
+
+$sequence "wheel_rl_suspension" {
+	"wheel_rl_low"
+	"wheel_rl_high"
+	autoplay
+	blend "vehicle_wheel_rl_height" -1 1
+	blendwidth 2
+	delta
+	fadein 0.2
+	fadeout 0.2
+	hidden
+}
+
+$sequence "wheel_rl_spin" {
+	"rlwheel_spin0"
+	"rlwheel_spin90"
+	"rlwheel_spin180"
+	"rlwheel_spin270"
+	"flwheel_spin0"
+	autoplay
+	blend "vehicle_wheel_rl_spin" -180 180
+	blendwidth 5
+	delta
+	fadein 0.2
+	fadeout 0.2
+	hidden
+}

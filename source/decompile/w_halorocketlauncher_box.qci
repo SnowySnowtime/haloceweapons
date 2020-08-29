@@ -1,0 +1,8 @@
+
+$cbox 0 0 0 0 0 0
+
+$bbox -3.732 -3.831 -4.266 41.372 3.805 10.231
+
+$hboxset "default"
+$hbox 0 "ValveBiped.Bip01_R_Hand" 0 -1.5 -5 5 0 0 ""
+$hbox 0 "ValveBiped.Weapon_bone" -4.334 -1.435 -0.164 6.194 0.696 7.06 ""

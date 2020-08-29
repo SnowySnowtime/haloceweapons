@@ -1,0 +1,122 @@
+
+$sequence "idle" {
+	"c_hum_srs99d_anims\idle.smd"
+	activity "ACT_VM_IDLE" 1
+	fadein 0.1
+	fadeout 0
+	fps 30
+	loop
+}
+
+$sequence "aim" {
+	"c_hum_srs99d_anims\aim.smd"
+	{ event AE_CL_PLAYSOUND 0 "h3.zoomout" }
+	fadein 0.1
+	fadeout 0
+	fps 30
+	loop
+}
+
+$sequence "aimout" {
+	"c_hum_srs99d_anims\aim.smd"
+	fadein 0.1
+	fadeout 0
+	fps 30
+	loop
+}
+
+$sequence "fire_aim" {
+	"c_hum_srs99d_anims\aimfire.smd"
+	{ event 6001 0 "1" }
+	{ event AE_CL_PLAYSOUND 0 "h3.srs99d_bolt" }
+	fadein 0
+	fadeout 0
+	node "1"
+	fps 30
+}
+
+$sequence "fire_rand1" {
+	"c_hum_srs99d_anims\fire_rand1.smd"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	{ event 6001 0 "1" }
+	{ event AE_CL_PLAYSOUND 0 "h3.srs99d_bolt" }
+	fadein 0
+	fadeout 0
+	node "1"
+	fps 30
+}
+
+$sequence "fire_rand2" {
+	"c_hum_srs99d_anims\fire_rand2.smd"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	{ event 6001 0 "1" }
+	{ event AE_CL_PLAYSOUND 0 "h3.srs99d_bolt" }
+	fadein 0
+	fadeout 0
+	node "1"
+	fps 30
+}
+
+$sequence "fire_rand3" {
+	"c_hum_srs99d_anims\fire_rand3.smd"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	{ event 6001 0 "1" }
+	{ event AE_CL_PLAYSOUND 0 "h3.srs99d_bolt" }
+	fadein 0
+	fadeout 0
+	node "1"
+	fps 30
+}
+
+$sequence "reload" {
+	"c_hum_srs99d_anims\reload.smd"
+	activity "ACT_VM_RELOAD" 1
+	{ event AE_CL_PLAYSOUND 0 "h3.srs99d_reload" }
+	fadein 0.3
+	fadeout 0.3
+	fps 30
+}
+
+$sequence "draw" {
+	"c_hum_srs99d_anims\draw.smd"
+	activity "ACT_VM_DRAW" 1
+	{ event AE_CL_PLAYSOUND 0 "h3.srs99d_ready" }
+	fadein 0.3
+	fadeout 0.3
+	fps 30
+}
+
+$sequence "throw_grenade" {
+	"c_hum_srs99d_anims\throw_grenade.smd"
+	activity "ACT_VM_SECONDARYATTACK" 1
+	fadein 0.05
+	fadeout 0.3
+	fps 30
+}
+
+$sequence "melee_rand0" {
+	"c_hum_srs99d_anims\melee_rand0.smd"
+	activity "ACT_VM_HITCENTER" 1
+	{ event AE_CL_PLAYSOUND 0 "h3.srs99d_melee0" }
+	fadein 0.1
+	fadeout 0.3
+	fps 30
+}
+
+$sequence "pose1" {
+	"c_hum_srs99d_anims\pose1.smd"
+	activity "ACT_VM_FIDGET" 1
+	{ event AE_CL_PLAYSOUND 0 "h3.srs99d_pose0" }
+	fadein 0.3
+	fadeout 0.3
+	fps 30
+}
+
+$sequence "pose2" {
+	"c_hum_srs99d_anims\pose2.smd"
+	activity "ACT_VM_FIDGET" 1
+	{ event AE_CL_PLAYSOUND 0 "h3.srs99d_pose1" }
+	fadein 0.3
+	fadeout 0.3
+	fps 30
+}

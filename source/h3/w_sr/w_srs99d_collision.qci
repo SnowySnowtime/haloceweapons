@@ -1,0 +1,12 @@
+
+$collisionmodel "w_srs99d_physics.smd"
+{
+	$mass 6.597588
+	$inertia 1
+	$damping 0
+	$rotdamping 0
+	$rootbone " "
+	$concave
+	$maxconvexpieces 1
+
+}

@@ -1,0 +1,5 @@
+
+$definebone "ValveBiped.Bip01_R_Hand" "" 1.783728 -5.776747 -3.330453 4.618705 90.659267 -171.248307 0 0 0 0 0 0
+$definebone "ValveBiped.Weapon_bone" "ValveBiped.Bip01_R_Hand" 5 -1.5 -5 0 0 -0.000001 0 0 0 0 0 0
+$definebone "smdimport" "ValveBiped.Weapon_bone" 1.988727 0.362876 3.798633 4.665195 -0.050535 171.272842 0 0 0 0 0 0
+
