@@ -1,8 +1,0 @@
-$collisionmodel "warthog_troop_coll.smd"
-{
-	$mass 700
-	$inertia 1
-	$damping 0
-	$rotdamping 0
-	$concave
-}
