@@ -7,9 +7,9 @@ SWEP.PrintName = "Shotgun"
 SWEP.TrueName = "M90 CAWS"
 SWEP.Trivia_Class = "Shotgun"
 SWEP.Trivia_Desc = "The M90 Close Assault Weapon is a pump-action, magazine-fed, dual tubular non-detachable shotgun designed from the M45E Tactical Shotgun. The Weapon System Technologies DTM series shotgun is the most common shotgun employed by UNSC Special Forces, law enforcement agencies, and sportsmen. The M90 has been in service for over 27 years and its design has changed very little throughout its service. "
-SWEP.Trivia_Manufacturer = "Mesriah Armory"
+SWEP.Trivia_Manufacturer = "Misriah Armory"
 SWEP.Trivia_Calibre = "12 Gauge"
-SWEP.Trivia_Mechanism = "Pump ACtion"
+SWEP.Trivia_Mechanism = "Pump Action"
 SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 1994
 
