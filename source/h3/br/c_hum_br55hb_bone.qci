@@ -73,7 +73,7 @@ $definebone "ValveBiped.Bip01_R_Hand" "r hand" -0.02696 -0.062082 0.229203 -0.25
 $definebone "ValveBiped.Bip01_R_Forearm" "r forearm" 0.000261 0.000031 0 -2.400005 -0.000057 -90.000154 0 0 0 0 0 0
 $definebone "ValveBiped.Bip01_R_UpperArm" "r upperarm" 0.037444 0.034389 -0.194032 0.666866 0.787874 -90.000099 0 0 0 0 0 0
 $definebone "gun" "r hand" -20.800873 10.120149 0 0 -2.000024 0 0 0 0 0 0 0
-$definebone "ophandle" "gun" 0.362333 0.386549 5.560584 0 0 -69.901939 0 0 0 0 0 0
+$definebone "ophandle" "gun" 0.362333 0.386549 5.560584 0 0 -0 0 0 0 0 0 0
 $definebone "safety" "gun" 2.394661 0.443654 3.661818 0 0 0 0 0 0 0 0 0
 $definebone "magazine" "gun" -7.620292 0.002204 1.323778 0 0 0 0 0 0 0 0 0
 
