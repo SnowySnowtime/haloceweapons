@@ -59,7 +59,7 @@ end
 					effectdata:SetScale(5)			// Size of explosion
 					effectdata:SetRadius(tr.MatType)		// What texture it hits
 					effectdata:SetMagnitude(18)			// Length of explosion trails
-					util.Effect( "tfa_sc_hr_explode", effectdata )
+					util.Effect( "astw2_halo_ce_explosion_fuelrod", effectdata )
 					util.BlastDamage(self.Entity, self:OwnerGet(), tr.HitPos, 300, 1000)
 					util.Decal("Scorch", tr.HitPos + tr.HitNormal, tr.HitPos - tr.HitNormal)
 					self.Entity:SetNWBool("smoke", false)
@@ -120,17 +120,85 @@ if CLIENT then
 	if (self.Entity:GetNWBool("smoke")) then
 	pos = self:GetPos()
 		for i=1, (1) do
-			local particle = self.emitter:Add( "effects/tool_tracer", pos + (self:GetForward() * -120 * i))
+			local particle = self.emitter:Add( "effects/halo3/electric_arcs", pos + (self:GetForward() * -120 * i))
 			if (particle) then
 				particle:SetVelocity((self:GetForward() * -400)+(VectorRand()* 200) )
 				particle:SetDieTime( math.Rand( 0, 0.5 ) )
 				particle:SetStartAlpha( math.Rand( 7, 10 ) )
 				particle:SetEndAlpha( 255 )
-				particle:SetStartSize( math.Rand( 100, 150 ) )
+				particle:SetStartSize( math.Rand( 100, 250 ) )
 				particle:SetEndSize( math.Rand( 50, 50 ) )
 				particle:SetRoll( math.Rand(0, 360) )
 				particle:SetRollDelta( math.Rand(-1, 1) )
 				particle:SetColor( 0, 225 , 255 ) 
+ 				particle:SetAirResistance( 200 ) 
+ 				particle:SetGravity( Vector( 100, 0, 0 ) ) 	
+			end
+		
+		end
+		for i=1, (1) do
+			local particle = self.emitter:Add( "effects/halo3/electric_arcs", pos + (self:GetForward() * -120 * i))
+			if (particle) then
+				particle:SetVelocity((self:GetForward() * -400)+(VectorRand()* 200) )
+				particle:SetDieTime( math.Rand( 0, 0.5 ) )
+				particle:SetStartAlpha( math.Rand( 7, 10 ) )
+				particle:SetEndAlpha( 255 )
+				particle:SetStartSize( math.Rand( 100, 250 ) )
+				particle:SetEndSize( math.Rand( 50, 50 ) )
+				particle:SetRoll( math.Rand(0, 360) )
+				particle:SetRollDelta( math.Rand(-1, 1) )
+				particle:SetColor( 0, 225 , 155 ) 
+ 				particle:SetAirResistance( 200 ) 
+ 				particle:SetGravity( Vector( 100, 0, 0 ) ) 	
+			end
+		
+		end
+		for i=1, (1) do
+			local particle = self.emitter:Add( "effects/halo3/plasma_electric", pos + (self:GetForward() * -120 * i))
+			if (particle) then
+				particle:SetVelocity((self:GetForward() * -400)+(VectorRand()* 200) )
+				particle:SetDieTime( math.Rand( 0, 0.5 ) )
+				particle:SetStartAlpha( math.Rand( 7, 10 ) )
+				particle:SetEndAlpha( 255 )
+				particle:SetStartSize( math.Rand( 100, 250 ) )
+				particle:SetEndSize( math.Rand( 50, 50 ) )
+				particle:SetRoll( math.Rand(0, 360) )
+				particle:SetRollDelta( math.Rand(-1, 1) )
+				particle:SetColor( 0, 225 , 155 ) 
+ 				particle:SetAirResistance( 200 ) 
+ 				particle:SetGravity( Vector( 100, 0, 0 ) ) 	
+			end
+		
+		end
+		for i=1, (2) do
+			local particle = self.emitter:Add( "effects/halo3/thick_smoke_large", pos + (self:GetForward() * -120 * i))
+			if (particle) then
+				particle:SetVelocity((self:GetForward() * -150)+(VectorRand()* 100) )
+				particle:SetDieTime( math.Rand( 0, 0.5 ) )
+				particle:SetStartAlpha( math.Rand( 7, 10 ) )
+				particle:SetEndAlpha( 255 )
+				particle:SetStartSize( math.Rand( 30, 30 ) )
+				particle:SetEndSize( math.Rand( 30, 30 ) )
+				particle:SetRoll( math.Rand(0, 360) )
+				particle:SetRollDelta( math.Rand(-1, 1) )
+				particle:SetColor( 25, 175 , 255 ) 
+ 				particle:SetAirResistance( 200 ) 
+ 				particle:SetGravity( Vector( 100, 0, 0 ) ) 	
+			end
+		
+		end
+		for i=1, (2) do
+			local particle = self.emitter:Add( "effects/halo3/thick_smoke_large", pos + (self:GetForward() * -120 * i))
+			if (particle) then
+				particle:SetVelocity((self:GetForward() * -150)+(VectorRand()* 100) )
+				particle:SetDieTime( math.Rand( 0, 0.5 ) )
+				particle:SetStartAlpha( math.Rand( 7, 10 ) )
+				particle:SetEndAlpha( 255 )
+				particle:SetStartSize( math.Rand( 100, 100 ) )
+				particle:SetEndSize( math.Rand( 75, 75 ) )
+				particle:SetRoll( math.Rand(0, 360) )
+				particle:SetRollDelta( math.Rand(-1, 1) )
+				particle:SetColor( 25, 255 , 175 ) 
  				particle:SetAirResistance( 200 ) 
  				particle:SetGravity( Vector( 100, 0, 0 ) ) 	
 			end
