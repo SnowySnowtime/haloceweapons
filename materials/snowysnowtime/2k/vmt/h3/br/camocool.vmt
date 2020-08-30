@@ -1,6 +1,6 @@
 "VertexLitGeneric"
 {
-	"$basetexture" "snowysnowtime/2k/h3/br"
+	"$basetexture" "snowysnowtime/2k/h3/br/camocool"
 	"$bumpmap" "snowysnowtime/2k/h3/br_n"
 	"$phong" "1" 
 	"$phongboost" "4"
