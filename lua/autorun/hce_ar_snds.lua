@@ -625,7 +625,7 @@ sound.Add(
     channel = CHAN_STATIC,
     volume = 1.0,
     soundlevel = 80,
-    sound = {"customedition/cov_snip_shot9.wav","customedition/cov_snip_shot10.wav"}
+    sound = {"snow/weapons/beam_rifle/beam_rifle_fire/cov_snip_shot10.wav","snow/weapons/beam_rifle/beam_rifle_fire/cov_snip_shot9.wav"}
 })
 
 sound.Add(

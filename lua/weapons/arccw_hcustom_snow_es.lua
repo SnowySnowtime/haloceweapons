@@ -1,6 +1,6 @@
 SWEP.Base = "arccw_base_melee"
 SWEP.Spawnable = true -- this obviously has to be set to true
-SWEP.Category = "ArcCW - Halo Custom Edition" -- edit this if you like
+SWEP.Category = "ArcCW - Halo 3" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "Energy Sword"
@@ -30,14 +30,14 @@ SWEP.Primary.Ammo = ""
 SWEP.PrimaryBash = true
 SWEP.CanBash = true
 SWEP.MeleeDamageType = DMG_SLASH
-SWEP.MeleeDamage = 95
-SWEP.MeleeRange = 50
+SWEP.MeleeDamage = 105
+SWEP.MeleeRange = 70
 SWEP.MeleeTime = 1.7
 SWEP.MeleeGesture = ACT_HL2MP_GESTURE_RANGE_ATTACK_MELEE
 
 SWEP.Melee2 = true
-SWEP.Melee2Damage = 150
-SWEP.Melee2Range = 55
+SWEP.Melee2Damage = 300
+SWEP.Melee2Range = 95
 SWEP.Melee2Time = 2.4
 SWEP.Melee2Gesture = ACT_HL2MP_GESTURE_RANGE_ATTACK_MELEE2
 
