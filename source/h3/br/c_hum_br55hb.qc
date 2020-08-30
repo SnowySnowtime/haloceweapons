@@ -10,21 +10,21 @@ $surfaceprop "weapon"
 
 $contents "solid"
 
-$illumposition -0.204 -10.311 -5.993
+$illumposition 11.327 -13.973 -2.291
 
 $cdmaterials "snowysnowtime\2k\vmt\h3\br\"
 
 $texturegroup "skinfamilies"
 {
-    { "base" "rubber" }
-    { "camocool" "camocool_rubber" }
-    { "fern" "fern_rubber" }
-    { "hazard" "hazard_rubber" }
-    { "spraypaint" "spraypaint_rubber" }
-    { "color" "color_rubber" }
+    { "battle_rifle" }
+    { "camocool" }
+    { "fern" }
+    { "hazard" }
+    { "spraypaint" }
+    { "color" }
 }
 
-$attachment "muzzle" "gun" 24 0 5.1 rotate 0 0 0
+$attachment "muzzle" "gun" 24.8 0 4.9 rotate 0 0 0
 $attachment "1" "gun" -7.8 -1.25 4.9 rotate 0 -90 90
 
 $cbox 0 0 0 0 0 0
@@ -44,6 +44,7 @@ $sequence "fire1" {
 	"c_hum_br55hb_anims\fire1.smd"
 	activity "ACT_VM_PRIMARYATTACK" 1
 	{ event 6001 0 "1" }
+	{ event AE_CL_PLAYSOUND 0 "h3.halo_eject_rifle" }
 	fadein 0
 	fadeout 0
 	node "1"
@@ -55,6 +56,7 @@ $sequence "fire2" {
 	"c_hum_br55hb_anims\fire2.smd"
 	activity "ACT_VM_PRIMARYATTACK" 1
 	{ event 6001 0 "1" }
+	{ event AE_CL_PLAYSOUND 0 "h3.halo_eject_rifle" }
 	fadein 0
 	fadeout 0
 	node "1"
@@ -66,6 +68,7 @@ $sequence "fire3" {
 	"c_hum_br55hb_anims\fire3.smd"
 	activity "ACT_VM_PRIMARYATTACK" 1
 	{ event 6001 0 "1" }
+	{ event AE_CL_PLAYSOUND 0 "h3.halo_eject_rifle" }
 	fadein 0
 	fadeout 0
 	node "1"
@@ -76,17 +79,17 @@ $sequence "fire3" {
 $sequence "reload" {
 	"c_hum_br55hb_anims\reload.smd"
 	activity "ACT_VM_RELOAD" 1
-	{ event AE_CL_PLAYSOUND 0 "h3.ma5c_reload" }
+	{ event AE_CL_PLAYSOUND 0 "h3.br_reload" }
 	fadein 0.3
 	fadeout 0.3
 	rotate -90
 	fps 30
 }
 
-$sequence "draw" {
+$sequence "deploy" {
 	"c_hum_br55hb_anims\draw.smd"
 	activity "ACT_VM_DRAW" 1
-	{ event AE_CL_PLAYSOUND 3 "h3.ma5c_ready" }
+	{ event AE_CL_PLAYSOUND 3 "h3.br_deploy" }
 	fadein 0.3
 	fadeout 0.3
 	rotate -90
@@ -96,7 +99,7 @@ $sequence "draw" {
 $sequence "melee1" {
 	"c_hum_br55hb_anims\melee1.smd"
 	activity "ACT_VM_HITCENTER" 1
-	{ event AE_CL_PLAYSOUND 0 "h3.ma5c_melee0" }
+	{ event AE_CL_PLAYSOUND 0 "h3.br_melee1" }
 	fadein 0.1
 	fadeout 0.3
 	rotate -90
@@ -106,7 +109,7 @@ $sequence "melee1" {
 $sequence "melee2" {
 	"c_hum_br55hb_anims\melee2.smd"
 	activity "ACT_VM_HITCENTER" 1
-	{ event AE_CL_PLAYSOUND 0 "h3.ma5c_melee1" }
+	{ event AE_CL_PLAYSOUND 0 "h3.br_melee2" }
 	fadein 0.1
 	fadeout 0.3
 	rotate -90
@@ -116,7 +119,7 @@ $sequence "melee2" {
 $sequence "pose1" {
 	"c_hum_br55hb_anims\pose1.smd"
 	activity "ACT_VM_FIDGET" 1
-	{ event AE_CL_PLAYSOUND 0 "h3.ma5c_pose0" }
+	{ event AE_CL_PLAYSOUND 0 "h3.br_pose1" }
 	fadein 0.3
 	fadeout 0.3
 	rotate -90
@@ -126,7 +129,7 @@ $sequence "pose1" {
 $sequence "pose2" {
 	"c_hum_br55hb_anims\pose2.smd"
 	activity "ACT_VM_FIDGET" 1
-	{ event AE_CL_PLAYSOUND 0 "h3.ma5c_pose1" }
+	{ event AE_CL_PLAYSOUND 0 "h3.br_pose2" }
 	fadein 0.3
 	fadeout 0.3
 	rotate -90
