@@ -1,5 +1,5 @@
 SWEP.Base = "arccw_base"
-SWEP.Spawnable = false -- this obviously has to be set to true
+SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Halo Custom Evolved" -- edit this if you like
 SWEP.AdminOnly = false
 
@@ -32,12 +32,12 @@ SWEP.DamageMin = 20 -- damage done at maximum range
 SWEP.Range =  700 -- in METRES
 SWEP.Penetration = 25
 SWEP.DamageType = DMG_BULLET
-SWEP.ShootEntity = "plasma_hcea" 
 SWEP.MuzzleVelocity = 600 -- projectile or phys bullet muzzle velocity
 -- IN M/S
 
 SWEP.TracerNum = 1 -- tracer every X
-SWEP.TracerName 	= "hce_sr_tracer"
+SWEP.Tracer 	= "effect_astw2_halo3_tracer_plasmarifle"
+SWEP.ImpactEffect 	= "effect_astw2_halo3_impact_plasmarifle"
 
 SWEP.ChamberSize = 0-- how many rounds can be chambered.
 SWEP.Primary.ClipSize = 35 -- DefaultClip is automatically set.
@@ -77,7 +77,7 @@ SWEP.ShootSound = Sound("cmtprfire")
 SWEP.ShootSoundSilenced = nil
 SWEP.DistantShootSound = nil
 
-SWEP.MuzzleEffect = "muzzleflash_5"
+SWEP.MuzzleEffect = "astw2_halo_reach_muzzle_plasma_rifle"
 SWEP.ShellModel = "models/shells/shell_338mag.mdl"
 SWEP.ShellPitch = 80
 SWEP.ShellScale = 1.5
