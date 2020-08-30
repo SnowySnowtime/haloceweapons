@@ -1,5 +1,7 @@
 $modelname "snowysnowtime/eonace/c_hum_br55hb.mdl"
 
+$include c_hum_br55hb_bone.qci
+
 $bodygroup "br55hb"
 {
 	studio "c_hum_br55hb.smd"
