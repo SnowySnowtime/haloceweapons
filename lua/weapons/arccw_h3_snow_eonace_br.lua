@@ -7,7 +7,7 @@ SWEP.PrintName = "Battle Rifle"
 SWEP.TrueName = "BR55HB SR"
 SWEP.Trivia_Class = "Battle Rifle"
 SWEP.Trivia_Desc = "The BR55 Service Rifle is a gas-operated, magazine-fed, mid-to-long range weapon capable of semi-automatic, fully automatic, and burst-firing modes. The BR55, having a rifled barrel, is 89.9cm long and is fitted with a scope for increased accuracy. The scope is mounted on the optics rail. The safety is also located above the handle of the weapon. The weapon fires the M634 X-HP-SAP round from a 36-round magazine. Additionally, the weapon features a scope attachment capable of 2x magnification. In addition to its initial role, the BR55 battle rifle can also fulfill the role of a designated marksman rifle."
-SWEP.Trivia_Manufacturer = "Mesriah Armory"
+SWEP.Trivia_Manufacturer = "Misriah Armory"
 SWEP.Trivia_Calibre = "9.5x40mm M634 X-HP-SAP"
 SWEP.Trivia_Mechanism = "Semi-Auto"
 
@@ -58,7 +58,7 @@ SWEP.MeleeHitSound = "hceworld"
 SWEP.MeleeHitNPCSound = "hceslap"
 
 SWEP.ViewModel = "models/snowysnowtime/eonace/c_hum_br55hb.mdl"
-SWEP.WorldModel = "models/snowysnowtime/w_br.mdl"
+SWEP.WorldModel = "models/snowysnowtime/eonace/w_br55hb.mdl"
 SWEP.ViewModelFOV = 70
 
 SWEP.Range =  250 -- in METRES
