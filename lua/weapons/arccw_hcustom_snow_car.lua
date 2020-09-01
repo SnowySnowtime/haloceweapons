@@ -20,18 +20,18 @@ SWEP.UseHands = true
 if GetConVar("arccw_hce_bal"):GetInt() == 0 then -- HaloCW
    SWEP.Recoil = 0.75
 	SWEP.RecoilSide = 0.25
-	SWEP.Damage = 15
-	SWEP.DamageMin = 30
+	SWEP.Damage = 25
+	SWEP.DamageMin = 45
 	SWEP.AccuracyMOA = 0.05 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-	SWEP.HipDispersion = 500 -- inaccuracy added by hip firing.
+	SWEP.HipDispersion = 100 -- inaccuracy added by hip firing.
 	SWEP.MoveDispersion = 0
 	SWEP.JumpDispersion = 0
 	SWEP.ChamberSize = 0
 elseif GetConVar("arccw_hce_bal"):GetInt() == 1 then -- halo purist
 	SWEP.Recoil = 0
 	SWEP.RecoilSide = 0
-	SWEP.Damage = 100
-	SWEP.DamageMin = 100
+	SWEP.Damage = 30
+	SWEP.DamageMin = 35
 	SWEP.AccuracyMOA = 0
 	SWEP.HipDispersion = 0
 	SWEP.MoveDispersion = 0
@@ -40,10 +40,10 @@ elseif GetConVar("arccw_hce_bal"):GetInt() == 1 then -- halo purist
 elseif GetConVar("arccw_hce_bal"):GetInt() == 2 then -- arccw
     SWEP.Recoil = 0.75
 	SWEP.RecoilSide = 0.25
-	SWEP.Damage = 85
-	SWEP.DamageMin = 125
+	SWEP.Damage = 35
+	SWEP.DamageMin = 25
 	SWEP.AccuracyMOA = 0.03
-	SWEP.HipDispersion = 450
+	SWEP.HipDispersion = 150
 	SWEP.MoveDispersion = 550
 	SWEP.ChamberSize = 3
 end
@@ -94,8 +94,6 @@ SWEP.NPCWeight = 25
 SWEP.ManualAction = false
 
 SWEP.AccuracyMOA = 0.04 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 100 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 200
 
 SWEP.Primary.Ammo = "357" -- what ammo type the gun uses
 SWEP.MagID = "hs338" -- the magazine pool this gun draws from
