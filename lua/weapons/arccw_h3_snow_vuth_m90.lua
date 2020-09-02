@@ -115,6 +115,7 @@ SWEP.MeleeTime = 1
 
 SWEP.RejectAttachments = {
     ["ammo_cerberus"] = true, -- fuck cerberus
+    ["ammo_flechette"] = true, -- it busts the shotguns to be literal snipers
     ["acwatt_perk_fastbolt"] = true, -- whats the point of this on my weapons?
     ["acwatt_perk_beefficient"] = true, -- never heard of her
 }
