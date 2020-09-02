@@ -1,5 +1,5 @@
 att.PrintName = "Black Eye Skull"
-att.Icon = Material("entities/hce_blackeye.png", "smooth mips")
+att.Icon = Material("entities/halo_skulls_blackeye.png", "smooth mips")
 att.Description = "Bash your way to good health."
 att.Desc_Pros = {
     "+ Health on bash"

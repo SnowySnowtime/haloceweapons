@@ -1,5 +1,5 @@
 att.PrintName = "Scarab Skull"
-att.Icon = Material("entities/hce_skull_placeholder.png", "smooth mips")
+att.Icon = Material("entities/halo_skulls_scarab.png", "smooth mips")
 att.Description = "Enables the power of the Scarab skull."
 att.Desc_Pros = {
 	" All player held firearms shoot",

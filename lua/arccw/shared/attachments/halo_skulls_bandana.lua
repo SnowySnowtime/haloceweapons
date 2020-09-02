@@ -1,5 +1,5 @@
 att.PrintName = "Bandana Skull"
-att.Icon = Material("entities/hce_bandana.png", "smooth mips")
+att.Icon = Material("entities/halo_skulls_bandana.png", "smooth mips")
 att.Description = "Enables the power of the Bandana Skull*. Mileage may vary, jackal snipers not included."
 att.Desc_Pros = {
     "+ Infinite Ammo"

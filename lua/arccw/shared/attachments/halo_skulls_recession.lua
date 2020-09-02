@@ -1,5 +1,5 @@
 att.PrintName = "Recession Skull"
-att.Icon = Material("entities/hce_recession.png", "smooth mips")
+att.Icon = Material("entities/halo_skulls_recession.png", "smooth mips")
 att.Description = "Enables the power of the Recession Skull*. Each shot is worth two."
 att.Desc_Pros = {
 }
