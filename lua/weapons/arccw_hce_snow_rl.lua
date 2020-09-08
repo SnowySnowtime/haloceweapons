@@ -52,7 +52,7 @@ SWEP.DamageMin = 45 -- damage done at maximum range
 SWEP.Range =  700 -- in METRES
 SWEP.Penetration = 100
 SWEP.DamageType = DMG_BULLET
-SWEP.ShootEntity = "astw2_halo_ce_rocket_launched" -- entity to fire, if any
+SWEP.ShootEntity = "arccw_halo_ce_rocket_launched" -- entity to fire, if any
 SWEP.MuzzleVelocity = 6000 -- projectile or phys bullet muzzle velocity
 -- IN M/S
 
