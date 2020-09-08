@@ -3,16 +3,16 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Halo Custom Edition" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Spiker"
-SWEP.TrueName = "Type-25 Carbine"
+SWEP.PrintName = "CMT Spiker"
+SWEP.TrueName = "Type-25 Spiker"
 SWEP.Trivia_Class = "Carbine"
 SWEP.Trivia_Desc = "A strange modified variant of the brute spiker created by a mysterious group of individuals only known as 'CMT'"
 SWEP.Trivia_Manufacturer = "CMT"
 SWEP.Trivia_Calibre = "Superheated Spikes"
 SWEP.Trivia_Mechanism = "Automatic"
-SWEP.Trivia_Country = "never heard of her"
+SWEP.Trivia_Country = "ported by EonAce"
 
-SWEP.Slot = 3
+SWEP.Slot = 2
 
 if GetConVar("arccw_truenames"):GetBool() then SWEP.PrintName = SWEP.TrueName end
 
@@ -23,12 +23,12 @@ SWEP.WorldModel = "models/snowysnowtime/eonace/w_cmtspiker.mdl"
 SWEP.ViewModelFOV = 70
 
 if GetConVar("arccw_hce_bal"):GetInt() == 0 then -- HaloCW
-	SWEP.Recoil = 0.4
-	SWEP.RecoilSide = 0.4
+	SWEP.Recoil = 0.25
+	SWEP.RecoilSide = 0.25
 	SWEP.Damage = 25
 	SWEP.DamageMin = 15 -- damage done at maximum range
 	SWEP.AccuracyMOA = 40 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-	SWEP.HipDispersion = 200 -- inaccuracy added by hip firing.
+	SWEP.HipDispersion = 150 -- inaccuracy added by hip firing.
 	SWEP.JumpDispersion = 0
 	SWEP.ChamberSize = 0
 elseif GetConVar("arccw_hce_bal"):GetInt() == 1 then -- halo purist
@@ -41,13 +41,13 @@ elseif GetConVar("arccw_hce_bal"):GetInt() == 1 then -- halo purist
 	SWEP.MoveDispersion = 0
 	SWEP.ChamberSize = 1
 elseif GetConVar("arccw_hce_bal"):GetInt() == 2 then -- arccw
-    SWEP.Recoil = 0.4
-	SWEP.RecoilSide = 0.4
-	SWEP.Damage = 30
-	SWEP.DamageMin = 10 -- damage done at maximum range
+    SWEP.Recoil = 0.25
+	SWEP.RecoilSide = 0.25
+	SWEP.Damage = 25
+	SWEP.DamageMin = 15 -- damage done at maximum range
 	SWEP.AccuracyMOA = 40 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-	SWEP.HipDispersion = 200 -- inaccuracy added by hip firing.
-	SWEP.MoveDispersion = 120
+	SWEP.HipDispersion = 150 -- inaccuracy added by hip firing.
+	SWEP.MoveDispersion = 100
 	SWEP.ChamberSize = 1
 end
 
