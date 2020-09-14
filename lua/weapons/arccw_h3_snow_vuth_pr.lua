@@ -190,13 +190,73 @@ SWEP.Attachments = {
         DefaultAttName = "Factory Default",
         FreeSlot = true
     },
-	{
-        PrintName = "Firetype",
-        Slot = "cmtpr",
-		FreeSlot = true,
-		Installed = "cmt_pr"
-    },
 }
+
+
+SWEP.Delay_Accel = 0.8
+SWEP.Delay_Decel = 0.6
+
+SWEP.Hook_ModifyRPM = function(wep, delay)
+	local firerate_min = 0.166666666666667	-- 360 -- 6
+	local firerate_max = 0.111111111111111	-- 540 -- 9
+	
+	local firerate_diff = (firerate_min - firerate_max)
+	
+	
+
+	local returnthatvalue = firerate_min - (firerate_diff * wep:GetNWFloat("Celleryation"))
+	
+
+	
+    return returnthatvalue
+end
+
+SWEP.Hook_FireBullets = function(wep)
+	wep:SetNWFloat("Celleryation", wep:GetNWFloat("Celleryation") + wep.Delay_Accel)
+	wep:SetNWFloat("BatteryLevel", wep:GetNWFloat("BatteryLevel") - 1/400 )
+end
+
+SWEP.Hook_DrawHUD = function(wep)
+
+	
+	local NextPrimFire 	= math.Round( math.max( wep:GetNextPrimaryFire() - CurTime(), 0 ), 2 )
+	local Scaled		= math.Round( NextPrimFire / GetConVar( "host_timescale" ):GetFloat(), 3 )
+
+		if wep:GetNextPrimaryFire() < CurTime() then
+			surface.SetTextColor( 255, 255, 255 )
+		else
+			surface.SetTextColor( 255, 0, 0 )
+		end
+
+		surface.SetTextPos( ScrW() / 2 - 148, 72 + 24 )
+		surface.DrawText( "Nextprimaryfire: " .. Scaled )
+		
+	surface.SetTextColor( 255, 255, 255 )
+	surface.SetDrawColor( 255, 255, 255, 255 )
+
+	surface.SetTextPos( ScrW() / 2, 72 - 24 )
+	surface.DrawText( "Heat: " .. wep:GetNWFloat("Celleryation") )
+	
+	surface.SetTextPos( ScrW() / 2 + 12, 72 )
+	surface.DrawText( "RPM: " .. math.Round(60 / wep:GetBuff_Hook("Hook_ModifyRPM")) .. "RPM" )
+
+	surface.SetTextPos( ScrW() / 2 - 41, 72 + 24 + 24 )
+	surface.DrawText( "Battery: " .. wep:GetNWFloat("BatteryLevel") )
+end
+
+
+SWEP.Hook_Think = function(wep)
+	wep:SetNWFloat("Celleryation", math.Clamp(wep:GetNWFloat("Celleryation") - (wep.Delay_Decel * FrameTime()), 0, 1) )
+	--wep.Owner:ChatPrint( wep.Delay_Decel * FrameTime() )
+end
+
+DEFINE_BASECLASS("arccw_base")
+
+function SWEP:Initialize()
+	self:SetNWFloat("BatteryLevel", 400/400 )
+	
+	BaseClass.Initialize( self )
+end
 
 SWEP.Animations = {
     ["idle"] = {
