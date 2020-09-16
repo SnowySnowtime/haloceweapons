@@ -73,7 +73,7 @@ SWEP.Tracer = "effect_astw2_halo3_tracer_human" -- tracer every X
 SWEP.TracerCol = Color(25, 255, 25)
 SWEP.TracerWidth = 3
 
-SWEP.Primary.ClipSize = 32 -- DefaultClip is automatically set.
+SWEP.Primary.ClipSize = 36 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 45
 SWEP.ReducedClipSize = 24
 
