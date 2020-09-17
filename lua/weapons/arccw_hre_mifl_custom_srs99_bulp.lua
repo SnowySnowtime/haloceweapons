@@ -94,7 +94,7 @@ SWEP.MagID = "hs338" -- the magazine pool this gun draws from
 SWEP.ShootVol = 1000 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.ShootSound = "hce_sr_fire"
+SWEP.ShootSound = "h3_sr_fire"
 SWEP.ShootSoundSilenced = "weapons/arccw/m4a1/m4a1_silencer_01.wav"
 SWEP.DistantShootSound = "sr_lodbetter"
 
