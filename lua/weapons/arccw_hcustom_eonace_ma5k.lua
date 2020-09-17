@@ -105,7 +105,7 @@ SWEP.ShellScale = 1.5
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
 
-SWEP.SightTime = 0.2
+SWEP.SightTime = 0.4
 SWEP.SpeedMult = 0.85
 SWEP.SightedSpeedMult = 0.25
 SWEP.MeleeTime = 1
@@ -141,7 +141,7 @@ SWEP.HolsterAng = Angle(-10, 30, -10)
 SWEP.BarrelOffsetSighted = Vector(0, 0, 0)
 SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 
-SWEP.BarrelLength = 20
+SWEP.BarrelLength = 30
 
 SWEP.AttachmentElements = {
     ["ub"] = {
@@ -150,7 +150,7 @@ SWEP.AttachmentElements = {
     },
 }
 
-SWEP.ExtraSightDist = 15
+SWEP.ExtraSightDist = 7
 
 SWEP.Attachments = {
 	{
@@ -246,7 +246,7 @@ SWEP.Animations = {
 		Source = "aim",
 	},
     ["idle"] = {
-        Source = "idle1",
+        Source = "idle",
         Time = 4
     },
 	["exit_inspect"] = {
@@ -257,14 +257,8 @@ SWEP.Animations = {
 		Time = 0.2,
     },
     ["draw"] = {
-        Source = "draw1",
+        Source = "draw",
 		Time = 0.7,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 0.25,
-    },
-	["draw_empty"] = {
-        Source = "draw2",
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.25,
@@ -274,7 +268,7 @@ SWEP.Animations = {
         Time = 0.2,
     },
 	["bash"] = {
-		Source = { "melee1", "melee2" },
+		Source = "melee",
 		Time = 1,
         LHIK = true,
         LHIKIn = 0,
@@ -282,7 +276,7 @@ SWEP.Animations = {
     },
     ["reload"] = {
         Source = "reload",
-        Time = 3,
+        Time = 2.5,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Checkpoints = {06, 15, 37, 47},
         FrameRate = 30,
@@ -292,9 +286,9 @@ SWEP.Animations = {
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-        Time = 4,
+        Time = 3,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Checkpoints = {11, 27, 38, 65, 78, 92},
+        Checkpoints = {11, 16, 36, 47, 57},
         FrameRate = 30,
         LHIK = true,
         LHIKIn = 0.5,

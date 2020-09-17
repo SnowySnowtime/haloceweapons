@@ -100,56 +100,11 @@ sound.Add(
 
 sound.Add(
 {
-    name = "cmt.ma5k_reload_empty1",
+    name = "cmt.ma5k_reload5",
     channel = CHAN_STATIC,
     volume = 1.0,
     soundlevel = 80,
-    sound = "customedition/ma5k_reload_empty1.wav"
-})
-
-sound.Add(
-{
-    name = "cmt.ma5k_reload_empty2",
-    channel = CHAN_STATIC,
-    volume = 1.0,
-    soundlevel = 80,
-    sound = "customedition/ma5k_reload_empty2.wav"
-})
-
-sound.Add(
-{
-    name = "cmt.ma5k_reload_empty3",
-    channel = CHAN_STATIC,
-    volume = 1.0,
-    soundlevel = 80,
-    sound = "customedition/ma5k_reload_empty3.wav"
-})
-
-sound.Add(
-{
-    name = "cmt.ma5k_reload_empty4",
-    channel = CHAN_STATIC,
-    volume = 1.0,
-    soundlevel = 80,
-    sound = "customedition/ma5k_reload_empty4.wav"
-})
-
-sound.Add(
-{
-    name = "cmt.ma5k_reload_empty5",
-    channel = CHAN_STATIC,
-    volume = 1.0,
-    soundlevel = 80,
-    sound = "customedition/ma5k_reload_empty5.wav"
-})
-
-sound.Add(
-{
-    name = "cmt.ma5k_reload_empty6",
-    channel = CHAN_STATIC,
-    volume = 1.0,
-    soundlevel = 80,
-    sound = "customedition/ma5k_reload_empty6.wav"
+    sound = "customedition/ma5k_reload5.wav"
 })
 
 sound.Add(
