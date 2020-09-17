@@ -1,0 +1,10 @@
+"UnlitGeneric"
+{
+	"$basetexture" "snowysnowtime/eonace/h3carbine_switch_illum"
+	"$translucent" 1
+	"$color2" "[0 2 0]"
+	"$nocull" 1
+	"$selfillum" "1"
+	"$selfillumtint" "[0 2 0]"
+	"$selfillummask" "snowysnowtime\eonace\h3carbine_switch_illum"
+}
