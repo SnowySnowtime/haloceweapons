@@ -23,11 +23,11 @@ SWEP.WorldModel = "models/snowysnowtime/eonace/w_h3carbine.mdl"
 SWEP.ViewModelFOV = 70
 
 if GetConVar("arccw_hce_bal"):GetInt() == 0 then -- HaloCW
-	SWEP.Recoil = 0.7
-	SWEP.RecoilSide = 0.7
-	SWEP.Damage = 25
-	SWEP.DamageMin = 15 -- damage done at maximum range
-	SWEP.AccuracyMOA = 1 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+	SWEP.Recoil = 0.4
+	SWEP.RecoilSide = 0.4
+	SWEP.Damage = 30
+	SWEP.DamageMin = 20 -- damage done at maximum range
+	SWEP.AccuracyMOA = 0.1 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 	SWEP.HipDispersion = 50 -- inaccuracy added by hip firing.
 	SWEP.JumpDispersion = 0
 	SWEP.ChamberSize = 0
@@ -41,8 +41,8 @@ elseif GetConVar("arccw_hce_bal"):GetInt() == 1 then -- halo purist
 	SWEP.MoveDispersion = 0
 	SWEP.ChamberSize = 1
 elseif GetConVar("arccw_hce_bal"):GetInt() == 2 then -- arccw
-    SWEP.Recoil = 0.4
-	SWEP.RecoilSide = 0.4
+    SWEP.Recoil = 0.25
+	SWEP.RecoilSide = 0.25
 	SWEP.Damage = 30
 	SWEP.DamageMin = 10 -- damage done at maximum range
 	SWEP.AccuracyMOA = 20 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
@@ -94,7 +94,7 @@ SWEP.ShootPitch = 100 -- pitch of shoot sound
 
 SWEP.ShootSound = Sound("h3carbine_fire")
 SWEP.ShootSoundSilenced = "weapons/arccw/m4a1/m4a1_silencer_01.wav"
-SWEP.DistantShootSound = "ar_lod"
+SWEP.DistantShootSound = "car_lod"
 
 SWEP.MuzzleEffect = "astw2_halo_3_muzzle_carbine"
 SWEP.ImpactEffect = ""
@@ -165,7 +165,7 @@ SWEP.Attachments = {
             wang = Angle(-13, -1, 182.3)
         },
         CorrectivePos = Vector(0, 0, 0),
-        CorrectiveAng = Angle(0, 0, 0),
+        CorrectiveAng = Angle(2.6, 0, 0),
         InstalledEles = {"rail"}
     },
 		{
@@ -174,7 +174,7 @@ SWEP.Attachments = {
         Slot = {"muzzle"},
         Bone = "gun",
         Offset = {
-            vpos = Vector(26, -3.35, -0.03),
+            vpos = Vector(22, 0, 0.85),
             vang = Angle(0, 0, -90),
             wpos = Vector(18.3, 0.85, -5.8),
             wang = Angle(-12.5, -0.5, 183)
@@ -186,8 +186,8 @@ SWEP.Attachments = {
         Slot = {"foregrip", "ubgl", "bipod"},
         Bone = "gun",
         Offset = {
-            vpos = Vector(8.3, -0.5, 0),
-            vang = Angle(0, 0, -90),
+            vpos = Vector(8.3, 0, -1.25),
+            vang = Angle(0, 0, 8),
             wpos = Vector(0, 0, 0),
             wang = Angle(0, 0, 0)
         },
@@ -202,7 +202,7 @@ SWEP.Attachments = {
         Slot = "tac",
         Bone = "gun",
         Offset = {
-            vpos = Vector(11, -3.25, -0.85), -- offset that the attachment will be relative to the bone
+            vpos = Vector(17, 0, 0.25), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
             wpos = Vector(15.95, 1.7, -4.15),
             wang = Angle(-13, 0, -87.7)
@@ -224,10 +224,10 @@ SWEP.Attachments = {
         PrintName = "Charm",
         Slot = "charm",
         FreeSlot = true,
-        Bone = "gun", -- relevant bone any attachments will be mostly referring to
+        Bone = "hood", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(1.8, -1.8, -0.95), -- offset that the attachment will be relative to the bone
-            vang = Angle(0, 0, -92),
+            vpos = Vector(0, -1.1, 0), -- offset that the attachment will be relative to the bone
+            vang = Angle(0, 0, 12),
             wpos = Vector(7.03, 1.7, -3.85),
             wang = Angle(-10, 0, 180)
         },
@@ -243,8 +243,14 @@ SWEP.Animations = {
         Source = "fidget1",
         Time = 4
     },
-	["aim"] = {
+	["idle_sights"] = {
 		Source = "aim",
+	},
+	["enter_sight"] = {
+		Source = "aim",
+	},
+	["exit_sight"] = {
+		Source = "aimout",
 	},
 	["exit_inspect"] = {
 		Source = "fidget",
