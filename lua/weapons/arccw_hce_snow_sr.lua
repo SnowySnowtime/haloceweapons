@@ -192,10 +192,30 @@ SWEP.Attachments = {
             wang = Angle(-11, 0, 180)
         },
     },
+	{
+        PrintName = "Underbarrel",
+        Slot = {"foregrip", "bipod"},
+        Bone = "frame gun",
+        Offset = {
+            vpos = Vector(7, -0.4, -3),
+            vang = Angle(0, 0, 5),
+            wpos = Vector(13, 0.6, -3.5),
+            wang = Angle(-10, 0, 180),
+        },		
+    },
+    {
+        PrintName = "Grip",
+        Slot = "grip",
+        DefaultAttName = "Standard Grip"
+    },	
     {
         PrintName = "Stock",
         Slot = "stock",
         DefaultAttName = "Standard Stock"
+    },
+	{
+        PrintName = "Firetype",
+        Slot = {"fcg","fcg_smg"}
     },
 	{
         PrintName = "Tactical",
@@ -237,17 +257,17 @@ SWEP.Attachments = {
 }
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
-    if wep.Attachments[7].Installed == "hce_anniv" then
+    if wep.Attachments[10].Installed == "hce_anniv" then
         if anim == "reload_empty" then
-            return "reload_empty_anal"
+            return "reload_empty_anniv"
         elseif anim == "reload" then
-            return "reload_anal"
+            return "reload_anniv"
 				end
     end
 end
 
 SWEP.Hook_GetShootSound = function(wep, sound)
-    if wep.Attachments[7].Installed == "hce_anniv" then
+    if wep.Attachments[10].Installed == "hce_anniv" then
 		return "sr_hcea_fire"
     end
 end
@@ -289,6 +309,33 @@ SWEP.Animations = {
     },
     ["reload_empty"] = {
         Source = "reloadempty",
+        Time = 3,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        Checkpoints = {24, 33, 51},
+        FrameRate = 30,
+        LHIK = true,
+        LHIKIn = 0.5,
+        LHIKOut = 0.5,
+    },
+	["draw_anniv"] = {
+        Source = "anniv_draw",
+        Time = 1,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 0.25,
+    },
+    ["reload_anniv"] = {
+        Source = "anniv_reload",
+        Time = 2.5,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        Checkpoints = {24, 33, 51, 58, 62, 74, 80},
+        FrameRate = 30,
+        LHIK = true,
+        LHIKIn = 0.5,
+        LHIKOut = 0.5,
+    },
+    ["reload_empty_anniv"] = {
+        Source = "anniv_reloadempty",
         Time = 3,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Checkpoints = {24, 33, 51},

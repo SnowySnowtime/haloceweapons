@@ -25,10 +25,11 @@ SWEP.ViewModelFOV = 70
 if GetConVar("arccw_hce_bal"):GetInt() == 0 then -- HaloCW
 	SWEP.Recoil = 0.4
 	SWEP.RecoilSide = 0.4
-	SWEP.Damage = 30
+	SWEP.Damage = 20
 	SWEP.DamageMin = 20 -- damage done at maximum range
 	SWEP.AccuracyMOA = 0.1 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 	SWEP.HipDispersion = 50 -- inaccuracy added by hip firing.
+	SWEP.MoveDispersion = 50
 	SWEP.JumpDispersion = 0
 	SWEP.ChamberSize = 0
 elseif GetConVar("arccw_hce_bal"):GetInt() == 1 then -- halo purist
@@ -47,7 +48,7 @@ elseif GetConVar("arccw_hce_bal"):GetInt() == 2 then -- arccw
 	SWEP.DamageMin = 10 -- damage done at maximum range
 	SWEP.AccuracyMOA = 20 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 	SWEP.HipDispersion = 300 -- inaccuracy added by hip firing.
-	SWEP.MoveDispersion = 120
+	SWEP.MoveDispersion = 75
 	SWEP.ChamberSize = 1
 end
 
@@ -74,7 +75,7 @@ SWEP.Delay = 60 / 250 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
-        Mode = 2,
+        Mode = 1,
     },
     {
         Mode = 0

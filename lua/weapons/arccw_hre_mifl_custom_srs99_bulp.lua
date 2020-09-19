@@ -206,7 +206,7 @@ SWEP.Attachments = {
 	},
     {
         PrintName = "Underbarrel",
-        Slot = {"foregrip", "bipod"},
+        Slot = {"foregrip", "bipod", "style_pistol"},
         Bone = "Weapon",
         Offset = {
             vpos = Vector(0, -0.8, 8),
@@ -214,7 +214,7 @@ SWEP.Attachments = {
             wpos = Vector(13, 0.6, -3.5),
             wang = Angle(-10, 0, 180),
         },		
-    },	
+    },
     {
         PrintName = "Grip",
         Slot = "grip",

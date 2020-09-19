@@ -197,6 +197,31 @@ SWEP.Attachments = {
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(0, 0, 0)
     },
+	{
+        PrintName = "Underbarrel",
+        Slot = {"foregrip", "bipod"},
+        Bone = "frame pump",
+        Offset = {
+            vpos = Vector(2, 0, -1),
+            vang = Angle(0, 0, 5),
+            wpos = Vector(13, 0.6, -3.5),
+            wang = Angle(-10, 0, 180),
+        },		
+    },
+    {
+        PrintName = "Grip",
+        Slot = "grip",
+        DefaultAttName = "Standard Grip"
+    },	
+    {
+        PrintName = "Stock",
+        Slot = "stock",
+        DefaultAttName = "Standard Stock"
+    },
+	{
+        PrintName = "Firetype",
+        Slot = {"fcg","fcg_smg"}
+    },
     {
         PrintName = "Tactical",
         Slot = "tac",
@@ -207,21 +232,6 @@ SWEP.Attachments = {
             wpos = Vector(15.625, -0.253, -6.298),
             wang = Angle(-8.829, -0.556, 90)
         },
-    },
-    {
-        PrintName = "Grip",
-        Slot = "grip",
-        DefaultAttName = "Standard Grip"
-    },
-    {
-        PrintName = "Stock",
-        Slot = "stock",
-        DefaultAttName = "Standard Stock"
-    },
-    {
-        PrintName = "Fire Group",
-        Slot = "fcg",
-        DefaultAttName = "Standard FCG"
     },
     {
         PrintName = "Ammo Type",
@@ -252,17 +262,27 @@ SWEP.Attachments = {
 }
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
-    if wep.Attachments[6].Installed == "hce_anniv" then
-        if anim == "reload_empty" then
-            return "reload_empty_anal"
-        elseif anim == "reload" then
-            return "reload_anal"
-				end
+    if wep.Attachments[10].Installed == "hce_anniv" then
+        if anim == "sgreload_start" then
+            return "sgreload_start_anniv"
+			end
+		if anim == "sgreload_insert" then
+            return "sgreload_insert_anniv"
+			end
+		if anim == "sgreload_start_empty" then
+            return "sgreload_start_empty_anniv"
+			end
+		if anim == "sgreload_finish" then
+            return "sgreload_finish_anniv"
+			end
+		if anim == "fire" then
+            return "fire_anniv"
+			end
     end
 end
 
 SWEP.Hook_GetShootSound = function(wep, sound)
-    if wep.Attachments[6].Installed == "hce_anniv" then
+    if wep.Attachments[10].Installed == "hce_anniv" then
 		return "sg_hcea_fire"
     end
 end
@@ -328,6 +348,42 @@ SWEP.Animations = {
     },
     ["sgreload_finish"] = {
         Source = "reloadempty",
+        Time = 1.2,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 0.4,
+    },
+	["fire_anniv"] = {
+        Source = {"anniv_fire"},
+        Time = 1,
+    },
+    ["sgreload_start_anniv"] = {
+        Source = "anniv_reload1",
+        Time = 0.5,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        LHIK = true,
+        LHIKIn = 0.5,
+        LHIKOut = 0,
+    },
+    ["sgreload_start_empty_anniv"] = {
+        Source = "anniv_reload1",
+        Time = 0.5,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        LHIK = true,
+        LHIKIn = 0.5,
+        LHIKOut = 0,
+    },
+    ["sgreload_insert_anniv"] = {
+        Source = "anniv_reload2",
+        Time = 0.5,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        TPAnimStartTime = 0.3,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 0,
+    },
+    ["sgreload_finish_anniv"] = {
+        Source = "anniv_reloadempty",
         Time = 1.2,
         LHIK = true,
         LHIKIn = 0,

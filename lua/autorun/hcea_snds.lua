@@ -1020,7 +1020,7 @@ sound.Add(
     channel = CHAN_STATIC,
     volume = 1.0,
     soundlevel = 80,
-    sound = {"hcea/ar_fire1.wav","hcea/ar_fire2.wav","hcea/ar_fire3.wav","hcea/ar_fire4.wav",}
+    sound = {"hcea/shotgun_fire1.wav","hcea/shotgun_fire2.wav","hcea/shotgun_fire3.wav","hcea/shotgun_fire4.wav","hcea/shotgun_fire5.wav"}
 })
 
 sound.Add(

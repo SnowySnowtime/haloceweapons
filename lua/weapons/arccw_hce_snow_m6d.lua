@@ -212,11 +212,32 @@ SWEP.Attachments = {
             wang = Angle(0, 0, 180)
         },
 		VMScale = Vector(0.7, 0.7, 0.7),
+		ExcludeFlags = {"anniv"},
     },
+	{
+        PrintName = "Underbarrel",
+        Slot = {"style_pistol"},
+        Bone = "frame gun",
+        Offset = {
+            vpos = Vector(8, -0, 2),
+            vang = Angle(0, 0, 5),
+            wpos = Vector(13, 0.6, -3.5),
+            wang = Angle(-10, 0, 180),
+        },		
+    },
+    {
+        PrintName = "Grip",
+        Slot = "grip",
+        DefaultAttName = "Standard Grip"
+    },	
     {
         PrintName = "Stock",
         Slot = "stock",
         DefaultAttName = "Standard Stock"
+    },
+	{
+        PrintName = "Firetype",
+        Slot = {"fcg","fcg_smg"}
     },
 	{
         PrintName = "Tactical",
@@ -259,8 +280,24 @@ SWEP.Attachments = {
     },
 }
 
+SWEP.Hook_TranslateAnimation = function(wep, anim)
+    if wep.Attachments[11].Installed == "hce_anniv" then
+        if anim == "reload_empty" then
+            return "reload_empty_anniv"
+        elseif anim == "reload" then
+            return "reload_anniv"
+				end
+		if anim == "bash" then
+            return "bash_anniv"
+			end
+		if anim == "exit_inspect" then
+            return "exit_inspect_anniv"
+			end
+    end
+end
+
 SWEP.Hook_GetShootSound = function(wep, sound)
-    if wep.Attachments[8].Installed == "hce_anniv" then
+    if wep.Attachments[11].Installed == "hce_anniv" then
 		return "hcea_magnumfire"
     end
 end
@@ -275,6 +312,10 @@ SWEP.Animations = {
     },
 	["exit_inspect"] = {
 		Source = "fidget",
+	},
+	["exit_inspect_anniv"] = {
+		Source = "anniv_fidget",
+		Time = 4.45,
 	},
     ["draw"] = {
         Source = "draw",
@@ -306,6 +347,33 @@ SWEP.Animations = {
     },
     ["reload_empty"] = {
         Source = "reloadempty",
+        Time = 2,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+        Checkpoints = {24, 33, 51},
+        FrameRate = 30,
+        LHIK = true,
+        LHIKIn = 0.5,
+        LHIKOut = 0.5,
+    },
+	["bash_anniv"] = {
+        Source = "anniv_melee",
+		Time = 1.325,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 0.6,
+    },
+    ["reload_anniv"] = {
+        Source = "anniv_reload",
+        Time = 2,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+        Checkpoints = {24, 33, 51, 58, 62, 74, 80},
+        FrameRate = 30,
+        LHIK = true,
+        LHIKIn = 0.5,
+        LHIKOut = 0.5,
+    },
+    ["reload_empty_anniv"] = {
+        Source = "anniv_reloadempty",
         Time = 2,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         Checkpoints = {24, 33, 51},

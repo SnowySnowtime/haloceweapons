@@ -202,19 +202,29 @@ SWEP.Attachments = {
 		VMScale = Vector(0.7, 0.7, 0.7),
     },
     {
+        PrintName = "Underbarrel",
+        Slot = {"style_pistol"},
+        Bone = "gun",
+        Offset = {
+            vpos = Vector(11, -0.3, 1.8),
+            vang = Angle(0, 0, 0),
+            wpos = Vector(13, 0.6, -3.5),
+            wang = Angle(-10, 0, 180),
+        },		
+    },
+    {
+        PrintName = "Grip",
+        Slot = "grip",
+        DefaultAttName = "Standard Grip"
+    },	
+    {
         PrintName = "Stock",
         Slot = "stock",
         DefaultAttName = "Standard Stock"
     },
 	{
-        PrintName = "Grip",
-        Slot = "grip",
-        DefaultAttName = "Standard Grip"
-    },
-	{
-        PrintName = "Fire Group",
-        Slot = "fcg",
-        DefaultAttName = "Standard FCG"
+        PrintName = "Firetype",
+        Slot = {"fcg","fcg_smg"}
     },
 	{
         PrintName = "Tactical",

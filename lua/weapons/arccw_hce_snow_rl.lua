@@ -207,10 +207,19 @@ SWEP.Attachments = {
 SWEP.Hook_TranslateAnimation = function(wep, anim)
     if wep.Attachments[4].Installed == "hce_anniv" then
         if anim == "reload_empty" then
-            return "reload_empty_anal"
+            return "reload_empty_anniv"
         elseif anim == "reload" then
-            return "reload_anal"
+            return "reload_anniv"
 				end
+		if anim == "fire" then
+            return "fire_anniv"
+			end
+		if anim == "exit_inspect" then
+            return "exit_inspect_anniv"
+			end
+		if anim == "bash" then
+            return "bash_anniv"
+			end
     end
 end
 
@@ -228,6 +237,10 @@ SWEP.Animations = {
 	["exit_inspect"] = {
 		Source = "fidget",
 	},
+	["exit_inspect_anniv"] = {
+		Source = "anniv_fidget",
+		Time = 4,
+	},
 	["fire_iron"] = {
         Source = "fire",
     },
@@ -238,9 +251,27 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKOut = 0.25,
     },
+	["draw_anniv"] = {
+        Source = "anniv_draw",
+        Time = 1,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 0.25,
+    },
     ["fire"] = {
         Source = "fire",
         Time = 1,
+    },
+	["fire_anniv"] = {
+        Source = "anniv_fire",
+        Time = 1,
+    },
+	["bash_anniv"] = {
+        Source = "melee",
+		Time = 1.75,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 0.6,
     },
 	["bash"] = {
         Source = "melee",
@@ -250,7 +281,7 @@ SWEP.Animations = {
         LHIKOut = 0.6,
     },
     ["reload"] = {
-        Source = "reload",
+        Source = "anniv_melee",
         Time = 3.75,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_CROSSBOW,
         Checkpoints = {24, 33, 51, 58, 62, 74, 80},
@@ -260,6 +291,25 @@ SWEP.Animations = {
     },
     ["reload_empty"] = {
         Source = "reloadempty",
+        Time = 3.75,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_CROSSBOW,
+        Checkpoints = {24, 33, 51},
+        FrameRate = 30,
+        LHIK = true,
+        LHIKIn = 0.5,
+        LHIKOut = 0.5,
+    },
+	["reload_anniv"] = {
+        Source = "anniv_reload",
+        Time = 3.75,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_CROSSBOW,
+        Checkpoints = {24, 33, 51, 58, 62, 74, 80},
+        LHIK = true,
+        LHIKIn = 0.5,
+        LHIKOut = 0.5,
+    },
+    ["reload_empty_anniv"] = {
+        Source = "anniv_reloadempty",
         Time = 3.75,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_CROSSBOW,
         Checkpoints = {24, 33, 51},

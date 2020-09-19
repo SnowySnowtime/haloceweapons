@@ -191,9 +191,9 @@ SWEP.Attachments = {
         PrintName = "Optic", -- print name
         DefaultAttName = "10x Scope",
         Slot = {"optic", "optic_lp"}, -- what kind of attachments can fit here, can be string or table
-        Bone = "frame gun", -- relevant bone any attachments will be mostly referring to
+        Bone = "gun", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(5.5, 0, 7), -- offset that the attachment will be relative to the bone
+            vpos = Vector(5.5, 0, 7.5), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
             wpos = Vector(6, 2, -4.4),
             wang = Angle(-8.829, 0, 180)
@@ -206,19 +206,39 @@ SWEP.Attachments = {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
         Slot = {"muzzle"},
-        Bone = "frame gun",
+        Bone = "gun",
         Offset = {
-            vpos = Vector(16, 0, 4.6),
+            vpos = Vector(22.5, 0, 4.85),
             vang = Angle(0, 0, 0),
             wpos = Vector(10, 2, -3.9),
             wang = Angle(-2.829, -4.9, 180)
         },
-		VMScale = Vector(1.1, 1.1, 1.1),
+		VMScale = Vector(0.95, 0.95, 0.95),
     },
+    {
+        PrintName = "Underbarrel",
+        Slot = {"foregrip", "bipod"},
+        Bone = "gun",
+        Offset = {
+            vpos = Vector(11, -0.3, 1.8),
+            vang = Angle(0, 0, 0),
+            wpos = Vector(13, 0.6, -3.5),
+            wang = Angle(-10, 0, 180),
+        },		
+    },
+    {
+        PrintName = "Grip",
+        Slot = "grip",
+        DefaultAttName = "Standard Grip"
+    },	
     {
         PrintName = "Stock",
         Slot = "stock",
         DefaultAttName = "Standard Stock"
+    },
+	{
+        PrintName = "Firetype",
+        Slot = {"fcg","fcg_smg"}
     },
 	{
         PrintName = "Tactical",
@@ -243,9 +263,9 @@ SWEP.Attachments = {
         PrintName = "Charm",
         Slot = "charm",
         FreeSlot = true,
-        Bone = "frame gun", -- relevant bone any attachments will be mostly referring to
+        Bone = "gun", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(3.25, -0.7, 4.3), -- offset that the attachment will be relative to the bone
+            vpos = Vector(6.25, -0.7, 4.3), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 10),
             wpos = Vector(6, 2.4, -3.5),
             wang = Angle(-10.393, 0, 180)

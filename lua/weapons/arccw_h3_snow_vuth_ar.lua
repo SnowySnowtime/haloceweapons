@@ -178,20 +178,30 @@ SWEP.Attachments = {
         CorrectiveAng = Angle(0, 0, 0),
         InstalledEles = {"mount"}
     },
+	{
+        PrintName = "Underbarrel",
+        Slot = {"foregrip", "bipod", "style_pistol"},
+        Bone = "gun",
+        Offset = {
+            vpos = Vector(14, 0, 2),
+            vang = Angle(0, 0, 0),
+            wpos = Vector(13, 0.6, -3.5),
+            wang = Angle(-10, 0, 180),
+        },		
+    },
+    {
+        PrintName = "Grip",
+        Slot = "grip",
+        DefaultAttName = "Standard Grip"
+    },	
     {
         PrintName = "Stock",
         Slot = "stock",
         DefaultAttName = "Standard Stock"
     },
 	{
-        PrintName = "Grip",
-        Slot = "grip",
-        DefaultAttName = "Standard Grip"
-    },
-	{
-        PrintName = "Fire Group",
-        Slot = "fcg",
-        DefaultAttName = "Standard FCG"
+        PrintName = "Firetype",
+        Slot = {"fcg","fcg_smg"}
     },
 	{
         PrintName = "Tactical",

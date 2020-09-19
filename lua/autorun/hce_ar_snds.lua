@@ -18,12 +18,58 @@ sound.Add(
 
 sound.Add(
 {
+    name = "hcea.ardeploy",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = "hcea/ar_deploy.wav"
+})
+
+sound.Add(
+{
+    name = "hcea.arreload",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = "hcea/ar_reload.wav"
+})
+
+sound.Add(
+{
+    name = "hcea.armelee",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = "hcea/ar_melee.wav"
+})
+
+sound.Add(
+{
     name = "hce.ardeploy",
     channel = CHAN_STATIC,
     volume = 1.0,
     soundlevel = 80,
     sound = "hce/ar_deploy.wav"
 })
+
+sound.Add(
+{
+    name = "hcea.m6reload",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = "hcea/pistol_reload.wav"
+})
+
+sound.Add(
+{
+    name = "hcea.m6fidget",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = "hcea/pistol_fidget.wav"
+})
+
 
 sound.Add(
 {
@@ -342,6 +388,33 @@ sound.Add(
 
 sound.Add(
 {
+    name = "hcea.srreloaddry",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = "hcea/sniper_reloade.wav"
+})
+
+sound.Add(
+{
+    name = "hcea.srreload",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = "hcea/sniper_reload.wav"
+})
+
+sound.Add(
+{
+    name = "hcea.srdeploy",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = "hcea/sr_deploy.wav"
+})
+
+sound.Add(
+{
     name = "hce.srdeploy",
     channel = CHAN_STATIC,
     volume = 1.0,
@@ -405,6 +478,42 @@ sound.Add(
 
 sound.Add(
 {
+    name = "hcea.sgreloadstart",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = {"hcea/shotgun_startreload1.wav","hcea/shotgun_startreload2.wav","hcea/shotgun_startreload3.wav"},
+})
+
+sound.Add(
+{
+    name = "hcea.pump",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = {"hcea/shotgun_pump1.wav","hcea/shotgun_pump2.wav","hcea/shotgun_pump3.wav"},
+})
+
+sound.Add(
+{
+    name = "hcea.sgreloadloop",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = {"hcea/shotgun_reload2.wav","hcea/shotgun_reload2.wav","hcea/shotgun_reload3.wav"}
+})
+
+sound.Add(
+{
+    name = "hcea.sgreloadexit",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = "hcea/shotgun_reloadfin.wav"
+})
+
+sound.Add(
+{
     name = "hce.rlmelee",
     channel = CHAN_STATIC,
     volume = 1.0,
@@ -437,6 +546,51 @@ sound.Add(
     volume = 1.0,
     soundlevel = 80,
     sound = "hce/rocket_reloadempty.wav"
+})
+
+sound.Add(
+{
+    name = "hcea.rlmelee",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = {"hcea/rocket_melee_1.wav","hcea/rocket_melee_2.wav","hcea/rocket_melee_3.wav"}
+})
+
+sound.Add(
+{
+    name = "hcea.rlfirer",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 200,
+    sound = {"hcea/rocket_pump1.wav","hcea/rocket_pump2.wav","hcea/rocket_pump3.wav"},
+})
+
+sound.Add(
+{
+    name = "hcea.rldeploy",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = "hce/rocket_deploy.wav"
+})
+
+sound.Add(
+{
+    name = "hcea.rlreload",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = "hcea/rocketlauncher_reload.wav"
+})
+
+sound.Add(
+{
+    name = "hcea.rlreloaddry",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = "hcea/rocket_reloade.wav"
 })
 
 sound.Add(

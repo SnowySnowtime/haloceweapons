@@ -13,3 +13,4 @@ att.Free = true
 att.Hook_GetShootSound = "hcea_magnumfire"
 
 att.ActivateElements = {"anniv"}
+att.GivesFlags = {"anniv"}
