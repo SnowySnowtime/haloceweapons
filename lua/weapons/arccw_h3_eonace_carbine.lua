@@ -193,6 +193,11 @@ SWEP.Attachments = {
             wang = Angle(0, 0, 0)
         },
     },
+	{
+        PrintName = "Grip",
+        Slot = "grip",
+        DefaultAttName = "Standard Grip"
+    },	
     {
         PrintName = "Stock",
         Slot = "stock",
@@ -272,7 +277,7 @@ SWEP.Animations = {
 		Time = 1,
         LHIK = true,
         LHIKIn = 0,
-        LHIKOut = 0.2,
+        LHIKOut = 0.8,
     },
     ["reload"] = {
         Source = "reload",
@@ -281,7 +286,7 @@ SWEP.Animations = {
         Checkpoints = {00, 08, 45, 58},
         FrameRate = 30,
         LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
+        LHIKIn = 1,
+        LHIKOut = 0.4,
     },
 }

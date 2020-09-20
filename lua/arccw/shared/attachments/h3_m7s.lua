@@ -44,15 +44,16 @@ att.HolosightPiece = "models/snowysnowtime/smg_sight.mdl"
 
 att.AdditionalSights = {
     {
-        Pos = Vector(0, -10, -6.1),
+        Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Magnification = 1,
+        Magnification = 1.25,
+		FlatScope = true,
     }
 }
 
-att.Holosight = true
+att.Holosight = false
 att.HolosightReticle = Material("entities/odst_smg.png")
-att.HolosightSize = 1.5
+att.HolosightSize = 5
 att.HolosightBone = "holosight"
 att.HolosightNoHSP = false -- for this holosight ignore HSP
 

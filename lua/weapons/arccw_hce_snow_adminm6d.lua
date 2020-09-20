@@ -1,5 +1,5 @@
 SWEP.Base = "arccw_base"
-SWEP.Spawnable = false -- this obviously has to be set to true
+SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Halo Combat Evolved" -- edit this if you like
 SWEP.AdminOnly = true
 

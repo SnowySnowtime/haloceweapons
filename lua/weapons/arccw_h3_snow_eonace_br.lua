@@ -182,6 +182,14 @@ SWEP.AttachmentElements = {
         VMSkin = 1,
         WMSkin = 1,
     },
+	["muzzle"] = {
+        VMBodygroups = {{ind = 1, bg = 1}},
+        WMBodygroups = {{ind = 1, bg = 1}},
+    },
+	["brscope"] = {
+        VMBodygroups = {{ind = 2, bg = 1}},
+        WMBodygroups = {{ind = 2, bg = 1}},
+    },
 }
 
 SWEP.ExtraSightDist = 15
@@ -190,17 +198,16 @@ SWEP.Attachments = {
 	{
         PrintName = "Optic", -- print name
         DefaultAttName = "10x Scope",
-        Slot = {"optic", "optic_lp"}, -- what kind of attachments can fit here, can be string or table
+        Slot = {"optic", "optic_lp", "h3brsc"}, -- what kind of attachments can fit here, can be string or table
         Bone = "gun", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(5.5, 0, 7.5), -- offset that the attachment will be relative to the bone
+            vpos = Vector(4.9, 0, 7.35), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
             wpos = Vector(6, 2, -4.4),
             wang = Angle(-8.829, 0, 180)
         },
         CorrectivePos = Vector(0, 0, 0),
-        CorrectiveAng = Angle(0, 0, 0),
-        InstalledEles = {"mount"}
+        CorrectiveAng = Angle(1, 0, 0),
     },
 	{
         PrintName = "Muzzle",
@@ -208,16 +215,17 @@ SWEP.Attachments = {
         Slot = {"muzzle"},
         Bone = "gun",
         Offset = {
-            vpos = Vector(22.5, 0, 4.85),
+            vpos = Vector(21.9, 0, 4.9),
             vang = Angle(0, 0, 0),
             wpos = Vector(10, 2, -3.9),
             wang = Angle(-2.829, -4.9, 180)
         },
-		VMScale = Vector(0.95, 0.95, 0.95),
+		VMScale = Vector(1, 0.9, 0.9),
+		InstalledEles = {"muzzle"},
     },
     {
         PrintName = "Underbarrel",
-        Slot = {"foregrip", "bipod"},
+        Slot = {"foregrip", "bipod", "ubgl"},
         Bone = "gun",
         Offset = {
             vpos = Vector(11, -0.3, 1.8),
@@ -243,13 +251,14 @@ SWEP.Attachments = {
 	{
         PrintName = "Tactical",
         Slot = "tac",
-        Bone = "frame gun",
+        Bone = "gun",
         Offset = {
-            vpos = Vector(12, -0.7, 4.2), -- offset that the attachment will be relative to the bone
-            vang = Angle(0, 0, 90),
+            vpos = Vector(12, 0, 5.7), -- offset that the attachment will be relative to the bone
+            vang = Angle(0, 0, 180),
             wpos = Vector(6, 1.25, -3),
             wang = Angle(-8.829, -0.556, 90)
         },
+		VMScale = Vector(0.4, 0.4, 0.4),
     },
     {
         PrintName = "Ammo Type",
@@ -265,7 +274,7 @@ SWEP.Attachments = {
         FreeSlot = true,
         Bone = "gun", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(6.25, -0.7, 4.3), -- offset that the attachment will be relative to the bone
+            vpos = Vector(6.25, -0.765, 4.6), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 10),
             wpos = Vector(6, 2.4, -3.5),
             wang = Angle(-10.393, 0, 180)
@@ -292,7 +301,8 @@ SWEP.Animations = {
 		Source = "aim",
 	},
 	["exit_sight"] = {
-		Source = "aimout",
+		Source = "aim",
+		Time = 0.01,
 	},
 	["enter_inspect"] = {
 		Source = "pose1",
@@ -302,7 +312,7 @@ SWEP.Animations = {
 		Time = 3,
 	},
 	["fire_iron"] = {
-        Source = "fire",
+        Source = {"fire1","fire2","fire3"},
 		Time = 0.35,
     },
     ["draw"] = {
@@ -330,7 +340,7 @@ SWEP.Animations = {
         Checkpoints = {24, 33, 51, 58, 62, 74, 80},
         FrameRate = 30,
         LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
+        LHIKIn = 0.1,
+        LHIKOut = 0.55,
     },
 }

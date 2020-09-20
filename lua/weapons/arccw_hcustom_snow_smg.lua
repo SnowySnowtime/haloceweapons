@@ -150,7 +150,7 @@ SWEP.BarrelLength = 24
 SWEP.AttachmentElements = {
 }
 
-SWEP.ExtraSightDist = 15
+SWEP.ExtraSightDist = 2
 
 SWEP.Attachments = {
 	{

@@ -177,7 +177,7 @@ SWEP.AttachmentElements = {
     },
 }
 
-SWEP.ExtraSightDist = 15
+SWEP.ExtraSightDist = 3
 
 SWEP.Attachments = {
 	{
@@ -186,7 +186,7 @@ SWEP.Attachments = {
         Slot = {"optic", "optic_lp", "optic_sniper"}, -- what kind of attachments can fit here, can be string or table
         Bone = "frame gun", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(3.3, 0, 1.4), -- offset that the attachment will be relative to the bone
+            vpos = Vector(0, 0, 1.4), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
             wpos = Vector(9.36, 0.739, -6.4),
             wang = Angle(-11, 0, 180)
