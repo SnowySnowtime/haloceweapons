@@ -1,0 +1,10 @@
+"UnlitGeneric"
+{
+	"$basetexture"	"effects/halo_spv3/flash/muzzle_flash/muzzle_flare_center"
+	"$additive"	1
+	"$vertexcolor"	1
+	"$vertexalpha"	1
+
+
+
+}

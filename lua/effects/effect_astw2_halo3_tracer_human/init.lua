@@ -41,7 +41,7 @@ function EFFECT:Render()
 	local v2 = ( self.DieTime2 - CurTime() ) / self.LifeTime2
 
 	render.SetMaterial( Tracer )
-	render.DrawBeam( self.StartPos, self.EndPos, (v * Width)*3/2, 0, (self.Dist/10)*math.Rand(-2,2), Color( 255, 185, 100, v * 200 ) )
+	render.DrawBeam( self.StartPos, self.EndPos, (v * Width)*3/2, 0, (self.Dist/10)*math.Rand(-2,2), Color( 255, 215, 100, v * 200 ) )
 	
 	render.SetMaterial( Tracer2 )
 	render.DrawBeam( self.StartPos, self.EndPos, (v2 * Width2)*2/3, 0, (self.Dist/10)*math.Rand(-2,2), Color( r, b, g, v2 * 50) )

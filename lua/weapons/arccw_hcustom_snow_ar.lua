@@ -97,7 +97,7 @@ SWEP.ShootSound = Sound("ar_h3_fire")
 SWEP.ShootSoundSilenced = "weapons/arccw/m4a1/m4a1_silencer_01.wav"
 SWEP.DistantShootSound = "ar_lod"
 
-SWEP.MuzzleEffect = "astw2_halo_3_muzzle_assault_rifle"
+SWEP.MuzzleEffect = "astw2_halo_spv3_muzzle_assault_rifle"
 SWEP.ShellModel = "models/shells/shell_338mag.mdl"
 SWEP.ShellPitch = 80
 SWEP.ShellScale = 1.5

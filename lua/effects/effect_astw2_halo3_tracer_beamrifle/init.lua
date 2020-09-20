@@ -1,6 +1,8 @@
 
-local Tracer = Material( "effects/halo2/plasma_cannon_contrail" )
-local Width = 3
+local Tracer = Material( "effects/halo2/plasma_contrail" )
+local Tracer2  = Material( "effects/blueblacklargebeam" )
+local Width = 20
+local Width2 = 15
 
 function EFFECT:Init( data )
 
@@ -14,8 +16,10 @@ function EFFECT:Init( data )
 	self.Dir = ( self.EndPos - self.StartPos ):GetNormalized()
 	self.Dist = self.StartPos:Distance( self.EndPos )
 	
-	self.LifeTime = 0.05
+	self.LifeTime = 0.15
+	self.LifeTime2 = 0.25
 	self.DieTime = CurTime() + self.LifeTime
+	self.DieTime2 = CurTime() + self.LifeTime2
 
 end
 
@@ -34,8 +38,12 @@ function EFFECT:Render()
 	
 	local v = ( self.DieTime - CurTime() ) / self.LifeTime
 	
+	local v2 = ( self.DieTime2 - CurTime() ) / self.LifeTime2
 
 	render.SetMaterial( Tracer )
-	render.DrawBeam( self.StartPos, self.EndPos, (v * Width)*3/2, 0, (self.Dist/10)*math.Rand(-2,2), Color( 255, 215, 120, v * 255 ) )
+	render.DrawBeam( self.StartPos, self.EndPos, (v * Width)*3/2, 0, (self.Dist/10)*math.Rand(-2,2), Color( 255, 175, 255, v * 155 ) )
+	
+	render.SetMaterial( Tracer2 )
+	render.DrawBeam( self.StartPos, self.EndPos, (v2 * Width2)*2/3, 0, (self.Dist/10)*math.Rand(-2,2), Color( 255, 195, 255, (v2 * 100)*3/2.5 ) )
 
 end

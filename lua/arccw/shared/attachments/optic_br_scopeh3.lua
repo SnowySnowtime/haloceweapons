@@ -19,7 +19,7 @@ att.Model = "models/snowysnowtime/eonace/br_lens.mdl"
 
 att.DroppedModel = "models/Items/BoxSRounds.mdl"
 
-att.AutoStats = true
+att.AutoStats = false
 
 att.AdditionalSights = {
     {
@@ -37,20 +37,22 @@ att.AdditionalSights = {
 att.ScopeGlint = false
 
 att.Holosight = false
-att.HolosightReticle = Material("entities/br_scope.png")
+att.HolosightReticle = Material("entities/br_2d_scope.png")
 att.HolosightNoFlare = true
-att.HolosightSize = 2
+att.HolosightSize = 0.5
 att.HolosightBone = "holosight"
 att.HolosightPiece = "models/snowysnowtime/eonace/br_lens.mdl"
 att.Colorable = true
 
 att.HolosightMagnification = 1
 att.HolosightBlackbox = false
+att.FlatScopeBlackbox = false
 
 att.HolosightMagnificationMin = 3
 att.HolosightMagnificationMax = 4
 
 att.Mult_SightTime = 0.95
+att.Mult_SightsDispersion = 0.35
 
 att.AttachSound = "attch/snow/halo/h3/x_button.wav"
 att.DetachSound = "attch/snow/halo/h3/b_button.wav"

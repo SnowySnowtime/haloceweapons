@@ -1,8 +1,8 @@
 
 local Tracer = Material( "effects/halo3/energy_braids" )
 local Tracer2  = Material( "effects/halo3/energy_trail" )
-local Width = 3
-local Width2 = 6
+local Width = 4
+local Width2 = 8
 
 function EFFECT:Init( data )
 
@@ -16,8 +16,8 @@ function EFFECT:Init( data )
 	self.Dir = ( self.EndPos - self.StartPos ):GetNormalized()
 	self.Dist = self.StartPos:Distance( self.EndPos )
 	
-	self.LifeTime = 0.5
-	self.LifeTime2 = 0.6
+	self.LifeTime = 0.25
+	self.LifeTime2 = 0.15
 	self.DieTime = CurTime() + self.LifeTime
 	self.DieTime2 = CurTime() + self.LifeTime2
 

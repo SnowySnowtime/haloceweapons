@@ -1,0 +1,10 @@
+"UnlitGeneric"
+{
+	"$basetexture"	"effects/halo3/thin_smoke_small"
+	"$additive"	1
+	"$vertexcolor"	1
+	"$vertexalpha"	1
+
+
+
+}

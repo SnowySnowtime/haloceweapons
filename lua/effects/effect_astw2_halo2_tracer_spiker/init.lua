@@ -8,8 +8,8 @@ EFFECT.Length				= 64;
 //EFFECT.WhizSound			= Sound( "nomad/whiz.wav" );		-- by Robinhood76 (http:--www.freesound.org/people/Robinhood76/sounds/96556/)
 EFFECT.WhizDistance			= 72;
 
-local MaterialMain			= Material( "effects/swbf/yellowlaser_bolt" );
-local MaterialFront			= Material( "effects/swbf/yellowlaser" );
+local MaterialMain			= Material( "effects/halo3/trails/trail_ar" );
+local MaterialFront			= Material( "effects/halo3/flare1" );
 
 function EFFECT:GetTracerOrigin( data )
 
@@ -103,7 +103,7 @@ function EFFECT:Render()
 	local endPos = self.StartPos + self.Normal * endDistance;
 	
 	render.SetMaterial( MaterialFront );
-	render.DrawSprite( endPos, 0, 0, color_white );
+	render.DrawSprite( endPos, 8, 8, color_white );
 
 	render.SetMaterial( MaterialMain );
 	render.DrawBeam( startPos, endPos, 10, 0, 1, color_white );

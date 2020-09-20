@@ -1,0 +1,9 @@
+"UnlitGeneric"
+{
+	"$basetexture"	"effects/halo_spv3/energy/glow_rings"
+	"$additive"	1
+	"$vertexcolor"	1
+	"$vertexalpha"	1
+
+
+}

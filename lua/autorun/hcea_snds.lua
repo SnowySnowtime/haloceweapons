@@ -1889,51 +1889,6 @@ sound.Add(
 
 sound.Add(
 {
-    name = "chaingun_fire_h3_1",
-    channel = CHAN_STATIC,
-    volume = 1.0,
-    soundlevel = 80,
-    sound = "customedition/chaingun_fire_h3_1.wav"
-})
-
-sound.Add(
-{
-    name = "chaingun_fire_h3_2",
-    channel = CHAN_STATIC,
-    volume = 1.0,
-    soundlevel = 80,
-    sound = "customedition/chaingun_fire_h3_2.wav"
-})
-
-sound.Add(
-{
-    name = "chaingun_fire_h3_3",
-    channel = CHAN_STATIC,
-    volume = 1.0,
-    soundlevel = 80,
-    sound = "customedition/chaingun_fire_h3_3.wav"
-})
-
-sound.Add(
-{
-    name = "chaingun_fire_h3_4",
-    channel = CHAN_STATIC,
-    volume = 1.0,
-    soundlevel = 80,
-    sound = "customedition/chaingun_fire_h3_4.wav"
-})
-
-sound.Add(
-{
-    name = "chaingun_fire_h3_5",
-    channel = CHAN_STATIC,
-    volume = 1.0,
-    soundlevel = 80,
-    sound = "customedition/chaingun_fire_h3_5.wav"
-})
-
-sound.Add(
-{
     name = "cmtprfire",
     channel = CHAN_STATIC,
     volume = 1.0,

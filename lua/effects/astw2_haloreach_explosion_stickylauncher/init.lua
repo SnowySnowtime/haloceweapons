@@ -13,6 +13,24 @@ local light = DynamicLight(self:EntIndex())
             light.Size = 512
             light.DieTime = CurTime() + 0.3
         end
+		
+		
+		
+    local particle = emitter:Add("effects/halo3/muzzle_flash_round_fiery", self.Origin)
+
+    particle:SetVelocity( 25 * VectorRand() )
+    particle:SetDieTime( 0.35 )
+    particle:SetStartAlpha( 255 )
+    particle:SetEndAlpha( 0 )
+    particle:SetStartSize( math.Rand(5,15) )
+    particle:SetEndSize( math.Rand(150,300) )
+    particle:SetRoll( math.Rand(0,360) )
+    particle:SetRollDelta( math.Rand(0,0) )
+    particle:SetColor( 215, 215, 255 )
+    particle:SetAirResistance( 55 )
+    particle:SetLighting( false )
+    particle:SetCollide( false )
+	
     local particle = emitter:Add("effects/halo3/explosive_burst", self.Origin)
 
     particle:SetVelocity( 25 * VectorRand() )

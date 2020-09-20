@@ -9,6 +9,51 @@ sound.Add(
 
 sound.Add(
 {
+    name = "ster_fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 200,
+    sound = {"h2/m60_ster1.wav","h2/m60_ster2.wav","h2/m60_ster3.wav"},
+})
+
+sound.Add(
+{
+    name = "hcust.tur_1",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 200,
+    sound = "h2/tur_1.wav",
+})
+
+sound.Add(
+{
+    name = "hcust.tur_2",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 200,
+    sound = "h2/tur_2.wav",
+})
+
+sound.Add(
+{
+    name = "hcust.tur_3",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 200,
+    sound = "h2/tur_3.wav",
+})
+
+sound.Add(
+{
+    name = "hcust.tur_4",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 200,
+    sound = "h2/tur_4.wav",
+})
+
+sound.Add(
+{
     name = "hce.armelee",
     channel = CHAN_STATIC,
     volume = 1.0,
