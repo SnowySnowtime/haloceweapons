@@ -72,7 +72,7 @@ SWEP.ExtendedClipSize = 8120
 SWEP.ReducedClipSize = 2048
 
 SWEP.Delay = 60 / 4000 -- 60 / RPM.
-SWEP.Num = 1 -- number of shots per trigger pull.
+SWEP.Num = 2 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
         Mode = 2,

@@ -214,8 +214,8 @@ SWEP.Attachments = {
         Slot = "tac",
         Bone = "frame gun",
         Offset = {
-            vpos = Vector(29, -0.8, 3), -- offset that the attachment will be relative to the bone
-            vang = Angle(0, 0, 90),
+            vpos = Vector(29, 0, 0.75), -- offset that the attachment will be relative to the bone
+            vang = Angle(0, 0, 0),
             wpos = Vector(6, 1.25, -3),
             wang = Angle(-8.829, -0.556, 90)
         },
@@ -234,8 +234,8 @@ SWEP.Attachments = {
         FreeSlot = true,
         Bone = "frame gun", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(9.5, -0.6, 5.25), -- offset that the attachment will be relative to the bone
-            vang = Angle(0, 0, 10),
+            vpos = Vector(18.5, -0.8, 4.25), -- offset that the attachment will be relative to the bone
+            vang = Angle(0, 0, 15),
             wpos = Vector(6, 2.4, -3.5),
             wang = Angle(-10.393, 0, 180)
         },
