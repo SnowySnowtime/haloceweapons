@@ -1,0 +1,33 @@
+VertexLitGeneric
+{
+	"$basetexture"	"snowysnowtime\eonace\vuthakral\T57B\diffuse"
+  	"$bumpmap"	"snowysnowtime\eonace\vuthakral\T57B\normal"
+
+ 	$phong		1
+	$phongexponent	44
+	$phongboost	13
+                 
+                 "$phongfresnelranges" "[ 0.05 0.3 1 ]" 
+	
+	$lightwarptexture	"snowysnowtime\2k\h3\lw_metaldull"
+
+	$envmap		"env_cubemap"
+	$normalmapalphaenvmapmask 1
+	$cubemaptint	"[ 0 0 0 ]"
+	$cubemappower	.25
+
+	$detail		"snowysnowtime\eonace\vuthakral\T57B\airlock_field"
+	$detailscale	3
+	$detailblendmode	0
+	$detailblendfactor	0.15
+
+	$selfillum 1
+
+	Proxies
+	{
+		drc_ReflectionTint
+		{
+			resultVar $envmaptint
+		}
+	}
+}

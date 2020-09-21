@@ -65,7 +65,7 @@ SWEP.MuzzleVelocity = 600 -- projectile or phys bullet muzzle velocity
 -- IN M/S
 
 SWEP.TracerNum = 1 -- tracer every X
-SWEP.Tracer 	= "effect_astw2_halo3_tracer_human"
+SWEP.Tracer 	= "effect_astw2_halo3_tracer_br"
 
 SWEP.Primary.ClipSize = 4096 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 8120

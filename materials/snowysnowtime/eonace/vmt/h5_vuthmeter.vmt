@@ -1,0 +1,39 @@
+UnlitGeneric
+{
+	"$basetexture"	"snowysnowtime\eonace\vuthakral\T57B\symbol"
+	$translucent 1
+
+	$color2	"[ 0 0.6 1 ]"
+
+	$detail	"snowysnowtime\eonace\vuthakral\T57B\pulse"
+	$detailscale	1
+	$detailblendmode 	2
+	$detailblendfactor	1
+
+	$radius		135
+	$angle		 0
+	$translate		 "[0 0]"
+	$center		 "[.5 .5]"
+
+	Proxies
+	{
+		"TextureScroll"
+            		{
+                		"textureScrollVar" "$detailtexturetransform"
+               		 	"textureScrollRate" 1
+                		"textureScrollAngle" 90
+           		 }
+		drc_RotateMag
+		{
+			resultVar $angle
+		}
+		TextureTransform
+		{
+			"translateVar" 	$translate
+                		"rotateVar"	$angle
+                		"centerVar"	$center
+                		"resultVar"	$basetexturetransform
+		}
+	}
+}
+

@@ -151,6 +151,14 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 1, bg = 1}},
         WMBodygroups = {{ind = 1, bg = 1}},
     },
+	["hq"] = {
+        VMBodygroups = {{ind = 0, bg = 1}},
+        WMBodygroups = {{ind = 0, bg = 1}},
+    },
+	["h5c"] = {
+        VMBodygroups = {{ind = 0, bg = 2}},
+        WMBodygroups = {{ind = 0, bg = 2}},
+    },
 }
 
 SWEP.Attachments = {
@@ -237,6 +245,12 @@ SWEP.Attachments = {
             wpos = Vector(7.03, 1.7, -3.85),
             wang = Angle(-10, 0, 180)
         },
+    },
+	{
+        PrintName = "Model",
+        Slot = {"skin_h3car"},
+        DefaultAttName = "Halo 3",
+        FreeSlot = true
     },
 }
 

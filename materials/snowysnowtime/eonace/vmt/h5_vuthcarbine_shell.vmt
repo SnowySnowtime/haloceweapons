@@ -1,0 +1,72 @@
+VertexLitGeneric
+{
+	"$basetexture"	"snowysnowtime\eonace\vuthakral\T57B\diffuse"
+  	"$bumpmap"	"snowysnowtime\eonace\vuthakral\T57B\normal"
+
+ 	$phong		1
+	$phongexponent	38
+	$phongboost	12
+	$phongtint		"[ 0.82 0.4 0.72 ]"
+                $phongfresnelranges	"[ 0.12 0.25 0.5 ]" 
+
+	$rimlight	1
+	$rimlightboost	1.4
+	$rimlightexponent	2.4
+	
+	$lightwarptexture	"snowysnowtime\2k\h3\lw_metaldull"
+
+	$envmap		"env_cubemap"
+	$normalmapalphaenvmapmask 1
+	$cubemaptint	"[ 1.8 -0 1 2 ]"
+	$cubemappower	0.25
+	$cubemapmin	0.035
+	$cubemapmax	0.4
+
+	$detail		"snowysnowtime\eonace\vuthakral\T57B\airlock_field"
+	$detailscale	3
+	$detailblendmode	2
+	$detailblendfactor	0.5
+
+	Proxies
+	{
+		drc_ReflectionTint_WeaponColour
+		{
+			resultVar $envmaptint
+		}
+		drc_PlayerWeaponColours
+		{
+			resultVar	$color2
+			default		1 1 1
+		}
+		Clamp 
+		{
+			min 0.1
+			max 1
+			srcVar1 "$color2"
+			resultVar "$color2"
+		}
+		Clamp 
+		{
+			min 0.25
+			max 0.9
+			srcVar1 "$color2"
+			resultVar "$phongtint"
+		}
+		Clamp
+		{
+			min 15
+			max 45
+			srcVar1 "$color2"
+			resultVar "$phongexponent"
+		}
+		Clamp
+		{
+			min 6.75
+			max 30
+			srcVar1 "$color2"
+			resultVar "$phongboost"
+		}
+	}
+}
+
+

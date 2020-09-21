@@ -1,0 +1,23 @@
+UnlitGeneric
+{
+	"$basetexture"	"snowysnowtime\eonace\vuthakral\T57B\sight"
+	$translucent 1
+
+	$color2	"[ .65 .7 1 ]"
+
+	$detail	"snowysnowtime\eonace\vuthakral\T57B\pulse"
+	$detailscale	1
+	$detailblendmode 	2
+	$detailblendfactor	1
+
+	Proxies
+	{
+		"TextureScroll"
+            		{
+                		"textureScrollVar" "$detailtexturetransform"
+               		 	"textureScrollRate" 1
+                		"textureScrollAngle" 90
+           		 }
+	}
+}
+

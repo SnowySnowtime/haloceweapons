@@ -69,7 +69,7 @@ SWEP.MuzzleVelocity = 700 -- projectile or phys bullet muzzle velocity
 -- IN M/S
 
 SWEP.TracerNum = 1 -- tracer every X
-SWEP.Tracer = "effect_astw2_halo3_tracer_human" -- tracer every X
+SWEP.Tracer = "effect_astw2_halo3_tracer_br" -- tracer every X
 SWEP.TracerCol = Color(25, 255, 25)
 SWEP.TracerWidth = 3
 

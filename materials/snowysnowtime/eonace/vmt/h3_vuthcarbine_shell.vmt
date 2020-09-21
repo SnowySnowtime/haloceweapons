@@ -1,0 +1,40 @@
+VertexLitGeneric
+{
+	"$basetexture"	"snowysnowtime\eonace\vuthakral\T51C\diffuse"
+  	"$bumpmap"	"snowysnowtime\eonace\vuthakral\T51C\normal"
+
+ 	$phong		1
+	$phongexponent	8
+	$phongboost	9
+	$phongtint		"[ 0.52 0.35 0.72 ]"
+                $phongfresnelranges	"[ 0.22 0.15 0.5 ]" 
+
+	$rimlight	1
+	$rimlightboost	1.4
+	$rimlightexponent	2.4
+	$rimmask	1
+	
+	$lightwarptexture	"models\vuthakral\halo\weapons/lw_covyshell"
+
+	$envmap		"env_cubemap"
+	$normalmapalphaenvmapmask 1
+	$cubemaptint	"[ -1 0.2 0.2 ]"
+	$cubemappower	0.3
+
+	$detail		"models\vuthakral\halo\props\covenant\airlock_field2"
+	$detailscale	0.5
+	$detailblendmode	2
+	$detailblendfactor	0.4
+
+	$color2		"[ 0.8 0.7 0.85 ]"
+
+	Proxies
+	{
+		drc_ReflectionTint
+		{
+			resultVar $envmaptint
+		}
+	}
+}
+
+

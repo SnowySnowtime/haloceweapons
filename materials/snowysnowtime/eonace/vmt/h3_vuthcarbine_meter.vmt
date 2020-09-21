@@ -1,0 +1,24 @@
+UnlitGeneric
+{
+	"$basetexture"	"snowysnowtime\eonace\vuthakral\T51C\meter_carbine"
+	$translucent 1
+
+	$translate	"[ 0 0 ]"
+
+	$flipscroll		0
+	$scrollmult	1
+
+	Proxies
+	{
+		drc_ScrollMag
+		{
+			resultVar $translate
+		}
+		TextureTransform
+		{
+			translateVar $translate
+			resultVar $basetexturetransform
+		}
+	}
+}
+
