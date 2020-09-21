@@ -19,7 +19,7 @@ if GetConVar("arccw_truenames"):GetBool() then SWEP.PrintName = SWEP.TrueName en
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/snowysnowtime/c_fp_turret.mdl"
-SWEP.WorldModel = "models/halomodels/haloce/w_haloassaultrifle.mdl"
+SWEP.WorldModel = "models/snowysnowtime/w_turret.mdl"
 SWEP.ViewModelFOV = 70
 
 if GetConVar("arccw_hce_bal"):GetInt() == 0 then -- HaloCW
@@ -95,7 +95,7 @@ SWEP.ShootPitch = 100 -- pitch of shoot sound
 
 SWEP.ShootSound = Sound("ster_fire")
 SWEP.ShootSoundSilenced = "weapons/arccw/m4a1/m4a1_silencer_01.wav"
-SWEP.DistantShootSound = "ar_lod"
+SWEP.DistantShootSound = "m60_lod"
 
 SWEP.MuzzleEffect = "astw2_halo_3_muzzle_machine_gun_turret"
 SWEP.ShellModel = "models/shells/shell_338mag.mdl"

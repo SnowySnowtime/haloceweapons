@@ -28,6 +28,16 @@ sound.Add(
 
 sound.Add(
 {
+    name = "m60_lod",
+    channel = CHAN_ITEM,
+    volume = 0.15,
+    level = 750,
+	pitch = { 100, 105 },
+    sound = {"h2/chain_gun_lod_far1.wav","h2/chain_gun_lod_far2.wav","h2/chain_gun_lod_far3.wav"}
+})
+
+sound.Add(
+{
     name = "h3_pr_lod",
     channel = CHAN_STATIC,
     volume = 0.7,

@@ -19,7 +19,7 @@ if GetConVar("arccw_truenames"):GetBool() then SWEP.PrintName = SWEP.TrueName en
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/snowysnowtime/c_fp_turret.mdl"
-SWEP.WorldModel = "models/halomodels/haloce/w_haloassaultrifle.mdl"
+SWEP.WorldModel = "models/snowysnowtime/w_turret.mdl"
 SWEP.ViewModelFOV = 70
 
 if GetConVar("arccw_hce_bal"):GetInt() == 0 then -- HaloCW
@@ -95,7 +95,7 @@ SWEP.ShootPitch = 100 -- pitch of shoot sound
 
 SWEP.ShootSound = Sound("ster_fire")
 SWEP.ShootSoundSilenced = "weapons/arccw/m4a1/m4a1_silencer_01.wav"
-SWEP.DistantShootSound = "ar_lod"
+SWEP.DistantShootSound = "m60_lod"
 
 SWEP.MuzzleEffect = "astw2_halo_3_muzzle_machine_gun_turret"
 SWEP.ShellModel = "models/shells/shell_338mag.mdl"
@@ -164,8 +164,8 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(25, 0, 4.8), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
-            wpos = Vector(6, 2, -4.4),
-            wang = Angle(-8.829, 0, 180)
+            wpos = Vector(25, 2, -10),
+            wang = Angle(-12, 0, 180)
         },
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(0, 0, 0),
@@ -179,8 +179,8 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(39, 0, 2.75),
             vang = Angle(0, 0, 0),
-            wpos = Vector(10, 2, -3.9),
-            wang = Angle(-2.829, -4.9, 180)
+            wpos = Vector(43, 3.5, -12),
+            wang = Angle(-15, -12, 180)
         },
 		VMScale = Vector(1.5, 1.5, 1.5),
     },
@@ -191,7 +191,7 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(20, 0, 0),
             vang = Angle(0, 0, 5),
-            wpos = Vector(13, 0.6, -3.5),
+            wpos = Vector(20, 0, -4.9),
             wang = Angle(-10, 0, 180),
         },		
     },

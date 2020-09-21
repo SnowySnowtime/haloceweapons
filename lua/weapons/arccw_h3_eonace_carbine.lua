@@ -19,7 +19,7 @@ if GetConVar("arccw_truenames"):GetBool() then SWEP.PrintName = SWEP.TrueName en
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/snowysnowtime/eonace/c_hum_covcarbine.mdl"
-SWEP.WorldModel = "models/snowysnowtime/eonace/w_h3carbine.mdl"
+SWEP.WorldModel = "models/snowysnowtime/eonace/w_carbine.mdl"
 SWEP.ViewModelFOV = 70
 
 if GetConVar("arccw_hce_bal"):GetInt() == 0 then -- HaloCW
@@ -170,7 +170,7 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(0.1, 0, 1.65), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
-            wpos = Vector(15.92, 0.75, -6.8),
+            wpos = Vector(7.92, 1.09, -6.8),
             wang = Angle(-13, -1, 182.3)
         },
         CorrectivePos = Vector(0, 0, 0),
@@ -185,8 +185,8 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(22, 0, 0.85),
             vang = Angle(0, 0, -90),
-            wpos = Vector(18.3, 0.85, -5.8),
-            wang = Angle(-12.5, -0.5, 183)
+            wpos = Vector(30.3, 2.75, -6.8),
+            wang = Angle(-10, 0, 180)
         },
 		VMScale = Vector(1, 1, 1),
     },
@@ -197,8 +197,8 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(8.3, 0, -1.25),
             vang = Angle(0, 0, 8),
-            wpos = Vector(0, 0, 0),
-            wang = Angle(0, 0, 0)
+            wpos = Vector(15, 1, 0),
+            wang = Angle(-12, 0, 180)
         },
     },
 	{
