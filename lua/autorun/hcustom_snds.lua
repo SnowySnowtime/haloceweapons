@@ -1,3 +1,7 @@
+--Halo Custom Edition--
+
+
+--CMT Spiker
 
 sound.Add(
 {
@@ -52,6 +56,8 @@ sound.Add(
     soundlevel = 120,
     sound = "customedition/cmtspiker_fire.wav"
 })
+
+--CMT MA5K
 
 sound.Add(
 {
@@ -125,13 +131,18 @@ sound.Add(
     sound = {"customedition/ma5k_fire1.wav","customedition/ma5k_fire2.wav","customedition/ma5k_fire3.wav","customedition/ma5k_fire4.wav",}
 })
 
+--Halo 3--
+
+
+--Covenant Carbine
+
 sound.Add(
 {
     name = "h3.carbine_draw",
     channel = CHAN_STATIC,
     volume = 1.0,
     soundlevel = 80,
-    sound = {"h3/h3carbine_draw1.wav","h3/h3carbine_draw2.wav","h3/h3carbine_draw3.wav",}
+    sound = {"h3/carbine_draw1.wav","h3/carbine_draw2.wav","h3/carbine_draw3.wav",}
 })
 
 sound.Add(
@@ -140,7 +151,7 @@ sound.Add(
     channel = CHAN_STATIC,
     volume = 1.0,
     soundlevel = 80,
-    sound = {"h3/h3carbine_posing1.wav","h3/h3carbine_posing2.wav","h3/h3carbine_posing3.wav",}
+    sound = {"h3/carbine_posing1.wav","h3/carbine_posing2.wav","h3/carbine_posing3.wav",}
 })
 
 sound.Add(
@@ -149,7 +160,7 @@ sound.Add(
     channel = CHAN_STATIC,
     volume = 1.0,
     soundlevel = 80,
-    sound = "h3/h3carbine_reload1-1.wav"
+    sound = "h3/carbine_reload1-1.wav"
 })
 
 sound.Add(
@@ -158,7 +169,7 @@ sound.Add(
     channel = CHAN_STATIC,
     volume = 1.0,
     soundlevel = 80,
-    sound = "h3/h3carbine_reload1-2.wav"
+    sound = "h3/carbine_reload1-2.wav"
 })
 
 sound.Add(
@@ -167,7 +178,7 @@ sound.Add(
     channel = CHAN_STATIC,
     volume = 1.0,
     soundlevel = 80,
-    sound = "h3/h3carbine_reload1-3.wav"
+    sound = "h3/carbine_reload1-3.wav"
 })
 
 sound.Add(
@@ -176,7 +187,7 @@ sound.Add(
     channel = CHAN_STATIC,
     volume = 1.0,
     soundlevel = 80,
-    sound = "h3/h3carbine_reload1-4.wav"
+    sound = "h3/carbine_reload1-4.wav"
 })
 
 sound.Add(
@@ -185,14 +196,88 @@ sound.Add(
     channel = CHAN_STATIC,
     volume = 1.0,
     soundlevel = 80,
-    sound = {"h3/h3carbine_melee1.wav","h3/h3carbine_melee2.wav","h3/h3carbine_melee3.wav",}
+    sound = {"h3/carbine_melee1.wav","h3/carbine_melee2.wav","h3/carbine_melee3.wav",}
 })
 
 sound.Add(
 {
-    name = "h3carbine_fire",
+    name = "h3.carbine_fire",
     channel = CHAN_STATIC,
     volume = 1.0,
     soundlevel = 120,
-    sound = {"h3/h3carbine_fire1.wav","h3/h3carbine_fire2.wav","h3/h3carbine_fire3.wav",}
+    sound = {"h3/carbine_fire1.wav","h3/carbine_fire2.wav","h3/carbine_fire3.wav",}
+})
+
+--Battle Rifle
+
+sound.Add(
+{
+    name = "h3.br_deploy",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = {"h3/br_draw1.wav","h3/br_draw2.wav",}
+})
+
+sound.Add(
+{
+    name = "h3.br_pose1",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = {"h3/br_pose1a.wav","h3/br_pose1b.wav","h3/br_pose1c.wav","h3/br_pose1d.wav",}
+})
+
+sound.Add(
+{
+    name = "h3.br_pose2",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = {"h3/br_pose2a.wav","h3/br_pose2b.wav","h3/br_pose2c.wav",}
+})
+
+sound.Add(
+{
+    name = "h3.br_reload1",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = {"h3/br_reload1-1.wav","h3/br_reload2-1.wav","h3/br_reload3-1.wav",}
+})
+
+sound.Add(
+{
+    name = "h3.br_reload2",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = {"h3/br_reload1-2.wav","h3/br_reload2-2.wav","h3/br_reload3-2.wav",}
+})
+
+sound.Add(
+{
+    name = "h3.br_reload3",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = {"h3/br_reload1-3.wav","h3/br_reload2-3.wav","h3/br_reload3-3.wav",}
+})
+
+sound.Add(
+{
+    name = "h3.br_melee1",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = {"h3/br_melee1a.wav","h3/br_melee1b.wav","h3/br_melee1c.wav",}
+})
+
+sound.Add(
+{
+    name = "h3.br_melee2",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = {"h3/br_melee2a.wav","h3/br_melee2b.wav","h3/br_melee2c.wav",}
 })
