@@ -22,7 +22,7 @@ if GetConVar("arccw_truenames"):GetBool() then SWEP.PrintName = SWEP.TrueName en
 SWEP.UseHands = true
 
 if GetConVar("arccw_hce_bal"):GetInt() == 0 then -- HaloCW
-   SWEP.Recoil = 0.75
+   SWEP.Recoil = 0.55
 	SWEP.RecoilSide = 0.25
 	SWEP.Damage = 15
 	SWEP.DamageMin = 30
@@ -42,7 +42,7 @@ elseif GetConVar("arccw_hce_bal"):GetInt() == 1 then -- halo purist
 	SWEP.JumpDispersion = 0
 	SWEP.ChamberSize = 0
 elseif GetConVar("arccw_hce_bal"):GetInt() == 2 then -- arccw
-    SWEP.Recoil = 0.75
+    SWEP.Recoil = 0.55
 	SWEP.RecoilSide = 0.25
 	SWEP.Damage = 15
 	SWEP.DamageMin = 30
@@ -182,7 +182,7 @@ SWEP.AttachmentElements = {
         VMSkin = 1,
         WMSkin = 1,
     },
-	["muzzle"] = {
+	["brmuzzle"] = {
         VMBodygroups = {{ind = 1, bg = 1}},
         WMBodygroups = {{ind = 1, bg = 1}},
     },
@@ -197,17 +197,16 @@ SWEP.ExtraSightDist = 15
 SWEP.Attachments = {
 	{
         PrintName = "Optic", -- print name
-        DefaultAttName = "10x Scope",
+        DefaultAttName = "No Sights",
         Slot = {"optic", "optic_lp", "h3brsc"}, -- what kind of attachments can fit here, can be string or table
         Bone = "gun", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(4.9, 0, 7.35), -- offset that the attachment will be relative to the bone
+            vpos = Vector(4.9, 0, 7.4), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
-            wpos = Vector(6, 2, -4.4),
-            wang = Angle(-8.829, 0, 180)
+            wpos = Vector(7.42, 0.43, -7.95),
+            wang = Angle(-12, -1.155, 180)
         },
-        CorrectivePos = Vector(0, 0, 0),
-        CorrectiveAng = Angle(1, 0, 0),
+		Installed = "optic_br_scopeh3d"
     },
 	{
         PrintName = "Muzzle",
@@ -217,11 +216,11 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(21.9, 0, 4.9),
             vang = Angle(0, 0, 0),
-            wpos = Vector(10, 2, -3.9),
-            wang = Angle(-2.829, -4.9, 180)
+            wpos = Vector(25, 0.9, -9.25),
+            wang = Angle(-12, -1.155, 180)
         },
 		VMScale = Vector(1, 0.9, 0.9),
-		InstalledEles = {"muzzle"},
+		InstalledEles = {"brmuzzle"}
     },
     {
         PrintName = "Underbarrel",
@@ -230,39 +229,36 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(11, -0.3, 1.8),
             vang = Angle(0, 0, 0),
-            wpos = Vector(13, 0.6, -3.5),
-            wang = Angle(-10, 0, 180),
-        },		
+            wpos = Vector(15, 0.82, -3.8),
+            wang = Angle(-14, -1.155, 183),
+        },        
     },
     {
         PrintName = "Grip",
         Slot = "grip",
         DefaultAttName = "Standard Grip"
-    },	
+    },    
     {
         PrintName = "Stock",
         Slot = "stock",
         DefaultAttName = "Standard Stock"
     },
-	{
+    {
         PrintName = "Firetype",
         Slot = {"fcg","fcg_smg"}
     },
-	{
+    {
         PrintName = "Tactical",
         Slot = "tac",
         Bone = "gun",
         Offset = {
             vpos = Vector(12, 0, 5.7), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 180),
-            wpos = Vector(6, 1.25, -3),
-            wang = Angle(-8.829, -0.556, 90)
+            wpos = Vector(15, 0.65, -7.75),
+            wang = Angle(-12, -1.2, 0),
         },
-		VMScale = Vector(0.4, 0.4, 0.4),
-    },
-    {
-        PrintName = "Ammo Type",
-        Slot = {"ammo_bullet"}
+        VMScale = Vector(0.4, 0.4, 0.4),
+		WMScale = Vector(0.4, 0.4, 0.4),
     },
     {
         PrintName = "Perk",
@@ -274,12 +270,13 @@ SWEP.Attachments = {
         FreeSlot = true,
         Bone = "gun", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(6.25, -0.765, 4.6), -- offset that the attachment will be relative to the bone
-            vang = Angle(0, 0, 10),
-            wpos = Vector(6, 2.4, -3.5),
-            wang = Angle(-10.393, 0, 180)
+            vpos = Vector(3.9, -0.8, 4.65), -- offset that the attachment will be relative to the bone
+            vang = Angle(0, 0, 0),
+            wpos = Vector(7.15, 1.35, -5.1),
+            wang = Angle(-12, 0, 180)
         },
 		VMScale = Vector(0.7, 0.7, 0.7),
+		WMScale = Vector(0.7, 0.7, 0.7),
     },
 	{
         PrintName = "Skin",
@@ -327,7 +324,7 @@ SWEP.Animations = {
         Time = 0.35,
     },
 	["bash"] = {
-        Source = "melee1",
+        Source = {"melee1","melee2"},
 		Time = 1,
         LHIK = true,
         LHIKIn = 0,
@@ -337,10 +334,42 @@ SWEP.Animations = {
         Source = "reload",
         Time = 2.15,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
-        Checkpoints = {24, 33, 51, 58, 62, 74, 80},
+        Checkpoints = {12, 31, 48},
         FrameRate = 30,
         LHIK = true,
-        LHIKIn = 0.1,
-        LHIKOut = 0.55,
+        LHIKIn = 0.5,
+        LHIKOut = 0.5,
     },
 }
+
+-- nZombies Stuff
+SWEP.NZWonderWeapon		= false	-- Is this a Wonder-Weapon? If true, only one player can have it at a time. Cheats aren't stopped, though.
+--SWEP.NZRePaPText		= "your text here"	-- When RePaPing, what should be shown? Example: Press E to your text here for 2000 points.
+SWEP.NZPaPName				= "BXR-55HB"
+--SWEP.NZPaPReplacement 	= ""	-- If Pack-a-Punched, replace this gun with the entity class shown here.
+SWEP.NZPreventBox		= false	-- If true, this gun won't be placed in random boxes GENERATED. Users can still place it in manually.
+SWEP.NZTotalBlackList	= false	-- if true, this gun can't be placed in the box, even manually, and can't be bought off a wall, even if placed manually. Only code can give this gun.
+
+SWEP.Primary.MaxAmmo = 144
+-- Max Ammo function
+
+function SWEP:NZMaxAmmo()
+
+	local ammo_type = self:GetPrimaryAmmoType() or self.Primary.Ammo
+
+    if SERVER then
+        self.Owner:SetAmmo( self.Primary.MaxAmmo, ammo_type )
+    end
+end
+
+-- PaP Function
+function SWEP:OnPaP()
+self.Ispackapunched = 1
+self.PrintName = "BXR-55HB"
+self.Primary.ClipSize = 36
+self.Primary.MaxAmmo = 144
+self.Damage = 25
+self.DamageMin = 45
+self.Delay = 60 / 1000
+return true
+end

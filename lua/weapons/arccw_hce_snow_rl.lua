@@ -4,7 +4,7 @@ SWEP.Category = "ArcCW - Halo Combat Evolved" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "Rocket Launcher"
-SWEP.TrueName = "M41 SPNKR"
+SWEP.TrueName = "M41 SPNKr"
 SWEP.Trivia_Class = "Rocket Launcher"
 SWEP.Trivia_Desc = "The M41 Surface-to-Surface Rocket Medium Anti-Vehicle / Assault Weapon (M41 SSR MAV/AW), formally known as the Medium Anti-Vehicle / Assault Weapon, Bore 102mm, M41 Surface-to-Surface Rocket Launcher, and commonly known as the Jackhammer or the SPNKR (also stylised as SPNKr), is a heavy ordnance weapon used by the UNSC and Insurrectionists. It is manufactured by Misriah Armory."
 SWEP.Trivia_Manufacturer = "Misriah Armory"
@@ -319,3 +319,34 @@ SWEP.Animations = {
         LHIKOut = 0.5,
     },
 }
+
+-- nZombies Stuff
+SWEP.NZWonderWeapon		= false	-- Is this a Wonder-Weapon? If true, only one player can have it at a time. Cheats aren't stopped, though.
+--SWEP.NZRePaPText		= "your text here"	-- When RePaPing, what should be shown? Example: Press E to your text here for 2000 points.
+SWEP.NZPaPName				= "M420 SPANKr"
+--SWEP.NZPaPReplacement 	= ""	-- If Pack-a-Punched, replace this gun with the entity class shown here.
+SWEP.NZPreventBox		= false	-- If true, this gun won't be placed in random boxes GENERATED. Users can still place it in manually.
+SWEP.NZTotalBlackList	= false	-- if true, this gun can't be placed in the box, even manually, and can't be bought off a wall, even if placed manually. Only code can give this gun.
+
+SWEP.Primary.MaxAmmo = 10
+-- Max Ammo function
+
+function SWEP:NZMaxAmmo()
+
+	local ammo_type = self:GetPrimaryAmmoType() or self.Primary.Ammo
+
+    if SERVER then
+        self.Owner:SetAmmo( self.Primary.MaxAmmo, ammo_type )
+    end
+end
+
+-- PaP Function
+function SWEP:OnPaP()
+self.Ispackapunched = 1
+self.PrintName = "M420 SPANKr"
+self.MagExtender = true
+self.ActivateElements = {"extendedmag"}
+self.Primary.MaxAmmo = 20
+self.Delay = 60 / 120
+return true
+end

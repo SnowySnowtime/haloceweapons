@@ -175,15 +175,19 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 0, bg = 1}},
         WMBodygroups = {{ind = 0, bg = 1}},
     },
+	["sr_scope"] = {
+        VMBodygroups = {{ind = 1, bg = 1}},
+        WMBodygroups = {{ind = 1, bg = 1}},
+    },
 }
 
-SWEP.ExtraSightDist = 3
+SWEP.ExtraSightDist = 5
 
 SWEP.Attachments = {
 	{
         PrintName = "Optic", -- print name
-        DefaultAttName = "10x Scope",
-        Slot = {"optic", "optic_lp", "optic_sniper"}, -- what kind of attachments can fit here, can be string or table
+        DefaultAttName = "No Sights",
+        Slot = {"optic", "optic_lp", "optic_sniper", "hce_srscope",}, -- what kind of attachments can fit here, can be string or table
         Bone = "frame gun", -- relevant bone any attachments will be mostly referring to
         Offset = {
             vpos = Vector(0, 0, 1.4), -- offset that the attachment will be relative to the bone
@@ -191,6 +195,7 @@ SWEP.Attachments = {
             wpos = Vector(9.36, 0.739, -6.4),
             wang = Angle(-11, 0, 180)
         },
+		Installed = "optic_sr_scopece"
     },
 	{
         PrintName = "Underbarrel",
@@ -277,6 +282,16 @@ SWEP.Animations = {
         Source = "idle",
         Time = 4
     },
+	["idle_sights"] = {
+		Source = "aim",
+	},
+	["enter_sight"] = {
+		Source = "aim",
+	},
+	["exit_sight"] = {
+		Source = "aim",
+		Time = 0.01,
+	},
 	["exit_inspect"] = {
 		Source = "fidget",
 	},
@@ -295,6 +310,10 @@ SWEP.Animations = {
     },
     ["fire"] = {
         Source = "fire",
+        Time = 1,
+    },
+    ["fire_iron"] = {
+        Source = "aim",
         Time = 1,
     },
     ["reload"] = {
@@ -357,4 +376,31 @@ if engine.ActiveGamemode() == "terrortown" then
         desc = "A powerful sniper rifle. Uses typical rifle ammo, \nbut isn't lethal at point blank.\nPurchased weapons come with full attachments."
     };
     SWEP.Icon = "arccw/ttt_awm.png"
+end
+
+-- nZombies Stuff
+SWEP.NZWonderWeapon		= false	-- Is this a Wonder-Weapon? If true, only one player can have it at a time. Cheats aren't stopped, though.
+--SWEP.NZRePaPText		= "your text here"	-- When RePaPing, what should be shown? Example: Press E to your text here for 2000 points.
+SWEP.NZPaPName				= "SRS BSNS"
+SWEP.NZPaPReplacement 	= "arccw_hre_mifl_custom_srs99_bulp"	-- If Pack-a-Punched, replace this gun with the entity class shown here.
+SWEP.NZPreventBox		= false	-- If true, this gun won't be placed in random boxes GENERATED. Users can still place it in manually.
+SWEP.NZTotalBlackList	= false	-- if true, this gun can't be placed in the box, even manually, and can't be bought off a wall, even if placed manually. Only code can give this gun.
+
+SWEP.Primary.MaxAmmo = 28
+-- Max Ammo function
+
+function SWEP:NZMaxAmmo()
+
+	local ammo_type = self:GetPrimaryAmmoType() or self.Primary.Ammo
+
+    if SERVER then
+        self.Owner:SetAmmo( self.Primary.MaxAmmo, ammo_type )
+    end
+end
+
+-- PaP Function
+function SWEP:OnPaP()
+self.Ispackapunched = 1
+self.PrintName = "SRS BSNS"
+return true
 end

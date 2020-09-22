@@ -1,4 +1,4 @@
-att.PrintName = "H3 BR Scope"
+att.PrintName = "2D BR55 Scope"
 att.Icon = Material("entities/tfa_hce_snow_objectiveflag.png")
 att.Description = "A Powerful 2x Scope built for the BR55HB SR for precision aiming. Best used with Semi-Auto weaponry."
 
@@ -9,7 +9,7 @@ att.Desc_Pros = {
     "+ Lightweight Scope",
 }
 att.Desc_Cons = {
-	"Only available for the BR55HB",
+	"Only available for the BR55HB SR",
 }
 att.AutoStats = true
 att.Ignore = false
@@ -25,9 +25,7 @@ att.AdditionalSights = {
     {
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Magnification = 1.5,
-        ScrollFunc = ArcCW.SCROLL_ZOOM,
-        ZoomLevels = 1,
+        Magnification = 2,
         ZoomSound = "weapons/arccw/fiveseven/fiveseven_slideback.wav",
 		FlatScope = true,
 		IgnoreExtra = true
@@ -37,19 +35,16 @@ att.AdditionalSights = {
 att.ScopeGlint = false
 
 att.Holosight = false
-att.HolosightReticle = Material("entities/br_2d_scope.png")
+att.HolosightReticle = Material("entities/battle_rifle_scope.png")
 att.HolosightNoFlare = true
-att.HolosightSize = 0.5
+att.HolosightSize = 1
 att.HolosightBone = "holosight"
 att.HolosightPiece = "models/snowysnowtime/eonace/br_lens.mdl"
 att.Colorable = true
 
-att.HolosightMagnification = 1
-att.HolosightBlackbox = false
-att.FlatScopeBlackbox = false
-
-att.HolosightMagnificationMin = 3
-att.HolosightMagnificationMax = 4
+att.HolosightMagnification = 12.5
+att.HolosightBlackbox = true
+att.FlatScopeBlackbox = true
 
 att.Mult_SightTime = 0.95
 att.Mult_SightsDispersion = 0.35

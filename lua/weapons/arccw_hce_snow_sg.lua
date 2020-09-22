@@ -390,3 +390,45 @@ SWEP.Animations = {
         LHIKOut = 0.4,
     },
 }
+
+-- nZombies Stuff
+SWEP.NZWonderWeapon		= false	-- Is this a Wonder-Weapon? If true, only one player can have it at a time. Cheats aren't stopped, though.
+--SWEP.NZRePaPText		= "your text here"	-- When RePaPing, what should be shown? Example: Press E to your text here for 2000 points.
+SWEP.NZPaPName				= "M900 Shredder"
+--SWEP.NZPaPReplacement 	= ""	-- If Pack-a-Punched, replace this gun with the entity class shown here.
+SWEP.NZPreventBox		= false	-- If true, this gun won't be placed in random boxes GENERATED. Users can still place it in manually.
+SWEP.NZTotalBlackList	= false	-- if true, this gun can't be placed in the box, even manually, and can't be bought off a wall, even if placed manually. Only code can give this gun.
+
+SWEP.Primary.MaxAmmo = 72
+-- Max Ammo function
+
+function SWEP:NZMaxAmmo()
+
+	local ammo_type = self:GetPrimaryAmmoType() or self.Primary.Ammo
+
+    if SERVER then
+        self.Owner:SetAmmo( self.Primary.MaxAmmo, ammo_type )
+    end
+end
+
+-- PaP Function
+function SWEP:OnPaP()
+self.Ispackapunched = 1
+self.PrintName = "M900 Shredder"
+self.MagExtender = true
+self.ActivateElements = {"extendedmag"}
+self.Primary.MaxAmmo = 108
+self.Damage = 15
+self.DamageMin = 5
+self.Num = 30
+self.Delay = 60 / 75
+self.Firemodes = {
+    {
+        Mode = 2,
+    },
+    {
+        Mode = 0
+    }
+}
+return true
+end

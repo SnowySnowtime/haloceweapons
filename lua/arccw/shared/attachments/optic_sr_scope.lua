@@ -21,11 +21,11 @@ att.AutoStats = true
 
 att.AdditionalSights = {
     {
-        Pos = Vector(-4.74, -25.8, -0.755),
+        Pos = Vector(-4.74, -24.8, -0.755),
         Ang = Angle(0, -90, 0),
         Magnification = 1.2,
         ScrollFunc = ArcCW.SCROLL_ZOOM,
-        ZoomLevels = 3,
+        ZoomLevels = 1,
         ZoomSound = "sr_zoom"
     }
 }
@@ -35,7 +35,7 @@ att.ScopeGlint = false
 att.Holosight = true
 att.HolosightReticle = Material("entities/sr_scope.png")
 att.HolosightNoFlare = true
-att.HolosightSize = 0.3
+att.HolosightSize = 0.15
 att.HolosightBone = "holosight"
 att.HolosightPiece = "models/snowysnowtime/h3scopelayer.mdl"
 

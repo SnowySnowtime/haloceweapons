@@ -262,3 +262,37 @@ if engine.ActiveGamemode() == "terrortown" then
     };
     SWEP.Icon = "arccw/ttt_awm.png"
 end
+
+-- nZombies Stuff
+SWEP.NZWonderWeapon		= false	-- Is this a Wonder-Weapon? If true, only one player can have it at a time. Cheats aren't stopped, though.
+--SWEP.NZRePaPText		= "your text here"	-- When RePaPing, what should be shown? Example: Press E to your text here for 2000 points.
+SWEP.NZPaPName				= "Jackal"
+--SWEP.NZPaPReplacement 	= ""	-- If Pack-a-Punched, replace this gun with the entity class shown here.
+SWEP.NZPreventBox		= false	-- If true, this gun won't be placed in random boxes GENERATED. Users can still place it in manually.
+SWEP.NZTotalBlackList	= false	-- if true, this gun can't be placed in the box, even manually, and can't be bought off a wall, even if placed manually. Only code can give this gun.
+
+SWEP.Primary.MaxAmmo = 10
+-- Max Ammo function
+
+function SWEP:NZMaxAmmo()
+
+	local ammo_type = self:GetPrimaryAmmoType() or self.Primary.Ammo
+
+    if SERVER then
+        self.Owner:SetAmmo( self.Primary.MaxAmmo, ammo_type )
+    end
+end
+
+-- PaP Function
+function SWEP:OnPaP()
+self.Ispackapunched = 1
+self.PrintName = "Jackal"
+self.MagExtender = true
+self.ActivateElements = {"extendedmag"}
+self.Primary.MaxAmmo = 30
+self.Damage = 115
+self.DamageMin = 175
+self.AccuracyMOA = 0.01 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+self.HipDispersion = 0
+return true
+end
