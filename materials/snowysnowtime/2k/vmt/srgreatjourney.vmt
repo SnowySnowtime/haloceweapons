@@ -10,7 +10,7 @@
 	"$phong" "1" 
 	"$phongboost" "10"
 	"$phongexponent" "90"
-	"$phongexponenttexture" "snowysnowtime\2k\wephong\phong_srgreat"
+	"$phongexponenttexture" "snowysnowtime\2k\wephong\phong_srgold"
 	"$phongalbedotint" "1"
 	"$phongfresnelranges" "[1 1 16]"
 	"$phongdisablehalflambert" "1"

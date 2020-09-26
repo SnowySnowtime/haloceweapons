@@ -270,44 +270,34 @@ SWEP.Attachments = {
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
-        Time = 4
+        Time = 98/30
     },
 	["fire_iron"] = {
         Source = "fire",
     },
     ["draw"] = {
         Source = "draw",
-        Time = 1,
+        Time = 21/28,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.25,
     },
     ["fire"] = {
         Source = { "fire_rand1","fire_rand2","fire_rand3" },
-        Time = 0.8,
+        Time = 15/25,
     },
 	["bash"] = {
         Source = "melee",
-		Time = 0.9,
+		Time = 28/45,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.6,
     },
     ["reload"] = {
         Source = "reload",
-        Time = 1.7,
+        Time =  49/30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         Checkpoints = {24, 33, 51, 58, 62, 74, 80},
-        FrameRate = 30,
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
-    },
-    ["reload_empty"] = {
-        Source = "reload",
-        Time = 1.7,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
-        Checkpoints = {24, 33, 51},
         FrameRate = 30,
         LHIK = true,
         LHIKIn = 0.5,

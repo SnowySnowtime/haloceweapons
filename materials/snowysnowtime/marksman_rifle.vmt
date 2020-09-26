@@ -1,8 +1,0 @@
-"VertexlitGeneric"
-{
-	"$basetexture" "snowysnowtime/marksman_rifle"
-	"$phong" "1"
-	"$phongexponent" "60"
-	"$phongboost"	"1"
-	"$phongfresnelranges"	"[4 6 1]"
-}

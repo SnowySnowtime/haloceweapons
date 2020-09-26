@@ -5,8 +5,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Plasma Rifle"
 SWEP.TrueName = "Type-25 DER"
-SWEP.Trivia_Class = "(ADW)"
-SWEP.Trivia_Desc = "Active Development Weapon"
+SWEP.Trivia_Class = "Rifle"
+SWEP.Trivia_Desc = "This is a Type-25 Directed Energy Rifle"
 SWEP.Trivia_Manufacturer = "Iruiru Armory"
 SWEP.Trivia_Calibre = "Plasma"
 SWEP.Trivia_Mechanism = "Automatic"
@@ -172,6 +172,17 @@ SWEP.Attachments = {
         PrintName = "Perk",
         Slot = "perk"
     },
+	{
+        PrintName = "Underbarrel",
+        Slot = {"foregrip", "ubgl", "bipod"},
+        Bone = "gun",
+        Offset = {
+            vpos = Vector(5, 0, 2),
+            vang = Angle(0, 0, 8),
+            wpos = Vector(15, 1, 0),
+            wang = Angle(-12, 0, 180)
+        },
+    },
     {
         PrintName = "Charm",
         Slot = "charm",
@@ -232,7 +243,7 @@ end
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
-        Time = 4,
+        Time = 88/30,
     },
 	["fire_iron"] = {
         Source = "fire",
@@ -240,14 +251,14 @@ SWEP.Animations = {
     },
     ["draw"] = {
         Source = "draw",
-        Time = 1,
+        Time = 20/30,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.25,
     },
     ["fire"] = {
-        Source = "fire",
-        Time = 0.6,
+        Source = {"firefp","fire_fp1","fire_fp2"},
+        Time = 2/30,
     },
 	["inspect"] = {
         Source = "fidget",
@@ -255,13 +266,14 @@ SWEP.Animations = {
     },
 	["bash"] = {
         Source = "melee",
+		Time = 33/30,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.2,
     },
     ["reload"] = {
         Source = "overheat_loop",
-        Time = 3,
+        Time = 95/30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Checkpoints = {24, 33, 51, 58, 62, 74, 80},
         FrameRate = 30,

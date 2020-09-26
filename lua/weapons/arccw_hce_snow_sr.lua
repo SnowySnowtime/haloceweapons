@@ -280,7 +280,7 @@ end
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
-        Time = 4
+        Time = 79/30
     },
 	["idle_sights"] = {
 		Source = "aim",
@@ -297,7 +297,7 @@ SWEP.Animations = {
 	},
     ["draw"] = {
         Source = "draw",
-        Time = 1,
+        Time = 28/30,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.25,
@@ -310,42 +310,40 @@ SWEP.Animations = {
     },
     ["fire"] = {
         Source = "fire",
-        Time = 1,
+        Time = 18/25,
     },
     ["fire_iron"] = {
         Source = "aim",
-        Time = 1,
+        Time = 18/25,
     },
     ["reload"] = {
         Source = "reload",
-        Time = 2.5,
+        Time = 82/30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Checkpoints = {24, 33, 51, 58, 62, 74, 80},
-        FrameRate = 30,
         LHIK = true,
         LHIKIn = 0.5,
         LHIKOut = 0.5,
     },
     ["reload_empty"] = {
         Source = "reloadempty",
-        Time = 3,
+        Time = 99/30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Checkpoints = {24, 33, 51},
-        FrameRate = 30,
         LHIK = true,
         LHIKIn = 0.5,
         LHIKOut = 0.5,
     },
 	["draw_anniv"] = {
         Source = "anniv_draw",
-        Time = 1,
+        Time = 28/30,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.25,
     },
     ["reload_anniv"] = {
         Source = "anniv_reload",
-        Time = 2.5,
+        Time = 82/30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Checkpoints = {24, 33, 51, 58, 62, 74, 80},
         FrameRate = 30,
@@ -355,7 +353,7 @@ SWEP.Animations = {
     },
     ["reload_empty_anniv"] = {
         Source = "anniv_reloadempty",
-        Time = 3,
+        Time = 99/30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Checkpoints = {24, 33, 51},
         FrameRate = 30,

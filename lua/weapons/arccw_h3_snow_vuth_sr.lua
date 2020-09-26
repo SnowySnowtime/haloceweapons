@@ -192,7 +192,9 @@ SWEP.Attachments = {
             wpos = Vector(0, 0, 0),
             wang = Angle(0, 0, 0)
         },
-		Installed = "optic_sr_scope"
+		Installed = "optic_sr_scope",
+		Integral = true, 
+		Hidden = true,
     },
     {
         PrintName = "Underbarrel",
@@ -287,37 +289,27 @@ SWEP.Animations = {
     },
     ["draw"] = {
         Source = "draw",
-        Time = 0.85,
+        Time = 20/30,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.25,
     },
 	["bash"] = {
         Source = "melee_rand0",
-		Time = 1,
+		Time = 34/30,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.2,
     },
     ["fire"] = {
         Source = { "fire_rand1","fire_rand2","fire_rand3"} ,
-        Time = 1,
+        Time = 18/25,
     },
     ["reload"] = {
         Source = "reload",
-        Time = 2.5,
+        Time = 71/30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Checkpoints = {24, 33, 51, 58, 62, 74, 80},
-        FrameRate = 30,
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
-    },
-    ["reload_empty"] = {
-        Source = "reload",
-        Time = 2.5,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Checkpoints = {24, 33, 51},
         FrameRate = 30,
         LHIK = true,
         LHIKIn = 0.5,

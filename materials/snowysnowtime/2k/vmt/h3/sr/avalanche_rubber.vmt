@@ -5,7 +5,7 @@
 	"$phong" "1" 
 	"$phongboost" "1"
 	"$phongexponent" "3"
-	"$phongexponenttexture" "snowysnowtime/2k/h3/sr/avalanche_p"
+	"$phongexponenttexture" "snowysnowtime/2k/h3/sr_phong"
 	"$phongalbedotint" "1"
 	"$phongfresnelranges" "[1.5 3 5]"
 	"$phongdisablehalflambert" "1"

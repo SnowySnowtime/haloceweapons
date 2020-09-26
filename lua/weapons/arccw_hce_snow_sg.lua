@@ -290,28 +290,21 @@ end
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
-		Time = 8,
+		Time = 61/30,
     },
 	["exit_inspect"] = {
 		Source = "fidget",
 	},
     ["draw"] = {
         Source = "draw",
-        Time = 0.75,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 0.25,
-    },
-    ["ready"] = {
-        Source = "draw",
-        Time = 1,
+        Time = 22/30,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.25,
     },
     ["fire_iron"] = {
         Source = "fire",
-        Time = 1,
+        Time = 25/30,
     },
 	 ["bash"] = {
         Source = "melee",
@@ -319,11 +312,11 @@ SWEP.Animations = {
     },
     ["fire"] = {
         Source = {"fire"},
-        Time = 1,
+        Time = 25/30,
     },
     ["sgreload_start"] = {
         Source = "reload1",
-        Time = 0.5,
+        Time = 13/30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         LHIK = true,
         LHIKIn = 0.5,
@@ -339,7 +332,7 @@ SWEP.Animations = {
     },
     ["sgreload_insert"] = {
         Source = "reload2",
-        Time = 0.5,
+        Time = 11/25,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         TPAnimStartTime = 0.3,
         LHIK = true,
@@ -348,18 +341,18 @@ SWEP.Animations = {
     },
     ["sgreload_finish"] = {
         Source = "reloadempty",
-        Time = 1.2,
+        Time = 41/30,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.4,
     },
 	["fire_anniv"] = {
         Source = {"anniv_fire"},
-        Time = 1,
+        Time = 25/30,
     },
     ["sgreload_start_anniv"] = {
         Source = "anniv_reload1",
-        Time = 0.5,
+        Time = 13/30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         LHIK = true,
         LHIKIn = 0.5,
@@ -367,7 +360,7 @@ SWEP.Animations = {
     },
     ["sgreload_start_empty_anniv"] = {
         Source = "anniv_reload1",
-        Time = 0.5,
+        Time = 13/30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         LHIK = true,
         LHIKIn = 0.5,
@@ -375,7 +368,7 @@ SWEP.Animations = {
     },
     ["sgreload_insert_anniv"] = {
         Source = "anniv_reload2",
-        Time = 0.5,
+        Time = 11/25,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         TPAnimStartTime = 0.3,
         LHIK = true,
@@ -384,7 +377,7 @@ SWEP.Animations = {
     },
     ["sgreload_finish_anniv"] = {
         Source = "anniv_reloadempty",
-        Time = 1.2,
+        Time = 41/30,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.4,

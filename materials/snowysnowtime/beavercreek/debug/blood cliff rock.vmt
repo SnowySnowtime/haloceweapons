@@ -1,5 +1,0 @@
-"VertexlitGeneric"
-{
-	"$basetexture" "snowysnowtime/beavercreek/debug/blood cliff rock"
-	"$basetexturetransform" "center 0 0 scale 0.1 0.1 rotate 0 translate 0 0"
-}

@@ -93,7 +93,7 @@ SWEP.MagID = "hs338" -- the magazine pool this gun draws from
 SWEP.ShootVol = 140 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.ShootSound = Sound("h3carbine_fire")
+SWEP.ShootSound = Sound("h3.carbine_fire")
 SWEP.ShootSoundSilenced = "weapons/arccw/m4a1/m4a1_silencer_01.wav"
 SWEP.DistantShootSound = "car_lod"
 
@@ -257,11 +257,7 @@ SWEP.Attachments = {
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle1",
-        Time = 4
-    },
-    ["idle_moving"] = {
-        Source = "fidget1",
-        Time = 4
+        Time = 99/30
     },
 	["idle_sights"] = {
 		Source = "aim",
@@ -277,25 +273,25 @@ SWEP.Animations = {
 	},
     ["draw"] = {
         Source = "draw",
-		Time = 0.7,
+		Time = 18/30,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.25,
     },
     ["fire"] = {
         Source = { "fire1", "fire2", "fire3" },
-        Time = 0.2,
+        Time = 8/30,
     },
 	["bash"] = {
 		Source = "melee",
-		Time = 1,
+		Time = 29/30,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.8,
     },
     ["reload"] = {
         Source = "reload",
-        Time = 2.3,
+        Time = 68/30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Checkpoints = {00, 08, 45, 58},
         FrameRate = 30,

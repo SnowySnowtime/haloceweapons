@@ -19,6 +19,11 @@ SWEP.ViewModel = "models/snowysnowtime/c_energysword.mdl"
 SWEP.WorldModel = "models/snowysnowtime/w_es.mdl"
 SWEP.ViewModelFOV = 60
 
+SWEP.WorldModelOffset = {
+	pos = Vector(9, 1, 2.5),
+	ang = Angle(0, 180, 0)
+}
+
 SWEP.DefaultSkin = 0
 SWEP.DefaultWMSkin = 0
 
@@ -64,16 +69,69 @@ SWEP.AttachmentElements = {
 }
 
 SWEP.Attachments = {
+	{
+        PrintName = "Optic", -- print name
+        DefaultAttName = "10x Scope",
+        Slot = {"optic", "optic_lp"}, -- what kind of attachments can fit here, can be string or table
+        Bone = "frame handle", -- relevant bone any attachments will be mostly referring to
+        Offset = {
+            vpos = Vector(0, 0, 6.2), -- offset that the attachment will be relative to the bone
+            vang = Angle(0, 0, 0),
+            wpos = Vector(6, 2, -4.4),
+            wang = Angle(-8.829, 0, 180)
+        },
+        CorrectivePos = Vector(0, 0, 0),
+        CorrectiveAng = Angle(0, 0, 0),
+        InstalledEles = {"mount"}
+    },
+	{
+        PrintName = "Tactical",
+        Slot = "tac",
+        Bone = "frame handle",
+        Offset = {
+            vpos = Vector(7.5, -0.75, 3.4), -- offset that the attachment will be relative to the bone
+            vang = Angle(0, 0, 90),
+            wpos = Vector(6, 1.25, -3),
+            wang = Angle(-8.829, -0.556, 90)
+        },
+    },
+    {
+        PrintName = "Perk",
+        Slot = "perk"
+    },
+	{
+        PrintName = "Underbarrel",
+        Slot = {"foregrip", "ubgl", "bipod"},
+        Bone = "frame handle",
+        Offset = {
+            vpos = Vector(0, 0, 0),
+            vang = Angle(0, 0, 8),
+            wpos = Vector(15, 1, 0),
+            wang = Angle(-12, 0, 180)
+        },
+    },
+    {
+        PrintName = "Charm",
+        Slot = "charm",
+        FreeSlot = true,
+        Bone = "frame handle", -- relevant bone any attachments will be mostly referring to
+        Offset = {
+            vpos = Vector(5.5, -1.5, 3.6), -- offset that the attachment will be relative to the bone
+            vang = Angle(0, 0, 10),
+            wpos = Vector(6, 2.4, -3.5),
+            wang = Angle(-10.393, 0, 180)
+        },
+    },
 }
 
 SWEP.Animations = {
 	["idle"] = {
         Source = "idle",
-        Time = 2.5,
+        Time = 98/30,
     },
     ["draw"] = {
         Source = "draw",
-        Time = 2,
+        Time = 53/30,
     },
     ["ready"] = {
         Source = "draw",
@@ -87,9 +145,9 @@ SWEP.Animations = {
 		Source = "fire3",
         Time = 2.2,
     },
-    ["inspect"] = {
+    ["exit_inspect"] = {
         Source = "fidget",
-        Time = 1,
+        Time = 118/30,
     },
 }
 

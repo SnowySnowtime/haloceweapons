@@ -6,7 +6,7 @@ SWEP.AdminOnly = false
 SWEP.PrintName = "SMG"
 SWEP.TrueName = "M7 SMG"
 SWEP.Trivia_Class = "SMG"
-SWEP.Trivia_Desc = "The M7/Caseless Submachine Gun, more simply known as the SMG, is a United Nations Space Command infantry and special operations weapon. Sustained fire tends to cause the muzzle to ''walk'' upwards as recoil compounds. "
+SWEP.Trivia_Desc = "The M7/Caseless Submachine Gun, more simply known as the SMG, is a United Nations Space Command infantry and special operations weapon. Sustained fire tends to cause the muzzle to ''walk'' upwards as recoil compounds."
 SWEP.Trivia_Manufacturer = "Misriah Armory"
 SWEP.Trivia_Calibre = "5x23mm M443 Caseless Full Metal Jacket"
 SWEP.Trivia_Mechanism = "Automatic"
@@ -133,7 +133,7 @@ SWEP.IronSightStruct = {
 SWEP.HoldtypeHolstered = "normal"
 SWEP.HoldtypeActive = "smg"
 SWEP.HoldtypeSights = "ar2"
-SWEP.MeleeTime = 0.5
+SWEP.MeleeTime = 0.85
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_RPG
 
@@ -266,16 +266,19 @@ SWEP.Attachments = {
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
-        Time = 5
+        Time = 88/30
     },
 	["idle_sights"] = {
 		Source = "aim",
+		Time = 1/2000,
 	},
 	["enter_sight"] = {
 		Source = "aim",
+		Time = 1/2000,
 	},
 	["exit_sight"] = {
-		Source = "aimout",
+		Source = "aim",
+		Time = 1/2000
 	},
 	["enter_inspect"] = {
 		Source = "pose2",
@@ -284,42 +287,32 @@ SWEP.Animations = {
 		Source = "pose1",
 	},
 	["fire_iron"] = {
-        Source = "fire",
+        Source = "fire_fp",
+		Time = 4/30,
     },
     ["draw"] = {
         Source = "draw",
-        Time = 1,
+        Time = 18/30,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.25,
-		SoundTable = {{s = "customedition/smg_ready.wav", t = 0}},
     },
     ["fire"] = {
-        Source = "fire",
-        Time = 1,
+        Source = "fire_fp",
+        Time = 4/30,
     },
 	["bash"] = {
         Source = "melee",
         LHIK = true,
-		Time = 1,
+		Time = 25/30,
         LHIKIn = 0,
         LHIKOut = 0.2,
     },
     ["reload"] = {
         Source = "reload",
-        Time = 1.75,
+        Time = 49/30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         Checkpoints = {24, 33, 51, 58, 62, 74, 80},
-        FrameRate = 30,
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
-    },
-    ["reload_empty"] = {
-        Source = "reload",
-        Time = 1.75,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
-        Checkpoints = {24, 33, 51},
         FrameRate = 30,
         LHIK = true,
         LHIKIn = 0.5,

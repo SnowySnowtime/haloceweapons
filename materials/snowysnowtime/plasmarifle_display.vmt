@@ -1,6 +1,0 @@
-"UnlitGeneric"
-{
-	"$basetexture" "snowysnowtime/display"
-	"$nocull" "1"
-	"$color2"		"{100 190 600}"
-}

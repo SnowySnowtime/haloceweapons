@@ -292,11 +292,11 @@ SWEP.Animations = {
     },
     ["fire"] = {
         Source = {"fire1", "fire2", "fire3"},
-        Time = 1.15,
+        Time = 33/30,
     },
     ["sgreload_start"] = {
         Source = "reload_enter",
-        Time = 0.5,
+        Time = 13/30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         LHIK = true,
         LHIKIn = 0.5,
@@ -304,7 +304,7 @@ SWEP.Animations = {
     },
     ["sgreload_start_empty"] = {
         Source = "reload_enter",
-        Time = 0.5,
+        Time = 13/30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         LHIK = true,
         LHIKIn = 0.5,
@@ -312,7 +312,7 @@ SWEP.Animations = {
     },
     ["sgreload_insert"] = {
         Source = "reload_loop",
-        Time = 0.5,
+        Time = 15/30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         TPAnimStartTime = 0.3,
         LHIK = true,
@@ -321,7 +321,7 @@ SWEP.Animations = {
     },
     ["sgreload_finish"] = {
         Source = "reload_exit",
-        Time = 1.2,
+        Time = 33/30,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.4,

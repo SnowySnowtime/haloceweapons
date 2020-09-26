@@ -271,11 +271,9 @@ SWEP.Attachments = {
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
     if wep.Attachments[11].Installed == "hce_anniv" then
-        if anim == "reload_empty" then
-            return "reload_empty_anniv"
-        elseif anim == "reload" then
+        if anim == "reload" then
             return "reload_anniv"
-				end
+			end
 		if anim == "draw" then
             return "draw_anniv"
 			end
@@ -294,7 +292,7 @@ end
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
-        Time = 4
+        Time = 79/30
     },
 	["exit_inspect"] = {
 		Source = "fidget",
@@ -304,71 +302,50 @@ SWEP.Animations = {
     },
     ["draw"] = {
         Source = "draw",
-        Time = 1,
+        Time = 28/30,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.25,
     },
     ["fire"] = {
         Source = "fire",
-        Time = 1,
+        Time = 20/30,
     },
 	["bash"] = {
         Source = "melee",
+		Time = 36/30,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.2,
     },
     ["reload"] = {
         Source = "reload",
-        Time = 3,
+        Time = 86/30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Checkpoints = {24, 33, 51, 58, 62, 74, 80},
-        FrameRate = 30,
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
-    },
-    ["reload_empty"] = {
-        Source = "reload",
-        Time = 3,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Checkpoints = {24, 33, 51},
-        FrameRate = 30,
         LHIK = true,
         LHIKIn = 0.5,
         LHIKOut = 0.5,
     },
 	["draw_anniv"] = {
         Source = "anniv_draw",
-        Time = 1,
+        Time = 28/30,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.25,
     },
 	["bash_anniv"] = {
         Source = "anniv_melee",
-		Time = 1.1,
+		Time = 36/30,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.2,
     },
     ["reload_anniv"] = {
         Source = "anniv_reload",
-        Time = 3,
+        Time = 86/30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Checkpoints = {24, 33, 51, 58, 62, 74, 80},
-        FrameRate = 30,
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
-    },
-    ["reload_empty_anniv"] = {
-        Source = "anniv_reload",
-        Time = 3,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Checkpoints = {24, 33, 51},
-        FrameRate = 30,
         LHIK = true,
         LHIKIn = 0.5,
         LHIKOut = 0.5,
