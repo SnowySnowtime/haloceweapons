@@ -35,7 +35,7 @@ function ENT:Initialize()
     end
 
     self.at = CurTime() + self.ArmTime
-    self.Armed = false
+    self.Armed = true
 end
 
 function ENT:OnRemove()
