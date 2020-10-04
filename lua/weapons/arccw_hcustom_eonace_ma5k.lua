@@ -247,46 +247,47 @@ SWEP.Animations = {
 	},
     ["idle"] = {
         Source = "idle",
-        Time = 4
+        Time = 100/30
     },
 	["exit_inspect"] = {
 		Source = "fidget",
+		Time = 60/30
 	},
 	["fire_iron"] = {
         Source = "aim_fire",
-		Time = 0.2,
+		Time = 10/30,
     },
     ["draw"] = {
         Source = "draw",
-		Time = 0.7,
+		Time = 27/45,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.25,
     },
     ["fire"] = {
         Source = "fire",
-        Time = 0.2,
+        Time = 10/45,
     },
 	["bash"] = {
 		Source = "melee",
-		Time = 1,
+		Time = 25/30,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.2,
     },
     ["reload"] = {
         Source = "reload",
-        Time = 2.5,
+        Time = 75/30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Checkpoints = {06, 15, 37, 47},
-        FrameRate = 30,
+        FrameRate = 75/30,
         LHIK = true,
         LHIKIn = 0.5,
         LHIKOut = 0.5,
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-        Time = 3,
+        Time = 80/30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Checkpoints = {11, 16, 36, 47, 57},
         FrameRate = 30,

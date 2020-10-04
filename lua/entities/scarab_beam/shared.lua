@@ -22,7 +22,7 @@ self.Owner = self:GetOwner()
 self.Entity:SetModel( "models/Items/AR2_Grenade.mdl" )
 self.Entity:SetModelScale( 0 )
 self.Entity:PhysicsInit( SOLID_VPHYSICS )      -- Make us work with physics,  	
-self.Entity:SetMoveType( MOVETYPE_NONE )   --after all, gmod is a physics  	
+self.Entity:SetMoveType( MOVETYPE_VPHYSICS )   --after all, gmod is a physics  	
 self.Entity:SetSolid( SOLID_VPHYSICS )        -- CHEESECAKE!    >:3           
 --self.Entity:SetColor(Color(0 100 255,255))
 

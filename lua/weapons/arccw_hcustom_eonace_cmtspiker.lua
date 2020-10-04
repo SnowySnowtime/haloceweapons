@@ -222,7 +222,16 @@ SWEP.Animations = {
         Time = 4
     },
 	["exit_inspect"] = {
-		Source = "fidget",
+		Source = "fidget2",
+		Time = 21/30,
+	},
+	["idle_inspect"] = {
+		Source = "fidget2",
+		Time = 21/30,
+	},
+	["enter_inspect"] = {
+		Source = "fidget1",
+		Time = 21/30,
 	},
 	["fire_iron"] = {
         Source = "fire",

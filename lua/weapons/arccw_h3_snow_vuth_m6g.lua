@@ -277,18 +277,18 @@ SWEP.Animations = {
     },
     ["draw"] = {
         Source = "draw",
-        Time = 21/28,
+        Time = 21/30,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.25,
     },
     ["fire"] = {
         Source = { "fire_rand1","fire_rand2","fire_rand3" },
-        Time = 15/25,
+        Time = 15/30,
     },
 	["bash"] = {
         Source = "melee",
-		Time = 28/45,
+		Time = 28/30,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.6,

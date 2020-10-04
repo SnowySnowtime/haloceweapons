@@ -299,7 +299,7 @@ SWEP.Animations = {
 	},
 	["exit_sight"] = {
 		Source = "aim",
-		Time = 1/1200,
+		Time = 1/30,
 	},
 	["enter_inspect"] = {
 		Source = "pose1",
@@ -310,7 +310,7 @@ SWEP.Animations = {
 	},
 	["fire_iron"] = {
         Source = {"fire1","fire2","fire3"},
-		Time = 0.35,
+		Time = 5/30,
     },
     ["draw"] = {
         Source = "deploy",

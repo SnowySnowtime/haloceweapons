@@ -206,6 +206,9 @@ SWEP.Attachments = {
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
     if wep.Attachments[4].Installed == "hce_anniv" then
+	    if anim == "draw" then
+            return "draw_anniv"
+			end
         if anim == "reload_empty" then
             return "reload_empty_anniv"
         elseif anim == "reload" then
@@ -232,57 +235,62 @@ end
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
-        Time = 4
+        Time = 59/30
+    },
+    ["holster"] = {
+        Source = "holster",
+        Time = 21/30
     },
 	["exit_inspect"] = {
 		Source = "fidget",
+		Time = 117/30,
 	},
 	["exit_inspect_anniv"] = {
 		Source = "anniv_fidget",
-		Time = 4,
+		Time = 117/30,
 	},
 	["fire_iron"] = {
         Source = "fire",
     },
     ["draw"] = {
         Source = "draw",
-        Time = 1,
+        Time = 21/30,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.25,
     },
 	["draw_anniv"] = {
         Source = "anniv_draw",
-        Time = 1,
+        Time = 21/30,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.25,
     },
     ["fire"] = {
         Source = "fire",
-        Time = 1,
+        Time = 27/30,
     },
 	["fire_anniv"] = {
         Source = "anniv_fire",
-        Time = 1,
+        Time = 27/30,
     },
 	["bash_anniv"] = {
         Source = "melee",
-		Time = 1.75,
+		Time = 51/30,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.6,
     },
 	["bash"] = {
         Source = "melee",
-		Time = 1.75,
+		Time = 51/30,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.6,
     },
     ["reload"] = {
-        Source = "anniv_melee",
-        Time = 3.75,
+        Source = "reload",
+        Time = 110/30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_CROSSBOW,
         Checkpoints = {24, 33, 51, 58, 62, 74, 80},
         LHIK = true,
@@ -291,7 +299,7 @@ SWEP.Animations = {
     },
     ["reload_empty"] = {
         Source = "reloadempty",
-        Time = 3.75,
+        Time = 124/30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_CROSSBOW,
         Checkpoints = {24, 33, 51},
         FrameRate = 30,
@@ -301,7 +309,7 @@ SWEP.Animations = {
     },
 	["reload_anniv"] = {
         Source = "anniv_reload",
-        Time = 3.75,
+        Time = 110/30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_CROSSBOW,
         Checkpoints = {24, 33, 51, 58, 62, 74, 80},
         LHIK = true,
@@ -310,7 +318,7 @@ SWEP.Animations = {
     },
     ["reload_empty_anniv"] = {
         Source = "anniv_reloadempty",
-        Time = 3.75,
+        Time = 124/30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_CROSSBOW,
         Checkpoints = {24, 33, 51},
         FrameRate = 30,
@@ -345,8 +353,7 @@ function SWEP:OnPaP()
 self.Ispackapunched = 1
 self.PrintName = "M420 SPANKr"
 self.MagExtender = true
-self.ActivateElements = {"extendedmag"}
 self.Primary.MaxAmmo = 20
-self.Delay = 60 / 120
+self.Delay = 60 / 150
 return true
 end
