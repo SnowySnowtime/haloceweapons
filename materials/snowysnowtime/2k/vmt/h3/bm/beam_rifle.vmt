@@ -4,19 +4,29 @@
 	"$bumpmap" "snowysnowtime/2k/h3/bm/beam_rifle_n"
 	"$nocull" 1
     "$envmap" "snowysnowtime/cyborg_reflection_armor"
-	"$envmaptint" "[ 1 1 1 ]"
-	"$cubemaptint"	"[ 0 0 0 ]"
-	"$cubemappower"	0.01
+	"$envmaptint" "[ 0 0 0 ]"
+	"$cubemaptint"	"[ 4 0 4 ]"
+	"$cubemappower"	0.05
 	"$normalmapalphaenvmapmask" "1"
 	"$selfillum" "1"
-	"$selfillumtint" "[10 2 10]"
+	"$selfillumtint" "[80 20 80]"
 	"$selfillummask" "snowysnowtime/2k/h3/bm/beam_rifle_illum"
+	$lightwarptexture	"snowysnowtime\2k\h3\lw_metaldull"
+	$detail		"snowysnowtime\eonace\vuthakral\T57B\airlock_field"
+	$detailscale	32
+	$detailblendmode	0
+	$detailblendfactor	0.2
+	$rimlight	1
+	$rimlightboost	1.4
+	$rimlightexponent	5
+	$rimmask	1
 	"$phong" "1" 
 	"$phongboost" "1"
-	"$phongexponent" "100"
+	"$phongexponent" "400"
 	"$phongexponenttexture" "snowysnowtime/2k/h3/bm/phong_beamrifledef"
 	"$phongalbedotint" "1"
-	"$phongfresnelranges" "[4 0.5 12]"
+	"$phongfresnelranges" "[4 2 24]"
+	$phongtint		"[ 0.52 0.35 0.72 ]"
 	"$phongdisablehalflambert" "1"
 	"Proxies"
 	{

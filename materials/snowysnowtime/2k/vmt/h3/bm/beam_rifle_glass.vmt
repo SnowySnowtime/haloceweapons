@@ -2,15 +2,26 @@
 {
 	"$basetexture" "snowysnowtime/2k/h3/bm/gray_50_percent"
 	"$translucent" 1
-	"$nocull" 1
+	"$additive" "1"
     "$envmap" "snowysnowtime/cyborg_reflection_armor"
-	"$envmaptint" "[ 1 1 1 ]"
-	"$cubemaptint"	"[ 0 0 0 ]"
-	"$cubemappower"	1
+	"$envmaptint" "[ 0 0 0 ]"
+	"$cubemaptint"	"[ 1 1 1 ]"
+	"$cubemappower"	0.25
+	$detail		"snowysnowtime\eonace\vuthakral\T57B\airlock_field"
+	$detailscale	12
+	$detailblendmode	0
+	$detailblendfactor	0.2
+	$rimlight	1
+	$rimlightboost	12
+	$rimlightexponent	1
+	$rimmask	1
+	"$phong" "1" 
+	"$phongboost" "1"
+	"$phongexponent" "12"
+	"$phongexponenttexture" "snowysnowtime/2k/h3/bm/phong_beamrifledef"
+	"$phongalbedotint" "1"
+	"$phongfresnelranges" "[4 2 12]"
 	"$normalmapalphaenvmapmask" "1"
-	"$selfillum" "1"
-	"$selfillumtint" "[3 0.1 3]"
-	"$selfillummask" "snowysnowtime/2k/h3/bm/gray_50_percent"
 	"Proxies"
 	{
 		vuth_ReflectionTint

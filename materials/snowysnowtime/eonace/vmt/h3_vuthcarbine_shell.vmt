@@ -7,7 +7,7 @@ VertexLitGeneric
 	$phongexponent	8
 	$phongboost	9
 	$phongtint		"[ 0.52 0.35 0.72 ]"
-                $phongfresnelranges	"[ 0.22 0.15 0.5 ]" 
+    $phongfresnelranges	"[ 0.22 0.15 0.5 ]" 
 
 	$rimlight	1
 	$rimlightboost	1.4
