@@ -167,6 +167,10 @@ SWEP.AttachmentElements = {
         VMSkin = 6,
         WMSkin = 6,
     },
+	["e32000"] = {
+        VMSkin = 7,
+        WMSkin = 7,
+    },
 	["anniv"] = {
         VMBodygroups = {{ind = 0, bg = 1}},
         WMBodygroups = {{ind = 0, bg = 1}},

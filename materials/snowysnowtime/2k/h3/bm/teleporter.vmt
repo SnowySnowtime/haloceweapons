@@ -1,0 +1,43 @@
+"UnlitGeneric"
+{
+	"$basetexture" "snowysnowtime/2k/teleporter"
+	"$selfillum" "1"
+	"$additive" "1"
+	"$nocull" "1"
+"$basetexturetransform" "center 0 0 scale 4 1 rotate 0 translate 0 0"
+	"$blendtintbybasealpha" "1"
+	"$color2" "{ 500 100 500 }"
+	"Proxies"
+	{
+	"AnimatedTexture"
+	{
+		"animatedTextureVar" "$basetexture"
+		"animatedTextureFrameNumVar" "$frame"
+		"animatedTextureFrameRate" "30"
+	}
+		"TextureScroll"
+		{
+
+
+          "LinearRamp"
+            {
+                "rate" 4
+                "initialValue" 0.0
+                "resultVar" "$angle"
+            }
+
+
+			"texturescrollvar" "$baseTextureTransform"
+			"texturescrollrate" .1
+			"texturescrollangle" 90
+"texturescrollvar" "$baseTextureTransform"
+			"texturescrollrate" -.00
+			"texturescrollangle" 90
+
+
+}
+			
+			
+	}
+}		
+

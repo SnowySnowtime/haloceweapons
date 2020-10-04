@@ -4,7 +4,7 @@ SWEP.Category = "ArcCW - Halo Reanimated" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "Bullpup Sniper Rifle"
-SWEP.TrueName = "Bullpup SRS99 AM"
+SWEP.TrueName = "Bullpup SRS99C-S2 AM"
 SWEP.Trivia_Class = "Sniper Rifle"
 SWEP.Trivia_Desc = "Shorten-ed and Bullpup-ed version of an SRS99."
 SWEP.Trivia_Manufacturer = "Misriah Armory"

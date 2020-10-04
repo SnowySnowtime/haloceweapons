@@ -4,7 +4,7 @@ SWEP.Category = "ArcCW - Halo 3" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "Plasma Rifle"
-SWEP.TrueName = "Type-25 DER"
+SWEP.TrueName = "Type-25 Plasma Rifle"
 SWEP.Trivia_Class = "Rifle"
 SWEP.Trivia_Desc = "This is a Type-25 Directed Energy Rifle"
 SWEP.Trivia_Manufacturer = "Iruiru Armory"
@@ -273,7 +273,7 @@ SWEP.Animations = {
     },
     ["reload"] = {
         Source = "overheat_loop",
-        Time = 95/30,
+        Time = 95/40,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Checkpoints = {24, 33, 51, 58, 62, 74, 80},
         FrameRate = 30,

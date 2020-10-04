@@ -1,0 +1,22 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "snowysnowtime/2k/h3/bm/gray_50_percent"
+	"$translucent" 1
+	"$nocull" 1
+    "$envmap" "snowysnowtime/cyborg_reflection_armor"
+	"$envmaptint" "[ 1 1 1 ]"
+	"$cubemaptint"	"[ 0 0 0 ]"
+	"$cubemappower"	1
+	"$normalmapalphaenvmapmask" "1"
+	"$selfillum" "1"
+	"$selfillumtint" "[3 0.1 3]"
+	"$selfillummask" "snowysnowtime/2k/h3/bm/gray_50_percent"
+	"Proxies"
+	{
+		vuth_ReflectionTint
+		{
+			resultVar $envmaptint
+		}
+	}
+}
+

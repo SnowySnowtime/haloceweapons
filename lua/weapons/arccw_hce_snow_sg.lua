@@ -131,8 +131,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-3.45, -12.011, 1.983),
-    Ang = Angle(0, 0, 0),
+    Pos = Vector(-3.41, -8, 1.7),
+    Ang = Angle(0, 0.1, 0),
     Magnification = 1.1,
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
@@ -324,7 +324,7 @@ SWEP.Animations = {
     },
     ["sgreload_start_empty"] = {
         Source = "reload1",
-        Time = 0.5,
+        Time = 13/30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         LHIK = true,
         LHIKIn = 0.5,
@@ -332,7 +332,7 @@ SWEP.Animations = {
     },
     ["sgreload_insert"] = {
         Source = "reload2",
-        Time = 11/25,
+        Time = 11/30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         TPAnimStartTime = 0.3,
         LHIK = true,
@@ -368,7 +368,7 @@ SWEP.Animations = {
     },
     ["sgreload_insert_anniv"] = {
         Source = "anniv_reload2",
-        Time = 11/25,
+        Time = 11/30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         TPAnimStartTime = 0.3,
         LHIK = true,

@@ -14,6 +14,7 @@ AddCSLuaFile()
 
 function ENT:Initialize()
     if SERVER then
+		
         self:SetModel( self.Model )
         self:SetMoveType( MOVETYPE_VPHYSICS )
         self:SetSolid( SOLID_VPHYSICS )
@@ -30,11 +31,11 @@ function ENT:Initialize()
         end
 
         self.kt = CurTime() + self.FuseTime
-        self.motorsound = CreateSound( self, "halo/combat_evolved/weapons/rocket_flyby_hce.ogg")
+        self.motorsound = CreateSound( self, "hce/rocket_flyby_hce.wav")
     end
 
     self.at = CurTime() + self.ArmTime
-    self.Armed = false
+    self.Armed = true
 end
 
 function ENT:OnRemove()
@@ -144,7 +145,7 @@ function ENT:Detonate()
             util.Effect( "WaterSurfaceExplosion", effectdata )
         else
             util.Effect( "astw2_halo_ce_explosion_rocket", effectdata)
-	sound.Play( "halo/combat_evolved/weapons/grenade_expl_" .. math.random(1,2) .. ".ogg",  self:GetPos(), 100, 100 )
+	sound.Play( "hce/grenade_expl_" .. math.random(1,2) .. ".wav",  self:GetPos(), 100, 100 )
         end
 
         local attacker = self

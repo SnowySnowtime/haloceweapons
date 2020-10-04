@@ -98,7 +98,8 @@ SWEP.MagID = "hs338" -- the magazine pool this gun draws from
 SWEP.ShootVol = 80 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.ShootSound = Sound("smg_soup")
+SWEP.ShootSound = Sound("h3.smg_fire")
+SWEP.FirstShootSound = Sound("h3.smg_firstfire")
 SWEP.ShootSoundSilenced = "h3sup"
 SWEP.DistantShootSound = nil
 
@@ -125,8 +126,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-3.375, -3, 0),
-    Ang = Angle(0.792, 0.017, 0),
+    Pos = Vector(-3.73, -3, 0.225),
+    Ang = Angle(-0.9, -1.1, 0),
     Magnification = 1.1,
 }
 
@@ -270,15 +271,15 @@ SWEP.Animations = {
     },
 	["idle_sights"] = {
 		Source = "aim",
-		Time = 1/2000,
+		Time = 1/30,
 	},
 	["enter_sight"] = {
 		Source = "aim",
-		Time = 1/2000,
+		Time = 1/30,
 	},
 	["exit_sight"] = {
 		Source = "aim",
-		Time = 1/2000
+		Time = 1/30
 	},
 	["enter_inspect"] = {
 		Source = "pose2",
@@ -347,8 +348,8 @@ self.PrintName = "Bullet Hose"
 self.MagExtender = true
 self.ActivateElements = {"extendedmag"}
 self.Primary.MaxAmmo = 800
-self.Damage = 25
+self.Damage = 30
 self.DamageMin = 15
-self.Delay = 60 / 900
+self.Delay = 60 / 1000
 return true
 end

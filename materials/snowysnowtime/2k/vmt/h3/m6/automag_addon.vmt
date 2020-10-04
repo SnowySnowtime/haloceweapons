@@ -1,5 +1,6 @@
 "VertexLitGeneric"
 {
+<<<<<<< HEAD
 	"$basetexture" "snowysnowtime/2k/h3/m6s"
 	"$bumpmap" "snowysnowtime/2k/h3/m6s_n"
 	"$selfillum" "1"
@@ -14,6 +15,23 @@
 	"$phongboost" "8"
 	"$phongexponent" "20"
 	"$phongexponenttexture" "snowysnowtime/2k/h3/m6s_p"
+=======
+	"$basetexture" "snowysnowtime/2k/h3/automag_addon"
+	"$bumpmap" "snowysnowtime/2k/h3/automag_addon_n"
+	"$envmap" "snowysnowtime/cyborg_reflection_armor"
+	"$envmaptint" "[ 1 1 1 ]"
+	"$cubemaptint"	"[ 0 0 0 ]"
+	"$cubemappower"	0.01
+	"$envmapfresnel" "1"
+	"$normalmapalphaenvmapmask" "1"
+	"$selfillum" "1"
+	"$selfillumtint" "[20 20 20]"
+	"$selfillummask" "snowysnowtime\2k\h3\automag_addon_illum"
+	"$phong" "1" 
+	"$phongboost" "8"
+	"$phongexponent" "20"
+	"$phongexponenttexture" "snowysnowtime/2k/h3/m6_p"
+>>>>>>> 18aab9e7095109a5c23ed955e135b614573e06d7
 	"$phongalbedotint" "1"
 	"$phongfresnelranges" "[1.5 3 5]"
 	"$phongdisablehalflambert" "1"

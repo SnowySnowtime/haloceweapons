@@ -4,7 +4,7 @@ SWEP.Category = "ArcCW - Halo Combat Evolved" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "Sniper Rifle"
-SWEP.TrueName = "SRS99 AM"
+SWEP.TrueName = "SRS99C-S2 AM"
 SWEP.Trivia_Class = "Sniper Rifle"
 SWEP.Trivia_Desc = "The Sniper Rifle System 99 Anti-Materiel, (formally known as the Special Applications Rifle, Caliber 14.5 mm, SRS99), is a sniper rifle produced by Misriah Armory and used by the UNSC Armed Forces, and a part of the broader SRS99 family of weapons. The SRS99 entered service with the Army in 2460. Because of its modularity and ongoing manufacturer support, the SRS99 was adopted by all branches in 2521."
 SWEP.Trivia_Manufacturer = "Misriah Armory"
