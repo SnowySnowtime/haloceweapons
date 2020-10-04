@@ -200,7 +200,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Perk",
-        Slot = {"perk","go_perk"}
+        Slot = "perk"
     },
     {
         PrintName = "Charm",
@@ -219,15 +219,15 @@ SWEP.Attachments = {
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
-        Time = 4
+        Time = 70/30,
     },
 	["exit_inspect"] = {
 		Source = "fidget2",
 		Time = 21/30,
 	},
 	["idle_inspect"] = {
-		Source = "fidget2",
-		Time = 21/30,
+		Source = "fidget_idle",
+		Time = 70/30,
 	},
 	["enter_inspect"] = {
 		Source = "fidget1",
@@ -238,24 +238,32 @@ SWEP.Animations = {
     },
     ["draw"] = {
         Source = "draw",
-        Time = 1,
+        Time = 29/30,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 0.25,
+    },
+	["holster"] = {
+        Source = "holster",
+        Time = 29/30,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.25,
     },
     ["fire"] = {
         Source = "fire",
-        Time = 1,
+        Time = 25/30,
     },
 	["bash"] = {
         Source = "melee",
+		Time = 35/30,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.2,
     },
     ["reload"] = {
         Source = "reload",
-        Time = 3,
+        Time = 68/22,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Checkpoints = {24, 33, 51, 58, 62, 74, 80},
         FrameRate = 30,
@@ -265,7 +273,7 @@ SWEP.Animations = {
     },
     ["reload_empty"] = {
         Source = "reload",
-        Time = 3,
+        Time = 68/22,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Checkpoints = {24, 33, 51},
         FrameRate = 30,

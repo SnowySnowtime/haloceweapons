@@ -463,6 +463,15 @@ sound.Add(
 
 sound.Add(
 {
+    name = "cmt.spiker_pose",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = "customedition/cmtspiker_pose.wav"
+})
+
+sound.Add(
+{
     name = "cmt.spiker_reload1",
     channel = CHAN_STATIC,
     volume = 1.0,
