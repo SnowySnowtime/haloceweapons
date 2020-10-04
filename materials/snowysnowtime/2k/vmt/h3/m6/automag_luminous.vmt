@@ -1,16 +1,9 @@
 "UnLitGeneric"
 {
-<<<<<<< HEAD
-	"$basetexture" "snowysnowtime/2k/h3/m6"
-	"$bumpmap" "snowysnowtime/2k/h3/m6_n"
-	"$selfillum" "1"
-	"$color2" "[ 0 9 0 ]"
-=======
 	"$basetexture" "snowysnowtime/2k/h3/automag"
 	"$bumpmap" "snowysnowtime/2k/h3/automag_n"
 	"$selfillum" "1"
 	"$color2" "[ 0 100 0 ]"
->>>>>>> 18aab9e7095109a5c23ed955e135b614573e06d7
 	"$envmap" "snowysnowtime/cyborg_reflection_armor"
 	"$envmaptint" "[ 0.06 0.06 0.06 ]"
 	"$envmapfresnel" "1"
@@ -18,11 +11,8 @@
 	"$phong" "1" 
 	"$phongboost" "0.00001"
 	"$phongexponent" "20000"
-<<<<<<< HEAD
 	"$phongexponenttexture" "snowysnowtime/2k/h3/m6c_p"
-=======
 	"$phongexponenttexture" "snowysnowtime/2k/h3/m6_p"
->>>>>>> 18aab9e7095109a5c23ed955e135b614573e06d7
 	"$phongalbedotint" "1"
 	"$phongfresnelranges" "[0 0 0]"
 	"$phongdisablehalflambert" "1"

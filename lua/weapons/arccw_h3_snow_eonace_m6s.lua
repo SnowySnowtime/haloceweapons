@@ -93,6 +93,11 @@ SWEP.ShootSound = "h3_magnumfire"
 SWEP.ShootSoundSilenced = "hcesup"
 SWEP.DistantShootSound = "m6d_lod"
 
+SWEP.WorldModelOffset = {
+	pos = Vector(16, 1.5, 0),
+	ang = Angle(180, 0, 0)
+}
+
 SWEP.TracerNum = 1 -- tracer every X
 SWEP.Tracer = nil
 SWEP.MuzzleEffect = "astw2_halo_3_muzzle_magnum"
