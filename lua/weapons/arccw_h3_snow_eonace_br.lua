@@ -340,6 +340,16 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
     },
+    ["reload_empty"] = {
+        Source = "reload",
+        Time = 57/30,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+        Checkpoints = {12, 31, 48},
+        FrameRate = 30,
+        LHIK = true,
+        LHIKIn = 0.5,
+        LHIKOut = 0.5,
+    },
 }
 
 -- nZombies Stuff

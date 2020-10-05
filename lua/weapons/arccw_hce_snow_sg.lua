@@ -318,6 +318,7 @@ SWEP.Animations = {
         Source = "reload1",
         Time = 13/30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+		RestoreAmmo = 1,
         LHIK = true,
         LHIKIn = 0.5,
         LHIKOut = 0,
