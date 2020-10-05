@@ -252,6 +252,7 @@ SWEP.Animations = {
     ["sgreload_start_empty"] = {
         Source = "overheat_in",
         Time = 58/30,
+		RestoreAmmo = 1,
         LHIK = true,
         LHIKIn = 0.5,
         LHIKOut = 0,

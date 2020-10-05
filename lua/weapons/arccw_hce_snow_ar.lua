@@ -275,9 +275,11 @@ SWEP.Attachments = {
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
     if wep.Attachments[11].Installed == "hce_anniv" then
-        if anim == "reload" then
+        if anim == "reload_empty" then
+            return "reload_empty_anniv"
+        elseif anim == "reload" then
             return "reload_anniv"
-			end
+				end
 		if anim == "draw" then
             return "draw_anniv"
 			end
@@ -331,6 +333,15 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
     },
+    ["reload_empty"] = {
+        Source = "reload",
+        Time = 86/30,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        Checkpoints = {24, 33, 51, 58, 62, 74, 80},
+        LHIK = true,
+        LHIKIn = 0.5,
+        LHIKOut = 0.5,
+    },
 	["draw_anniv"] = {
         Source = "anniv_draw",
         Time = 28/30,
@@ -346,6 +357,15 @@ SWEP.Animations = {
         LHIKOut = 0.2,
     },
     ["reload_anniv"] = {
+        Source = "anniv_reload",
+        Time = 86/30,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        Checkpoints = {24, 33, 51, 58, 62, 74, 80},
+        LHIK = true,
+        LHIKIn = 0.5,
+        LHIKOut = 0.5,
+    },
+    ["reload_empty_anniv"] = {
         Source = "anniv_reload",
         Time = 86/30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,

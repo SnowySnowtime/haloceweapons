@@ -32,8 +32,7 @@ SWEP.DamageMin = 20 -- damage done at maximum range
 SWEP.Range =  700 -- in METRES
 SWEP.Penetration = 25
 SWEP.DamageType = DMG_BULLET
-SWEP.MuzzleVelocity = 600 -- projectile or phys bullet muzzle velocity
--- IN M/S
+SWEP.MuzzleVelocity = 600 -- projectile or phys bullet muzzle velocity -- IN M/S
 
 SWEP.TracerNum = 1 -- tracer every X
 SWEP.Tracer 	= "effect_astw2_halo3_tracer_plasmarifle"
@@ -281,6 +280,16 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0.5,
     },
+    ["reload_empty"] = {
+        Source = "overheat_loop",
+        Time = 95/40,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        Checkpoints = {24, 33, 51, 58, 62, 74, 80},
+        FrameRate = 30,
+        LHIK = true,
+        LHIKIn = 0.5,
+        LHIKOut = 0.5,
+    },
 }
 
 -- nZombies Stuff
@@ -309,6 +318,6 @@ self.Ispackapunched = 1
 self.PrintName = "Scarab Gun"
 self.Primary.MaxAmmo = 1000
 self.Delay = 60 / 400
-self.ShootEntity = "scarab_beam"
+self.ShootEntity = "hunter_beam"
 return true
 end
