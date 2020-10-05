@@ -15,6 +15,7 @@
 	"$phongalbedotint" "1"
 	"$phongfresnelranges" "[4 0.5 12]"
 	"$phongdisablehalflambert" "1"
+	$lightwarptexture	"snowysnowtime/2k/h3/lw_metaldull"
 	"Proxies"
 	{
 		vuth_ReflectionTint

@@ -9,7 +9,7 @@
 	"$envmapfresnel" "1"
 	"$normalmapalphaenvmapmask" "1"
 	"$phong" "1" 
-	"$phongboost" "25"
+	"$phongboost" "5"
 	"$phongexponent" "5"
 	"$phongexponenttexture" "snowysnowtime/2k/h3/m6c_p"
 	"$phongexponenttexture" "snowysnowtime/2k/h3/m6_p"

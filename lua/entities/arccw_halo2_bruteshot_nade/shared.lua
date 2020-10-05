@@ -15,7 +15,7 @@ AddCSLuaFile()
 
 function ENT:Initialize()
     if SERVER then
-	util.SpriteTrail( self, 0, Color(235,225,255,200), false, 18, 0, 0.5, 1, "trails/smoke" )
+	util.SpriteTrail(self, 0, Color(255,255,255,179), false, 12, 1, 0.5, 1/(9+1)*0.3, "snowysnowtime/contrails/rocket_contrail.vmt");     
         self:SetModel( self.Model )
         self:SetMoveType( MOVETYPE_VPHYSICS )
         self:SetSolid( SOLID_VPHYSICS )
@@ -28,7 +28,7 @@ function ENT:Initialize()
             phys:Wake()
 		phys:SetMass(1)
             phys:SetBuoyancyRatio(0)
-		phys:EnableGravity( false )
+		phys:EnableGravity( true )
         end
 
         self.kt = CurTime() + self.FuseTime
@@ -62,7 +62,7 @@ function ENT:Think()
     if SERVER then
 	
 	if CurTime() >= self.at then
-            local targets = ents.FindInSphere(self:GetPos(), 16)
+            local targets = ents.FindInSphere(self:GetPos(), 32)
             for _, k in pairs(targets) do
                 if k:IsPlayer() or k:IsNPC() then
                     if self:Visible( k ) and k:Health() > 0 then
@@ -76,11 +76,7 @@ function ENT:Think()
 
         if self.Armed then
             local phys = self:GetPhysicsObject()
-            phys:ApplyForceCenter( self:GetAngles():Forward() * 500 )
-        end
-
-        if CurTime() >= self.kt then
-            self:Detonate()
+            phys:ApplyForceCenter( self:GetAngles():Forward() * 12000 )
         end
     end
 
@@ -91,13 +87,13 @@ function ENT:Detonate()
     if SERVER then
         if !self:IsValid() then return end
         local effectdata = EffectData()
-        effectdata:SetOrigin(self:GetPos() + Vector(0,0,40))
+        effectdata:SetOrigin(self:GetPos() + Vector(0,0,0))
 
         if self:WaterLevel() >= 1 then
             util.Effect( "WaterSurfaceExplosion", effectdata )
         else
-            util.Effect( "astw2_halo2_explosion_bruteshot", effectdata)
-			sound.Play( "halo/halo_2/weapons/brute_explode.ogg",  self:GetPos(), 100, 100 )
+            util.Effect( "astw2_halo_ce_explosion_frag", effectdata)
+			self.Entity:EmitSound( "hce/grenade_expl_"..math.random(1,2)..".wav", SNDLVL_512dB, 100, 100 )
         end
 
         local attacker = self
@@ -106,7 +102,7 @@ function ENT:Detonate()
             attacker = self.Owner
         end
 
-        util.BlastDamage(self, attacker, self:GetPos(), 256, 50)
+        util.BlastDamage(self, attacker, self:GetPos(), 256, 75)
 	 util.ScreenShake(self:GetPos(),2000,100,0.35,720)
         self:Remove()
     end

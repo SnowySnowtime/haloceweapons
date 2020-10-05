@@ -2,4 +2,5 @@
 {
 	"$basetexture" "snowysnowtime/display_fp"
 	"$selfillum" 1
+	"$additive" 1
 }

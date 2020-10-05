@@ -29,7 +29,7 @@ if GetConVar("arccw_hce_bal"):GetInt() == 0 then -- HaloCW
 	SWEP.Damage = 30
 	SWEP.DamageMin = 30
 	SWEP.AccuracyMOA = 0.04
-	SWEP.HipDispersion = 0.09
+	SWEP.HipDispersion = 1
 	SWEP.MoveDispersion = 0
 	SWEP.JumpDispersion = 0
 	SWEP.ChamberSize = 0

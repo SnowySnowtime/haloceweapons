@@ -1,0 +1,8 @@
+"UnlitGeneric"
+{
+	"$baseTexture" "models/halo/combat_evolved/weapons/frag/frag_grenade"
+	"$nocull" "1"
+	"$additive"	"1"
+
+
+}

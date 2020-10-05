@@ -6,15 +6,16 @@
     "$envmap" "snowysnowtime/cyborg_reflection_armor"
 	"$envmaptint" "[ 1 1 1 ]"
 	"$cubemaptint"	"[ 0 0 0 ]"
-	"$cubemappower"	0.3
+	"$cubemappower"	0.06
 	"$normalmapalphaenvmapmask" "1"
 	"$phong" "1" 
-	"$phongboost" "12"
+	"$phongboost" "3"
 	"$phongexponent" "100"
-	"$phongexponenttexture" "snowysnowtime\ma5e\phongexp255"
+	"$phongexponenttexture" "snowysnowtime\2k\wephong\phong_ardef"
 	"$phongalbedotint" "1"
 	"$phongfresnelranges" "[4 0.5 8]"
 	"$phongdisablehalflambert" "1"
+	$lightwarptexture	"snowysnowtime/2k/h3/lw_metaldull"
 	"Proxies"
 	{
 		vuth_ReflectionTint

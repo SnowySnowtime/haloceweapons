@@ -9,12 +9,13 @@
 	"$cubemappower"	0.3
 	"$normalmapalphaenvmapmask" "1"
 	"$phong" "1" 
-	"$phongboost" "10"
+	"$phongboost" "5"
 	"$phongexponent" "125"
 	"$phongexponenttexture" "snowysnowtime\2k\wephong\phong_arluck"
 	"$phongalbedotint" "1"
-	"$phongfresnelranges" "[4 0.5 8]"
+	"$phongfresnelranges" "[2 0.5 8]"
 	"$phongdisablehalflambert" "1"
+	$lightwarptexture	"snowysnowtime/2k/h3/lw_metaldull"
 	"Proxies"
 	{
 		vuth_ReflectionTint

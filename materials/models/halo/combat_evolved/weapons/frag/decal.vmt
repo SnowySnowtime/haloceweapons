@@ -1,0 +1,14 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models/halo/combat_evolved/weapons/frag/frag_grenade_decal"
+	"$nocull" "1"
+
+	"$alphatest" 1
+	"$alphatestreference" 0.3
+	"$allowAlphaToCoverage" 1
+	
+	//"$ambientocclusion" "0"
+	"$phong" "0"
+
+
+}

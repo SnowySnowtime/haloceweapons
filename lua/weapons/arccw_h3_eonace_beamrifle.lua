@@ -138,7 +138,7 @@ SWEP.RejectAttachments = {
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_RPG
 
-SWEP.ActivePos = Vector(0, 0, 0)
+SWEP.ActivePos = Vector(0.175, -1.7, -1.5)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.HolsterPos = Vector(2, -6, -2)
