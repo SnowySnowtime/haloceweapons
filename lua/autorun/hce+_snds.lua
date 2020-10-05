@@ -1,26 +1,5 @@
 --Halo Custom Edition--
 
-
---SPV3 Plasma Rifle
-
-sound.Add(
-{
-    name = "cmtprfire",
-    channel = CHAN_STATIC,
-    volume = 1.0,
-    soundlevel = 80,
-    sound = "customedition/prfire1.wav","customedition/prfire2.wav","customedition/prfire3.wav"
-})
-
-sound.Add(
-{
-    name = "cmtprreload",
-    channel = CHAN_STATIC,
-    volume = 1.0,
-    soundlevel = 80,
-    sound = "customedition/prreload.wav"
-})
-
 --SPV3 Focus Rifle
 
 sound.Add(
@@ -1747,11 +1726,11 @@ sound.Add(
 
 sound.Add(
 {
-    name = "plasma_fire_1",
+    name = "plasma_fire",
     channel = CHAN_STATIC,
     volume = 1.0,
     soundlevel = 80,
-    sound = "hce/plasma_fire_1.wav"
+    sound = {"hce/plasma_fire_1.wav","hce/plasma_fire_2.wav","hce/plasma_fire_3.wav","hce/plasma_fire_4.wav","hce/plasma_fire_5.wav"},
 })
 
 sound.Add(
@@ -1761,42 +1740,6 @@ sound.Add(
     volume = 1.0,
     soundlevel = 80,
     sound = "hce/prifle_overheat.wav"
-})
-
-sound.Add(
-{
-    name = "plasma_fire_2",
-    channel = CHAN_STATIC,
-    volume = 1.0,
-    soundlevel = 80,
-    sound = "hce/plasma_fire_2.wav"
-})
-
-sound.Add(
-{
-    name = "plasma_fire_3",
-    channel = CHAN_STATIC,
-    volume = 1.0,
-    soundlevel = 80,
-    sound = "hce/plasma_fire_3.wav"
-})
-
-sound.Add(
-{
-    name = "plasma_fire_4",
-    channel = CHAN_STATIC,
-    volume = 1.0,
-    soundlevel = 80,
-    sound = "hce/plasma_fire_4.wav"
-})
-
-sound.Add(
-{
-    name = "plasma_fire_5",
-    channel = CHAN_STATIC,
-    volume = 1.0,
-    soundlevel = 80,
-    sound = "hce/plasma_fire_5.wav"
 })
 
 sound.Add(
