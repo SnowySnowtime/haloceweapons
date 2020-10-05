@@ -30,10 +30,16 @@ SWEP.ViewModelFOV = 70
 SWEP.Damage = 20
 SWEP.DamageMin = 20 -- damage done at maximum range
 SWEP.Range =  700 -- in METRES
-SWEP.Penetration = 25
+SWEP.Penetration = 0
 SWEP.DamageType = DMG_BULLET
 SWEP.MuzzleVelocity = 600 -- projectile or phys bullet muzzle velocity
 -- IN M/S
+SWEP.PhysBulletMuzzleVelocity = 80 -- override phys bullet muzzle velocity
+SWEP.PhysBulletDrag = 0
+SWEP.PhysBulletGravity = 0
+
+SWEP.AlwaysPhysBullet = true
+SWEP.PhysTracerProfile = 0 -- color for phys tracer.
 
 SWEP.TracerNum = 1 -- tracer every X
 SWEP.Tracer 	= "effect_astw2_halo_ce_tracer_pr"

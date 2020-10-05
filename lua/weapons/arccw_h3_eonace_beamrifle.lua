@@ -156,8 +156,8 @@ SWEP.ExtraSightDist = 15
 SWEP.Attachments = {
 	{
         PrintName = "Optic", -- print name
-        DefaultAttName = "10x Scope",
-        Slot = {"optic", "optic_lp", "h3bmsc"}, -- what kind of attachments can fit here, can be string or table
+        DefaultAttName = "None",
+        Slot = {"h3bmsc"}, -- what kind of attachments can fit here, can be string or table
         Bone = "gun", -- relevant bone any attachments will be mostly referring to
         Offset = {
             vpos = Vector(-6, -1.5, 2.05), -- offset that the attachment will be relative to the bone

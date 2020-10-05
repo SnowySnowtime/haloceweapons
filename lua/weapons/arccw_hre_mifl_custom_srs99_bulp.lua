@@ -226,6 +226,10 @@ SWEP.Attachments = {
         DefaultAttName = "Standard Stock"
     },
 	{
+        PrintName = "Firetype",
+        Slot = {"fcg","fcg_smg"}
+    },
+	{
         PrintName = "Tactical",
         Slot = "tac",
         Bone = "Weapon",

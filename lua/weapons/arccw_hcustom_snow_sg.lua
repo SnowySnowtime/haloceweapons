@@ -1,13 +1,13 @@
 SWEP.Base = "arccw_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
-SWEP.Category = "ArcCW - Halo Combat Evolved" -- edit this if you like
+SWEP.Category = "ArcCW - Halo Custom Edition" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Shotgun"
-SWEP.TrueName = "M90 CAWS"
-SWEP.Trivia_Class = "Shotgun"
-SWEP.Trivia_Desc = "The M90 Close Assault Weapon is a pump-action, magazine-fed, dual tubular non-detachable shotgun designed from the M45E Tactical Shotgun. The Weapon System Technologies DTM series shotgun is the most common shotgun employed by UNSC Special Forces, law enforcement agencies, and sportsmen. The M90 has been in service for over 27 years and its design has changed very little throughout its service. "
-SWEP.Trivia_Manufacturer = "Misriah Armory"
+SWEP.PrintName = "Blunderbuss"
+SWEP.TrueName = "M90 Blunderbuss"
+SWEP.Trivia_Class = "Blunderbuss"
+SWEP.Trivia_Desc = "A weapon conversion of the M90 CAWS to a Blunderbuss. Has the innate ability of pushing your foes, physics objects, and yourself."
+SWEP.Trivia_Manufacturer = "InfernoPlus"
 SWEP.Trivia_Calibre = "12 Gauge"
 SWEP.Trivia_Mechanism = "Pump Action"
 
@@ -22,7 +22,7 @@ SWEP.MeleeMissSound = ""
 SWEP.MeleeHitSound = "hceworld"
 SWEP.MeleeHitNPCSound = "hceslap"
 
-SWEP.ViewModel = "models/snowysnowtime/c_fp_cesg.mdl"
+SWEP.ViewModel = "models/snowysnowtime/c_fp_infernoshotgun.mdl"
 SWEP.WorldModel = "models/halomodels/haloce/w_halom90.mdl"
 SWEP.ViewModelFOV = 70
 
@@ -30,30 +30,30 @@ if GetConVar("arccw_hce_bal"):GetInt() == 0 then -- HaloCW
 	SWEP.Recoil = 6
 	SWEP.RecoilSide = 1
 	SWEP.MaxRecoilBlowback = 2
-	SWEP.AccuracyMOA = 45 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-	SWEP.HipDispersion = 300 -- inaccuracy added by hip firing.
-	SWEP.MoveDispersion = 150
+	SWEP.AccuracyMOA = 600 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+	SWEP.HipDispersion = 0 -- inaccuracy added by hip firing.
+	SWEP.MoveDispersion = 0
 	SWEP.ChamberSize = 0
 elseif GetConVar("arccw_hce_bal"):GetInt() == 1 then -- halo purist
 	SWEP.Recoil = 0
 	SWEP.RecoilSide = 0
 	SWEP.JumpDispersion = 0
-	SWEP.AccuracyMOA = 45
-	SWEP.HipDispersion = 0
+	SWEP.AccuracyMOA = 0
+	SWEP.HipDispersion = 360
 	SWEP.MoveDispersion = 0
 	SWEP.ChamberSize = 1
 elseif GetConVar("arccw_hce_bal"):GetInt() == 2 then -- arccw
 	SWEP.Recoil = 6
 	SWEP.RecoilSide = 1
 	SWEP.MaxRecoilBlowback = 2
-	SWEP.AccuracyMOA = 45 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-	SWEP.HipDispersion = 300 -- inaccuracy added by hip firing.
+	SWEP.AccuracyMOA = 0 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+	SWEP.HipDispersion = 360 -- inaccuracy added by hip firing.
 	SWEP.MoveDispersion = 250
 	SWEP.ChamberSize = 1
 end
 
-SWEP.Damage = 10
-SWEP.DamageMin = 3 -- damage done at maximum range
+SWEP.Damage = 2
+SWEP.DamageMin = 1 -- damage done at maximum range
 SWEP.Range = 30 -- in METRES
 SWEP.Penetration = 1
 SWEP.DamageType = DMG_BUCKSHOT
@@ -65,16 +65,17 @@ SWEP.TracerNum = 1 -- tracer every X
 SWEP.TracerCol = Color(255, 25, 25)
 SWEP.TracerWidth = 3
 
-SWEP.Primary.ClipSize = 12 -- DefaultClip is automatically set.
-SWEP.ExtendedClipSize = 18
-SWEP.ReducedClipSize = 8
+SWEP.Primary.ClipSize = 1 -- DefaultClip is automatically set.
+SWEP.ExtendedClipSize = 2
+SWEP.ReducedClipSize = 1
+SWEP.AutoReload = false
 
 SWEP.ShotgunSpreadDispersion = true -- dispersion will cause pattern to increase instead of shifting
 
-SWEP.ShotgunReload = true
+SWEP.ShotgunReload = false
 
 SWEP.Delay = 60 / 60 -- 60 / RPM.
-SWEP.Num = 15 -- number of shots per trigger pull.
+SWEP.Num = 200 -- number of shots per trigger pull.
 SWEP.RunawayBurst = false
 SWEP.Firemodes = {
     {
@@ -98,7 +99,6 @@ SWEP.ShootSoundSilenced = "weapons/arccw/m590_suppressed_tp.wav"
 SWEP.DistantShootSound = "sg_lod"
 
 SWEP.MuzzleEffect = "astw2_halo_ce_muzzle_shotgun"
-SWEP.ImpactEffect = "hce_ar_impact"
 SWEP.ShellModel = "models/shells/shell_12gauge.mdl"
 SWEP.ShellPitch = 100
 SWEP.ShellSounds = ArcCW.ShotgunShellSoundsTable
@@ -116,6 +116,8 @@ SWEP.RejectAttachments = {
 	["ammo_flechette"] = true, -- it busts the shotguns to be literal snipers
     ["acwatt_perk_fastbolt"] = true, -- whats the point of this on my weapons?
     ["acwatt_perk_beefficient"] = true, -- never heard of her
+    ["perk_push"] = true, -- the blunderbuss passive is literally just airbender.
+    ["hce_anniv"] = true, -- the blunderbuss does not have an anniversary model.
 }
 
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
@@ -134,7 +136,6 @@ SWEP.IronSightStruct = {
     Magnification = 1.1,
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
-
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "ar2"
@@ -171,10 +172,6 @@ SWEP.AttachmentElements = {
 	["woodlands"] = {
         VMSkin = 5,
         WMSkin = 5,
-    },
-	["anniv"] = {
-        VMBodygroups = {{ind = 0, bg = 1}},
-        WMBodygroups = {{ind = 0, bg = 1}},
     },
 }
 
@@ -238,6 +235,13 @@ SWEP.Attachments = {
     {
         PrintName = "Perk",
         Slot = {"perk","go_perk"}
+    },
+	{
+        PrintName = "Passive",
+        Slot = {"halo_passive"},
+		Installed = "passive_blunderbuss",
+		Hidden = true,
+		Integral = true,
     },
     {
         PrintName = "Charm",
@@ -321,68 +325,13 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0,
     },
-    ["sgreload_start_empty"] = {
-        Source = "reload1",
-        Time = 13/30,
+    ["reload"] = {
+        Source = "reload",
+        Time = 155/30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
-		RestoreAmmo = 1,
         LHIK = true,
         LHIKIn = 0.5,
         LHIKOut = 0,
-    },
-    ["sgreload_insert"] = {
-        Source = "reload2",
-        Time = 11/30,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
-        TPAnimStartTime = 0.3,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 0,
-    },
-    ["sgreload_finish"] = {
-        Source = "reloadempty",
-        Time = 41/30,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 0.4,
-    },
-	["fire_anniv"] = {
-        Source = {"anniv_fire"},
-        Time = 25/30,
-    },
-    ["sgreload_start_anniv"] = {
-        Source = "anniv_reload1",
-        Time = 13/30,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
-		RestoreAmmo = 1,
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0,
-    },
-    ["sgreload_start_empty_anniv"] = {
-        Source = "anniv_reload1",
-        Time = 13/30,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
-		RestoreAmmo = 1,
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0,
-    },
-    ["sgreload_insert_anniv"] = {
-        Source = "anniv_reload2",
-        Time = 11/30,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
-        TPAnimStartTime = 0.3,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 0,
-    },
-    ["sgreload_finish_anniv"] = {
-        Source = "anniv_reloadempty",
-        Time = 41/30,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 0.4,
     },
 }
 

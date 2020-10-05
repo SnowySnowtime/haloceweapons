@@ -109,9 +109,6 @@ SWEP.HoldtypeActive = "pistol"
 SWEP.HoldtypeSights = "revolver"
 
 SWEP.RejectAttachments = {
-    ["ammo_cerberus"] = true, -- fuck cerberus
-    ["acwatt_perk_fastbolt"] = true, -- whats the point of this on my weapons?
-    ["acwatt_perk_beefficient"] = true, -- never heard of her
 }
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_RPG
@@ -155,6 +152,10 @@ SWEP.AttachmentElements = {
         VMSkin = 7,
         WMSkin = 7,
     },
+	["anniv"] = {
+        VMBodygroups = {{ind = 0, bg = 1}},
+        WMBodygroups = {{ind = 0, bg = 1}},
+    },
 }
 
 SWEP.ExtraSightDist = 15
@@ -171,9 +172,6 @@ SWEP.Attachments = {
             wpos = Vector(6, 2, -4.4),
             wang = Angle(-8.829, 0, 180)
         },
-        CorrectivePos = Vector(0, 0, 0),
-        CorrectiveAng = Angle(0, 0, 0),
-        InstalledEles = {"mount"}
     },
 	{
         PrintName = "Muzzle",
@@ -188,10 +186,30 @@ SWEP.Attachments = {
         },
 		VMScale = Vector(0.7, 0.7, 0.7),
     },
+	{
+        PrintName = "Underbarrel",
+        Slot = {"style_pistol","bipod"},
+        Bone = "frame gun",
+        Offset = {
+            vpos = Vector(3.5, -0, 2),
+            vang = Angle(0, 0, 5),
+            wpos = Vector(13, 0.6, -3.5),
+            wang = Angle(-10, 0, 180),
+        },		
+    },
+    {
+        PrintName = "Grip",
+        Slot = "grip",
+        DefaultAttName = "Standard Grip"
+    },	
     {
         PrintName = "Stock",
         Slot = "stock",
         DefaultAttName = "Standard Stock"
+    },
+	{
+        PrintName = "Firetype",
+        Slot = {"fcg","fcg_smg"}
     },
 	{
         PrintName = "Tactical",
@@ -211,7 +229,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Perk",
-        Slot = "perk"
+        Slot = {"perk","go_perk"}
     },
     {
         PrintName = "Charm",
