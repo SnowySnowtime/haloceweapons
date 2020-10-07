@@ -2745,27 +2745,18 @@ sound.Add(
 
 sound.Add(
 {
-    name = "gravityhammer1",
+    name = "gravityhammer",
     channel = CHAN_STATIC,
     volume = 1.0,
-    soundlevel = 80,
-    sound = "gravity_hammer/hammer_hit1.wav"
+    soundlevel = 120,
+    sound = {"snow/weapons/gravity_hammer/hammer_hit/hammer_hit1.wav","snow/weapons/gravity_hammer/hammer_hit/hammer_hit3.wav","snow/weapons/gravity_hammer/hammer_hit/hammer_hit3.wav"}
 })
 
 sound.Add(
 {
-    name = "gravityhammer2",
+    name = "gravityhammerslap",
     channel = CHAN_STATIC,
     volume = 1.0,
-    soundlevel = 80,
-    sound = "gravity_hammer/hammer_hit2.wav"
-})
-
-sound.Add(
-{
-    name = "gravityhammer3",
-    channel = CHAN_STATIC,
-    volume = 1.0,
-    soundlevel = 80,
-    sound = "gravity_hammer/hammer_hit3.wav"
+    soundlevel = 120,
+    sound = {"snow/weapons/gravity_hammer/hammer_drops/hammer_drop1.wav","snow/weapons/gravity_hammer/hammer_drops/hammer_drop2.wav","snow/weapons/gravity_hammer/hammer_drops/hammer_drop3.wav","snow/weapons/gravity_hammer/hammer_drops/hammer_drop4.wav","snow/weapons/gravity_hammer/hammer_drops/hammer_drop5.wav"}
 })

@@ -1,0 +1,9 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "snowysnowtime/h3/grav/grav"
+	"$bumpmap" "snowysnowtime/h3/grav/grav_n"
+	"$phong" "1"
+	"$phongexponent" "45"
+	"$phongboost"	"2"
+	"$phongfresnelranges"	"[.2 4 1]""
+}
