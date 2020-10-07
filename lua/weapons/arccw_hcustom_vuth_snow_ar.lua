@@ -141,6 +141,9 @@ SWEP.HolsterAng = Angle(-10, 30, -10)
 SWEP.BarrelOffsetSighted = Vector(0, 0, -1)
 SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 
+SWEP.CustomizePos = Vector(3.824, -2, -1)
+SWEP.CustomizeAng = Angle(12.149, 30.547, 0)
+
 SWEP.BarrelLength = 30
 SWEP.AttachmentElements = {
 	["corrosion"] = {

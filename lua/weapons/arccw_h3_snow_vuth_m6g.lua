@@ -149,6 +149,9 @@ SWEP.HolsterAng = Angle(40, 0, 0)
 SWEP.BarrelOffsetSighted = Vector(0, 0, -1)
 SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 
+SWEP.CustomizePos = Vector(6.824, -8, -3.897)
+SWEP.CustomizeAng = Angle(12.149, 30.547, 0)
+
 SWEP.BarrelLength = 5
 SWEP.AttachmentElements = {
     ["yeet"] = {

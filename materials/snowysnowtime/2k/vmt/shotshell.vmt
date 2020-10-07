@@ -1,4 +1,18 @@
-"VertexlitGeneric"
+VertexLitGeneric
 {
-	"$basetexture" "snowysnowtime/shotshell"
+	"$basetexture"	"snowysnowtime/2k/shotshell"
+  	"$bumpmap"	"snowysnowtime/2k/shotshell_n"
+
+                 "$phong" "1" 
+                "$phongexponent" "14"
+                 "$phongboost" "13"
+                 
+                 "$phongfresnelranges" "[ 0.03 0.3 1 ]" 
+
+	$color2	"[ 1 1 1 ]"
+
+	"$lightwarptexture"	"snowysnowtime/2k/h3/lw_covyshell"
+
+	$blendtintbybasealpha	1
 }
+

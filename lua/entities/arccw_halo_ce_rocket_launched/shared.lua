@@ -7,7 +7,7 @@ ENT.Spawnable = false
 ENT.AdminSpawnable = false
 
 ENT.Model = "models/weapons/w_missile_launch.mdl"
-ENT.FuseTime = 8
+ENT.FuseTime = 5
 ENT.ArmTime = 0.11
 
 AddCSLuaFile()
@@ -25,7 +25,7 @@ function ENT:Initialize()
         local phys = self:GetPhysicsObject()
         if phys:IsValid() then
             phys:Wake()
-			phys:SetMass(3)
+			phys:SetMass(24000)
             phys:SetBuoyancyRatio(0)
             phys:EnableGravity( false )
         end
@@ -35,7 +35,7 @@ function ENT:Initialize()
     end
 
     self.at = CurTime() + self.ArmTime
-    self.Armed = true
+    self.Armed = false
 end
 
 function ENT:OnRemove()
@@ -73,7 +73,7 @@ function ENT:Think()
     if SERVER then
 	
 	if CurTime() >= self.at then
-            local targets = ents.FindInSphere(self:GetPos(), 8)
+            local targets = ents.FindInSphere(self:GetPos(), 1)
             for _, k in pairs(targets) do
                 if k:IsPlayer() or k:IsNPC() then
                     if self:Visible( k ) and k:Health() > 0 then
@@ -87,7 +87,7 @@ function ENT:Think()
 
         if self.Armed then
             local phys = self:GetPhysicsObject()
-            phys:ApplyForceCenter( self:GetAngles():Forward() * 500 )
+            phys:ApplyForceCenter( self:GetAngles():Forward() * 7200000 )
         end
 
         if CurTime() >= self.kt then
@@ -154,7 +154,7 @@ function ENT:Detonate()
             attacker = self.Owner
         end
 
-        util.BlastDamage(self, attacker, self:GetPos(), 330, 450)
+        util.BlastDamage(self, attacker, self:GetPos(), 300, 750)
 	 util.ScreenShake(self:GetPos(),10000,100,0.9,2048)
         self:Remove()
     end

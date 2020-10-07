@@ -16,7 +16,7 @@ att.DroppedModel = "models/halomodels/haloce/w_halo_skull.mdl"
 att.Ignore = GetConVar("arccw_hce_skulls"):GetBool()
 att.NotForNPC = true
 
-att.AutoStats = true
+att.AutoStats = false
 
 att.Override_ShootEntity = "scarab_beam"
 att.Override_GetShootSound = "scarab_fire_skull"

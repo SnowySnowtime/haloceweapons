@@ -150,6 +150,9 @@ SWEP.BarrelOffsetSighted = Vector(0, 0, -1)
 SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 SWEP.MeleeTime = 1
 
+SWEP.CustomizePos = Vector(3.5, -4, -2.897)
+SWEP.CustomizeAng = Angle(12.149, 30.547, 0)
+
 SWEP.BarrelLength = 50
 SWEP.AttachmentElements = {
 	 ["aval"] = {

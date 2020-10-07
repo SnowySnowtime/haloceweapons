@@ -145,6 +145,9 @@ SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.HolsterPos = Vector(2, -10, -2)
 SWEP.HolsterAng = Angle(-7.036, 60.016, 0)
 
+SWEP.CustomizePos = Vector(1.824, -4.5, -1.897)
+SWEP.CustomizeAng = Angle(12.149, 30.547, 0)
+
 SWEP.MeleeTime = 0.5
 
 SWEP.BarrelLength = 20 -- i mean its bullpup-ed AND obrez-ed sooooooooooooooooooo

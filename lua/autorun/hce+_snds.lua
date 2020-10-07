@@ -2024,20 +2024,11 @@ sound.Add(
 
 sound.Add(
 {
-    name = "smg_fire2",
+    name = "smg_soup",
     channel = CHAN_STATIC,
     volume = 1.0,
     soundlevel = 80,
-    sound = "customedition/smg_fire2.wav"
-})
-
-sound.Add(
-{
-    name = "smg_fire3",
-    channel = CHAN_STATIC,
-    volume = 1.0,
-    soundlevel = 80,
-    sound = "customedition/smg_fire2.wav"
+    sound = {"sil/smg1.wav","sil/smg2.wav","sil/smg3.wav","sil/smg4.wav","sil/smg5.wav","sil/smg6.wav"}
 })
 
 
@@ -2573,7 +2564,7 @@ sound.Add(
     name = "h3.beam_fire",
     channel = CHAN_STATIC,
     volume = 1.0,
-    soundlevel = 80,
+    soundlevel = 120,
     sound = {"snow/weapons/beam_rifle/beam_rifle_fire/cov_snip_shot10.wav","snow/weapons/beam_rifle/beam_rifle_fire/cov_snip_shot9.wav"}
 })
 
@@ -2719,7 +2710,32 @@ sound.Add(
 
 --Mauler
 
+sound.Add(
+{
+    name = "h3.excavator_fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 120,
+    sound = {"snow/weapons/excavator/excavator_fire/excavator1.wav","snow/weapons/excavator/excavator_fire/excavator2.wav","snow/weapons/excavator/excavator_fire/excavator3.wav"}
+})
 
+sound.Add(
+{
+    name = "h3.mauler_melee0",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 120,
+    sound = {"snow/weapons/excavator/excavator_fp/excavator_melee/excavator_melee1.wav","snow/weapons/excavator/excavator_fp/excavator_melee/excavator_melee2.wav","snow/weapons/excavator/excavator_fp/excavator_melee/excavator_melee3.wav"}
+})
+
+sound.Add(
+{
+    name = "h3.mauler_reload",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 100,
+    sound = {"snow/weapons/excavator/excavator_fp/excavator_reload/excavator_reload1.wav","snow/weapons/excavator/excavator_fp/excavator_reload/excavator_reload2.wav","snow/weapons/excavator/excavator_fp/excavator_reload/excavator_reload3.wav","snow/weapons/excavator/excavator_fp/excavator_reload/excavator_reload4.wav","snow/weapons/excavator/excavator_fp/excavator_reload/excavator_reload5.wav","snow/weapons/excavator/excavator_fp/excavator_reload/excavator_reload6.wav"}
+})
 
 --Brute Shot
 

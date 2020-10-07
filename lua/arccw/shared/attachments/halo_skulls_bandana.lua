@@ -5,7 +5,7 @@ att.Desc_Pros = {
     "+ Infinite Ammo"
 }
 att.Desc_Cons = {
-	"+ mildly inconsistent."
+	"+ This isnt bottomless clip."
 }
 att.Slot = "perk"
 

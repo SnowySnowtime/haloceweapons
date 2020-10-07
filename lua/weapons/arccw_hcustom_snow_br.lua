@@ -160,6 +160,9 @@ SWEP.HolsterAng = Angle(0, 40, -15)
 SWEP.BarrelOffsetSighted = Vector(0, 0, -1)
 SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 
+SWEP.CustomizePos = Vector(2.824, -4, -1.897)
+SWEP.CustomizeAng = Angle(12.149, 30.547, 0)
+
 SWEP.BarrelLength = 35
 SWEP.AttachmentElements = {
     ["skin"] = {

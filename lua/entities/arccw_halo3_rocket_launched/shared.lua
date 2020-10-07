@@ -89,11 +89,11 @@ function ENT:Think()
         end
         if self.Armed then
             local phys = self:GetPhysicsObject()
-            phys:ApplyForceCenter( self:GetAngles():Forward() * 500 )
+            phys:ApplyForceCenter( self:GetAngles():Forward() * 900 )
         end
 	
 	if CurTime() >= self.at then
-            local targets = ents.FindInSphere(self:GetPos(), 16)
+            local targets = ents.FindInSphere(self:GetPos(), 24)
             for _, k in pairs(targets) do
                 if k:IsPlayer() or k:IsNPC() then
                     if self:Visible( k ) and k:Health() > 0 then
