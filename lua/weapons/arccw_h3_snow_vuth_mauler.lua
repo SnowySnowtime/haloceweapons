@@ -25,16 +25,16 @@ SWEP.MeleeHitSound = "hceworld"
 SWEP.MeleeHitNPCSound = "hceslap"
 
 SWEP.ViewModel = "models/snowysnowtime/vuthakral/c_hum_Mauler.mdl"
-SWEP.WorldModel = "models/snowysnowtime/vuthakral/w_m90.mdl"
+SWEP.WorldModel = "models/snowysnowtime/vuthakral/w_mauler.mdl"
 SWEP.ViewModelFOV = 70
 
 if GetConVar("arccw_hce_bal"):GetInt() == 0 then -- HaloCW
 	SWEP.Recoil = 6
 	SWEP.RecoilSide = 1
 	SWEP.MaxRecoilBlowback = 2
-	SWEP.AccuracyMOA = 130 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+	SWEP.AccuracyMOA = 140 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 	SWEP.HipDispersion = 0 -- inaccuracy added by hip firing.
-	SWEP.MoveDispersion = 50
+	SWEP.MoveDispersion = 0
 	SWEP.ChamberSize = 0
 elseif GetConVar("arccw_hce_bal"):GetInt() == 1 then -- halo purist
 	SWEP.Recoil = 0
@@ -54,8 +54,8 @@ elseif GetConVar("arccw_hce_bal"):GetInt() == 2 then -- arccw
 	SWEP.ChamberSize = 1
 end
 
-SWEP.Damage = 8
-SWEP.DamageMin = 3 -- damage done at maximum range
+SWEP.Damage = 20
+SWEP.DamageMin = 7 -- damage done at maximum range
 SWEP.Range = 25 -- in METRES
 SWEP.Penetration = 0
 SWEP.DamageType = DMG_BUCKSHOT
@@ -76,7 +76,7 @@ SWEP.ShotgunSpreadDispersion = true -- dispersion will cause pattern to increase
 SWEP.ShotgunReload = false
 
 SWEP.Delay = 60 / 110 -- 60 / RPM.
-SWEP.Num = 15 -- number of shots per trigger pull.
+SWEP.Num = 8 -- number of shots per trigger pull.
 SWEP.RunawayBurst = false
 SWEP.Firemodes = {
     {
@@ -139,9 +139,9 @@ SWEP.IronSightStruct = {
 }
 
 
-SWEP.HoldtypeHolstered = "passive"
-SWEP.HoldtypeActive = "ar2"
-SWEP.HoldtypeSights = "rpg"
+SWEP.HoldtypeHolstered = "normal"
+SWEP.HoldtypeActive = "pistol"
+SWEP.HoldtypeSights = "revolver"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SHOTGUN
 
@@ -268,16 +268,16 @@ SWEP.Animations = {
     ["reload"] = {
         Source = "reload",
         Time = 54/30,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
 		RestoreAmmo = 1,
         LHIK = true,
         LHIKIn = 0.5,
         LHIKOut = 0,
     },
-    ["sgreload_start_empty"] = {
-        Source = "reload_enter",
+    ["reload_empty"] = {
+        Source = "reload",
         Time = 54/30,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
 		RestoreAmmo = 1,
         LHIK = true,
         LHIKIn = 0.5,

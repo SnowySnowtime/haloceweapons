@@ -16,13 +16,8 @@ SWEP.NotForNPCs = true
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/snowysnowtime/c_fp_gravhammer.mdl"
-SWEP.WorldModel = "models/snowysnowtime/w_es.mdl"
+SWEP.WorldModel = "models/snowysnowtime/w_hammer.mdl"
 SWEP.ViewModelFOV = 60
-
-SWEP.WorldModelOffset = {
-	pos = Vector(9, 1, 2.5),
-	ang = Angle(0, 180, 0)
-}
 
 SWEP.DefaultSkin = 0
 SWEP.DefaultWMSkin = 0
@@ -61,7 +56,7 @@ SWEP.Firemodes = {
 }
 
 SWEP.HoldtypeHolstered = "normal"
-SWEP.HoldtypeActive = "knife"
+SWEP.HoldtypeActive = "melee2"
 
 SWEP.Primary.ClipSize = -1
 
@@ -75,7 +70,7 @@ SWEP.Attachments = {
         FreeSlot = true,
         Bone = "frame shaft", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(5.5, -1.5, 3.6), -- offset that the attachment will be relative to the bone
+            vpos = Vector(0, -1.5, 19.6), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 10),
             wpos = Vector(6, 2.4, -3.5),
             wang = Angle(-10.393, 0, 180)
@@ -153,7 +148,7 @@ function SWEP:PrimaryAttack( ... )
 		effectdata:SetScale(1)			-- Size of explosion
 		effectdata:SetRadius(10)		-- What texture it hits
 		effectdata:SetMagnitude(8)			-- Length of explosion trails
-		util.Effect( "halo_grav_hammer", effectdata, true )
+		util.Effect( "arccw_h3_gravhammer", effectdata, true )
 		util.BlastDamage( self.Owner, self.Owner, pos, 125, 800 )
 	else
 		local pos = self.Owner:EyePos() + ( self.Owner:GetAimVector() * 63)
@@ -165,7 +160,7 @@ function SWEP:PrimaryAttack( ... )
 		effectdata:SetRadius(10)		-- What texture it hits
 		effectdata:SetMagnitude(8)			-- Length of explosion trails
 		
-		util.Effect( "halo_grav_hammer", effectdata, true )
+		util.Effect( "arccw_h3_gravhammer", effectdata, true )
 		util.BlastDamage( self.Owner, self.Owner, pos, 100, 500 )
 	end
 	
