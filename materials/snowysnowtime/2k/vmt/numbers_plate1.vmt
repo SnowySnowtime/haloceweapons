@@ -1,8 +1,20 @@
 "UnLitGeneric"
 {
-	"$basetexture" "snowysnowtime/numbers_plate1"
+	"$basetexture" "snowysnowtime/pistolcubemap"
+	
+	// ONE DIGIT
 	
 	"blendtintbybasealpha" "0"
 	"$additive" "1"
 	"$color2" "[0 .58 .88]"
+	
+	
+	Proxies // proxies are listed inside this block
+	{
+		ArcCW_HALOCE_AR
+		{
+			resultVar 1
+			prefixstring "vgui/ma5bhud/numbers_plate"
+		}
+	}
 }

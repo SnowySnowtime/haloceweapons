@@ -2,4 +2,14 @@
 {
 	"$basetexture" "snowysnowtime/2k/h3/br/3"
 	"$additive" "1"
+	
+	
+	Proxies // proxies are listed inside this block
+	{
+		ArcCW_HALOCE_AR
+		{
+			resultVar 2
+			prefixstring "vgui/ma5bhud/numbers_plate"
+		}
+	}
 }

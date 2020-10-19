@@ -22,6 +22,9 @@ SWEP.ViewModel = "models/snowysnowtime/c_fp_cmtar.mdl"
 SWEP.WorldModel = "models/halomodels/haloce/w_haloassaultrifle.mdl"
 SWEP.ViewModelFOV = 70
 
+SWEP.DefaultBodygroups = "01"
+
+
 if GetConVar("arccw_hce_bal"):GetInt() == 0 then -- HaloCW
 	SWEP.Recoil = 0.2
 	SWEP.RecoilSide = 0.2
