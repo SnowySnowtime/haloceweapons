@@ -11,7 +11,7 @@
 
 	Proxies
 	{
-		vuth_Compass
+		drc_Compass
 		{
 			resultVar $angle
 		}

@@ -18,7 +18,7 @@
 	$lightwarptexture	"snowysnowtime/2k/h3/lw_metaldull"
 	"Proxies"
 	{
-		vuth_ReflectionTint
+		drc_ReflectionTint
 		{
 			resultVar $envmaptint
 		}

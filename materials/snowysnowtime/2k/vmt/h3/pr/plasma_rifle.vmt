@@ -19,7 +19,7 @@ VertexLitGeneric
 
 	Proxies
 	{
-		vuth_ReflectionTint
+		drc_ReflectionTint
 		{
 			resultVar $envmaptint
 		}
