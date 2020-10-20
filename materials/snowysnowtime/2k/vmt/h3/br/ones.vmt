@@ -1,6 +1,6 @@
 "UnlitGeneric"
 {
-	"$basetexture" "snowysnowtime/2k/h3/br/2"
+	"$basetexture" "snowysnowtime/2k/h3/br/hud/numbers_plate2"
 	"$additive" "1"
 	
 	
@@ -9,7 +9,7 @@
 		ArcCW_HALOCE_AR
 		{
 			resultVar 1
-			prefixstring "vgui/ma5bhud/numbers_plate"
+			prefixstring "snowysnowtime/2k/h3/br/hud/numbers_plate"
 		}
 	}
 }

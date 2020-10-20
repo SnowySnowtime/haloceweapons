@@ -1,6 +1,6 @@
 "UnlitGeneric"
 {
-"$basetexture" "snowysnowtime\ma5e\hud\1"
+"$basetexture" "snowysnowtime\ma5e\hud\numbers_plate1"
 "blendtintbybasealpha" "0"
 "$additive" "1"
 "$color2" "[0 .58 .88]"
@@ -11,7 +11,7 @@
 		ArcCW_HALOCE_AR
 		{
 			resultVar 2
-			prefixstring "vgui/ma5bhud/numbers_plate"
+			prefixstring "snowysnowtime/ma5e/hud/numbers_plate"
 		}
 	}
 }
