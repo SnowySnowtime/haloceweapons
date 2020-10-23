@@ -2,4 +2,14 @@
 {
 	"$basetexture" "VGUI/ma5bhud/numbers_plate0"
 	"$additive" "1"
+	
+	
+	Proxies // proxies are listed inside this block
+	{
+		ArcCW_HALOCE_AR
+		{
+			resultVar 1
+			prefixstring "vgui/ma5bhud/numbers_plate"
+		}
+	}
 }
