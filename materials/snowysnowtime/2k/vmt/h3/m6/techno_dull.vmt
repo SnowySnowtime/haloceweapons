@@ -1,0 +1,16 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "snowysnowtime/2k/h3/m6/techcamo"
+	"$bumpmap" "snowysnowtime/2k/h3/m6_n"
+	"$envmap" "snowysnowtime/cyborg_reflection_armor"
+	"$envmaptint" "[ 0.001 0.001 0.001 ]"
+	"$envmapfresnel" "1"
+	"$normalmapalphaenvmapmask" "1"
+	"$phong" "1" 
+	"$phongboost" "1"
+	"$phongexponent" "60"
+	"$phongexponenttexture" "snowysnowtime/2k/h3/m6_p"
+	"$phongalbedotint" "1"
+	"$phongfresnelranges" "[1.5 3 5]"
+	"$phongdisablehalflambert" "1"
+}

@@ -20,7 +20,7 @@
 	"$phongdisablehalflambert" "1"
 	"Proxies"
 	{
-		vuth_ReflectionTint
+		drc_ReflectionTint
 		{
 			resultVar $envmaptint
 		}

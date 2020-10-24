@@ -4,7 +4,7 @@ VertexLitGeneric
   	"$bumpmap"	"snowysnowtime\2k\h3\pr_n"
 
 	"$lightwarptexture"	"snowysnowtime\2k\h3\lw_covyshell"
-	"$phongexponenttexture" "snowysnowtime/2k/h3/sg_p"
+	"$phongexponenttexture" "snowysnowtime/2k/h3/pr_p"
 
     "$phong" "1" 
     "$phongexponent" "28"
