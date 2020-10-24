@@ -178,14 +178,16 @@ SWEP.AttachmentElements = {
         WMBodygroups = {{ind = 0, bg = 2}},
     },
 }
-
 SWEP.Hook_TranslateAnimation = function(wep, anim)
     if wep.Attachments[7].Installed == "hce_anniv" then
-        if anim == "reload_empty" then
-            return "reload_empty_anal"
-        elseif anim == "reload" then
-            return "reload_anal"
-				end
+		local annivtag = (
+			anim == "reload_empty" or
+			anim == "reload"
+		)
+		
+		if annivtag then
+			return anim .. "_anal" -- lol
+		end
     end
 end
 

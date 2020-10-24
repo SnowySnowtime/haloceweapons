@@ -1,5 +1,5 @@
 SWEP.Base = "arccw_base"
-SWEP.Spawnable = false -- this obviously has to be set to true
+SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Halo Combat Evolved" -- edit this if you like
 SWEP.AdminOnly = false
 
@@ -64,17 +64,17 @@ SWEP.MuzzleVelocity = 6000 -- projectile or phys bullet muzzle velocity
 SWEP.TracerNum = 1 -- tracer every X
 SWEP.TracerName 	= "hce_sr_tracer"
 
-SWEP.Primary.ClipSize = 12 -- DefaultClip is automatically set.
-SWEP.ExtendedClipSize = 24
-SWEP.ReducedClipSize = 8
+SWEP.Primary.ClipSize = 24 -- DefaultClip is automatically set.
+SWEP.ExtendedClipSize = 48
+SWEP.ReducedClipSize = 12
 
-SWEP.Delay = 60 / 210 -- 60 / RPM.
+SWEP.Delay = 60 / 420 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
-        Mode = -2,
-		RunawayBurst = true,
-		PostBurstDelay = 0.3,
+        Mode = 2,
+		--RunawayBurst = false,
+		--PostBurstDelay = 0.3,
     },
     {
         Mode = 0,
@@ -257,6 +257,12 @@ SWEP.Attachments = {
     },
 }
 
+SWEP.Hook_SelectFireAnimation = function( wep, anim )
+	if wep:GetBurstCount() % 2 == 0 then
+		return "fire_fuckmyass"
+	end
+end
+
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
@@ -264,6 +270,7 @@ SWEP.Animations = {
     },
 	["fire_iron"] = {
         Source = "fire",
+		Time = 3
     },
     ["draw"] = {
         Source = "draw",
@@ -274,11 +281,10 @@ SWEP.Animations = {
     },
     ["fire"] = {
         Source = "fire",
-        Time = 0.5,
     },
     ["reload"] = {
         Source = "reload",
-        Time = 0.1,
+        Time = 3,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         Checkpoints = {24, 33, 51, 58, 62, 74, 80},
         FrameRate = 30,
@@ -288,7 +294,7 @@ SWEP.Animations = {
     },
     ["reload_empty"] = {
         Source = "reload",
-        Time = 4,
+        Time = 3,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         Checkpoints = {24, 33, 51},
         FrameRate = 30,

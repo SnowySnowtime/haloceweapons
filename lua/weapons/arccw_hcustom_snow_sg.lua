@@ -263,25 +263,24 @@ SWEP.Attachments = {
     },
 }
 
-SWEP.Hook_TranslateAnimation = function(wep, anim)
+
+--[[SWEP.Hook_TranslateAnimation = function(wep, anim)
     if wep.Attachments[10].Installed == "hce_anniv" then
-        if anim == "sgreload_start" then
-            return "sgreload_start_anniv"
-			end
-		if anim == "sgreload_insert" then
-            return "sgreload_insert_anniv"
-			end
-		if anim == "sgreload_start_empty" then
-            return "sgreload_start_empty_anniv"
-			end
-		if anim == "sgreload_finish" then
-            return "sgreload_finish_anniv"
-			end
-		if anim == "fire" then
-            return "fire_anniv"
-			end
+		local annivtag = (
+			anim == "bash" or
+			anim == "sgreload_start" or
+			anim == "sgreload_insert" or
+			anim == "sgreload_finish" or
+			anim == "sgreload_finish_empty" or
+			anim == "fire" or
+			anim == "draw"
+		)
+												-- No anniversary for the shotgun																											-- Unless
+		if annivtag then
+			return anim .. "_anniv"
+		end
     end
-end
+end]]
 
 SWEP.Hook_GetShootSound = function(wep, sound)
     if wep.Attachments[10].Installed == "hce_anniv" then

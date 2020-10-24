@@ -263,14 +263,19 @@ SWEP.Attachments = {
         FreeSlot = true
     },
 }
-
 SWEP.Hook_TranslateAnimation = function(wep, anim)
     if wep.Attachments[10].Installed == "hce_anniv" then
-        if anim == "reload_empty" then
-            return "reload_empty_anniv"
-        elseif anim == "reload" then
-            return "reload_anniv"
-				end
+		local annivtag = (
+			anim == "draw" or
+			anim == "exit_inspect" or
+			anim == "bash" or
+			anim == "reload_empty" or
+			anim == "reload"
+		)
+		
+		if annivtag then
+			return anim .. "_anniv"
+		end
     end
 end
 
@@ -343,6 +348,17 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.25,
+    },
+	["exit_inspect_anniv"] = {
+		Source = "anniv_fidget",
+		Time = 5 -- TranslateAnimation can't calculate the animation's time. Approximation.
+	},
+	["bash_anniv"] = {
+        Source = "anniv_melee",
+		Time = 1, -- TranslateAnimation can't calculate the animation's time. Approximation.
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 0.2,
     },
     ["reload_anniv"] = {
         Source = "anniv_reload",

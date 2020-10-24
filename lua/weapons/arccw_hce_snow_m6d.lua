@@ -285,17 +285,17 @@ SWEP.Attachments = {
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
     if wep.Attachments[11].Installed == "hce_anniv" then
-        if anim == "reload_empty" then
-            return "reload_empty_anniv"
-        elseif anim == "reload" then
-            return "reload_anniv"
-				end
-		if anim == "bash" then
-            return "bash_anniv"
-			end
-		if anim == "exit_inspect" then
-            return "exit_inspect_anniv"
-			end
+		local annivtag = (
+			anim == "bash" or
+			anim == "reload_empty" or
+			anim == "reload" or
+			anim == "exit_inspect" or
+			anim == "draw"
+		)
+		
+		if annivtag then
+			return anim .. "_anniv"
+		end
     end
 end
 

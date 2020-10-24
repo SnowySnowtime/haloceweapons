@@ -264,7 +264,17 @@ SWEP.Attachments = {
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
     if wep.Attachments[10].Installed == "hce_anniv" then
-		if anim == "sgreload_start" or anim == "sgreload_insert" or anim == "sgreload_finish" or anim == "sgreload_finish_empty" or anim == "fire" then
+		local annivtag = (
+			anim == "bash" or
+			anim == "sgreload_start" or
+			anim == "sgreload_insert" or
+			anim == "sgreload_finish" or
+			anim == "sgreload_finish_empty" or
+			anim == "fire" or
+			anim == "draw"
+		)
+		
+		if annivtag then
 			return anim .. "_anniv"
 		end
     end
@@ -291,12 +301,23 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKOut = 0.25,
     },
+    ["draw_anniv"] = {
+        Source = "anniv_draw",
+        Time = 22/30,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 0.25,
+    },
     ["fire_iron"] = {
         Source = "fire",
         Time = 25/30,
     },
-	 ["bash"] = {
+	["bash"] = {
         Source = "melee",
+        Time = 1,
+    },
+	["bash_anniv"] = {
+        Source = "anniv_melee",
         Time = 1,
     },
     ["fire"] = {
