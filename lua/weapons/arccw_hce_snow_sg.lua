@@ -264,21 +264,9 @@ SWEP.Attachments = {
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
     if wep.Attachments[10].Installed == "hce_anniv" then
-        if anim == "sgreload_start" then
-            return "sgreload_start_anniv"
-			end
-		if anim == "sgreload_insert" then
-            return "sgreload_insert_anniv"
-			end
-		if anim == "sgreload_start_empty" then
-            return "sgreload_start_empty_anniv"
-			end
-		if anim == "sgreload_finish" then
-            return "sgreload_finish_anniv"
-			end
-		if anim == "fire" then
-            return "fire_anniv"
-			end
+		if anim == "sgreload_start" or anim == "sgreload_insert" or anim == "sgreload_finish" or anim == "sgreload_finish_empty" or anim == "fire" then
+			return anim .. "_anniv"
+		end
     end
 end
 
@@ -324,15 +312,6 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0,
     },
-    ["sgreload_start_empty"] = {
-        Source = "reload1",
-        Time = 13/30,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
-		RestoreAmmo = 1,
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0,
-    },
     ["sgreload_insert"] = {
         Source = "reload2",
         Time = 11/30,
@@ -343,6 +322,13 @@ SWEP.Animations = {
         LHIKOut = 0,
     },
     ["sgreload_finish"] = {
+        Source = "reloadempty",
+        Time = 41/30,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 0.4,
+    },
+    ["sgreload_finish_empty"] = {
         Source = "reloadempty",
         Time = 41/30,
         LHIK = true,
@@ -362,15 +348,6 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0,
     },
-    ["sgreload_start_empty_anniv"] = {
-        Source = "anniv_reload1",
-        Time = 13/30,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
-		RestoreAmmo = 1,
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0,
-    },
     ["sgreload_insert_anniv"] = {
         Source = "anniv_reload2",
         Time = 11/30,
@@ -381,6 +358,13 @@ SWEP.Animations = {
         LHIKOut = 0,
     },
     ["sgreload_finish_anniv"] = {
+        Source = "anniv_reloadempty",
+        Time = 41/30,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 0.4,
+    },
+    ["sgreload_finish_empty_anniv"] = {
         Source = "anniv_reloadempty",
         Time = 41/30,
         LHIK = true,

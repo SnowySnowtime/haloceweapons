@@ -305,14 +305,6 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0,
     },
-    ["sgreload_start_empty"] = {
-        Source = "reload_enter",
-        Time = 13/30,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0,
-    },
     ["sgreload_insert"] = {
         Source = "reload_loop",
         Time = 15/30,
@@ -323,6 +315,13 @@ SWEP.Animations = {
         LHIKOut = 0,
     },
     ["sgreload_finish"] = {
+        Source = "reload_exit",
+        Time = 33/30,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 0.4,
+    },
+    ["sgreload_finish_empty"] = {
         Source = "reload_exit",
         Time = 33/30,
         LHIK = true,
