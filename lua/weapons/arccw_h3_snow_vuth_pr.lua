@@ -2,8 +2,6 @@ SWEP.Base = "arccw_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Halo 3" -- edit this if you like
 SWEP.AdminOnly = false
-SWEP.ArcCW_Halo = {}
-SWEP.ArcCW_Halo.Plasma = true
 
 SWEP.PrintName = "Plasma Rifle"
 SWEP.TrueName = "Type-25 Plasma Rifle"
@@ -41,9 +39,9 @@ SWEP.Tracer 	= "effect_astw2_halo3_tracer_plasmarifle"
 SWEP.ImpactEffect = "effect_astw2_halo3_impact_plasmarifle"
 
 SWEP.ChamberSize = 0-- how many rounds can be chambered.
-SWEP.Primary.ClipSize = 35 -- DefaultClip is automatically set.
-SWEP.ExtendedClipSize = 30
-SWEP.ReducedClipSize = 15
+SWEP.Primary.ClipSize = 999 -- DefaultClip is automatically set.
+SWEP.ExtendedClipSize = 999
+SWEP.ReducedClipSize = 999
 
 SWEP.Recoil = 0.2
 SWEP.RecoilSide = 0.2
@@ -71,7 +69,7 @@ SWEP.AccuracyMOA = 15 -- accuracy in Minutes of Angle. There are 60 MOA in a deg
 SWEP.HipDispersion = 80 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 0
 
-SWEP.Primary.Ammo = "ar2" -- what ammo type the gun uses
+SWEP.Primary.Ammo = "none" -- what ammo type the gun uses
 SWEP.MagID = "hs338" -- the magazine pool this gun draws from
 
 SWEP.ShootVol = 140 -- volume of shoot sound
@@ -132,6 +130,114 @@ SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 
 SWEP.CustomizePos = Vector(6.824, -2, 1.897)
 SWEP.CustomizeAng = Angle(12.149, 30.547, 0)
+
+-- I AM A BAD BITCH -- I AM A BAD BITCH 
+
+SWEP.ArcCW_Halo = {}
+SWEP.ArcCW_Halo.Plasma = true
+
+SWEP.Delay_Accel = 0.8
+SWEP.Delay_Decel = 0.6
+
+SWEP.Heat_Accel = 0.1
+SWEP.Heat_Decel = 0.4
+
+SWEP.Hook_ModifyRPM = function(wep, delay)
+	local firerate_min = 0.166666666666667	-- 360 -- 6
+	local firerate_max = 0.111111111111111	-- 540 -- 9
+	
+	local firerate_diff = (firerate_min - firerate_max)
+
+	local returnthatvalue = firerate_min - (firerate_diff * wep:GetCelleryation())
+
+    return returnthatvalue / wep:GetBuff_Mult("Mult_RPM")
+end
+
+SWEP.Hook_FireBullets = function(wep)
+	wep:SetCelleryation( wep:GetCelleryation() + wep.Delay_Accel)
+	wep:SetBatteryLevel( math.max( 0, wep:GetBatteryLevel() - 1/400 ) )
+	wep:SetHeatLevel( wep:GetHeatLevel() + wep.Heat_Accel )
+end
+
+SWEP.Hook_Think = function(wep)
+	wep:SetCelleryation( math.Clamp(wep:GetCelleryation() - (wep.Delay_Decel * FrameTime()), 0, 1) )
+    if wep:GetHeatLevel() >= 1 then 
+        local anim = wep.Animations["reload"]
+        local animtime = anim.MinProgress or anim.Time
+        wep:SetNextPrimaryFire( CurTime() + animtime )
+        wep:PlayAnimation( "reload", 1, true, nil, nil, nil, true)
+    end
+	wep:SetHeatLevel(math.Clamp(wep:GetHeatLevel() - (wep.Heat_Decel * FrameTime()), 0, 1) )
+end
+
+SWEP.Hook_DrawHUD = function(wep)
+    local text
+
+    if wep:GetBatteryLevel() <= 0 then
+        text = "No Battery"
+    elseif wep:GetBatteryLevel() <= 25/100 then
+        text = "Low Battery"
+    end
+
+    if wep:GetBatteryLevel() <= 25/100 then
+        surface.SetTextColor(255, 255, 255, 255)
+        surface.SetFont("ArcCW_12")
+        surface.SetTextPos( ScrW()/2-  surface.GetTextSize(text)/2, ScrH()/2 + ScreenScale(12) ) 
+        surface.DrawText(text)
+    end
+end
+
+SWEP.Hook_ShouldNotFire = function(wep, gmf)
+    if wep:GetBatteryLevel() <= 0 then
+        wep:SetClip1(0)
+        return true
+    end
+end
+
+SWEP.Hook_DryFire = function(wep, sound)
+    return "snow/weapons/magnum/magnum_dryfire.wav"
+end
+
+SWEP.Hook_FiremodeBars = function(wep)
+    local awesome = math.ceil( wep:GetHeatLevel()*10 )
+    local thebars = ""
+
+    for i = 1, awesome do
+        thebars = "!" .. thebars
+    end
+
+    for i = 1, 10-awesome do
+        thebars = thebars .. "#"
+    end
+
+    return thebars
+end
+
+SWEP.Hook_GetHUDData = function(wep, data)
+    data.clip = math.Round(wep:GetBatteryLevel() * 100, 0) .. "%"
+    data.ammo = "-"
+end
+
+SWEP.Disposable = true
+SWEP.BottomlessClip = false
+SWEP.InfiniteAmmo = false -- weapon can reload for free
+SWEP.AmmoPerShot = 0
+
+DEFINE_BASECLASS("arccw_base")
+
+function SWEP:SetupDataTables()
+	BaseClass.SetupDataTables( self )
+    
+    self:NetworkVar("Float", 30, "Celleryation")
+    self:NetworkVar("Float", 31, "BatteryLevel")
+    self:NetworkVar("Float", 29, "HeatLevel")
+
+	if SERVER then
+		self:SetBatteryLevel( 400/400 ) -- 4head
+	end
+end
+
+-- I AM A BAD BITCH -- I AM A BAD BITCH 
 
 SWEP.BarrelLength = 30
 SWEP.AttachmentElements = {
@@ -209,108 +315,6 @@ SWEP.Attachments = {
         FreeSlot = true
     },
 }
-
-
-SWEP.Delay_Accel = 0.8
-SWEP.Delay_Decel = 0.6
-
-SWEP.Heat_Accel = 0.1
-SWEP.Heat_Decel = 0.4
-
-SWEP.Hook_ModifyRPM = function(wep, delay)
-	local firerate_min = 0.166666666666667	-- 360 -- 6
-	local firerate_max = 0.111111111111111	-- 540 -- 9
-	
-	local firerate_diff = (firerate_min - firerate_max)
-
-	local returnthatvalue = firerate_min - (firerate_diff * wep:GetCelleryation())
-
-    return returnthatvalue / wep:GetBuff_Mult("Mult_RPM")
-end
-
-SWEP.Hook_FireBullets = function(wep)
-	wep:SetCelleryation( wep:GetCelleryation() + wep.Delay_Accel)
-	wep:SetBatteryLevel( math.max( 0, wep:GetBatteryLevel() - 1/25 ) )
-	wep:SetHeatLevel( wep:GetHeatLevel() + wep.Heat_Accel )
-end
-
-SWEP.Hook_Think = function(wep)
-	wep:SetCelleryation( math.Clamp(wep:GetCelleryation() - (wep.Delay_Decel * FrameTime()), 0, 1) )
-    if wep:GetHeatLevel() >= 1 then 
-        local anim = wep.Animations["reload"]
-        local animtime = anim.MinProgress or anim.Time
-        wep:SetNextPrimaryFire( CurTime() + animtime )
-        wep:PlayAnimation( "reload", 1, true, nil, nil, nil, true)
-    end
-	wep:SetHeatLevel(math.Clamp(wep:GetHeatLevel() - (wep.Heat_Decel * FrameTime()), 0, 1) )
-	--wep.Owner:ChatPrint( wep.Delay_Decel * FrameTime() )
-end
-
-SWEP.Hook_DrawHUD = function(wep)
-    local text
-
-    if wep:GetBatteryLevel() <= 0 then
-        text = "No Battery"
-    elseif wep:GetBatteryLevel() <= 25/100 then
-        text = "Low Battery"
-    end
-
-    if wep:GetBatteryLevel() <= 25/100 then
-        surface.SetTextColor(255, 255, 255, 255)
-        surface.SetFont("ArcCW_12")
-        surface.SetTextPos( ScrW()/2 - surface.GetTextSize(text)/2, ScrH()/2 + ScreenScale(12) ) 
-        surface.DrawText(text)
-    end
-end
-
-SWEP.Hook_ShouldNotFire = function(wep, gmf)
-    if wep:GetBatteryLevel() <= 0 then
-        --wep:DryFire()
-        return true
-    end
-end
-
-SWEP.Hook_DryFire = function(wep, sound)
-    return "snow/weapons/magnum/magnum_dryfire.wav"
-end
-
-SWEP.Hook_FiremodeBars = function(wep)
-    local awesome = math.ceil( wep:GetHeatLevel()*10 )
-    --print(awesome)
-    local thebars = ""
-
-    for i = 1, awesome do
-        thebars = "!" .. thebars
-    end
-
-    for i = 1, 10-awesome do
-        thebars = thebars .. "#"
-    end
-
-    return thebars
-end
-
-SWEP.Hook_GetHUDData = function(wep, data)
-    data.clip = math.Round(wep:GetHeatLevel() * 100, 0)
-    data.ammo = math.Round(wep:GetBatteryLevel() * 400/4, 0) .. "%"
-end
-
-SWEP.BottomlessClip = true
-SWEP.InfiniteAmmo = true -- weapon can reload for free
-
-DEFINE_BASECLASS("arccw_base")
-
-function SWEP:SetupDataTables()
-	BaseClass.SetupDataTables( self )
-    
-    self:NetworkVar("Float", 30, "Celleryation")
-    self:NetworkVar("Float", 31, "BatteryLevel")
-    self:NetworkVar("Float", 29, "HeatLevel")
-
-	if SERVER then
-		self:SetBatteryLevel( 400/400 )
-	end
-end
 
 SWEP.Animations = {
     ["idle"] = {
