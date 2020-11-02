@@ -230,7 +230,7 @@ end
 
 SWEP.Hook_FireBullets = function(wep)
 	wep:SetCelleryation( wep:GetCelleryation() + wep.Delay_Accel)
-	wep:SetBatteryLevel( math.max( 0, wep:GetBatteryLevel() - 1/4 ) )
+	wep:SetBatteryLevel( math.max( 0, wep:GetBatteryLevel() - 1/25 ) )
 	wep:SetHeatLevel( wep:GetHeatLevel() + wep.Heat_Accel )
 end
 
@@ -248,14 +248,14 @@ end
 
 SWEP.Hook_DrawHUD = function(wep)
     local text
-        
+
     if wep:GetBatteryLevel() <= 0 then
         text = "No Battery"
-    elseif wep:GetBatteryLevel() <= 25 then
+    elseif wep:GetBatteryLevel() <= 25/100 then
         text = "Low Battery"
     end
 
-    if wep:GetBatteryLevel() <= 25 then
+    if wep:GetBatteryLevel() <= 25/100 then
         surface.SetTextColor(255, 255, 255, 255)
         surface.SetFont("ArcCW_12")
         surface.SetTextPos( ScrW()/2 - surface.GetTextSize(text)/2, ScrH()/2 + ScreenScale(12) ) 
