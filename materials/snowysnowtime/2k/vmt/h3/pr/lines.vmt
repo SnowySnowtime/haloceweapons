@@ -1,7 +1,7 @@
 VertexLitGeneric
 {
-	"$basetexture"	"snowysnowtime\2k\h3\lines"
-  	"$bumpmap"	"snowysnowtime\2k\h3\pr\lines_n"
+	"$basetexture"	"snowysnowtime\2k\h3\pr\lines"
+  	"$bumpmap"	"snowysnowtime\2k\h3\pr\pr\lines_n"
 
 	"$lightwarptexture"	"snowysnowtime\2k\h3\lw_covyshell"
 	"$phongexponenttexture" "snowysnowtime/2k/h3/pr/lines_p"

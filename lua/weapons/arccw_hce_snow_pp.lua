@@ -3,12 +3,12 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Halo Combat Evolved" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Magnum"
-SWEP.TrueName = "M6D PDWS"
+SWEP.PrintName = "Plasma Pistol"
+SWEP.TrueName = "Type-25 PP"
 SWEP.Trivia_Class = "Pistol"
-SWEP.Trivia_Desc = "The M6D is a recoil-operated, magazine-fed handgun, chambered in 12.7x40mm ammunition, typically employed with semi-armor-piercing, high-explosive (SAPHE) rounds of that chambering, and feeding from 12-round detachable box magazines. It has also been known to be chambered in the .450 Magnum load.[The weapon is somewhat unusual for a handgun in that it is capable of both semi-automatic and automatic firing. The M6D is one of the M6 series’ upscaled variants, being larger than non-upscaled M6s by roughly 117%. The M6D is also an officer’s model, and in this capacity was employed by Captain Jacob Keyes on the UNSC Pillar of Autumn. Like other officer’s model M6s, the weapon is fitted with smart-linked KFA-2 optic for utilization by those employing a heads-up display."
+SWEP.Trivia_Desc = "The Type-25 Directed Energy Pistol (Type-25 DEP), also known as the plasma pistol, is a Covenant infantry firearm, carried commonly by the smaller species, such as the Unggoy, Kig-Yar, and the Yanme'e, but is occasionally used by larger species such as the Sangheili and Jiralhanae; as such it is the most commonly encountered Covenant energy weapon. While weak on its own, the plasma pistol has a wide variety of functions and becomes deadly in large numbers. "
 SWEP.Trivia_Manufacturer = "Misriah Armory"
-SWEP.Trivia_Calibre = "12.7x40mmn M225 SAP-HE"
+SWEP.Trivia_Calibre = "Superheated Plasma"
 SWEP.Trivia_Mechanism = "Semi-Auto"
 SWEP.Trivia_Country = "never heard of her"
 SWEP.Trivia_Year = 2460
@@ -36,8 +36,8 @@ if GetConVar("arccw_hce_bal"):GetInt() == 0 then -- HaloCW
 elseif GetConVar("arccw_hce_bal"):GetInt() == 1 then -- halo purist
 	SWEP.Recoil = 0
 	SWEP.RecoilSide = 0
-	SWEP.Damage = 50
-	SWEP.DamageMin = 50
+	SWEP.Damage = 20
+	SWEP.DamageMin = 16
 	SWEP.AccuracyMOA = 0
 	SWEP.HipDispersion = 0
 	SWEP.MoveDispersion = 0

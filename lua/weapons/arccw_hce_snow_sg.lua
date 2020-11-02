@@ -33,6 +33,8 @@ if GetConVar("arccw_hce_bal"):GetInt() == 0 then -- HaloCW
 	SWEP.AccuracyMOA = 45 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 	SWEP.HipDispersion = 300 -- inaccuracy added by hip firing.
 	SWEP.MoveDispersion = 150
+	SWEP.Damage = 10
+	SWEP.DamageMin = 3 -- damage done at maximum range
 	SWEP.ChamberSize = 0
 elseif GetConVar("arccw_hce_bal"):GetInt() == 1 then -- halo purist
 	SWEP.Recoil = 0
@@ -41,6 +43,8 @@ elseif GetConVar("arccw_hce_bal"):GetInt() == 1 then -- halo purist
 	SWEP.AccuracyMOA = 45
 	SWEP.HipDispersion = 0
 	SWEP.MoveDispersion = 0
+	SWEP.Damage = 18
+	SWEP.DamageMin = 8 -- damage done at maximum range
 	SWEP.ChamberSize = 1
 elseif GetConVar("arccw_hce_bal"):GetInt() == 2 then -- arccw
 	SWEP.Recoil = 6
@@ -49,11 +53,11 @@ elseif GetConVar("arccw_hce_bal"):GetInt() == 2 then -- arccw
 	SWEP.AccuracyMOA = 45 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 	SWEP.HipDispersion = 300 -- inaccuracy added by hip firing.
 	SWEP.MoveDispersion = 250
+	SWEP.Damage = 10
+	SWEP.DamageMin = 3 -- damage done at maximum range
 	SWEP.ChamberSize = 1
 end
 
-SWEP.Damage = 10
-SWEP.DamageMin = 3 -- damage done at maximum range
 SWEP.Range = 30 -- in METRES
 SWEP.Penetration = 1
 SWEP.DamageType = DMG_BUCKSHOT

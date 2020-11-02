@@ -5,7 +5,7 @@
 	"$envmap" "snowysnowtime/cyborg_reflection_armor"
 	"$envmaptint" "[ 1 1 1 ]"
 	"$cubemaptint"	"[ 2 1 0.6 ]"
-	"$cubemappower"	0.025
+	"$cubemappower"	0.15
 	"$envmapfresnel" "1"
 	"$normalmapalphaenvmapmask" "1"
 	"$phong" "1" 
@@ -17,7 +17,7 @@
 	"$phongdisablehalflambert" "1"
 	"Proxies"
 	{
-		vuth_ReflectionTint
+		drc_ReflectionTint
 		{
 			resultVar $envmaptint
 		}

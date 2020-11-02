@@ -1,6 +1,6 @@
 SWEP.Base = "arccw_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
-SWEP.Category = "ArcCW - Halo Combat Evolved" -- edit this if you like
+SWEP.Category = "ArcCW - Halo Custom Edition" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "Magnum (Dual)"
@@ -36,8 +36,8 @@ if GetConVar("arccw_hce_bal"):GetInt() == 0 then -- HaloCW
 elseif GetConVar("arccw_hce_bal"):GetInt() == 1 then -- halo purist
 	SWEP.Recoil = 0
 	SWEP.RecoilSide = 0
-	SWEP.Damage = 50
-	SWEP.DamageMin = 50
+	SWEP.Damage = 25
+	SWEP.DamageMin = 25
 	SWEP.AccuracyMOA = 0
 	SWEP.HipDispersion = 0
 	SWEP.MoveDispersion = 0
@@ -72,9 +72,10 @@ SWEP.Delay = 60 / 420 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
-        Mode = 2,
-		--RunawayBurst = false,
-		--PostBurstDelay = 0.3,
+        Mode = -2,
+		RunawayBurst = true,
+		AutoBurst = true,
+		PostBurstDelay = 0.17,
     },
     {
         Mode = 0,
@@ -187,7 +188,7 @@ SWEP.ExtraSightDist = 15
 
 SWEP.Attachments = {
 	{
-        PrintName = "Optic", -- print name
+        PrintName = "Right Optic", -- print name
         DefaultAttName = "10x Scope",
         Slot = {"optic", "optic_lp"}, -- what kind of attachments can fit here, can be string or table
         Bone = "frame gun", -- relevant bone any attachments will be mostly referring to
@@ -199,17 +200,16 @@ SWEP.Attachments = {
         },
     },
 	{
-        PrintName = "Muzzle",
-        DefaultAttName = "Standard Muzzle",
-        Slot = {"muzzle"},
-        Bone = "frame gun",
+        PrintName = "Left Optic", -- print name
+        DefaultAttName = "10x Scope",
+        Slot = {"optic", "optic_lp"}, -- what kind of attachments can fit here, can be string or table
+        Bone = "frame gun b", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(4, 0, 2.65),
+            vpos = Vector(3, 0, 3.5), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
-            wpos = Vector(8.1, 2, -3.6),
-            wang = Angle(0, 0, 180)
+            wpos = Vector(6, 2, -4.4),
+            wang = Angle(-8.829, 0, 180)
         },
-		VMScale = Vector(0.7, 0.7, 0.7),
     },
     {
         PrintName = "Stock",
@@ -217,9 +217,21 @@ SWEP.Attachments = {
         DefaultAttName = "Standard Stock"
     },
 	{
-        PrintName = "Tactical",
+        PrintName = "Right Tactical",
         Slot = "tac",
         Bone = "frame gun",
+        Offset = {
+            vpos = Vector(3, -0.1, 3.64), -- offset that the attachment will be relative to the bone
+            vang = Angle(0, 0, -90),
+            wpos = Vector(6, 1.25, -3),
+            wang = Angle(-8.829, -0.556, 90)
+        },
+		VMScale = Vector(0.1, 0.1, 0.1),
+    },
+	{
+        PrintName = "Left Tactical",
+        Slot = "tac",
+        Bone = "frame gun b",
         Offset = {
             vpos = Vector(3, -0.1, 3.64), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, -90),
@@ -237,7 +249,20 @@ SWEP.Attachments = {
         Slot = {"perk","go_perk"}
     },
     {
-        PrintName = "Charm",
+        PrintName = "Right Charm",
+        Slot = "charm",
+        FreeSlot = true,
+        Bone = "frame gun", -- relevant bone any attachments will be mostly referring to
+        Offset = {
+            vpos = Vector(3.25, -0.45, 2.8), -- offset that the attachment will be relative to the bone
+            vang = Angle(0, 0, 10),
+            wpos = Vector(6, 2.4, -3.5),
+            wang = Angle(-10.393, 0, 180)
+        },
+		VMScale = Vector(0.7, 0.7, 0.7),
+    },
+	{
+        PrintName = "Left Charm",
         Slot = "charm",
         FreeSlot = true,
         Bone = "frame gun", -- relevant bone any attachments will be mostly referring to

@@ -36,8 +36,8 @@ if GetConVar("arccw_hce_bal"):GetInt() == 0 then -- HaloCW
 elseif GetConVar("arccw_hce_bal"):GetInt() == 1 then -- halo purist
 	SWEP.Recoil = 0
 	SWEP.RecoilSide = 0
-	SWEP.Damage = 50
-	SWEP.DamageMin = 50
+	SWEP.Damage = 25
+	SWEP.DamageMin = 25
 	SWEP.AccuracyMOA = 0
 	SWEP.HipDispersion = 0
 	SWEP.MoveDispersion = 0

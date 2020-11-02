@@ -6,9 +6,9 @@ SWEP.AdminOnly = false
 SWEP.PrintName = "M247"
 SWEP.TrueName = "M247"
 SWEP.Trivia_Class = "LMG"
-SWEP.Trivia_Desc = "shoot is good, that is what i say"
+SWEP.Trivia_Desc = "The M247 General Purpose Machine Gun (GPMG), formally known as the Machine Gun, Caliber 7.62 mm, M247, is a machine gun used extensively by the United Nations Space Command Armed Forces. It is a scaled-down version of the more widely utilized M247H Heavy Machine Gun."
 SWEP.Trivia_Manufacturer = "Misriah Armory"
-SWEP.Trivia_Calibre = "Lots of fuck you"
+SWEP.Trivia_Calibre = "M118 7.62×51mm FMJ AP"
 SWEP.Trivia_Mechanism = "Automatic"
 SWEP.Trivia_Country = "never heard of her"
 
@@ -35,8 +35,8 @@ if GetConVar("arccw_hce_bal"):GetInt() == 0 then -- HaloCW
 elseif GetConVar("arccw_hce_bal"):GetInt() == 1 then -- halo purist
 	SWEP.Recoil = 0
 	SWEP.RecoilSide = 0
-	SWEP.Damage = 25
-	SWEP.DamageMin = 15 -- damage done at maximum range
+	SWEP.Damage = 18
+	SWEP.DamageMin = 16 -- damage done at maximum range
 	SWEP.JumpDispersion = 0
 	SWEP.HipDispersion = 0
 	SWEP.MoveDispersion = 0

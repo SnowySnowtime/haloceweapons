@@ -16,6 +16,36 @@ SWEP.Slot = 2
 
 if GetConVar("arccw_truenames"):GetBool() then SWEP.PrintName = SWEP.TrueName end
 
+if GetConVar("arccw_hce_bal"):GetInt() == 0 then -- HaloCW
+    SWEP.Recoil = 0.2
+	SWEP.RecoilSide = 0.2
+	SWEP.Damage = 20
+	SWEP.DamageMin = 20
+	SWEP.AccuracyMOA = 15 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+	SWEP.HipDispersion = 80 -- inaccuracy added by hip firing.
+	SWEP.MoveDispersion = 0
+	SWEP.JumpDispersion = 0
+	SWEP.ChamberSize = 0
+elseif GetConVar("arccw_hce_bal"):GetInt() == 1 then -- halo purist
+	SWEP.Recoil = 0
+	SWEP.RecoilSide = 0
+	SWEP.Damage = 14
+	SWEP.DamageMin = 12
+	SWEP.AccuracyMOA = 15 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+	SWEP.HipDispersion = 80 -- inaccuracy added by hip firing.
+	SWEP.MoveDispersion = 0
+	SWEP.JumpDispersion = 0
+	SWEP.ChamberSize = 0
+elseif GetConVar("arccw_hce_bal"):GetInt() == 2 then -- arccw
+    SWEP.Recoil = 0.2
+	SWEP.RecoilSide = 0.2
+	SWEP.Damage = 18
+	SWEP.DamageMin = 18
+	SWEP.AccuracyMOA = 15 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+	SWEP.HipDispersion = 80 -- inaccuracy added by hip firing.
+	SWEP.MoveDispersion = 0
+end
+
 SWEP.UseHands = true
 
 SWEP.MeleeSwingSound = ""
@@ -27,8 +57,6 @@ SWEP.ViewModel = "models/snowysnowtime/c_ce_pr.mdl"
 SWEP.WorldModel = "models/snowysnowtime/vuthakral/w_plasmarifle.mdl"
 SWEP.ViewModelFOV = 70
 
-SWEP.Damage = 20
-SWEP.DamageMin = 20 -- damage done at maximum range
 SWEP.Range =  700 -- in METRES
 SWEP.Penetration = 0
 SWEP.DamageType = DMG_BULLET
@@ -68,10 +96,6 @@ SWEP.NPCWeaponType = {"weapon_ar2"}
 SWEP.NPCWeight = 25
 
 SWEP.ManualAction = false
-
-SWEP.AccuracyMOA = 15 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.HipDispersion = 80 -- inaccuracy added by hip firing.
-SWEP.MoveDispersion = 0
 
 SWEP.Primary.Ammo = "ar2" -- what ammo type the gun uses
 SWEP.MagID = "hs338" -- the magazine pool this gun draws from
