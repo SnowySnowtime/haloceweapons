@@ -1,4 +1,4 @@
-SWEP.Base = "arccw_base"
+SWEP.Base = "arccw_halo_subbase"
 SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Halo Combat Evolved" -- edit this if you like
 SWEP.AdminOnly = false
@@ -80,6 +80,15 @@ SWEP.ReducedClipSize = 15
 
 SWEP.Recoil = 0.2
 SWEP.RecoilSide = 0.2
+
+-- Fesiug's Plasma subbase
+SWEP.Delay_Accel        = 0.4
+SWEP.Delay_Decel        = 0.6
+SWEP.Delay_Min      = 0.2555555
+SWEP.Delay_Max      = 0.0999
+SWEP.Heat_Accel         = 0.1
+SWEP.Heat_Decel         = 0.4
+SWEP.BatteryConsumption     = 1/400
 
 SWEP.Delay = 60 / 360 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
@@ -235,43 +244,6 @@ SWEP.Attachments = {
         FreeSlot = true
     },
 }
-
-
-SWEP.Delay_Accel = 0.4
-SWEP.Delay_Decel = 0.6
-
-SWEP.Hook_ModifyRPM = function(wep, delay)
-	local firerate_min = 0.2555555 -- 360 -- 6
-	local firerate_max = 0.0999	-- 540 -- 9
-	
-	local firerate_diff = (firerate_min - firerate_max)
-	
-	
-
-	local returnthatvalue = firerate_min - (firerate_diff * wep:GetNWFloat("Celleryation"))
-	
-
-	
-    return returnthatvalue
-end
-
-SWEP.Hook_FireBullets = function(wep)
-	wep:SetNWFloat("Celleryation", wep:GetNWFloat("Celleryation") + wep.Delay_Accel)
-	wep:SetNWFloat("BatteryLevel", wep:GetNWFloat("BatteryLevel") - 1/400 )
-end
-
-SWEP.Hook_Think = function(wep)
-	wep:SetNWFloat("Celleryation", math.Clamp(wep:GetNWFloat("Celleryation") - (wep.Delay_Decel * FrameTime()), 0, 1) )
-	--wep.Owner:ChatPrint( wep.Delay_Decel * FrameTime() )
-end
-
-DEFINE_BASECLASS("arccw_base")
-
-function SWEP:Initialize()
-	self:SetNWFloat("BatteryLevel", 400/400 )
-	
-	BaseClass.Initialize( self )
-end
 
 SWEP.Animations = {
     ["idle"] = {

@@ -46,6 +46,15 @@ SWEP.ReducedClipSize = 1
 SWEP.Recoil = 0.2
 SWEP.RecoilSide = 0.2
 
+
+SWEP.Delay_Accel        = 0.2
+SWEP.Delay_Decel        = 0.5
+SWEP.Heat_Accel     = 0.1
+SWEP.Heat_Decel     = 0.4
+SWEP.Delay_Min          = 0.166666666666667
+SWEP.Delay_Max          = 0.111111111111111
+SWEP.BatteryConsumption     = 1/400
+
 SWEP.Delay = 60 / 360 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
