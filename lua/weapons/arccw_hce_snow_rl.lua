@@ -230,6 +230,13 @@ SWEP.Hook_GetShootSound = function(wep, sound)
     end
 end
 
+SWEP.Hook_PostFireBullets = function(wep)
+    if wep:Clip1() <= 0 then
+        wep:SetNextPrimaryFire(0)
+        wep:Reload()
+    end
+end
+
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
