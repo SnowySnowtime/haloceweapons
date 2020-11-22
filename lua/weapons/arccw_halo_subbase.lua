@@ -192,11 +192,10 @@ DEFINE_BASECLASS("arccw_base")
 function SWEP:SetupDataTables()
 	BaseClass.SetupDataTables( self )
 
-    self:NetworkVar("Float", 28, "HeatDischargeTime")
-    
-    self:NetworkVar("Float", 30, "Celleryation")
     self:NetworkVar("Float", 31, "BatteryLevel")
+    self:NetworkVar("Float", 30, "Celleryation")
     self:NetworkVar("Float", 29, "HeatLevel")
+    self:NetworkVar("Float", 28, "HeatDischargeTime")
 
 	if SERVER then
 		self:SetBatteryLevel( 1 )
