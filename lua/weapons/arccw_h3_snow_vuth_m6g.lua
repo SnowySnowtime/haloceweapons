@@ -291,6 +291,7 @@ SWEP.Animations = {
     },
 	["bash"] = {
         Source = "melee",
+        --Source = {"melee","melee1"}, fix ur shit
 		Time = 28/30,
         LHIK = true,
         LHIKIn = 0,

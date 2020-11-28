@@ -159,19 +159,23 @@ end
 SWEP.Hook_GetHUDData = function(wep, data)
 local accelerator = wep.ArcCW_Halo.Accel
 	if wep.ArcCW_Halo.Accel then
+
+        --local delay = (wep.Delay * (1 / wep:GetBuff_Mult("Mult_RPM")))
+        --delay = wep:GetBuff_Hook("Hook_ModifyRPM", delay) or delay
+
 		data.clip = math.Round(wep:GetBatteryLevel() * 100, 0)
 		data.heat_enabled = true
 		data.heat_level = (wep:GetHeatDischargeTime() > CurTime() and (wep:GetHeatDischargeTime() - CurTime())/wep.Plasma_DischargeTime or wep:GetCelleryation())
 		data.heat_maxlevel = 1
-		data.heat_name = "ACCEL"
-		data.heat_locked = false
+		data.heat_name = "ACCEL"--math.Round(60/delay).."RPM"
+		data.heat_locked = wep:GetHeatDischargeTime() > CurTime()
 	else
 		data.clip = math.Round(wep:GetBatteryLevel() * 100, 0)
 		data.heat_enabled = wep:GetHeatDischargeTime() > CurTime()
 		data.heat_level = (wep:GetHeatDischargeTime() - CurTime())/wep.Plasma_DischargeTime
 		data.heat_maxlevel = 1
 		data.heat_name = "HEAT"
-		data.heat_locked = false
+		data.heat_locked = wep:GetHeatDischargeTime() > CurTime()
 	end
 end
 
@@ -179,7 +183,7 @@ SWEP.Hook_PostReload = function(wep)
     wep:SetBatteryLevel( 1 )
 end
 
-SWEP.Disposable = true
+SWEP.Disposable = false
 SWEP.BottomlessClip = false
 SWEP.InfiniteAmmo = false -- weapon can reload for free
 SWEP.AmmoPerShot = 0
@@ -189,11 +193,10 @@ DEFINE_BASECLASS("arccw_base")
 function SWEP:SetupDataTables()
 	BaseClass.SetupDataTables( self )
 
-    self:NetworkVar("Float", 28, "HeatDischargeTime")
-    
-    self:NetworkVar("Float", 30, "Celleryation")
     self:NetworkVar("Float", 31, "BatteryLevel")
+    self:NetworkVar("Float", 30, "Celleryation")
     self:NetworkVar("Float", 29, "HeatLevel")
+    self:NetworkVar("Float", 28, "HeatDischargeTime")
 
 	if SERVER then
 		self:SetBatteryLevel( 1 )

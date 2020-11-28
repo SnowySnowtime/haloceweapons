@@ -157,8 +157,8 @@ SWEP.Delay_Accel        = 0
 SWEP.Delay_Decel        = 0
 SWEP.Delay_Min      = 60 / 750
 SWEP.Delay_Max      = 60 / 750
-SWEP.Heat_Accel         = 0.12
-SWEP.Heat_Decel         = 0.3
+SWEP.Heat_Accel         = 0.16
+SWEP.Heat_Decel         = 0.5
 SWEP.BatteryConsumption     = 1/500
 
 SWEP.Plasma_DischargeTime = 1.5

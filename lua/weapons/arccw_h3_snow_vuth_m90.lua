@@ -290,7 +290,7 @@ SWEP.Animations = {
         LHIKOut = 0.25,
     },
 	 ["bash"] = {
-        Source = "melee",
+        Source = {"melee","melee1"},
         Time = 1,
     },
     ["fire"] = {

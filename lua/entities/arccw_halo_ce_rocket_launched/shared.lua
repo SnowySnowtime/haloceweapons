@@ -75,7 +75,7 @@ function ENT:Think()
 	if CurTime() >= self.at then
             local targets = ents.FindInSphere(self:GetPos(), 1)
             for _, k in pairs(targets) do
-                if k:IsPlayer() or k:IsNPC() then
+                if k:IsPlayer() and !k:GetOwner() or k:IsNPC() then
                     if self:Visible( k ) and k:Health() > 0 then
                         self:Detonate()
                     end
