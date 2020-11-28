@@ -9,7 +9,10 @@ VertexLitGeneric
                  
                  "$phongfresnelranges" "[ 0.03 0.3 1 ]" 
 
-	$color2	"[ 1 1 1 ]"
+	$color2	"[ 0.18 0.19 0.2 ]"
+	
+	"$phongexponenttexture" "snowysnowtime\ma5e\phongexp255"
+	"$phongalbedotint" "1"
 
 	"$lightwarptexture"	"snowysnowtime/2k/h3/lw_covyshell"
 
@@ -25,11 +28,6 @@ VertexLitGeneric
 		drc_ReflectionTint
 		{
 			resultVar $envmaptint
-		}
-		haloPlayerWeaponColorNOPULSE
-		{
-			resultVar	$color2
-			default		1 1 1
 		}
 	}
 }

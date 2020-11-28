@@ -49,6 +49,7 @@ SWEP.Animations = {
 }
 
 -- The moment the bitches went bad.
+-- quick, make an ass joke. bungie did it.
 
 SWEP.ArcCW_Halo = {}
 SWEP.ArcCW_Halo.Plasma = true

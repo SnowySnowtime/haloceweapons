@@ -1,7 +1,7 @@
 "UnLitGeneric"
 {
-	"$basetexture" "snowysnowtime/2k/h3/m6"
-	"$bumpmap" "snowysnowtime/2k/h3/m6_n"
+	"$basetexture" "snowysnowtime/2k/og/h3/pistol"
+	"$bumpmap" "snowysnowtime/2k/og/h3/pistol_n"
 	"$selfillum" "1"
 	"$color2" "[ 9 9 0 ]"
 	"$envmap" "snowysnowtime/cyborg_reflection_armor"
@@ -11,7 +11,7 @@
 	"$phong" "1" 
 	"$phongboost" "0.00001"
 	"$phongexponent" "20000"
-	"$phongexponenttexture" "snowysnowtime/2k/h3/m6_p"
+	"$phongexponenttexture" "snowysnowtime\ma5e\phongexp255"
 	"$phongalbedotint" "1"
 	"$phongfresnelranges" "[0 0 0]"
 	"$phongdisablehalflambert" "1"

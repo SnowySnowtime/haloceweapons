@@ -1,0 +1,25 @@
+"UnlitGeneric"
+{
+	"$basetexture" "snowysnowtime/2k/plasmarifle"
+	"$bumpmap" "snowysnowtime/2k/plasmarifle_n"
+	"$nocull" 1
+    "$envmap" "snowysnowtime/cyborg_reflection_armor"
+	"$envmaptint" "[ 1 1 1 ]"
+	"$cubemaptint"	"[ 0 0 0 ]"
+	"$cubemappower"	0.3
+	"$normalmapalphaenvmapmask" "1"
+	"$phong" "1" 
+	"$phongboost" "2"
+	"$phongexponent" "120"
+	"$phongexponenttexture" "snowysnowtime\2k\wephong\phong_ardef"
+	"$phongalbedotint" "1"
+	"$phongfresnelranges" "[4 0.5 12]"
+	"$phongdisablehalflambert" "1"
+	"Proxies"
+	{
+		drc_ReflectionTint
+		{
+			resultVar $envmaptint
+		}
+	}
+}

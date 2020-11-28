@@ -239,7 +239,7 @@ SWEP.Attachments = {
     },
 	{
         PrintName = "Skin",
-        Slot = {"skin_h3ar"},
+        Slot = {"skin_h3ar","skin_halouniversal"},
         DefaultAttName = "Factory Default",
         FreeSlot = true
     },

@@ -1,7 +1,7 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "snowysnowtime/2k/needler"
-	"$bumpmap" "snowysnowtime/2k/needler_n"
+	"$basetexture" "snowysnowtime/2k/og/hce/needler"
+	"$bumpmap" "snowysnowtime/2k/og/hce/needler_n"
 	"$selfillum" "1"
 	"$selfillummask" "snowysnowtime/needler_illum"
 	"$envmap" "snowysnowtime/cyborg_reflection_armor"
@@ -11,7 +11,7 @@
 	"$phong" "1" 
 	"$phongboost" "10"
 	"$phongexponent" "100"
-	"$phongexponenttexture" "snowysnowtime\2k\wephong\phong_33"
+	"$phongexponenttexture" "snowysnowtime\ma5e\phongexp255"
 	"$phongalbedotint" "1"
 	"$phongfresnelranges" "[4 0.5 8]"
 }

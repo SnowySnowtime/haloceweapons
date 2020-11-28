@@ -1,7 +1,7 @@
 VertexLitGeneric
 {
-	"$basetexture"	"snowysnowtime\2k\h3\pr"
-  	"$bumpmap"	"snowysnowtime\2k\h3\pr_n"
+	"$basetexture"	"snowysnowtime\2k\og\h3\pr"
+  	"$bumpmap"	"snowysnowtime\2k\og\h3\pr_n"
 
                  "$phong" "1" 
                 "$phongexponent" "44"
@@ -25,6 +25,8 @@ VertexLitGeneric
 	$detail 		"snowysnowtime\2k\h3\illum"
 	$detailscale	1
 	$detailblendmode	5
+	
+	"$phongexponenttexture" "snowysnowtime\ma5e\phongexp255"
 
 	Proxies
 	{

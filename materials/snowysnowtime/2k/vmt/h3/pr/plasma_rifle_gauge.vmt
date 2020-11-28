@@ -2,6 +2,7 @@ UnlitGeneric
 {
 	"$basetexture"	"snowysnowtime\2k\h3\heat_gauge"
 	"$translucent" "0"
+	"$decal" "1"
 	"$alphatest" "1"
 	"$phong" "0"
 	"$blendtintbybasealpha" "0"

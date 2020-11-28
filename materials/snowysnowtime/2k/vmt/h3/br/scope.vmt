@@ -1,7 +1,7 @@
 VertexLitGeneric
 {
-	"$basetexture" "snowysnowtime/2k/h3/br"
-	"$bumpmap" "snowysnowtime/2k/h3/br_n"
+	"$basetexture" "snowysnowtime/2k/og/h3/br"
+	"$bumpmap" "snowysnowtime/2k/og/h3/br_n"
 
 	$color2	"[ 0 10 50 ]"
 

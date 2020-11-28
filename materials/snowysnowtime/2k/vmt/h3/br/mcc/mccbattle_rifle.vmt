@@ -1,0 +1,14 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "snowysnowtime/2k/h3/br"
+	"$bumpmap" "snowysnowtime/2k/h3/br_n"
+	"$detail" "snowysnowtime/2k/h3/br/gun_detail"
+	"$detailscale" 0.1
+	"$phong" "1" 
+	"$phongboost" "4"
+	"$phongexponent" "60"
+	"$phongexponenttexture" "snowysnowtime/2k/h3/br_p"
+	"$phongalbedotint" "1"
+	"$phongfresnelranges" "[1.5 3 5]"
+	"$phongdisablehalflambert" "1"
+}

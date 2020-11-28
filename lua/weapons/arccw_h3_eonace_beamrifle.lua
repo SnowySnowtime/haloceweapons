@@ -1,4 +1,4 @@
-SWEP.Base = "arccw_base"
+SWEP.Base = "arccw_halo_subbase"
 SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Halo 3" -- edit this if you like
 SWEP.AdminOnly = false
@@ -72,11 +72,22 @@ SWEP.ReducedClipSize = 2
 
 SWEP.ShotgunReload = true
 
-SWEP.Delay = 60 / 500 -- 60 / RPM.
+SWEP.Delay_Accel        = 0.55
+SWEP.Delay_Decel        = 0.45
+SWEP.Heat_Accel     = 0.65
+SWEP.Heat_Decel     = 0.45
+SWEP.Delay_Min          = 0.2
+SWEP.Delay_Max          = 0.2
+SWEP.BatteryConsumption     = 1/10
+
+SWEP.Delay = 60 / 1000 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
-        Mode = 1,
+        Mode = 2,
+        PrintName = "PLASMA",
+        CustomBars = "--!--"
+        
     },
     {
         Mode = 0
@@ -88,7 +99,7 @@ SWEP.NPCWeight = 25
 
 SWEP.ManualAction = false
 
-SWEP.Primary.Ammo = "SniperPenetratedRound" -- what ammo type the gun uses
+SWEP.Primary.Ammo = "arccwhce_plasmabattery" -- what ammo type the gun uses
 SWEP.MagID = "hs338" -- the magazine pool this gun draws from
 
 SWEP.ShootVol = 140 -- volume of shoot sound
@@ -242,35 +253,27 @@ SWEP.Animations = {
         Source = {"fire1","fire2","fire3"},
         Time = 18/30,
     },
-    ["sgreload_start"] = {
-        Source = "overheat_in",
+	["enter_vent"] = {
+       Source = "overheat_in",
         Time = 58/30,
         LHIK = true,
         LHIKIn = 0.5,
         LHIKOut = 0,
     },
-    ["sgreload_start_empty"] = {
-        Source = "overheat_in",
-        Time = 58/30,
-		RestoreAmmo = 1,
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0,
-    },
-    ["sgreload_insert"] = {
+    ["idle_vent"] = {
         Source = "overheat_loop",
         Time = 58/300,
-        TPAnimStartTime = 0.3,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0,
     },
-    ["sgreload_finish"] = {
+    ["exit_vent"] = {
         Source = "overheat_out",
         Time = 23/30,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         LHIK = true,
         LHIKIn = 0,
-        LHIKOut = 0.4,
+        LHIKOut = 0.5,
     },
 }
 

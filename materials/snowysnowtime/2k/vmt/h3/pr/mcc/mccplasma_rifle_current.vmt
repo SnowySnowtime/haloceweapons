@@ -1,0 +1,21 @@
+VertexLitGeneric
+{
+	"$basetexture"	"snowysnowtime\2k\h3\pr"
+  	"$bumpmap"	"snowysnowtime\2k\h3\pr_n"
+
+	$lightwarptexture	"models\vuthakral\halo\weapons\lw_covyshell"
+
+                 "$phong" "1" 
+                "$phongexponent" "28"
+                 "$phongboost" "3"
+	"$phongtint"	"[ 0.1 0.5 0.72 ]"
+                 "$phongfresnelranges" "[ 0.8 0.3 1 ]" 
+
+//	$envmap env_cubemap
+	$normalmapalphaenvmapmask 1
+	$envmaptint "[ 0.02 0.04 0.06 ]"
+                 
+                 "$rimlight" "0" 
+                 "$rimlightexponent" "1" 
+                 "$rimlightboost" "7"
+}

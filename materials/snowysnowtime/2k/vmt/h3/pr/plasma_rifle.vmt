@@ -1,21 +1,28 @@
 VertexLitGeneric
 {
-	"$basetexture"	"snowysnowtime\2k\h3\pr"
-  	"$bumpmap"	"snowysnowtime\2k\h3\pr_n"
+	"$basetexture"	"snowysnowtime\2k\og\h3\pr"
+  	"$bumpmap"	"snowysnowtime\2k\og\h3\pr_n"
+	
+	$detail		"snowysnowtime\2k\h3\cov_hex_detail_detail"
+	$detailscale	7
+	$detailblendmode	5
+	"$detailblendfactor" "0.1"
 
 	"$lightwarptexture"	"snowysnowtime\2k\h3\lw_covyshell"
-	"$phongexponenttexture" "snowysnowtime/2k/h3/pr_p"
+	"$phongexponenttexture" "snowysnowtime\ma5e\phongexp255"
 
     "$phong" "1" 
-    "$phongexponent" "28"
-	"$phongboost" "3"
-	"$phongtint"	"[ 0.1 0.5 0.72 ]"
+    "$phongexponent" "16"
+	"$phongboost" "128"
+	"$phongalbedotint" "1"
 	"$phongfresnelranges" "[ 0.8 0.3 1 ]" 
 
 	$envmap		"env_cubemap"
 	$normalmapalphaenvmapmask	1
-	$cubemaptint	"[ .8 0 2 ]"
-	$cubemappower	.04
+	$cubemaptint	"[ .2 0 2 ]"
+	$cubemappower	0.4
+	$cubemapLDRmul	0.125
+	$blendtintbybasealpha	1
 
 	Proxies
 	{

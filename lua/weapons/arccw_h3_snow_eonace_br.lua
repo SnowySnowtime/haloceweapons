@@ -13,10 +13,6 @@ SWEP.Trivia_Mechanism = "Semi-Auto"
 
 SWEP.Slot = 3
 
-SWEP.VElements = {
-	["numerals"] = { type = "Quad", bone = "frame gun", rel = "", pos = Vector(3.37, 0, 6.26), angle = Angle(0, -90, 60), size = 0.0057, draw_func = nil},
-}
-
 if GetConVar("arccw_truenames"):GetBool() then SWEP.PrintName = SWEP.TrueName end
 
 SWEP.UseHands = true
@@ -315,7 +311,7 @@ SWEP.Attachments = {
     },
 	{
         PrintName = "Skin",
-        Slot = {"skin_h3br"},
+        Slot = {"skin_h3br","skin_halouniversal"},
         DefaultAttName = "Factory Default",
         FreeSlot = true
     },

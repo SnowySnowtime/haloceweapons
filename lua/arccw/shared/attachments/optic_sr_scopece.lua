@@ -2,7 +2,7 @@ att.PrintName = "Sniper Scope"
 att.Icon = Material("entities/tfa_hce_snow_objectiveflag.png")
 att.Description = "A powerful 5x-10x scope made for the SRS99C-S2 AM Rifle"
 
-att.SortOrder = 2.5
+att.SortOrder = 1000
 
 att.Desc_Pros = {
     "+ Precise",
