@@ -191,6 +191,10 @@ SWEP.AttachmentElements = {
         VMSkin = 9,
         WMSkin = 9,
     },
+	["mcc"] = {
+        VMSkin = 10,
+        WMSkin = 10,
+    },
 }
 
 SWEP.ExtraSightDist = 15

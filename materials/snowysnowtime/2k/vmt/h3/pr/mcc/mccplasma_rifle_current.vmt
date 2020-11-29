@@ -1,7 +1,7 @@
 VertexLitGeneric
 {
-	"$basetexture"	"snowysnowtime\2k\h3\pr"
-  	"$bumpmap"	"snowysnowtime\2k\h3\pr_n"
+	"$basetexture"	"snowysnowtime\2k\mcc\h3\pr"
+  	"$bumpmap"	"snowysnowtime\2k\mcc\h3\pr_n"
 
 	$lightwarptexture	"models\vuthakral\halo\weapons\lw_covyshell"
 

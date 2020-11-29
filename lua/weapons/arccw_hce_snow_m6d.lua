@@ -182,6 +182,10 @@ SWEP.AttachmentElements = {
         VMSkin = 7,
         WMSkin = 7,
     },
+	["mcc"] = {
+        VMSkin = 8,
+        WMSkin = 8,
+    },
 	["anniv"] = {
         VMBodygroups = {{ind = 0, bg = 1}},
         WMBodygroups = {{ind = 0, bg = 1}},

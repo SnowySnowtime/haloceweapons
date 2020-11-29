@@ -174,6 +174,18 @@ SWEP.AttachmentElements = {
         VMSkin = 5,
         WMSkin = 5,
     },
+	["camo"] = {
+        VMSkin = 6,
+        WMSkin = 6,
+    },
+	["hazardp"] = {
+        VMSkin = 7,
+        WMSkin = 7,
+    },
+	["mcc"] = {
+        VMSkin = 8,
+        WMSkin = 8,
+    },
 }
 
 SWEP.ExtraSightDist = 10

@@ -146,6 +146,14 @@ SWEP.AttachmentElements = {
         VMSkin = 1,
         WMSkin = 1,
     },
+	["lines"] = {
+        VMSkin = 2,
+        WMSkin = 2,
+    },
+	["mcc"] = {
+        VMSkin = 3,
+        WMSkin = 3,
+    },
 }
 
 SWEP.ExtraSightDist = 15
@@ -268,26 +276,6 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         LHIK = true,
         LHIKIn = 0,
-        LHIKOut = 0.5,
-    },
-    ["reload"] = {
-        Source = "draw",
-        Time = 2,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Checkpoints = {24, 33, 51, 58, 62, 74, 80},
-        FrameRate = 30,
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
-    },
-    ["reload_empty"] = {
-        Source = "draw",
-        Time = 2,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Checkpoints = {24, 33, 51, 58, 62, 74, 80},
-        FrameRate = 30,
-        LHIK = true,
-        LHIKIn = 0.5,
         LHIKOut = 0.5,
     },
 }

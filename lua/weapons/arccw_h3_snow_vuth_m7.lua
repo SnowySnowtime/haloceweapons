@@ -176,9 +176,17 @@ SWEP.AttachmentElements = {
         VMSkin = 5,
         WMSkin = 5,
     },
-	["green"] = {
+	["stripe"] = {
         VMSkin = 6,
         WMSkin = 6,
+    },
+	["mcc"] = {
+        VMSkin = 7,
+        WMSkin = 7,
+    },
+	["street"] = {
+        VMSkin = 8,
+        WMSkin = 8,
     },
 }
 

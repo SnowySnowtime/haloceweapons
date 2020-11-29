@@ -1726,6 +1726,24 @@ sound.Add(
 
 sound.Add(
 {
+    name = "h3.plasmarifle_overheat1",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = {"snow/weapons/plasma_rifle/plasrifle_overheat.wav"},
+})
+
+sound.Add(
+{
+    name = "h3.plasmarifle_overheat2",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = {"snow/weapons/plasma_rifle/plasrifle_oh_exit.wav"},
+})
+
+sound.Add(
+{
     name = "plasma_fire",
     channel = CHAN_STATIC,
     volume = 1.0,
