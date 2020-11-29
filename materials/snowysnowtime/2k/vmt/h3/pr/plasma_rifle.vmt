@@ -5,7 +5,7 @@ VertexLitGeneric
 	
 	$detail		"snowysnowtime\2k\h3\cov_hex_detail_detail"
 	$detailscale	7
-	$detailblendmode	5
+	$detailblendmode	2
 	"$detailblendfactor" "0.1"
 
 	"$lightwarptexture"	"snowysnowtime\2k\h3\lw_covyshell"

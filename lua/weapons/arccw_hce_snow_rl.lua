@@ -53,7 +53,7 @@ SWEP.Range =  700 -- in METRES
 SWEP.Penetration = 100
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = "arccw_halo_ce_rocket_launched" -- entity to fire, if any
-SWEP.MuzzleVelocity = 6000 -- projectile or phys bullet muzzle velocity
+SWEP.MuzzleVelocity = 100 -- projectile or phys bullet muzzle velocity
 -- IN M/S
 
 SWEP.TracerNum = 0 -- tracer every X

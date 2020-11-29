@@ -87,7 +87,7 @@ function ENT:Think()
 
         if self.Armed then
             local phys = self:GetPhysicsObject()
-            phys:ApplyForceCenter( self:GetAngles():Forward() * 7200000 )
+            phys:ApplyForceCenter( self:GetAngles():Forward() * 7000000 )
         end
 
         if CurTime() >= self.kt then
@@ -137,7 +137,7 @@ end
 
 function ENT:Detonate()
     if SERVER then
-        if !self:IsValid() then return end
+        if !self:IsValid() and !k:GetOwner() then return end
         local effectdata = EffectData()
             effectdata:SetOrigin( self:GetPos() )
 
