@@ -89,7 +89,7 @@ SWEP.Plasma_DischargeTime = 3
 SWEP.Hook_Think = function(wep)
 	wep:SetCelleryation( math.Clamp(wep:GetCelleryation() - (wep.Delay_Decel * FrameTime()), 0, 1) )
     if wep:GetHeatLevel() >= 1 then 
-        wep:SetNextPrimaryFire( CurTime() + wep.Plasma_DischargeTime )
+        wep:SetReloading( CurTime() + wep.Plasma_DischargeTime )
         wep:PlayAnimation( "enter_vent", 1, true, nil, nil, nil, true)
         wep.Plasma_Discharging = true
         wep:SetHeatDischargeTime( CurTime() + wep.Plasma_DischargeTime )
@@ -98,7 +98,7 @@ SWEP.Hook_Think = function(wep)
 		if wep.Animations["exit_vent"] then
         	wep:PlayAnimation( "exit_vent", 1, true, nil, nil, nil, true)
 			local animtime = wep.Animations["exit_vent"].MinProgress or wep.Animations["exit_vent"].Time
-			wep:SetNextPrimaryFire( CurTime() + animtime )
+			wep:SetReloading( CurTime() + animtime )
 		end
     end
 	wep:SetHeatLevel(math.Clamp(wep:GetHeatLevel() - (wep.Heat_Decel * FrameTime()), 0, 1) )
@@ -118,11 +118,11 @@ SWEP.Hook_DrawHUD = function(wep)
 
     if wep:GetBatteryLevel() <= 0 then
         text = "No Battery"
-    elseif wep:GetBatteryLevel() <= 25/100 then
+    elseif wep:GetBatteryLevel() <= 10/100 then
         text = "Low Battery"
     end
 
-    if wep:GetBatteryLevel() <= 25/100 then
+    if wep:GetBatteryLevel() <= 10/100 then
         surface.SetTextColor(255, 255, 255, 255)
         surface.SetFont("ArcCW_12")
         surface.SetTextPos( ScrW()/2-  surface.GetTextSize(text)/2, ScrH()/2 + ScreenScale(12) ) 
@@ -142,7 +142,7 @@ SWEP.Hook_DryFire = function(wep, sound)
 end
 
 SWEP.Hook_FiremodeBars = function(wep)
-    local awesome = math.ceil( wep:GetHeatLevel()*10 )
+    local awesome = math.ceil( wep:GetCelleryation()*10 )
     local thebars = ""
 
     for i = 1, awesome do
@@ -165,9 +165,9 @@ local accelerator = wep.ArcCW_Halo.Accel
 
 		data.clip = math.Round(wep:GetBatteryLevel() * 100, 0)
 		data.heat_enabled = true
-		data.heat_level = (wep:GetHeatDischargeTime() > CurTime() and (wep:GetHeatDischargeTime() - CurTime())/wep.Plasma_DischargeTime or wep:GetCelleryation())
+		data.heat_level = (wep:GetHeatDischargeTime() > CurTime() and (wep:GetHeatDischargeTime() - CurTime())/wep.Plasma_DischargeTime or wep:GetHeatLevel())
 		data.heat_maxlevel = 1
-		data.heat_name = "ACCEL"--math.Round(60/delay).."RPM"
+		data.heat_name = "HEAT"--math.Round(60/delay).."RPM"
 		data.heat_locked = wep:GetHeatDischargeTime() > CurTime()
 	else
 		data.clip = math.Round(wep:GetBatteryLevel() * 100, 0)

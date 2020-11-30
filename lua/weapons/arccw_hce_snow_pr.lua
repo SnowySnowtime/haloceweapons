@@ -74,9 +74,9 @@ SWEP.Tracer 	= "effect_astw2_halo_ce_tracer_pr"
 SWEP.ImpactEffect = "effect_astw2_halo_ce_impact_pr"
 
 SWEP.ChamberSize = 0-- how many rounds can be chambered.
-SWEP.Primary.ClipSize = 35 -- DefaultClip is automatically set.
-SWEP.ExtendedClipSize = 30
-SWEP.ReducedClipSize = 15
+SWEP.Primary.ClipSize = 1 -- DefaultClip is automatically set.
+SWEP.ExtendedClipSize = 1
+SWEP.ReducedClipSize = 1
 
 SWEP.Recoil = 0.2
 SWEP.RecoilSide = 0.2
@@ -106,7 +106,7 @@ SWEP.NPCWeight = 25
 
 SWEP.ManualAction = false
 
-SWEP.Primary.Ammo = "ar2" -- what ammo type the gun uses
+SWEP.Primary.Ammo = "arccwhce_plasmabattery" -- what ammo type the gun uses
 SWEP.MagID = "hs338" -- the magazine pool this gun draws from
 
 SWEP.ShootVol = 140 -- volume of shoot sound

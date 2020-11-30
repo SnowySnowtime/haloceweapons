@@ -24,8 +24,8 @@ SWEP.WorldModel = "models/snowysnowtime/w_m6d.mdl"
 SWEP.ViewModelFOV = 70
 
 if GetConVar("arccw_hce_bal"):GetInt() == 0 then -- HaloCW
-    SWEP.Recoil = 2
-	SWEP.RecoilSide = 1
+    SWEP.Recoil = 0.5
+	SWEP.RecoilSide = 0.5
 	SWEP.Damage = 40
 	SWEP.DamageMin = 45
 	SWEP.AccuracyMOA = 0.04
@@ -44,8 +44,8 @@ elseif GetConVar("arccw_hce_bal"):GetInt() == 1 then -- halo purist
 	SWEP.JumpDispersion = 0
 	SWEP.ChamberSize = 0
 elseif GetConVar("arccw_hce_bal"):GetInt() == 2 then -- arccw
-    SWEP.Recoil = 2
-	SWEP.RecoilSide = 1
+    SWEP.Recoil = 0.5
+	SWEP.RecoilSide = 0.5
 	SWEP.Damage = 35
 	SWEP.DamageMin = 40
 	SWEP.AccuracyMOA = 0.06
@@ -61,9 +61,9 @@ SWEP.ShootEntity = nil -- entity to fire, if any
 SWEP.MuzzleVelocity = 6000 -- projectile or phys bullet muzzle velocity
 -- IN M/S
 
-SWEP.Primary.ClipSize = 24 -- DefaultClip is automatically set.
-SWEP.ExtendedClipSize = 32
-SWEP.ReducedClipSize = 12
+SWEP.Primary.ClipSize = 1 -- DefaultClip is automatically set.
+SWEP.ExtendedClipSize = 1
+SWEP.ReducedClipSize = 1
 
 SWEP.Delay = 60 / 750 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
@@ -82,7 +82,7 @@ SWEP.NPCWeight = 25
 SWEP.ManualAction = false
 
 
-SWEP.Primary.Ammo = "357" -- what ammo type the gun uses
+SWEP.Primary.Ammo = "arccwhce_plasmabattery" -- what ammo type the gun uses
 SWEP.MagID = "hs338" -- the magazine pool this gun draws from
 
 SWEP.ShootVol = 140 -- volume of shoot sound
@@ -103,7 +103,7 @@ SWEP.ShellScale = 1.5
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
 
-SWEP.SightTime = 0.35
+SWEP.SightTime = 0.25
 SWEP.SpeedMult = 0.95
 SWEP.SightedSpeedMult = 0.25
 SWEP.MeleeTime = 1
