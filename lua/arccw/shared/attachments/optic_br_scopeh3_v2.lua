@@ -1,7 +1,7 @@
 att.PrintName = "br scope 2134214 awesome"
 att.Icon = Material("entities/acwatt_smo_perk_generic.png", "mips smooth")
 att.Description = "Featuring Dante from the Devil May Cry Series."
-att.Ignore = true
+att.Ignore = false
 att.SortOrder = 63643
 
 att.Desc_Pros = {

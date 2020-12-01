@@ -72,8 +72,8 @@ SWEP.ReducedClipSize = 2
 
 SWEP.ShotgunReload = true
 
-SWEP.Delay_Accel        = 0.55
-SWEP.Delay_Decel        = 0.45
+SWEP.Delay_Accel        = 0
+SWEP.Delay_Decel        = 0
 SWEP.Heat_Accel     = 0.65
 SWEP.Heat_Decel     = 0.45
 SWEP.Delay_Min          = 0.2

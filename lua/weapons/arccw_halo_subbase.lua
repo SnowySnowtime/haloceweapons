@@ -89,7 +89,7 @@ SWEP.Plasma_DischargeTime = 3
 SWEP.Hook_Think = function(wep)
 	wep:SetCelleryation( math.Clamp(wep:GetCelleryation() - (wep.Delay_Decel * FrameTime()), 0, 1) )
     if wep:GetHeatLevel() >= 1 then 
-        wep:SetReloading( CurTime() + wep.Plasma_DischargeTime )
+        wep:SetNextPrimaryFire( CurTime() + wep.Plasma_DischargeTime ) --SetNextPrimaryFire back to SetReloading after workshop arccw update
         wep:PlayAnimation( "enter_vent", 1, true, nil, nil, nil, true)
         wep.Plasma_Discharging = true
         wep:SetHeatDischargeTime( CurTime() + wep.Plasma_DischargeTime )
@@ -98,7 +98,7 @@ SWEP.Hook_Think = function(wep)
 		if wep.Animations["exit_vent"] then
         	wep:PlayAnimation( "exit_vent", 1, true, nil, nil, nil, true)
 			local animtime = wep.Animations["exit_vent"].MinProgress or wep.Animations["exit_vent"].Time
-			wep:SetReloading( CurTime() + animtime )
+			wep:SetNextPrimaryFire( CurTime() + animtime ) --SetNextPrimaryFire back to SetReloading after workshop arccw update
 		end
     end
 	wep:SetHeatLevel(math.Clamp(wep:GetHeatLevel() - (wep.Heat_Decel * FrameTime()), 0, 1) )
