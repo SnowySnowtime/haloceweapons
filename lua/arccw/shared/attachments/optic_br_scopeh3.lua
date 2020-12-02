@@ -30,8 +30,8 @@ att.AdditionalSights = {
 		Magnification = 2,
 		IgnoreExtra = false,
 		CrosshairInSights = true,
-        SwitchToSound = "weapons/fesiugsmo/zoom_in.wav",
-        SwitchFromSound = "weapons/fesiugsmo/zoom_out.wav",
+        SwitchToSound = "hce/zoom_in.wav",
+        SwitchFromSound = "hce/zoom_out.wav",
 	}
 }
 
