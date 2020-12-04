@@ -1,11 +1,28 @@
-UnlitGeneric
+VertexLitGeneric
 {
-	"$basetexture"	"snowysnowtime\2k\h3\heat_gauge"
-	"$translucent" "0"
+	"$basetexture" "snowysnowtime\2k\h3\glass"
+	"$bumpmap" "snowysnowtime\2k\h3\glass"
+	"$translucent" "1"
+	"$additive" "1"
 	"$decal" "1"
-	"$alphatest" "1"
-	"$phong" "0"
-	"$blendtintbybasealpha" "0"
-	"$blendtintcoloroverbase" "1"
-}
 
+                 "$phong" "1" 
+                "$phongexponent" "44"
+                 "$phongboost" "13"
+                 
+                 "$phongfresnelranges" "[ 0 0 0 ]" 
+
+	$detail 		"snowysnowtime\2k\h3\heat_gauge"
+	$detailscale	1
+	$detailblendmode	5
+	
+	"$phongexponenttexture" "snowysnowtime\ma5e\phongexp255"
+
+	Proxies
+	{
+		drc_ReflectionTint
+		{
+			resultVar $envmaptint
+		}
+	}
+}

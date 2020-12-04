@@ -25,7 +25,7 @@ SWEP.MeleeHitNPCSound = "hceslap"
 
 SWEP.ViewModel = "models/snowysnowtime/vuthakral/c_hum_plasmarifle.mdl"
 SWEP.WorldModel = "models/snowysnowtime/vuthakral/w_plasmarifle.mdl"
-SWEP.ViewModelFOV = 70
+SWEP.ViewModelFOV = 60
 
 SWEP.Damage = 20
 SWEP.DamageMin = 20 -- damage done at maximum range
@@ -128,7 +128,7 @@ SWEP.HoldtypeSights = "rpg"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
-SWEP.ActivePos = Vector(0, 0, 1)
+SWEP.ActivePos = Vector(-0.1, 3, 1.5)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.HolsterPos = Vector(3, -3, -0.5)
