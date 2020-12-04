@@ -170,9 +170,25 @@ SWEP.CustomizeAng = Angle(12.149, 30.547, 0)
 
 SWEP.BarrelLength = 30
 SWEP.AttachmentElements = {
-	["schism"] = {
+	["brutal"] = {
         VMSkin = 1,
         WMSkin = 1,
+    },
+	["schism"] = {
+        VMSkin = 2,
+        WMSkin = 2,
+    },
+	["ultra"] = {
+        VMSkin = 3,
+        WMSkin = 3,
+    },
+	["zealot"] = {
+        VMSkin = 4,
+        WMSkin = 4,
+    },
+	["mcc"] = {
+        VMSkin = 5,
+        WMSkin = 5,
     },
 }
 

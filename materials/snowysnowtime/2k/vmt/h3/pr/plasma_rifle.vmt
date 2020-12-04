@@ -7,6 +7,8 @@ VertexLitGeneric
 	$detailscale	7
 	$detailblendmode	2
 	"$detailblendfactor" "0.1"
+	$selfillum "1"
+	$selfillumtexture "snowysnowtime\2k\h3\illum"
 
 	"$lightwarptexture"	"snowysnowtime\2k\h3\lw_covyshell"
 	"$phongexponenttexture" "snowysnowtime\ma5e\phongexp255"

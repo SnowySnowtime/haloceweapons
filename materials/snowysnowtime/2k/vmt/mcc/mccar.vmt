@@ -10,8 +10,8 @@
 	"$cubemappower"	0.3
 	"$normalmapalphaenvmapmask" "1"
 	"$phong" "1" 
-	"$phongboost" "100"
-	"$phongexponent" "50"
+	"$phongboost" "15"
+	"$phongexponent" "25"
 	"$phongexponenttexture" "snowysnowtime\ma5e\phongexp255"
 	"$phongalbedotint" "1"
 	"$phongfresnelranges" "[4 0.5 8]"
