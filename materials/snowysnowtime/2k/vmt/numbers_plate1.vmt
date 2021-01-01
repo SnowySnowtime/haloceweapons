@@ -6,8 +6,6 @@
 	
 	"blendtintbybasealpha" "0"
 	"$additive" "1"
-	"$color2" "[0 .58 .88]"
-	
 	
 	Proxies // proxies are listed inside this block
 	{

@@ -89,7 +89,7 @@ SWEP.Plasma_DischargeTime = 3
 SWEP.Hook_Think = function(wep)
 	wep:SetCelleryation( math.Clamp(wep:GetCelleryation() - (wep.Delay_Decel * FrameTime()), 0, 1) )
     if wep:GetHeatLevel() >= 1 then 
-        wep:SetNextPrimaryFire( CurTime() + wep.Plasma_DischargeTime ) --SetNextPrimaryFire back to SetReloading after workshop arccw update
+        wep:SetReloading( CurTime() + wep.Plasma_DischargeTime )
         wep:PlayAnimation( "enter_vent", 1, true, nil, nil, nil, true)
         wep.Plasma_Discharging = true
         wep:SetHeatDischargeTime( CurTime() + wep.Plasma_DischargeTime )
@@ -98,7 +98,7 @@ SWEP.Hook_Think = function(wep)
 		if wep.Animations["exit_vent"] then
         	wep:PlayAnimation( "exit_vent", 1, true, nil, nil, nil, true)
 			local animtime = wep.Animations["exit_vent"].MinProgress or wep.Animations["exit_vent"].Time
-			wep:SetNextPrimaryFire( CurTime() + animtime ) --SetNextPrimaryFire back to SetReloading after workshop arccw update
+			wep:SetReloading( CurTime() + animtime )
 		end
     end
 	wep:SetHeatLevel(math.Clamp(wep:GetHeatLevel() - (wep.Heat_Decel * FrameTime()), 0, 1) )
@@ -142,41 +142,29 @@ SWEP.Hook_DryFire = function(wep, sound)
 end
 
 SWEP.Hook_FiremodeBars = function(wep)
-    local awesome = math.ceil( wep:GetCelleryation()*10 )
+    local awesome = math.ceil( wep:GetCelleryation()*7 )
     local thebars = ""
 
     for i = 1, awesome do
         thebars = "!" .. thebars
     end
 
-    for i = 1, 10-awesome do
-        thebars = thebars .. "#"
+    for i = 1, 7-awesome do
+        thebars = thebars .. "-"
     end
 
     return thebars
 end
 
 SWEP.Hook_GetHUDData = function(wep, data)
-local accelerator = wep.ArcCW_Halo.Accel
-	if wep.ArcCW_Halo.Accel then
-
-        --local delay = (wep.Delay * (1 / wep:GetBuff_Mult("Mult_RPM")))
-        --delay = wep:GetBuff_Hook("Hook_ModifyRPM", delay) or delay
-
-		data.clip = math.Round(wep:GetBatteryLevel() * 100, 0)
-		data.heat_enabled = true
-		data.heat_level = (wep:GetHeatDischargeTime() > CurTime() and (wep:GetHeatDischargeTime() - CurTime())/wep.Plasma_DischargeTime or wep:GetHeatLevel())
-		data.heat_maxlevel = 1
-		data.heat_name = "HEAT"--math.Round(60/delay).."RPM"
-		data.heat_locked = wep:GetHeatDischargeTime() > CurTime()
-	else
-		data.clip = math.Round(wep:GetBatteryLevel() * 100, 0)
-		data.heat_enabled = wep:GetHeatDischargeTime() > CurTime()
-		data.heat_level = (wep:GetHeatDischargeTime() - CurTime())/wep.Plasma_DischargeTime
-		data.heat_maxlevel = 1
-		data.heat_name = "HEAT"
-		data.heat_locked = wep:GetHeatDischargeTime() > CurTime()
-	end
+    local accelerator = wep.ArcCW_Halo.Accel
+    
+    data.clip = math.Round(wep:GetBatteryLevel() * 100, 0)
+    data.heat_enabled = true
+    data.heat_level = (wep:GetHeatDischargeTime() > CurTime() and (wep:GetHeatDischargeTime() - CurTime())/wep.Plasma_DischargeTime or wep:GetHeatLevel())
+    data.heat_maxlevel = 1
+    data.heat_name = "HEAT"--math.Round(60/delay).."RPM"
+    data.heat_locked = wep:GetHeatDischargeTime() > CurTime()
 end
 
 SWEP.Hook_PostReload = function(wep)
