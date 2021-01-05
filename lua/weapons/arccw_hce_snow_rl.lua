@@ -213,7 +213,7 @@ SWEP.Attachments = {
 }
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
-    if wep.Attachments[4].Installed == "hce_anniv" then
+    if wep.Attachments[4].Installed == "hce_anniv" or wep.Attachments[4].Installed == "hce_annivsound" then
 		local annivtag = (
 			anim == "draw" or
 			anim == "reload_empty" or
@@ -230,7 +230,7 @@ SWEP.Hook_TranslateAnimation = function(wep, anim)
 end
 
 SWEP.Hook_GetShootSound = function(wep, sound)
-    if wep.Attachments[4].Installed == "hce_anniv" then
+    if wep.Attachments[4].Installed == "hce_anniv" or wep.Attachments[4].Installed == "hce_annivsound" then
 		return "rl_hcea_fire"
     end
 end

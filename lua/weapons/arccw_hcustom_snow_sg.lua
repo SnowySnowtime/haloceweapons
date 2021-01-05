@@ -283,7 +283,7 @@ SWEP.Attachments = {
 end]]
 
 SWEP.Hook_GetShootSound = function(wep, sound)
-    if wep.Attachments[10].Installed == "hce_anniv" then
+    if wep.Attachments[10].Installed == "hce_anniv" or wep.Attachments[10].Installed == "hce_annivsound" then
 		return "sg_hcea_fire"
     end
 end
