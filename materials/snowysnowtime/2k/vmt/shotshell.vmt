@@ -1,7 +1,7 @@
 VertexLitGeneric
 {
-	"$basetexture"	"snowysnowtime/2k/shotshell"
-  	"$bumpmap"	"snowysnowtime/2k/shotshell_n"
+	"$basetexture"	"snowysnowtime/2k/mcc/hce/shotshell"
+  	"$bumpmap"	"snowysnowtime/2k/mcc/hce/shotshell_n"
 
                  "$phong" "1" 
                 "$phongexponent" "14"

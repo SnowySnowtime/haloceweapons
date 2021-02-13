@@ -28,8 +28,8 @@ att.AdditionalSights = {
 		Magnification = 10,
 		IgnoreExtra = false,
 		CrosshairInSights = true,
-        SwitchToSound = "hce/zoom_in.wav",
-        SwitchFromSound = "hce/zoom_out.wav",
+        SwitchToSound = "hce_zoomin",
+        SwitchFromSound = "hce_zoomout",
 	}
 }
 

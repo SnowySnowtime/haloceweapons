@@ -482,3 +482,21 @@ sound.Add(
     soundlevel = 80,
     sound = "shared/needleshakeanniv.wav"
 })
+
+sound.Add(
+{
+    name = "hce_zoomin",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = "hce/zoom_in.wav"
+})
+
+sound.Add(
+{
+    name = "hce_zoomout",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = "hce/zoom_out.wav"
+})
