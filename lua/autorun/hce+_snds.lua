@@ -1457,6 +1457,15 @@ sound.Add(
 
 sound.Add(
 {
+    name = "hce.rlfirer",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = "hce/rocket_fire.wav"
+})
+
+sound.Add(
+{
     name = "hcea.rlfidget",
     channel = CHAN_STATIC,
     volume = 1.0,
@@ -1497,7 +1506,7 @@ sound.Add(
     channel = CHAN_STATIC,
     volume = 1.0,
     soundlevel = 80,
-    sound = {"hce/rocketlauncher_shoot_1.wav","hce/rocketlauncher_shoot_1.wav"}
+    sound = {"hce/rocket_1.wav","hce/rocket_2.wav"}
 })
 
 sound.Add(
@@ -1758,6 +1767,24 @@ sound.Add(
     volume = 1.0,
     soundlevel = 80,
     sound = "hce/prifle_overheat.wav"
+})
+
+sound.Add(
+{
+    name = "hce.pr_overheat1",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = "hce/pr_overheat1.wav"
+})
+
+sound.Add(
+{
+    name = "hce.pr_overheat2",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = "hce/pr_overheat2.wav"
 })
 
 sound.Add(

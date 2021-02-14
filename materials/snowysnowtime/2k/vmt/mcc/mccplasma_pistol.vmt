@@ -1,7 +1,7 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "snowysnowtime/2k/plasmapistol"
-	"$bumpmap" "snowysnowtime/2k/plasmapistol_n"
+	"$basetexture" "snowysnowtime/2k/mcc/hce/plasmapistol"
+	"$bumpmap" "snowysnowtime/2k/mcc/hce/plasmapistol_n"
 	"$nocull" 1
     "$envmap" "snowysnowtime/cyborg_reflection_armor"
 	"$envmaptint" "[ 1 1 1 ]"

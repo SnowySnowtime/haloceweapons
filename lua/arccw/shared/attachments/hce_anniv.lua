@@ -2,7 +2,7 @@ att.PrintName = "Anniversary"
 att.Icon = Material("entities/hceanniv.png")
 att.Description = "Anniversary Models for the Halo Combat Evolved suite of weaponry."
 att.Desc_Pros = {
-    "  Purely Cosmetic"
+    "  Visuals and Sounds"
 }
 att.Desc_Cons = {
 }

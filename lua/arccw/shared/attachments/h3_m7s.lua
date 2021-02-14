@@ -39,8 +39,8 @@ att.Override_CanFireUnderwater = true
 att.HolosightNoFlare = true
 att.Override_MuzzleEffect = "astw2_halo_3_muzzle_SMG_ODST"
 att.Override_MuzzleEffectAttachment = "2"
-att.Model = "models/snowysnowtime/smg_sight.mdl"
-att.HolosightPiece = "models/snowysnowtime/smg_sight.mdl"
+att.Model = "models/snowysnowtime/m7s_sight.mdl"
+att.HolosightPiece = "models/snowysnowtime/m7s_sight.mdl"
 
 
 att.AdditionalSights = {

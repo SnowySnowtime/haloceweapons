@@ -169,33 +169,25 @@ SWEP.ArcCW_Halo.Accel = false
 
 SWEP.BarrelLength = 17
 SWEP.AttachmentElements = {
-    ["cherry"] = {
+    ["brutal"] = {
         VMSkin = 1,
         WMSkin = 1,
     },
-    ["desert"] = {
+    ["schism"] = {
         VMSkin = 2,
         WMSkin = 2,
     },
-    ["gold"] = {
+    ["ultra"] = {
         VMSkin = 3,
         WMSkin = 3,
     },
-    ["greatjourney"] = {
-        VMSkin = 5,
-        WMSkin = 5,
-    },
-	["hazard"] = {
+    ["zealot"] = {
         VMSkin = 4,
         WMSkin = 4,
     },
-	["toy"] = {
-        VMSkin = 6,
-        WMSkin = 6,
-    },
-	["woodlands"] = {
-        VMSkin = 7,
-        WMSkin = 7,
+	["mcc"] = {
+        VMSkin = 5,
+        WMSkin = 5,
     },
 	["anniv"] = {
         VMBodygroups = {{ind = 0, bg = 1}},

@@ -8,7 +8,7 @@ ENT.AdminSpawnable = false
 
 ENT.Model = "models/weapons/w_missile_launch.mdl"
 ENT.FuseTime = 5
-ENT.ArmTime = 0.11
+ENT.ArmTime = 0.01
 
 AddCSLuaFile()
 

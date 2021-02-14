@@ -66,8 +66,8 @@ SWEP.PhysBulletMuzzleVelocity = 80 -- override phys bullet muzzle velocity
 SWEP.PhysBulletDrag = 0
 SWEP.PhysBulletGravity = 0
 
-SWEP.AlwaysPhysBullet = true
-SWEP.PhysTracerProfile = 0 -- color for phys tracer.
+SWEP.AlwaysPhysBullet = false
+SWEP.PhysTracerProfile = 3 -- color for phys tracer.
 
 SWEP.TracerNum = 1 -- tracer every X
 SWEP.Tracer 	= "effect_astw2_halo_ce_tracer_pr"
@@ -124,7 +124,7 @@ SWEP.ShellPitch = 80
 SWEP.ShellScale = 1.5
 
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
-SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
+SWEP.CaseEffectAttachment = 3 -- which attachment to put the case effect on
 
 SWEP.SightTime = 0.35
 SWEP.SpeedMult = 0.85
@@ -257,7 +257,7 @@ SWEP.Attachments = {
     },
 	{
         PrintName = "Skin",
-        Slot = {"skin_h3pr","skin_halouniversal"},
+        Slot = {"skin_hcepr","skin_halouniversal"},
         DefaultAttName = "Factory Default",
         FreeSlot = true
     },
@@ -294,18 +294,31 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKOut = 0.2,
     },
-    ["reload"] = {
-        Source = "reload",
-        Time = 95/40,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Checkpoints = {24, 33, 51, 58, 62, 74, 80},
-        FrameRate = 30,
+    ["enter_vent"] = {
+        Source = "overheat_start",
+        Time = 59/30,
         LHIK = true,
         LHIKIn = 0.5,
+        LHIKOut = 0,
+    },
+    ["idle_vent"] = {
+        Source = "overheat_loop",
+        Time = 1/1,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 0,
+    },
+    ["exit_vent"] = {
+        Source = "overheat_finish",
+        Time = 35/30,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        LHIK = true,
+        LHIKIn = 0,
         LHIKOut = 0.5,
     },
 }
 
+SWEP.Rarity = "Legendary"
 -- nZombies Stuff
 SWEP.NZWonderWeapon		= false	-- Is this a Wonder-Weapon? If true, only one player can have it at a time. Cheats aren't stopped, though.
 --SWEP.NZRePaPText		= "your text here"	-- When RePaPing, what should be shown? Example: Press E to your text here for 2000 points.
