@@ -23,7 +23,6 @@ SWEP.ViewModel = "models/snowysnowtime/c_fp_cemagnum.mdl"
 SWEP.WorldModel = "models/snowysnowtime/w_m6d.mdl"
 SWEP.ViewModelFOV = 70
 
-if GetConVar("arccw_hce_bal"):GetInt() == 0 then -- HaloCW
     SWEP.Recoil = 2
 	SWEP.RecoilSide = 1
 	SWEP.Damage = 40
@@ -33,25 +32,57 @@ if GetConVar("arccw_hce_bal"):GetInt() == 0 then -- HaloCW
 	SWEP.MoveDispersion = 0
 	SWEP.JumpDispersion = 0
 	SWEP.ChamberSize = 0
-elseif GetConVar("arccw_hce_bal"):GetInt() == 1 then -- halo purist
-	SWEP.Recoil = 0
-	SWEP.RecoilSide = 0
-	SWEP.Damage = 25
-	SWEP.DamageMin = 25
-	SWEP.AccuracyMOA = 0
-	SWEP.HipDispersion = 0
-	SWEP.MoveDispersion = 0
-	SWEP.JumpDispersion = 0
-	SWEP.ChamberSize = 0
-elseif GetConVar("arccw_hce_bal"):GetInt() == 2 then -- arccw
-    SWEP.Recoil = 2
-	SWEP.RecoilSide = 1
-	SWEP.Damage = 35
-	SWEP.DamageMin = 40
-	SWEP.AccuracyMOA = 0.06
-	SWEP.HipDispersion = 100
-	SWEP.MoveDispersion = 350
-	SWEP.ChamberSize = 1
+
+local balance = {
+    [0] = {
+        -- HaloCW
+        Recoil = 2,
+        RecoilSide = 1,
+        Damage = 40,
+        DamageMin = 45,
+        AccuracyMOA = 0.04,
+        HipDispersion = 0.09,
+        MoveDispersion = 0,
+        JumpDispersion = 0,
+        ChamberSize = 0,
+    },
+    [1] = {
+        -- halo purist
+        Recoil = 0,
+        RecoilSide = 0,
+        Damage = 25,
+        DamageMin = 25,
+        AccuracyMOA = 0,
+        HipDispersion = 0,
+        MoveDispersion = 0,
+        JumpDispersion = 0,
+        ChamberSize = 0,
+    },
+    [2] = {
+        -- arccw
+        Recoil = 2,
+        RecoilSide = 1,
+        Damage = 35,
+        DamageMin = 40,
+        AccuracyMOA = 0.06,
+        HipDispersion = 100,
+        MoveDispersion = 350,
+        ChamberSize = 1,
+    }
+}
+
+function SWEP:ArcCW_Halo_Setup()
+    local val = GetConVar("arccw_hce_bal"):GetInt()
+    for i, v in pairs(balance[val]) do
+        self[i] = v
+    end
+end
+
+DEFINE_BASECLASS("arccw_base")
+function SWEP:Initialize()
+    BaseClass.Initialize(self)
+
+    self:ArcCW_Halo_Setup()
 end
 
 SWEP.Range =  100 -- in METRES
@@ -90,7 +121,7 @@ SWEP.ShootPitch = 100 -- pitch of shoot sound
 
 SWEP.ShootSound = "hce_magnumfire"
 SWEP.ShootSoundSilenced = "hcesup"
-SWEP.DistantShootSound = "m6d_lod"
+SWEP.DistantShootSound = nil -- does not exist -- "m6d_lod"
 
 SWEP.TracerNum = 1 -- tracer every X
 SWEP.Tracer = nil

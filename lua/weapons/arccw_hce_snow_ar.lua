@@ -22,33 +22,65 @@ SWEP.ViewModel = "models/snowysnowtime/c_fp_cear.mdl"
 SWEP.WorldModel = "models/halomodels/haloce/w_haloassaultrifle.mdl"
 SWEP.ViewModelFOV = 70
 
-if GetConVar("arccw_hce_bal"):GetInt() == 0 then -- HaloCW
+--  You will need this for the journey ahead
+--  Probably should set this to your first mode
 	SWEP.Recoil = 0.2
 	SWEP.RecoilSide = 0.2
 	SWEP.Damage = 25
-	SWEP.DamageMin = 15 -- damage done at maximum range
-	SWEP.AccuracyMOA = 70 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-	SWEP.HipDispersion = 360 -- inaccuracy added by hip firing.
+	SWEP.DamageMin = 15
+	SWEP.AccuracyMOA = 70
+	SWEP.HipDispersion = 360
 	SWEP.JumpDispersion = 0
 	SWEP.ChamberSize = 0
-elseif GetConVar("arccw_hce_bal"):GetInt() == 1 then -- halo purist
-	SWEP.Recoil = 0
-	SWEP.RecoilSide = 0
-	SWEP.Damage = 10
-	SWEP.DamageMin = 10 -- damage done at maximum range
-	SWEP.JumpDispersion = 0
-	SWEP.HipDispersion = 0
-	SWEP.MoveDispersion = 0
-	SWEP.ChamberSize = 1
-elseif GetConVar("arccw_hce_bal"):GetInt() == 2 then -- arccw
-    SWEP.Recoil = 0.2
-	SWEP.RecoilSide = 0.2
-	SWEP.Damage = 30
-	SWEP.DamageMin = 10 -- damage done at maximum range
-	SWEP.AccuracyMOA = 70 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-	SWEP.HipDispersion = 360 -- inaccuracy added by hip firing.
-	SWEP.MoveDispersion = 120
-	SWEP.ChamberSize = 1
+
+local balance = {
+    [0] = {
+        -- HaloCW
+        Recoil = 0.2,
+        RecoilSide = 0.2,
+        Damage = 25,
+        DamageMin = 15,
+        AccuracyMOA = 70,
+        HipDispersion = 360,
+        JumpDispersion = 0,
+        ChamberSize = 0,
+    },
+    [1] = {
+        -- halo purist
+        Recoil = 0,
+        RecoilSide = 0,
+        Damage = 10,
+        DamageMin = 10,
+        JumpDispersion = 0,
+        HipDispersion = 0,
+        MoveDispersion = 0,
+        ChamberSize = 0,
+    },
+    [2] = {
+        -- arccw
+        Recoil = 0.2,
+        RecoilSide = 0.2,
+        Damage = 30,
+        DamageMin = 10,
+        AccuracyMOA = 70,
+        HipDispersion = 360,
+        MoveDispersion = 120,
+        ChamberSize = 1,
+    }
+}
+
+function SWEP:ArcCW_Halo_Setup()
+    local val = GetConVar("arccw_hce_bal"):GetInt()
+    for i, v in pairs(balance[val]) do
+        self[i] = v
+    end
+end
+
+DEFINE_BASECLASS("arccw_base")
+function SWEP:Initialize()
+    BaseClass.Initialize(self)
+
+    self:ArcCW_Halo_Setup()
 end
 
 SWEP.MeleeSwingSound = ""
@@ -92,7 +124,7 @@ SWEP.MagID = "hs338" -- the magazine pool this gun draws from
 SWEP.ShootVol = 140 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
 
-SWEP.ShootSound = Sound("ar_hce_fire")
+SWEP.ShootSound = "ar_hce_fire"
 SWEP.ShootSoundSilenced = "weapons/arccw/m4a1/m4a1_silencer_01.wav"
 SWEP.DistantShootSound = "ar_lod"
 
