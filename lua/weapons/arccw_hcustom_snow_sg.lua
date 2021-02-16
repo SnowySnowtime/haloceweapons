@@ -334,6 +334,19 @@ SWEP.Animations = {
     },
 }
 
+if engine.ActiveGamemode() == "terrortown" then
+    SWEP.Kind = WEAPON_EQUIP1
+    SWEP.Slot = 6
+    SWEP.CanBuy = { ROLE_TRAITOR }
+    SWEP.LimitedStock = true
+    SWEP.AutoSpawnable = false
+    SWEP.EquipMenuData = {
+        type = "Weapon",
+        desc = "An ultra-powerful Shotgun that throws your foes, \nbut the gun itself will not kill.\nYou must kill them via gravity with this weapon."
+    };
+    SWEP.Icon = "entities/arccw_hce_snow_sg.png"
+end
+
 -- nZombies Stuff
 SWEP.NZWonderWeapon		= false	-- Is this a Wonder-Weapon? If true, only one player can have it at a time. Cheats aren't stopped, though.
 --SWEP.NZRePaPText		= "your text here"	-- When RePaPing, what should be shown? Example: Press E to your text here for 2000 points.

@@ -1,0 +1,32 @@
+VertexLitGeneric
+{
+	"$basetexture"	"snowysnowtime/2k/h3/mauler/excavator"
+  	"$bumpmap"	"snowysnowtime/2k/h3/mauler/excavator_bump"
+
+                 "$phong" "1" 
+                "$phongexponent" "14"
+                 "$phongboost" "13"
+                 
+                 "$phongfresnelranges" "[ 0.03 0.3 1 ]" 
+	
+	"$phongexponenttexture" "snowysnowtime\ma5e\phongexp255"
+	"$phongalbedotint" "1"
+
+	"$lightwarptexture"	"snowysnowtime/2k/h3/lw_covyshell"
+
+	$blendtintbybasealpha	1
+
+	$envmap		"env_cubemap"
+	$normalmapalphaenvmapmask	1
+	$cubemaptint	"[ 0 0 0 ]"
+	$cubemappower	0.3
+
+	Proxies
+	{
+		drc_ReflectionTint
+		{
+			resultVar $envmaptint
+		}
+	}
+}
+

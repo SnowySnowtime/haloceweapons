@@ -121,19 +121,9 @@ SWEP.HolsterPos = Vector(0, -3, -2)
 SWEP.HolsterAng = Angle(-10, 0, 0)
 
 if engine.ActiveGamemode() == "terrortown" then
-    SWEP.Kind = WEAPON_EQUIP1
-    SWEP.Slot = 6
-    SWEP.CanBuy = { ROLE_TRAITOR }
-    SWEP.CanDrop = true
+    SWEP.CanDrop = false
     SWEP.LimitedStock = false
     SWEP.AutoSpawnable = false
-    SWEP.EquipMenuData = {
-        type = "Weapon",
-        desc = "wort wort wort"
-    };
-    SWEP.Icon = "vgui/ttt/arccw_melee_machete"
-    SWEP.MeleeDamage = 80
-    SWEP.Melee2Damage = 105
 end
 
 --probably. From Stan's TFA Gravity Hammer

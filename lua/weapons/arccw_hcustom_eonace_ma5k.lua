@@ -300,6 +300,12 @@ SWEP.Animations = {
     },
 }
 
+if engine.ActiveGamemode() == "terrortown" then
+    SWEP.CanDrop = false
+    SWEP.LimitedStock = false
+    SWEP.AutoSpawnable = false
+end
+
 -- nZombies Stuff
 SWEP.NZWonderWeapon		= false	-- Is this a Wonder-Weapon? If true, only one player can have it at a time. Cheats aren't stopped, though.
 --SWEP.NZRePaPText		= "your text here"	-- When RePaPing, what should be shown? Example: Press E to your text here for 2000 points.

@@ -328,3 +328,9 @@ SWEP.Animations = {
         LHIKOut = 0.5,
     },
 }
+
+if engine.ActiveGamemode() == "terrortown" then
+    SWEP.CanDrop = false
+    SWEP.LimitedStock = false
+    SWEP.AutoSpawnable = false
+end

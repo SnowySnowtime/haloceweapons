@@ -1,0 +1,11 @@
+UnlitGeneric
+{
+	"$basetexture"	"snowysnowtime/2k/h3/display_illum"
+
+	$additive 1
+	$model 1
+}
+
+
+
+

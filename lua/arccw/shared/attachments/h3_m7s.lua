@@ -3,16 +3,14 @@ att.Icon = Material("snowysnowtime/2k/ico/h3/smg_sil.png")
 att.Description = "Converts the M7 to an M7S. Cannot use other scope or muzzle attachments."
 att.Desc_Pros = {
 	"Can fire underwater",
-	"Has a laser that improves aiming accuracy.",
+	"Suppressor increases Accuracy.",
 	"'Hud Linked Optics', making it superb for aiming",
 	"	while gunning. (2d scopes not supported yet)",
 	"Different AmmoType lets the M7S deal more",
 	"	damage overall, and penetrate thicker objects"
 }
 att.Desc_Cons = {
-	"Bright laser can reveal location, and",
-	"	decreases hipfire accuracy.",
-	"Jump firing accuracy is reduced due to",
+	"Hipfire/Jump fire Accuracy is reduced due to",
 	"	the suppressor."
 }
 att.Slot = "override_e"
@@ -52,8 +50,8 @@ att.AdditionalSights = {
 		Magnification = 2.5,
 		IgnoreExtra = false,
 		CrosshairInSights = true,
-        SwitchToSound = "weapons/fesiugsmo/zoom_in.wav",
-        SwitchFromSound = "weapons/fesiugsmo/zoom_out.wav",
+        SwitchToSound = "common/null.wav",
+        SwitchFromSound = "common/null.wav",
 	}
 }
 
@@ -142,7 +140,7 @@ end
 att.ActivateElements = {"anniv"}
 att.GivesFlags = {"halo_m7s"}
 
-att.Laser = true
+att.Laser = false
 att.LaserStrength = 2.5
 att.LaserBone = "laser"
 att.ColorOptionsTable = {Color(255, 25, 65)}

@@ -396,7 +396,7 @@ if engine.ActiveGamemode() == "terrortown" then
         type = "Weapon",
         desc = "A powerful sniper rifle. Uses typical rifle ammo, \nbut isn't lethal at point blank.\nPurchased weapons come with full attachments."
     };
-    SWEP.Icon = "arccw/ttt_awm.png"
+    SWEP.Icon = "entities/arccw_hce_snow_sr.png"
 end
 
 -- nZombies Stuff

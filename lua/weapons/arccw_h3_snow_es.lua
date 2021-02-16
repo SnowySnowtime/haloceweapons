@@ -173,8 +173,8 @@ if engine.ActiveGamemode() == "terrortown" then
         type = "Weapon",
         desc = "wort wort wort"
     };
-    SWEP.Icon = "vgui/ttt/arccw_melee_machete"
-    SWEP.MeleeDamage = 80
+    SWEP.Icon = "entities/arccw_h3_snow_es.png"
+    SWEP.MeleeDamage = 95
     SWEP.Melee2Damage = 105
 end
 
