@@ -4,11 +4,11 @@ SWEP.Category = "ArcCW - Halo 3" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "Fuel Rod"
-SWEP.TrueName = "Type-33B"
-SWEP.Trivia_Class = "Rocket Launcher"
-SWEP.Trivia_Desc = "The M41 Surface-to-Surface Rocket Medium Anti-Vehicle / Assault Weapon (M41 SSR MAV/AW), formally known as the Medium Anti-Vehicle / Assault Weapon, Bore 102mm, M41 Surface-to-Surface Rocket Launcher, and commonly known as the Jackhammer or the SPNKR (also stylised as SPNKr), is a heavy ordnance weapon used by the UNSC and Insurrectionists. It is manufactured by Misriah Armory."
-SWEP.Trivia_Manufacturer = "Misriah Armory"
-SWEP.Trivia_Calibre = "M19 102mm High-Explosive Shaped Charge Missiles"
+SWEP.TrueName = "Type-33(B)"
+SWEP.Trivia_Class = "Flak Cannon"
+SWEP.Trivia_Desc = "The Type-33 Light Anti-Armor Weapon (T-33 LAAW), colloquially known as the fuel rod gun, is a shoulder-fired flak cannon/radiation weapon, used by the Covenant. It is also sometimes called the flak cannon or fuel rod cannon though the latter term is usually reserved for vehicle-mounted weapons based on the same technology. "
+SWEP.Trivia_Manufacturer = "Assembly Forges"
+SWEP.Trivia_Calibre = "Class-2 38mm radioactive explosive fuel rods"
 SWEP.Trivia_Mechanism = "Semi-Auto"
 SWEP.Trivia_Country = "never heard of her"
 SWEP.Trivia_Year = 2460

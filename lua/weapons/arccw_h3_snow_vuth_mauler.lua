@@ -6,11 +6,10 @@ SWEP.AdminOnly = false
 SWEP.PrintName = "Mauler"
 SWEP.TrueName = "Type-52 Mauler"
 SWEP.Trivia_Class = "Handgun/Shotgun"
-SWEP.Trivia_Desc = "The M90 Close Assault Weapon is a pump-action, magazine-fed, dual tubular non-detachable shotgun designed from the M45E Tactical Shotgun. The Weapon System Technologies DTM series shotgun is the most common shotgun employed by UNSC Special Forces, law enforcement agencies, and sportsmen. The M90 has been in service for over 27 years and its design has changed very little throughout its service. "
-SWEP.Trivia_Manufacturer = "Misriah Armory"
-SWEP.Trivia_Calibre = "12 Gauge"
-SWEP.Trivia_Mechanism = "Pump Action"
-SWEP.Trivia_Country = "USA"
+SWEP.Trivia_Desc = "The Type-52 Mauler is used by the Jiralhanae as a handgun, although human military experts have classified it as being more of a handheld shotgun than anything else. The magazine holds 5 7.9mm metal bolts, which appear to be constantly kept at superheated temperatures before being fired. These bolts appear to fragment upon being ejected from the weapon, creating a scatter-shot effect reminiscent of human shotguns. Like all Jiralhanae weapons, the Mauler is equipped with a small blade underneath, making it a formidable melee weapon."
+SWEP.Trivia_Manufacturer = "Sacred Promissory"
+SWEP.Trivia_Calibre = "7.9mm Metal Bolts"
+SWEP.Trivia_Mechanism = "Gas-Operated"
 SWEP.Trivia_Year = 1994
 
 SWEP.Slot = 3
