@@ -6,9 +6,9 @@ ENT.Information = ""
 ENT.Spawnable = false
 ENT.AdminSpawnable = false
 
-ENT.Model = "models/halo/combat_evolved/weapons/grenade_plasma.mdl"
-ENT.FuseTime = 5
-ENT.ArmTime = 0.5
+ENT.Model = "models/snowysnowtime/projectiles/plasma_projectile.mdl"
+ENT.FuseTime = 4
+ENT.ArmTime = 0.2
 ENT.ImpactFuse = true
 
 AddCSLuaFile()
@@ -53,7 +53,7 @@ end
 function ENT:PhysicsCollide(data, physobj)
 if SERVER then
 		if data.Speed > 25 then
-            self:EmitSound(Sound("halo/halo_3/flak_proj_bounce" .. math.random(1,3) .. ".ogg"))
+            self:EmitSound(Sound("snow/weapons/flak_cannon/flak_proj_bounce/flak_proj_bounce" .. math.random(1,3) .. ".wav"))
 		end
 		end
 	if self.at <= CurTime() and self.ImpactFuse then
@@ -145,7 +145,7 @@ end
 
 function ENT:Detonate()
     if SERVER then
-        if !self:IsValid() then return end
+        if !self:IsValid() and !k:GetOwner() then return end
         local effectdata = EffectData()
             effectdata:SetOrigin( self:GetPos() )
 
@@ -153,7 +153,7 @@ function ENT:Detonate()
             util.Effect( "WaterSurfaceExplosion", effectdata )
         else
             util.Effect( "astw2_halo3_explosion_fuelrod", effectdata)
-	sound.Play( "halo/halo_3/fuel_expl_" .. math.random(1,2) .. ".ogg",  self:GetPos(), 100, 100 )
+	sound.Play( "h3_fuelrod_expl",  self:GetPos(), 100, 100 )
 	util.ScreenShake(self:GetPos(),5000,100,0.4,1000)
         end
 

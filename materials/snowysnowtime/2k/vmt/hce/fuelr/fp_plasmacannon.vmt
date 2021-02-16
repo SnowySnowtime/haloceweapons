@@ -1,0 +1,38 @@
+VertexLitGeneric
+{
+	"$basetexture"	"snowysnowtime/2k/hce/fuelrod/mcc/fr"
+  	"$bumpmap"	"snowysnowtime/2k/hce/fuelrod/mcc/fr_n"
+
+	$lightwarptexture	"snowysnowtime\2k\h3\lw_covyshell"
+
+                 "$phong" "1" 
+                "$phongexponent" "29"
+                 "$phongboost" "7"
+                 
+                 "$phongfresnelranges" "[ 0.08 0.6 2 ]" 
+
+	$detail	"snowysnowtime/2k/h3/fuelrod/flak_detail"
+	$detailscale	6
+	$detailblendmode	0
+	$detailblendfactor	0.7
+
+	$envmap		"env_cubemap"
+	$normalmapalphaenvmapmask	1
+	$cubemaptint	"[ 0 0 0 ]"
+	$cubemappower	0.1
+
+	Proxies
+	{
+		drc_ReflectionTint
+		{
+			resultVar $envmaptint
+		}
+		Clamp 
+		{
+			min 0.1
+			max 1
+			srcVar1 "$color2"
+			resultVar "$color2"
+		}
+	}
+}

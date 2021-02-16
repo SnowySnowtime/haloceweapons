@@ -1964,6 +1964,15 @@ sound.Add(
 
 sound.Add(
 {
+    name = "fuelrod_expl",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 150,
+    sound = {"hce/fuelrod_expl_2.wav","hce/fuelrod_expl_3.wav"}
+})
+
+sound.Add(
+{
     name = "hceaneedler_melee",
     channel = CHAN_STATIC,
     volume = 1.0,
@@ -2650,6 +2659,24 @@ sound.Add(
 })
 
 --Fuel Rod Gun
+
+sound.Add(
+{
+    name = "h3_fuelrod_fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = {"snow/weapons/flak_cannon/flak_fire_h3/flak_fire_h3_1.wav","snow/weapons/flak_cannon/flak_fire_h3/flak_fire_h3_2.wav","snow/weapons/flak_cannon/flak_fire_h3/flak_fire_h3_3.wav"}
+})
+
+sound.Add(
+{
+    name = "h3_fuelrod_expl",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 150,
+    sound = {"snow/weapons/flak_cannon/flak_expl/flak_expl1.wav","snow/weapons/flak_cannon/flak_expl/flak_expl2.wav","snow/weapons/flak_cannon/flak_expl/flak_expl3.wav"}
+})
 
 
 

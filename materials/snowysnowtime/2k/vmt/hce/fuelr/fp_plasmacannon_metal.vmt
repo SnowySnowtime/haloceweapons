@@ -1,0 +1,17 @@
+VertexLitGeneric
+{
+	"$basetexture"	"snowysnowtime/2k/hce/fuelrod/mcc/fr_metal"
+  	"$bumpmap"	"snowysnowtime/2k/hce/fuelrod/mcc/fr_n2"
+
+	$lightwarptexture	"snowysnowtime\2k\h3\lw_covyshell"
+
+	$detail	""
+	$detailscale	1
+	$detailblendmode	5
+
+                 "$phong" "1" 
+                "$phongexponent" "44"
+                 "$phongboost" "13"
+                 
+                 "$phongfresnelranges" "[ 0.05 0.3 1 ]" 
+}

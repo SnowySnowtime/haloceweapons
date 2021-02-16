@@ -1,0 +1,5 @@
+VertexLitGeneric
+{
+	"$basetexture"	"snowysnowtime/2k/hce/fuelrod/mcc/fr_electronics"
+	$selfillum 
+}
