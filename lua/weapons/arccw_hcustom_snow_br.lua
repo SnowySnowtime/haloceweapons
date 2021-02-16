@@ -21,36 +21,52 @@ if GetConVar("arccw_truenames"):GetBool() then SWEP.PrintName = SWEP.TrueName en
 
 SWEP.UseHands = true
 
-if GetConVar("arccw_hce_bal"):GetInt() == 0 then -- HaloCW
-   SWEP.Recoil = 0.75
-	SWEP.RecoilSide = 0.25
-	SWEP.Damage = 15
-	SWEP.DamageMin = 30
-	SWEP.AccuracyMOA = 0.07 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-	SWEP.HipDispersion = 50 -- inaccuracy added by hip firing.
-	SWEP.MoveDispersion = 150
+--  You will need this for the journey ahead
+--  Probably should set this to your first mode
+	SWEP.Recoil = 0.3
+	SWEP.RecoilSide = 0.3
+	SWEP.Damage = 25
+	SWEP.DamageMin = 15
+	SWEP.AccuracyMOA = 0.01
+	SWEP.HipDispersion = 125
 	SWEP.JumpDispersion = 0
 	SWEP.ChamberSize = 0
-elseif GetConVar("arccw_hce_bal"):GetInt() == 1 then -- halo purist
-	SWEP.Recoil = 0
-	SWEP.RecoilSide = 0
-	SWEP.Damage = 15
-	SWEP.DamageMin = 20
-	SWEP.AccuracyMOA = 0
-	SWEP.HipDispersion = 0
-	SWEP.MoveDispersion = 0
-	SWEP.JumpDispersion = 0
-	SWEP.ChamberSize = 0
-elseif GetConVar("arccw_hce_bal"):GetInt() == 2 then -- arccw
-    SWEP.Recoil = 0.75
-	SWEP.RecoilSide = 0.25
-	SWEP.Damage = 15
-	SWEP.DamageMin = 30
-	SWEP.AccuracyMOA = 0.04 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-	SWEP.HipDispersion = 70 -- inaccuracy added by hip firing.
-	SWEP.MoveDispersion = 175
-	SWEP.ChamberSize = 1
-end
+
+local balance = {
+    [0] = {
+        -- HaloCW
+        Recoil = 0.3,
+        RecoilSide = 0.3,
+        Damage = 17,
+        DamageMin = 17,
+        AccuracyMOA = 0.01,
+        HipDispersion = 125,
+        JumpDispersion = 0,
+        ChamberSize = 0,
+    },
+    [1] = {
+        -- halo purist
+        Recoil = 0,
+        RecoilSide = 0,
+        Damage = 10,
+        DamageMin = 10,
+        JumpDispersion = 0,
+        HipDispersion = 0,
+        MoveDispersion = 0,
+        ChamberSize = 0,
+    },
+    [2] = {
+        -- arccw
+        Recoil = 0.2,
+        RecoilSide = 0.2,
+        Damage = 17,
+        DamageMin = 17,
+        AccuracyMOA = 0.05,
+        HipDispersion = 360,
+        MoveDispersion = 120,
+        ChamberSize = 1,
+    }
+}
 
 SWEP.MeleeSwingSound = ""
 SWEP.MeleeMissSound = ""

@@ -28,31 +28,52 @@ SWEP.ViewModel = "models/snowysnowtime/vuthakral/c_hum_Mauler.mdl"
 SWEP.WorldModel = "models/snowysnowtime/vuthakral/w_mauler.mdl"
 SWEP.ViewModelFOV = 70
 
-if GetConVar("arccw_hce_bal"):GetInt() == 0 then -- HaloCW
+--  You will need this for the journey ahead
+--  Probably should set this to your first mode
 	SWEP.Recoil = 6
-	SWEP.RecoilSide = 1
-	SWEP.MaxRecoilBlowback = 2
-	SWEP.AccuracyMOA = 140 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-	SWEP.HipDispersion = 0 -- inaccuracy added by hip firing.
-	SWEP.MoveDispersion = 0
-	SWEP.ChamberSize = 0
-elseif GetConVar("arccw_hce_bal"):GetInt() == 1 then -- halo purist
-	SWEP.Recoil = 0
-	SWEP.RecoilSide = 0
-	SWEP.JumpDispersion = 0
-	SWEP.AccuracyMOA = 65
+	SWEP.RecoilSide = 2
+	SWEP.Damage = 10
+	SWEP.DamageMin = 3
+	SWEP.AccuracyMOA = 75
 	SWEP.HipDispersion = 0
-	SWEP.MoveDispersion = 0
-	SWEP.ChamberSize = 1
-elseif GetConVar("arccw_hce_bal"):GetInt() == 2 then -- arccw
-	SWEP.Recoil = 6
-	SWEP.RecoilSide = 1
-	SWEP.MaxRecoilBlowback = 2
-	SWEP.AccuracyMOA = 125 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-	SWEP.HipDispersion = 10 -- inaccuracy added by hip firing.
-	SWEP.MoveDispersion = 70
-	SWEP.ChamberSize = 1
-end
+	SWEP.JumpDispersion = 0
+	SWEP.ChamberSize = 0
+
+local balance = {
+    [0] = {
+        -- HaloCW
+        Recoil = 6,
+        RecoilSide = 2,
+        Damage = 10,
+        DamageMin = 3,
+        AccuracyMOA = 75,
+        HipDispersion = 0,
+        JumpDispersion = 0,
+        ChamberSize = 0,
+    },
+    [1] = {
+        -- halo purist
+        Recoil = 2,
+        RecoilSide = 1,
+        Damage = 10,
+        DamageMin = 3,
+        JumpDispersion = 0,
+        HipDispersion = 0,
+        MoveDispersion = 0,
+        ChamberSize = 0,
+    },
+    [2] = {
+        -- arccw
+        Recoil = 6,
+        RecoilSide = 3,
+        Damage = 12,
+        DamageMin = 2,
+        AccuracyMOA = 75,
+        HipDispersion = 0,
+        MoveDispersion = 0,
+        ChamberSize = 1,
+    }
+}
 
 SWEP.Damage = 20
 SWEP.DamageMin = 7 -- damage done at maximum range

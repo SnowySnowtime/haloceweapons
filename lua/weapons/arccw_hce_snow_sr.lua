@@ -27,36 +27,58 @@ SWEP.MeleeHitNPCSound = "hceslap"
 SWEP.ViewModel = "models/snowysnowtime/c_fp_cesniperrifle.mdl"
 SWEP.WorldModel = "models/snowysnowtime/w_sniperrifle.mdl"
 SWEP.ViewModelFOV = 70
+--  You will need this for the journey ahead
+--  Probably should set this to your first mode
+	SWEP.Recoil = 0.2
+	SWEP.RecoilSide = 0.2
+	SWEP.Damage = 125
+	SWEP.DamageMin = 100
+	SWEP.AccuracyMOA = 0.005
+	SWEP.HipDispersion = 360
+	SWEP.JumpDispersion = 0
+	SWEP.ChamberSize = 0
 
-if GetConVar("arccw_hce_bal"):GetInt() == 0 then -- HaloCW
-    SWEP.Recoil = 2
-	SWEP.RecoilSide = 1
-	SWEP.Damage = 95
-	SWEP.DamageMin = 150
-	SWEP.AccuracyMOA = 0.05 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-	SWEP.HipDispersion = 500 -- inaccuracy added by hip firing.
-	SWEP.MoveDispersion = 0
-	SWEP.JumpDispersion = 0
-	SWEP.ChamberSize = 0
-elseif GetConVar("arccw_hce_bal"):GetInt() == 1 then -- halo purist
-	SWEP.Recoil = 0
-	SWEP.RecoilSide = 0
-	SWEP.Damage = 101
-	SWEP.DamageMin = 101
-	SWEP.AccuracyMOA = 0
-	SWEP.HipDispersion = 0
-	SWEP.MoveDispersion = 0
-	SWEP.JumpDispersion = 0
-	SWEP.ChamberSize = 0
-elseif GetConVar("arccw_hce_bal"):GetInt() == 2 then -- arccw
-    SWEP.Recoil = 4
-	SWEP.RecoilSide = 2
-	SWEP.Damage = 85
-	SWEP.DamageMin = 125
-	SWEP.AccuracyMOA = 0.03
-	SWEP.HipDispersion = 450
-	SWEP.MoveDispersion = 550
-	SWEP.ChamberSize = 1
+local balance = {
+    [0] = {
+        -- HaloCW
+        Recoil = 1,
+        RecoilSide = 1,
+        Damage = 100,
+        DamageMin = 100,
+        AccuracyMOA = 0.005,
+        HipDispersion = 700,
+        JumpDispersion = 0,
+        ChamberSize = 0,
+    },
+    [1] = {
+        -- halo purist
+        Recoil = 0,
+        RecoilSide = 0,
+        Damage = 100,
+        DamageMin = 100,
+        JumpDispersion = 0,
+        HipDispersion = 0,
+        MoveDispersion = 0,
+        ChamberSize = 0,
+    },
+    [2] = {
+        -- arccw
+        Recoil = 0.2,
+        RecoilSide = 0.2,
+        Damage = 100,
+        DamageMin = 100,
+        AccuracyMOA = 0.005,
+        HipDispersion = 700,
+        MoveDispersion = 120,
+        ChamberSize = 1,
+    }
+}
+
+function SWEP:ArcCW_Halo_Setup()
+    local val = GetConVar("arccw_hce_bal"):GetInt()
+    for i, v in pairs(balance[val]) do
+        self[i] = v
+    end
 end
 
 SWEP.Range = 200 -- in METRES

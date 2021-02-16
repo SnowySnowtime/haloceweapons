@@ -17,33 +17,13 @@ if GetConVar("arccw_truenames"):GetBool() then SWEP.PrintName = SWEP.TrueName en
 
 SWEP.UseHands = true
 
-if GetConVar("arccw_hce_bal"):GetInt() == 0 then -- HaloCW
-    SWEP.Recoil = 2
-	SWEP.RecoilSide = 1
-	SWEP.Damage = 95
-	SWEP.DamageMin = 150
-	SWEP.AccuracyMOA = 0.05 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-	SWEP.HipDispersion = 500 -- inaccuracy added by hip firing.
-	SWEP.MoveDispersion = 0
-	SWEP.JumpDispersion = 0
-elseif GetConVar("arccw_hce_bal"):GetInt() == 1 then -- halo purist
-	SWEP.Recoil = 0
-	SWEP.RecoilSide = 0
-	SWEP.Damage = 100
-	SWEP.DamageMin = 100
-	SWEP.AccuracyMOA = 0
-	SWEP.HipDispersion = 0
-	SWEP.MoveDispersion = 0
-	SWEP.JumpDispersion = 0
-elseif GetConVar("arccw_hce_bal"):GetInt() == 2 then -- arccw
-    SWEP.Recoil = 4
-	SWEP.RecoilSide = 2
-	SWEP.Damage = 85
-	SWEP.DamageMin = 125
-	SWEP.AccuracyMOA = 0.03
-	SWEP.HipDispersion = 450
-	SWEP.MoveDispersion = 550
-end
+SWEP.Recoil = 4
+SWEP.RecoilSide = 2
+SWEP.Damage = 85
+SWEP.DamageMin = 125
+SWEP.AccuracyMOA = 0.03
+SWEP.HipDispersion = 450
+SWEP.MoveDispersion = 550
 
 SWEP.MeleeSwingSound = ""
 SWEP.MeleeMissSound = ""
@@ -171,11 +151,14 @@ SWEP.Attachments = {
         Slot = {"h3bmsc"}, -- what kind of attachments can fit here, can be string or table
         Bone = "gun", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(-6, -1.5, 2.05), -- offset that the attachment will be relative to the bone
+            vpos = Vector(0, 0, 0), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, -47),
             wpos = Vector(7.36, 0.739, -5.201),
             wang = Angle(-9.738, 0, 180)
         },
+		Installed = "optic_bm_scopeh3",
+		Integral = true, 
+		Hidden = true,
     },
     {
         PrintName = "Stock",

@@ -23,34 +23,52 @@ SWEP.ViewModel = "models/snowysnowtime/vuthakral/c_hum_m7.mdl"
 SWEP.WorldModel = "models/snowysnowtime/vuthakral/w_m7.mdl"
 SWEP.ViewModelFOV = 70
 
-if GetConVar("arccw_hce_bal"):GetInt() == 0 then -- HaloCW
+--  You will need this for the journey ahead
+--  Probably should set this to your first mode
 	SWEP.Recoil = 0.2
 	SWEP.RecoilSide = 0.2
-	SWEP.Damage = 18
-	SWEP.DamageMin = 10 -- damage done at maximum range
-	SWEP.AccuracyMOA = 30 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-	SWEP.HipDispersion = 370 -- inaccuracy added by hip firing.
-	SWEP.MoveDispersion = 0
-	SWEP.ChamberSize = 0
-elseif GetConVar("arccw_hce_bal"):GetInt() == 1 then -- halo purist
-	SWEP.Recoil = 0.1
-	SWEP.RecoilSide = 0.1
-	SWEP.Damage = 18
-	SWEP.DamageMin = 10 -- damage done at maximum range
+	SWEP.Damage = 25
+	SWEP.DamageMin = 15
+	SWEP.AccuracyMOA = 15
+	SWEP.HipDispersion = 270
 	SWEP.JumpDispersion = 0
-	SWEP.HipDispersion = 0
-	SWEP.MoveDispersion = 0
 	SWEP.ChamberSize = 0
-elseif GetConVar("arccw_hce_bal"):GetInt() == 2 then -- arccw
-    SWEP.Recoil = 0.2
-	SWEP.RecoilSide = 0.2
-	SWEP.Damage = 18
-	SWEP.DamageMin = 10 -- damage done at maximum range
-	SWEP.AccuracyMOA = 25 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-	SWEP.HipDispersion = 350 -- inaccuracy added by hip firing.
-	SWEP.MoveDispersion = 160
-	SWEP.ChamberSize = 1
-end
+
+local balance = {
+    [0] = {
+        -- HaloCW
+        Recoil = 0.2,
+        RecoilSide = 0.2,
+        Damage = 27,
+        DamageMin = 15,
+        AccuracyMOA = 15,
+        HipDispersion = 270,
+        JumpDispersion = 0,
+        ChamberSize = 0,
+    },
+    [1] = {
+        -- halo purist
+        Recoil = 0,
+        RecoilSide = 0,
+        Damage = 25,
+        DamageMin = 25,
+        JumpDispersion = 0,
+        HipDispersion = 0,
+        MoveDispersion = 0,
+        ChamberSize = 0,
+    },
+    [2] = {
+        -- arccw
+        Recoil = 0.2,
+        RecoilSide = 0.2,
+        Damage = 25,
+        DamageMin = 10,
+        AccuracyMOA = 15,
+        HipDispersion = 270,
+        MoveDispersion = 120,
+        ChamberSize = 1,
+    }
+}
 
 SWEP.MeleeSwingSound = ""
 SWEP.MeleeMissSound = ""

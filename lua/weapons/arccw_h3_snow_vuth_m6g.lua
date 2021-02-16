@@ -23,37 +23,53 @@ SWEP.ViewModel = "models/snowysnowtime/vuthakral/c_hum_m6g.mdl"
 SWEP.WorldModel = "models/snowysnowtime/vuthakral/w_m6g.mdl"
 SWEP.ViewModelFOV = 70
 
-if GetConVar("arccw_hce_bal"):GetInt() == 0 then -- HaloCW
     SWEP.Recoil = 2
 	SWEP.RecoilSide = 1
-	SWEP.Damage = 65
-	SWEP.DamageMin = 65
+	SWEP.Damage = 40
+	SWEP.DamageMin = 45
 	SWEP.AccuracyMOA = 0.04
 	SWEP.HipDispersion = 0.09
 	SWEP.MoveDispersion = 0
 	SWEP.JumpDispersion = 0
 	SWEP.ChamberSize = 0
-elseif GetConVar("arccw_hce_bal"):GetInt() == 1 then -- halo purist
-	SWEP.Recoil = 0
-	SWEP.RecoilSide = 0
-	SWEP.Damage = 50
-	SWEP.DamageMin = 50
-	SWEP.AccuracyMOA = 0
-	SWEP.HipDispersion = 0
-	SWEP.MoveDispersion = 0
-	SWEP.JumpDispersion = 0
-	SWEP.ChamberSize = 0
-elseif GetConVar("arccw_hce_bal"):GetInt() == 2 then -- arccw
-    SWEP.Recoil = 2
-	SWEP.RecoilSide = 1
-	SWEP.Damage = 74
-	SWEP.DamageMin = 49
-	SWEP.AccuracyMOA = 0.06
-	SWEP.HipDispersion = 55
-	SWEP.MoveDispersion = 150
-	SWEP.JumpDispersion = 1
-	SWEP.ChamberSize = 1
-end
+
+local balance = {
+    [0] = {
+        -- HaloCW
+        Recoil = 2,
+        RecoilSide = 1,
+        Damage = 50,
+        DamageMin = 30,
+        AccuracyMOA = 0.04,
+        HipDispersion = 0.09,
+        MoveDispersion = 0,
+        JumpDispersion = 0,
+        ChamberSize = 0,
+    },
+    [1] = {
+        -- halo purist
+        Recoil = 0,
+        RecoilSide = 0,
+        Damage = 25,
+        DamageMin = 25,
+        AccuracyMOA = 0,
+        HipDispersion = 0,
+        MoveDispersion = 0,
+        JumpDispersion = 0,
+        ChamberSize = 0,
+    },
+    [2] = {
+        -- arccw
+        Recoil = 2,
+        RecoilSide = 1,
+        Damage = 50,
+        DamageMin = 35,
+        AccuracyMOA = 0.06,
+        HipDispersion = 100,
+        MoveDispersion = 350,
+        ChamberSize = 1,
+    }
+}
 
 SWEP.Range =  100 -- in METRES
 SWEP.Penetration = 100
