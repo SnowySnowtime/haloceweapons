@@ -1955,6 +1955,15 @@ sound.Add(
 
 sound.Add(
 {
+    name = "hce.T33B_ready",
+    channel = CHAN_STATIC,
+    volume = 2,
+    soundlevel = 110,
+    sound = "snow/weapons/plasma_rifle/plasrifle_ready.wav"
+})
+
+sound.Add(
+{
     name = "fuelrod_fire",
     channel = CHAN_STATIC,
     volume = 1.0,
@@ -2678,7 +2687,41 @@ sound.Add(
     sound = {"snow/weapons/flak_cannon/flak_expl/flak_expl1.wav","snow/weapons/flak_cannon/flak_expl/flak_expl2.wav","snow/weapons/flak_cannon/flak_expl/flak_expl3.wav"}
 })
 
+sound.Add(
+{
+    name = "h3_fuelrod_expl_dist",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 170,
+    sound = {"snow/weapons/flak_cannon/flak_expl_lod_far/flak_expl_lod_far1.wav","snow/weapons/flak_cannon/flak_expl_lod_far/flak_expl_lod_far2.wav","snow/weapons/flak_cannon/flak_expl_lod_far/flak_expl_lod_far3.wav"}
+})
 
+sound.Add(
+{
+    name = "h3.t33b_fp_rotate",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 150,
+    sound = {"snow/weapons/flak_cannon/flak_cannon_fire_animation/fire_animation1.wav","snow/weapons/flak_cannon/flak_cannon_fire_animation/fire_animation2.wav","snow/weapons/flak_cannon/flak_cannon_fire_animation/fire_animation3.wav"}
+})
+
+sound.Add(
+{
+    name = "h3.T33B_reload1",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 150,
+    sound = {"snow/weapons/flak_cannon/flak_cannon_reload/flak_cannon_reload1.wav","snow/weapons/flak_cannon/flak_cannon_reload/flak_cannon_reload2.wav","snow/weapons/flak_cannon/flak_cannon_reload/flak_cannon_reload3.wav"}
+})
+
+sound.Add(
+{
+    name = "h3.T33B_ready",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 150,
+    sound = {"snow/weapons/flak_cannon/flak_cannon_ready/flak_cannon_ready1.wav","snow/weapons/flak_cannon/flak_cannon_ready/flak_cannon_ready2.wav","snow/weapons/flak_cannon/flak_cannon_ready/flak_cannon_ready3.wav"}
+})
 
 --Energy Sword
 

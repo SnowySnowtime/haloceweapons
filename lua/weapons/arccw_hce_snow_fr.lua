@@ -20,7 +20,7 @@ if GetConVar("arccw_truenames"):GetBool() then SWEP.PrintName = SWEP.TrueName en
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/snowysnowtime/vuthakral/c_hum_t33a.mdl"
-SWEP.WorldModel = "models/halomodels/haloce/w_halorocketlauncher.mdl"
+SWEP.WorldModel = "models/snowysnowtime/vuthakral/w_t33a.mdl"
 SWEP.ViewModelFOV = 70
 
 SWEP.MeleeSwingSound = nil
@@ -45,11 +45,11 @@ SWEP.ReducedClipSize = 1
 
 SWEP.Delay_Accel        = 0.2
 SWEP.Delay_Decel        = 0.5
-SWEP.Heat_Accel     = 0.4
-SWEP.Heat_Decel     = 0.4
+SWEP.Heat_Accel     = 0.37
+SWEP.Heat_Decel     = 0.34
 SWEP.Delay_Min          = 0.5
 SWEP.Delay_Max          = 0.5
-SWEP.BatteryConsumption     = 1/400
+SWEP.BatteryConsumption     = 3/100
 
 SWEP.Delay = 60 / 270 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
@@ -74,7 +74,7 @@ SWEP.AccuracyMOA = 0 -- accuracy in Minutes of Angle. There are 60 MOA in a degr
 SWEP.HipDispersion = 0 -- inaccuracy added by hip firing.
 SWEP.MoveDispersion = 100
 
-SWEP.Primary.Ammo = "RPG_Round" -- what ammo type the gun uses
+SWEP.Primary.Ammo = "arccwhce_plasmabattery" -- what ammo type the gun uses
 SWEP.MagID = "hs338" -- the magazine pool this gun draws from
 
 SWEP.ShootVol = 140 -- volume of shoot sound
@@ -209,23 +209,12 @@ SWEP.Animations = {
         Source = "idle",
         Time = 59/30
     },
-    ["holster"] = {
-        Source = "holster",
-        Time = 21/30
-    },
 	["fire_iron"] = {
         Source = "fire",
     },
     ["draw"] = {
         Source = "draw",
-        Time = 21/30,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 0.25,
-    },
-	["draw_anniv"] = {
-        Source = "anniv_draw",
-        Time = 21/30,
+        Time = 22/30,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.25,
@@ -247,6 +236,12 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0.5,
         LHIKOut = 0,
+		SoundTable = {
+		{
+			s = "hce.pr_overheat1", -- sound; can be string or table
+			t = 0,
+			},
+        },
     },
     ["idle_vent"] = {
         Source = "overheat_loop",
@@ -262,6 +257,12 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.5,
+		SoundTable = {
+		{
+			s = "hce.pr_overheat2", -- sound; can be string or table
+			t = 0.2,
+			},
+        },
     },
 }
 
@@ -273,7 +274,7 @@ SWEP.NZPaPName				= "M420 SPANKr"
 SWEP.NZPreventBox		= false	-- If true, this gun won't be placed in random boxes GENERATED. Users can still place it in manually.
 SWEP.NZTotalBlackList	= false	-- if true, this gun can't be placed in the box, even manually, and can't be bought off a wall, even if placed manually. Only code can give this gun.
 
-SWEP.Primary.MaxAmmo = 10
+SWEP.Primary.MaxAmmo = 100
 -- Max Ammo function
 
 function SWEP:NZMaxAmmo()

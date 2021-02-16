@@ -7,8 +7,8 @@ ENT.Spawnable = false
 ENT.AdminSpawnable = false
 
 ENT.Model = "models/snowysnowtime/projectiles/plasma_projectile.mdl"
-ENT.FuseTime = 4
-ENT.ArmTime = 0.2
+ENT.FuseTime = 2
+ENT.ArmTime = 0.07
 ENT.ImpactFuse = true
 
 AddCSLuaFile()
@@ -18,9 +18,10 @@ function ENT:Initialize()
         self:SetModel( self.Model )
         self:SetMoveType( MOVETYPE_VPHYSICS )
         self:SetSolid( SOLID_VPHYSICS )
+        self:SetMaterial( slipperymetal )
         self:PhysicsInit( SOLID_VPHYSICS )
         self:SetCollisionGroup( COLLISION_GROUP_PROJECTILE )
-        self:DrawShadow( true )
+        self:DrawShadow( false )
 
         local phys = self:GetPhysicsObject()
         if phys:IsValid() then
@@ -163,7 +164,7 @@ function ENT:Detonate()
             attacker = self.Owner
         end
 
-        util.BlastDamage(self, attacker, self:GetPos(), 250, 300)
+        util.BlastDamage(self, attacker, self:GetPos(), 250, 125)
 
         self:Remove()
     end

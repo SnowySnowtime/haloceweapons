@@ -20,7 +20,7 @@ if GetConVar("arccw_truenames"):GetBool() then SWEP.PrintName = SWEP.TrueName en
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/snowysnowtime/vuthakral/c_hum_t33b.mdl"
-SWEP.WorldModel = "models/halomodels/haloce/w_halorocketlauncher.mdl"
+SWEP.WorldModel = "models/snowysnowtime/vuthakral/w_t33b.mdl"
 SWEP.ViewModelFOV = 70
 
 if GetConVar("arccw_hce_bal"):GetInt() == 0 then -- HaloCW
@@ -48,7 +48,7 @@ SWEP.Range =  700 -- in METRES
 SWEP.Penetration = 100
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = "arccw_halo3_fuelrod_projectile" -- entity to fire, if any
-SWEP.MuzzleVelocity = 2500 -- projectile or phys bullet muzzle velocity
+SWEP.MuzzleVelocity = 3000 -- projectile or phys bullet muzzle velocity
 SWEP.PhysBulletDontInheritPlayerVelocity = true
 -- IN M/S
 
@@ -233,7 +233,7 @@ SWEP.Animations = {
     },
     ["reload"] = {
         Source = "reload",
-        Time = 110/30,
+        Time = 89/30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_CROSSBOW,
         Checkpoints = {24, 33, 51, 58, 62, 74, 80},
         LHIK = true,
@@ -242,7 +242,7 @@ SWEP.Animations = {
     },
     ["reload_empty"] = {
         Source = "reload",
-        Time = 124/30,
+        Time = 89/30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_CROSSBOW,
         Checkpoints = {24, 33, 51},
         FrameRate = 30,
