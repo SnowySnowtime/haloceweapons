@@ -276,6 +276,12 @@ SWEP.Attachments = {
         DefaultAttName = "Halo 3",
         FreeSlot = true
     },
+	{
+        PrintName = "Skins",
+        Slot = {"skin_h3cars","skin_halouniversal"},
+        DefaultAttName = "Factory Default",
+        FreeSlot = true
+    },
 }
 
 SWEP.Animations = {
