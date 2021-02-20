@@ -1,14 +1,14 @@
-att.PrintName = "Halo CE Dreamweb Suppressor"
+att.PrintName = "SPV3 Suppressor"
 att.Icon = Material("entities/tfa_hce_snow_objectiveflag.png", "smooth mips")
-att.Description = "Precision orientated suppressor, using this gives you benefits all around."
+att.Description = "Precision orientated suppressor, using this gives you precision benefits."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
 }
 att.Slot = "muzzle"
-att.SortOrder = 200
+att.SortOrder = 201
 
-att.Model = "models/snowysnowtime/suppressor.mdl"
+att.Model = "models/snowysnowtime/spv3/suppressor.mdl"
 att.Ignore = GetConVar("arccw_hce_attch"):GetBool()
 att.Silencer = true
 att.Override_MuzzleEffect = "astw2_halo_3_muzzle_SMG_ODST"
@@ -27,3 +27,5 @@ att.Add_BarrelLength = 5
 
 att.AttachSound = "attch/snow/halo/h1/forward.wav"
 att.DetachSound = "attch/snow/halo/h1/back.wav"
+
+att.ActivateElements = {"body"}

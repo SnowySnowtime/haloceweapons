@@ -247,6 +247,11 @@ SWEP.Attachments = {
         DefaultAttName = "Standard Stock"
     },
 	{
+        PrintName = "Grip",
+        Slot = "grip",
+        DefaultAttName = "Standard Grip"
+    },	
+	{
         PrintName = "Tactical",
         Slot = "tac",
         Bone = "gun",

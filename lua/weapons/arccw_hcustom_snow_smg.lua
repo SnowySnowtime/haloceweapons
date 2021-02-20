@@ -10,8 +10,7 @@ SWEP.Trivia_Desc = "The M7/Caseless Submachine Gun, more simply known as the SMG
 SWEP.Trivia_Manufacturer = "Misriah Armory"
 SWEP.Trivia_Calibre = "5x23mm M443 Caseless Full Metal Jacket"
 SWEP.Trivia_Mechanism = "Automatic"
-SWEP.Trivia_Country = "never heard of her"
-SWEP.Trivia_Year = 2460
+SWEP.Trivia_Country = "SPV3"
 
 SWEP.Slot = 2
 
@@ -19,7 +18,7 @@ if GetConVar("arccw_truenames"):GetBool() then SWEP.PrintName = SWEP.TrueName en
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/snowysnowtime/c_smg_fp.mdl"
+SWEP.ViewModel = "models/snowysnowtime/spv3/c_smg.mdl"
 SWEP.WorldModel = "models/snowysnowtime/w_smg.mdl"
 SWEP.ViewModelFOV = 70
 
@@ -28,7 +27,7 @@ SWEP.ViewModelFOV = 70
 	SWEP.Recoil = 0.2
 	SWEP.RecoilSide = 0.2
 	SWEP.Damage = 25
-	SWEP.DamageMin = 15
+	SWEP.DamageMin = 18
 	SWEP.AccuracyMOA = 15
 	SWEP.HipDispersion = 270
 	SWEP.JumpDispersion = 0
@@ -61,8 +60,8 @@ local balance = {
         -- arccw
         Recoil = 0.2,
         RecoilSide = 0.2,
-        Damage = 25,
-        DamageMin = 10,
+        Damage = 28,
+        DamageMin = 25,
         AccuracyMOA = 15,
         HipDispersion = 270,
         MoveDispersion = 120,
@@ -151,11 +150,11 @@ SWEP.IronSightStruct = {
 SWEP.HoldtypeHolstered = "normal"
 SWEP.HoldtypeActive = "smg"
 SWEP.HoldtypeSights = "ar2"
-SWEP.MeleeTime = 0.5
+SWEP.MeleeTime = 0.9
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_RPG
 
-SWEP.ActivePos = Vector(0, 0, 0)
+SWEP.ActivePos = Vector(0, -1, 1)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.HolsterPos = Vector(3, -3, -0.5)
@@ -169,6 +168,34 @@ SWEP.CustomizeAng = Angle(12.149, 30.547, 0)
 
 SWEP.BarrelLength = 24
 SWEP.AttachmentElements = {
+	["ironsights"] = {
+        VMBodygroups = {{ind = 1, bg = 1}},
+        WMBodygroups = {{ind = 1, bg = 1}},
+    },
+	["body"] = {
+        VMBodygroups = {{ind = 0, bg = 1}},
+        WMBodygroups = {{ind = 0, bg = 1}},
+    },
+	["handle"] = {
+        VMBodygroups = {{ind = 2, bg = 1}},
+        WMBodygroups = {{ind = 2, bg = 1}},
+    },
+	["extmag"] = {
+        VMBodygroups = {{ind = 7, bg = 1}},
+        WMBodygroups = {{ind = 7, bg = 1}},
+    },
+	["stock1"] = {
+        VMBodygroups = {{ind = 3, bg = 1}},
+        WMBodygroups = {{ind = 3, bg = 1}},
+    },
+	["stock2"] = {
+        VMBodygroups = {{ind = 3, bg = 2}},
+        WMBodygroups = {{ind = 3, bg = 2}},
+    },
+	["amped"] = {
+        VMSkin = 1,
+        WMSkin = 1,
+    },
 }
 
 SWEP.ExtraSightDist = 15
@@ -176,18 +203,18 @@ SWEP.ExtraSightDist = 15
 SWEP.Attachments = {
 	{
         PrintName = "Optic", -- print name
-        DefaultAttName = "10x Scope",
-        Slot = {"optic", "optic_lp"}, -- what kind of attachments can fit here, can be string or table
+        DefaultAttName = "None",
+        Slot = {"optic", "optic_lp", "spv3smgsc"}, -- what kind of attachments can fit here, can be string or table
         Bone = "frame gun", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(2, 0, 4.55), -- offset that the attachment will be relative to the bone
+            vpos = Vector(-1, 0, 4.7), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
             wpos = Vector(6, 2, -4.4),
             wang = Angle(-8.829, 0, 180)
         },
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(0, 0, 0),
-        InstalledEles = {"mount"}
+        Installed = "optic_smg_irons"
     },
 	{
         PrintName = "Muzzle",
@@ -195,7 +222,7 @@ SWEP.Attachments = {
         Slot = {"muzzle"},
         Bone = "frame gun",
         Offset = {
-            vpos = Vector(7.5, 0, 3.45),
+            vpos = Vector(9, 0, 3.45),
             vang = Angle(0, 0, 0),
             wpos = Vector(10, 2, -3.9),
             wang = Angle(-2.829, -4.9, 180)
@@ -204,9 +231,15 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Stock",
-        Slot = "stock",
-        DefaultAttName = "Standard Stock"
+        Slot = {"stock", "spv3_stock"},
+        DefaultAttName = "No Stock",
+		Installed = "stock_spv3pos1"
     },
+	{
+        PrintName = "Grip",
+        Slot = "grip",
+        DefaultAttName = "Standard Grip"
+    },	
 	{
         PrintName = "Tactical",
         Slot = "tac",
@@ -218,9 +251,21 @@ SWEP.Attachments = {
             wang = Angle(-8.829, -0.556, 90)
         },
     },
+	{
+        PrintName = "Underbarrel",
+        Slot = {"foregrip", "spv3_foregrip","style_pistol"},
+        Bone = "frame gun",
+        Offset = {
+            vpos = Vector(5.75, 0, 1.45),
+            vang = Angle(0, 0, 0),
+            wpos = Vector(13, 0.6, -3.5),
+            wang = Angle(-10, 0, 180),
+        },
+		Installed = "foregrip_spv3smg"
+    },
     {
         PrintName = "Ammo Type",
-        Slot = "ammo_bullet"
+        Slot = {"ammo_bullet","ammo_spv3"}
     },
     {
         PrintName = "Perk",
@@ -236,57 +281,111 @@ SWEP.Attachments = {
         FreeSlot = true,
         Bone = "frame gun", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(3.25, -0.45, 2.8), -- offset that the attachment will be relative to the bone
+            vpos = Vector(6, -0.45, 4), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 10),
             wpos = Vector(6, 2.4, -3.5),
             wang = Angle(-10.393, 0, 180)
         },
     },
+	{
+        PrintName = "Skin",
+        Slot = {"skin_spv3smg"},
+        DefaultAttName = "Factory Default",
+        FreeSlot = true
+    },
 }
+
+SWEP.Hook_TranslateAnimation = function(wep, anim)
+    if wep.Attachments[7].Installed == "ammo_spv3_extend" then
+		local annivtag = (
+			anim == "reload_empty" or
+			anim == "reload"
+		)
+		
+		if annivtag then
+			return anim .. "_extended" -- lol
+		end
+    end
+end
 
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
-        Time = 4
+        Time = 127/30
     },
 	["fire_iron"] = {
-        Source = "fire",
+        Source = "aim",
     },
+	["idle_sights"] = {
+		Source = "aim",
+	},
+	["enter_sight"] = {
+		Source = "aim",
+	},
+	["exit_sight"] = {
+		Source = "aim",
+		Time = 1/30,
+	},
     ["draw"] = {
         Source = "draw",
-        Time = 1,
+        Time = 32/30,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.25,
-		SoundTable = {{s = "customedition/smg_ready.wav", t = 0}},
+		SoundTable = {{s = "h3.m7_ready", t = 0.01}},
     },
     ["fire"] = {
         Source = "fire",
-        Time = 0.3,
+        Time = 4/30,
     },
 	["bash"] = {
         Source = "melee",
         LHIK = true,
-		Time = 0.5,
+		Time = 33/30,
+		SoundTable = {{s = "h3.m7_melee", t = 0.01}},
         LHIKIn = 0,
         LHIKOut = 0.2,
     },
     ["reload"] = {
         Source = "reload",
-        Time = 1.75,
+        Time = 54/30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         Checkpoints = {24, 33, 51, 58, 62, 74, 80},
         FrameRate = 30,
+		SoundTable = {{s = "h3.m7_reload1", t = 0.01},{s = "h3.m7_reload2", t = 0.85}},
         LHIK = true,
         LHIKIn = 0.5,
         LHIKOut = 0.5,
     },
     ["reload_empty"] = {
         Source = "reload",
-        Time = 1.75,
+        Time = 54/30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         Checkpoints = {24, 33, 51},
         FrameRate = 30,
+		SoundTable = {{s = "h3.m7_reload1", t = 0.01},{s = "h3.m7_reload2", t = 0.85}},
+        LHIK = true,
+        LHIKIn = 0.5,
+        LHIKOut = 0.5,
+    },
+	["reload_extended"] = {
+        Source = "reload_extmag",
+        Time = 76/30,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+        Checkpoints = {24, 33, 51, 58, 62, 74, 80},
+        FrameRate = 30,
+		SoundTable = {{s = "h3.m7_reload1", t = 0.25},{s = "h3.m7_reload2", t = 1.325}},
+        LHIK = true,
+        LHIKIn = 0.5,
+        LHIKOut = 0.5,
+    },
+	["reload_empty_extended"] = {
+        Source = "reload_extmag",
+        Time = 76/30,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+        Checkpoints = {24, 33, 51, 58, 62, 74, 80},
+        FrameRate = 30,
+		SoundTable = {{s = "h3.m7_reload1", t = 0.25},{s = "h3.m7_reload2", t = 1.325}},
         LHIK = true,
         LHIKIn = 0.5,
         LHIKOut = 0.5,

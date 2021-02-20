@@ -1,64 +1,44 @@
-att.PrintName = "M7S SMG"
-att.Icon = Material("snowysnowtime/2k/ico/h3/smg_sil.png")
-att.Description = "Converts the M7 to an M7S. Cannot use other scope or muzzle attachments."
+att.PrintName = "2D SMG Scope"
+att.Icon = Material("entities/tfa_hce_snow_objectiveflag.png")
+att.Description = "A Powerful 2x Scope built for the SPV3 SMG for precision aiming. Primarily used by ODST's"
+
+att.SortOrder = 200
+
 att.Desc_Pros = {
-	"Can fire underwater",
-	"Suppressor increases Accuracy.",
-	"'Hud Linked Optics', making it superb for aiming",
-	"	while gunning. (2d scopes not supported yet)",
-	"Different AmmoType lets the M7S deal more",
-	"	damage overall, and penetrate thicker objects"
+    "+ Precise",
+    "+ Lightweight Scope",
 }
 att.Desc_Cons = {
-	"Hipfire/Jump fire Accuracy is reduced due to",
-	"	the suppressor."
+	"Only available for the SPV3 SMG",
 }
-att.Slot = "override_e"
-att.Silencer = true
-
 att.AutoStats = true
-att.Mult_Recoil = 0.75
-att.Mult_AccuracyMOA = 0.75
-att.Mult_HipDispersion = 1.35
-att.Mult_SightsDispersion = 0.35
-att.Mult_SightTime = 1.25
-att.Mult_DrawTime = 1.25
-att.Mult_HolsterTime = 1.25
-att.Mult_SightedSpeedMult = 1.45
-att.Mult_Damage = 1.26
-att.Mult_DamageMin = 1.7
-att.Mult_MeleeTime = 1.1
-att.Mult_MeleeDamage = 1.05
-att.Add_MeleeRange = 4
-att.Override_ClipSize = 48
-att.Mult_Penetration = 1.15
-att.Add_BarrelLength = 10
-att.Override_CanFireUnderwater = true
-att.HolosightNoFlare = true
-att.Override_MuzzleEffect = "astw2_halo_3_muzzle_SMG_ODST"
-att.Override_MuzzleEffectAttachment = "2"
-att.Model = "models/snowysnowtime/m7s_sight.mdl"
-att.HolosightPiece = "models/snowysnowtime/m7s_sight.mdl"
+att.Ignore = false
+att.Slot = "optic"
 
+att.Model = "models/snowysnowtime/spv3/scope.mdl"
+
+att.DroppedModel = "models/Items/BoxSRounds.mdl"
+
+att.AutoStats = false
 
 att.AdditionalSights = {
 	{
-		Pos = Vector(-3, -100, 0),
-		Ang = Angle(0, -0.95, 0),
+		Pos = Vector(0, -40, 0),
+		Ang = Angle(0, 0, 0),
 		GlobalPos = Vector(0, 0, 0),
 		GlobalAng = Angle(0, 0, 0),
-		Magnification = 2.5,
+		Magnification = 2,
 		IgnoreExtra = false,
 		CrosshairInSights = true,
-        SwitchToSound = "common/null.wav",
-        SwitchFromSound = "common/null.wav",
+        SwitchToSound = "hce_zoomin",
+        SwitchFromSound = "hce_zoomout",
 	}
 }
 
 att.Mult_SightTime = 1
 
-att.AttachSound = "attch/snow/halo/h3/x_button.wav"
-att.DetachSound = "attch/snow/halo/h3/b_button.wav"
+att.AttachSound = "attch/snow/halo/h1/forward.wav"
+att.DetachSound = "attch/snow/halo/h1/back.wav"
 
 local ScopeTexture	= Material("hud/scopes/m6d_scope.png")
 local proscopesize		= 180
@@ -136,13 +116,3 @@ att.Hook_DrawHUD = function(wep)
 	// Bottom
 	surface.DrawRect(icns.tl, icns.br, scopesize, ScrH())
 end
-
-att.ActivateElements = {"anniv"}
-att.GivesFlags = {"halo_m7s"}
-
-att.Laser = false
-att.LaserStrength = 2.5
-att.LaserBone = "laser"
-att.ColorOptionsTable = {Color(255, 25, 65)}
-att.AttachSound = "attch/snow/halo/halo_attch_equip_odst.wav"
-att.DetachSound = "attch/snow/halo/back_button.wav"

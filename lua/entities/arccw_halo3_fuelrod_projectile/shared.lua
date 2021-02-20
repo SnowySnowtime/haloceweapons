@@ -8,7 +8,7 @@ ENT.AdminSpawnable = false
 
 ENT.Model = "models/snowysnowtime/projectiles/plasma_projectile.mdl"
 ENT.FuseTime = 2
-ENT.ArmTime = 0.07
+ENT.ArmTime = 0.15
 ENT.ImpactFuse = true
 
 AddCSLuaFile()

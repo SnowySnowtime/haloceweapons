@@ -1,0 +1,18 @@
+"VertexLitGeneric"
+{
+"$basetexture" "snowysnowtime\spv3\smg\smg_attch"
+"$bumpmap" "snowysnowtime\spv3\smg\smg_attch_n"
+
+	$color2	"[ 4 0 0 ]"
+
+                 "$phong" "1" 
+                "$phongexponent" "24"
+                 "$phongboost" "13"
+				 "$phongalbedotint" "1"
+				 "$phongexponenttexture" "snowysnowtime\ma5e\phongexp255"
+                 
+                 "$phongfresnelranges" "[ 0.05 0.3 1 ]" 
+
+	$lightwarptexture	"snowysnowtime\2k\h3\lw_distortreflect"
+}
+}

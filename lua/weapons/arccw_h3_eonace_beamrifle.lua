@@ -17,8 +17,8 @@ if GetConVar("arccw_truenames"):GetBool() then SWEP.PrintName = SWEP.TrueName en
 
 SWEP.UseHands = true
 
-SWEP.Recoil = 4
-SWEP.RecoilSide = 2
+SWEP.Recoil = 1
+SWEP.RecoilSide = 0.5
 SWEP.Damage = 85
 SWEP.DamageMin = 125
 SWEP.AccuracyMOA = 0.03
@@ -64,7 +64,7 @@ SWEP.Delay = 60 / 1000 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
-        Mode = 2,
+        Mode = 1,
         PrintName = "PLAS",
         CustomBars = "--!--"
         
