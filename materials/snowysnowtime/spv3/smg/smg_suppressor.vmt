@@ -4,17 +4,17 @@
 "$bumpmap" "snowysnowtime\spv3\smg\smg_attch_n"
 
 "$phong" "1" 
-"$phongboost" "3"
-"$phongexponent" "5"
+"$phongboost" "50"
+"$phongexponent" "20"
 "$phongexponenttexture" "snowysnowtime\ma5e\phongexp255"
 "$phongalbedotint" "1"
 "$phongfresnelranges" "[1 1.25 1.75]"
 "$phongdisablehalflambert" "1"
 
-"$detail" "snowysnowtime\ma5e\detail_paint"
-"$detailscale" "20"
-"$detailblendfactor" "3"
-"$detailblendmode" "0"
+"$detail" "snowysnowtime\spv3\smg\detail_metal_scratches"
+"$detailscale" "1"
+"$detailblendfactor" "0.11"
+"$detailblendmode" "4"
 
 	"$envmap" "snowysnowtime/cyborg_reflection_armor"
 	"$envmaptint" "[ 1 1 1 ]"

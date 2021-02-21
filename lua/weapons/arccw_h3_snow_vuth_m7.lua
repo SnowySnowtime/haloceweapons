@@ -27,7 +27,7 @@ SWEP.ViewModelFOV = 70
 --  Probably should set this to your first mode
 	SWEP.Recoil = 0.2
 	SWEP.RecoilSide = 0.2
-	SWEP.Damage = 25
+	SWEP.Damage = 24
 	SWEP.DamageMin = 15
 	SWEP.AccuracyMOA = 15
 	SWEP.HipDispersion = 270
