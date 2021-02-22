@@ -19,7 +19,7 @@ if GetConVar("arccw_truenames"):GetBool() then SWEP.PrintName = SWEP.TrueName en
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/snowysnowtime/spv3/c_smg.mdl"
-SWEP.WorldModel = "models/snowysnowtime/w_smg.mdl"
+SWEP.WorldModel = "models/snowysnowtime/spv3/c_smg.mdl"
 SWEP.ViewModelFOV = 70
 
 --  You will need this for the journey ahead

@@ -1,0 +1,44 @@
+"VertexLitGeneric"
+{
+"$basetexture" "snowysnowtime\spv3\dmr\dmr"
+"$bumpmap" "snowysnowtime\spv3\dmr\dmr_n"
+
+                 "$phong" "1" 
+                "$phongexponent" "24"
+                 "$phongboost" "13"
+				 "$phongalbedotint" "1"
+				 "$phongexponenttexture" "snowysnowtime\ma5e\phongexp255"
+                 
+                 "$phongfresnelranges" "[ 0.05 0.3 1 ]" 
+
+	$lightwarptexture	"snowysnowtime\2k\h3\lw_distortreflect"
+	Proxies
+	{
+		drc_PlayerColour2
+		{
+			resultVar		$color2 // pass the player color value to Gmod
+			default		0.23 0.35 0.41 // unused for now.
+		}
+		Clamp // clamp the chosen color between 1% and 125% (usually)
+		{
+			min 0.1
+			max 1.15
+			srcVar1 "$color2"
+			resultVar "$color2"
+		}
+		Clamp 
+		{
+			min .3
+			max .6
+			srcVar1 "$color2"
+			resultVar "$phongtint"
+		}
+		Clamp
+		{
+			min 1
+			max 1.5
+			srcVar1 "$color2"
+			resultVar "$phongboost"
+		}
+	}
+}

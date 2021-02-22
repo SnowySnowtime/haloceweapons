@@ -1,0 +1,28 @@
+"VertexLitGeneric"
+{
+"$basetexture" "snowysnowtime\spv3\dmr\colorble"
+"$bumpmap" "snowysnowtime\spv3\dmr\dmr_n"
+"$translucent" "1"
+"$decal" "1"
+
+"$phong" "1" 
+"$phongboost" "48"
+"$phongexponent" "25"
+"$phongexponenttexture" "snowysnowtime\ma5e\phongexp255"
+"$phongalbedotint" "1"
+"$phongfresnelranges" "[1 1.25 1.75]"
+"$phongdisablehalflambert" "1"
+
+"$detail" "snowysnowtime\spv3\smg\detail_metal_scratches"
+"$detailscale" "3"
+"$detailblendfactor" "-1"
+"$detailblendmode" "0"
+"Proxies"
+	{
+		"haloPlayerWeaponColorNOPULSE"
+		{
+			"resultVar"			"$color2"
+			"$default" 		"1 1 1"
+		}
+	}
+}

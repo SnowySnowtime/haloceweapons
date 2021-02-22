@@ -2875,3 +2875,32 @@ sound.Add(
     soundlevel = 120,
     sound = {"snow/weapons/gravity_hammer/hammer_drops/hammer_drop1.wav","snow/weapons/gravity_hammer/hammer_drops/hammer_drop2.wav","snow/weapons/gravity_hammer/hammer_drops/hammer_drop3.wav","snow/weapons/gravity_hammer/hammer_drops/hammer_drop4.wav","snow/weapons/gravity_hammer/hammer_drops/hammer_drop5.wav"}
 })
+
+--DMR
+
+sound.Add(
+{
+    name = "h3.dmr_fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = {"spv3/fire1.wav","spv3/fire2.wav","spv3/fire3.wav"}
+})
+
+sound.Add(
+{
+    name = "h3.dmr_reload",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = {"spv3/reload1-1.wav","spv3/reload2-1.wav","spv3/reload3-1.wav"}
+})
+
+sound.Add(
+{
+    name = "h3.dmr_reload2",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = {"spv3/reload1-2.wav","spv3/reload2-2.wav","spv3/reload3-2.wav"}
+})
