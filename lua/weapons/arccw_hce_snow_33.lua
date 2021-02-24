@@ -180,7 +180,14 @@ SWEP.Attachments = {
         PrintName = "Firetype",
         Slot = "needler",
 		FreeSlot = true,
-		Installed = "hce_needler"
+		Installed = "hce_needler",
+		Integral = true,
+    },
+	{
+        PrintName = "Passive",
+        Slot = {"halo_passive"},
+		Installed = "passive_halo_non_prec_wep_mult",
+		Integral = true
     },
 }
 

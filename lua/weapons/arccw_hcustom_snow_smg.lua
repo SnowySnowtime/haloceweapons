@@ -293,6 +293,12 @@ SWEP.Attachments = {
         DefaultAttName = "Factory Default",
         FreeSlot = true
     },
+	{
+        PrintName = "Passive",
+        Slot = {"halo_passive"},
+		Installed = "passive_halo_non_prec_wep_mult",
+		Integral = true
+    },
 }
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)

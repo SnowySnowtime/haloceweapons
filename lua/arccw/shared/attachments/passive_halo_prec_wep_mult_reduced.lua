@@ -14,6 +14,6 @@ att.Hook_BulletHit = function(wep, data)
     if CLIENT then return end
 
     if data.tr.HitGroup == HITGROUP_HEAD then
-        data.damage = data.damage * 4
+        data.damage = data.damage * 2
     end
 end

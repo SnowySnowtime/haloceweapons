@@ -26,8 +26,8 @@ SWEP.ViewModelFOV = 70
 --  Probably should set this to your first mode
 	SWEP.Recoil = 0.2
 	SWEP.RecoilSide = 0.2
-	SWEP.Damage = 25
-	SWEP.DamageMin = 15
+	SWEP.Damage = 40
+	SWEP.DamageMin = 20
 	SWEP.AccuracyMOA = 40
 	SWEP.HipDispersion = 270
 	SWEP.JumpDispersion = 0
@@ -38,8 +38,8 @@ local balance = {
         -- HaloCW
         Recoil = 0.2,
         RecoilSide = 0.2,
-        Damage = 27,
-        DamageMin = 15,
+        Damage = 42,
+        DamageMin = 24,
         AccuracyMOA = 40,
         HipDispersion = 270,
         JumpDispersion = 0,
@@ -49,8 +49,8 @@ local balance = {
         -- halo purist
         Recoil = 0,
         RecoilSide = 0,
-        Damage = 25,
-        DamageMin = 25,
+        Damage = 40,
+        DamageMin = 20,
         JumpDispersion = 0,
         HipDispersion = 0,
         MoveDispersion = 0,
@@ -60,8 +60,8 @@ local balance = {
         -- arccw
         Recoil = 0.2,
         RecoilSide = 0.2,
-        Damage = 30,
-        DamageMin = 10,
+        Damage = 40,
+        DamageMin = 19,
         AccuracyMOA = 40,
         HipDispersion = 270,
         MoveDispersion = 120,
@@ -256,6 +256,12 @@ SWEP.Attachments = {
             wpos = Vector(6, 2.4, -3.5),
             wang = Angle(-10.393, 0, 180)
         },
+    },
+	{
+        PrintName = "Passive",
+        Slot = {"halo_passive"},
+		Installed = "passive_halo_non_prec_wep_mult",
+		Integral = true
     },
 }
 

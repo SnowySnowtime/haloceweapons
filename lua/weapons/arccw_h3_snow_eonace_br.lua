@@ -21,8 +21,8 @@ SWEP.UseHands = true
 --  Probably should set this to your first mode
 	SWEP.Recoil = 0.3
 	SWEP.RecoilSide = 0.3
-	SWEP.Damage = 25
-	SWEP.DamageMin = 15
+	SWEP.Damage = 17
+	SWEP.DamageMin = 17
 	SWEP.AccuracyMOA = 0.01
 	SWEP.HipDispersion = 125
 	SWEP.JumpDispersion = 0
@@ -341,6 +341,12 @@ SWEP.Attachments = {
         Slot = {"skin_h3br","skin_halouniversal"},
         DefaultAttName = "Factory Default",
         FreeSlot = true
+    },
+	{
+        PrintName = "Passive",
+        Slot = {"halo_passive"},
+		Installed = "passive_halo_prec_wep_mult_reduced",
+		Integral = true
     },
 }
 

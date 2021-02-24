@@ -165,57 +165,11 @@ SWEP.CustomizeAng = Angle(12.149, 30.547, 0)
 
 SWEP.BarrelLength = 30
 SWEP.AttachmentElements = {
-	["corrosion"] = {
+	["lumoria"] = {
         VMSkin = 1,
         WMSkin = 1,
     },
-    ["gold"] = {
-        VMSkin = 2,
-        WMSkin = 2,
-    },
-    ["greatjourney"] = {
-        VMSkin = 3,
-        WMSkin = 3,
-    },
-	["luckyshot"] = {
-        VMSkin = 4,
-        WMSkin = 4,
-    },
-	["squirtgun"] = {
-        VMSkin = 5,
-        WMSkin = 5,
-    },
-	["desert"] = {
-        VMSkin = 6,
-        WMSkin = 6,
-    },
-	["mcc"] = {
-        VMSkin = 7,
-        WMSkin = 7,
-    },
-	["anniv"] = {
-        VMBodygroups = {{ind = 0, bg = 2}},
-        WMBodygroups = {{ind = 0, bg = 2}},
-    },
 }
-SWEP.Hook_TranslateAnimation = function(wep, anim)
-    if wep.Attachments[7].Installed == "hce_anniv" or wep.Attachments[7].Installed == "hce_annivsound" then
-		local annivtag = (
-			anim == "reload_empty" or
-			anim == "reload"
-		)
-		
-		if annivtag then
-			return anim .. "_anal" -- lol
-		end
-    end
-end
-
-SWEP.Hook_GetShootSound = function(wep, sound)
-    if wep.Attachments[7].Installed == "hce_anniv" or wep.Attachments[7].Installed == "hce_annivsound" then
-		return "ar_hcea_fire"
-    end
-end
 
 SWEP.ExtraSightDist = 15
 
@@ -273,9 +227,15 @@ SWEP.Attachments = {
     },
 	{
         PrintName = "Skin",
-        Slot = {"skin_hcear"},
+        Slot = {"skin_spv3ar"},
         DefaultAttName = "Factory Default",
         FreeSlot = true
+    },
+	{
+        PrintName = "Passive",
+        Slot = {"halo_passive"},
+		Installed = "passive_halo_non_prec_wep_mult",
+		Integral = true
     },
 }
 

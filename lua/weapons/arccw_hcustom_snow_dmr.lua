@@ -25,10 +25,10 @@ SWEP.ViewModelFOV = 70
 
     SWEP.Recoil = 1
 	SWEP.RecoilSide = 0.2
-	SWEP.Damage = 65
-	SWEP.DamageMin = 40
+	SWEP.Damage = 35
+	SWEP.DamageMin = 35
 	SWEP.AccuracyMOA = 0.04
-	SWEP.HipDispersion = 0.09
+	SWEP.HipDispersion = 20
 	SWEP.MoveDispersion = 0
 	SWEP.JumpDispersion = 0
 	SWEP.ChamberSize = 0
@@ -38,10 +38,10 @@ local balance = {
         -- HaloCW
         Recoil = 1,
         RecoilSide = 0.2,
-        Damage = 65,
-        DamageMin = 40,
+        Damage = 35,
+        DamageMin = 35,
         AccuracyMOA = 0.04,
-        HipDispersion = 0.09,
+        HipDispersion = 20,
         MoveDispersion = 0,
         JumpDispersion = 0,
         ChamberSize = 0,
@@ -50,10 +50,10 @@ local balance = {
         -- halo purist
         Recoil = 0,
         RecoilSide = 0,
-        Damage = 25,
-        DamageMin = 25,
+        Damage = 35,
+        DamageMin = 35,
         AccuracyMOA = 0,
-        HipDispersion = 0,
+        HipDispersion = 10,
         MoveDispersion = 0,
         JumpDispersion = 0,
         ChamberSize = 0,
@@ -62,7 +62,7 @@ local balance = {
         -- arccw
         Recoil = 1,
         RecoilSide = 0.2,
-        Damage = 65,
+        Damage = 35,
         DamageMin = 35,
         AccuracyMOA = 0.06,
         HipDispersion = 100,
@@ -91,6 +91,8 @@ SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
 SWEP.MuzzleVelocity = 6000 -- projectile or phys bullet muzzle velocity
 -- IN M/S
+
+SWEP.AlwaysPhysBullet = true
 
 SWEP.Primary.ClipSize = 15 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 20
@@ -280,10 +282,6 @@ SWEP.Attachments = {
         },
     },
     {
-        PrintName = "Ammo Type",
-        Slot = {"ammo_bullet"}
-    },
-    {
         PrintName = "Perk",
         Slot = {"perk","go_perk"}
     },
@@ -299,6 +297,17 @@ SWEP.Attachments = {
             wang = Angle(-10.393, 0, 180)
         },
 		VMScale = Vector(0.7, 0.7, 0.7),
+    },
+	{
+        PrintName = "Physbullet Colors",
+        Slot = {"ammo_dmr_halo"},
+		Installed = "ammo_tracer_gofork"
+    },
+	{
+        PrintName = "Passive",
+        Slot = {"halo_passive"},
+		Installed = "passive_halo_prec_wep_mult_increased",
+		Integral = true
     },
 }
 

@@ -52,7 +52,7 @@ elseif GetConVar("arccw_hce_bal"):GetInt() == 2 then -- arccw
 	SWEP.ChamberSize = 1
 end
 
-SWEP.Damage = 2
+SWEP.Damage = 3
 SWEP.DamageMin = 1 -- damage done at maximum range
 SWEP.Range = 30 -- in METRES
 SWEP.Penetration = 1
@@ -260,6 +260,12 @@ SWEP.Attachments = {
         Slot = {"skin_hcesg"},
         DefaultAttName = "Factory Default",
         FreeSlot = true
+    },
+	{
+        PrintName = "Passive",
+        Slot = {"halo_passive"},
+		Installed = "passive_halo_non_prec_wep_mult",
+		Integral = true
     },
 }
 

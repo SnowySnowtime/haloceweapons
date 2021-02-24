@@ -304,6 +304,12 @@ SWEP.Attachments = {
             wang = Angle(-8.829, 0, 180)
         },
     },
+	{
+        PrintName = "Passive",
+        Slot = {"halo_passive"},
+		Installed = "passive_halo_non_prec_wep_mult",
+		Integral = true
+    },
 }
 
 SWEP.Animations = {

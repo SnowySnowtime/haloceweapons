@@ -1,5 +1,5 @@
-att.PrintName = "Surgical Shot"
-att.Icon = Material("entities/acwatt_go_perk_headshot.png", "mips smooth")
+att.PrintName = "halo non precision weapon multiplier"
+att.Icon = Material("entities/tfa_hce_snow_objectiveflag.png", "smooth mips")
 att.Description = "Further triples headshot damage."
 att.Desc_Pros = {
     "pro.headshotdamage"
@@ -7,13 +7,13 @@ att.Desc_Pros = {
 att.Desc_Cons = {
 }
 att.AutoStats = true
-att.Slot = "go_perk"
+att.Slot = "halo_passive"
 
 
 att.Hook_BulletHit = function(wep, data)
     if CLIENT then return end
 
     if data.tr.HitGroup == HITGROUP_HEAD then
-        data.damage = data.damage * 0.5
+        data.damage = data.damage * 0.6
     end
 end

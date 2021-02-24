@@ -25,8 +25,8 @@ SWEP.ViewModelFOV = 70
 
     SWEP.Recoil = 2
 	SWEP.RecoilSide = 1
-	SWEP.Damage = 40
-	SWEP.DamageMin = 45
+	SWEP.Damage = 30
+	SWEP.DamageMin = 30
 	SWEP.AccuracyMOA = 0.04
 	SWEP.HipDispersion = 0.09
 	SWEP.MoveDispersion = 0
@@ -38,7 +38,7 @@ local balance = {
         -- HaloCW
         Recoil = 2,
         RecoilSide = 1,
-        Damage = 50,
+        Damage = 30,
         DamageMin = 30,
         AccuracyMOA = 0.04,
         HipDispersion = 0.09,
@@ -62,8 +62,8 @@ local balance = {
         -- arccw
         Recoil = 2,
         RecoilSide = 1,
-        Damage = 50,
-        DamageMin = 35,
+        Damage = 30,
+        DamageMin = 30,
         AccuracyMOA = 0.06,
         HipDispersion = 100,
         MoveDispersion = 350,
@@ -295,6 +295,12 @@ SWEP.Attachments = {
         Slot = {"skin_h3m6","skin_halouniversal"},
         DefaultAttName = "Factory Default",
         FreeSlot = true
+    },
+	{
+        PrintName = "Passive",
+        Slot = {"halo_passive"},
+		Installed = "passive_halo_prec_wep_mult_reduced",
+		Integral = true
     },
 }
 
