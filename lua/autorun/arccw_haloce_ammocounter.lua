@@ -12,16 +12,10 @@ if CLIENT then
 				if LocalPlayer():GetActiveWeapon() then
 					local OurWeapon = LocalPlayer():GetActiveWeapon()
 					if OurWeapon.ArcCW then
-					
-					--------------------------- THE MAGic
-					
-						local KnowYourPlace		=	string.sub(string.reverse(OurWeapon:Clip1()), Place, Place)
+						local KnowYourPlace = string.sub(string.reverse(OurWeapon:Clip1()), Place, Place)
 						local digits = string.format( tonumber(KnowYourPlace) or 0 )
 
 						texture = self.Prefix .. digits
-						
-					--------------------------- THE MAGic
-					
 					end
 				end
 				
