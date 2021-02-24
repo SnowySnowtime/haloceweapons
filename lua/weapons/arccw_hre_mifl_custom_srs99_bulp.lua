@@ -75,7 +75,7 @@ local balance = {
 }
 
 SWEP.Range = 200 -- in METRES
-SWEP.Penetration = 1000
+SWEP.Penetration = 100
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
 SWEP.MuzzleVelocity = 4000 -- projectile or phys bullet muzzle velocity

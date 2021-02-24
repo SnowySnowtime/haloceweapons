@@ -4,8 +4,8 @@ SWEP.Category = "ArcCW - Halo Custom Edition" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "DMR"
-SWEP.TrueName = "M393 Designated Marksman Rifle"
-SWEP.Trivia_Class = "Pistol"
+SWEP.TrueName = "M393 DMR"
+SWEP.Trivia_Class = "Designated Marksman Rifle"
 SWEP.Trivia_Desc = "The M393 Designated Marksman Rifle, more commonly known as the DMR, is a long-range infantry firearm and a successor to the M392 Designated Marksman Rifle. While the introduction of the BR55 Battle Rifle did see it supersede the M392 Designated Marksman Rifle as the standard armament within the UNSC Navy, this only resulted in the latter series being retooled to suit a more niche combat role, beginning with introduction of the M393 Designated Marksman Rifle."
 SWEP.Trivia_Manufacturer = "Misriah Armory"
 SWEP.Trivia_Calibre = "7.62x51mm NATO"

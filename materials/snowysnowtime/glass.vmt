@@ -1,1 +1,1 @@
-"VertexLitGeneric"{	"$baseTexture" "snowysnowtime/smg_crosshair"	"$basetexturetransform" "center 0 0 scale 0.1 0.1 rotate 0 translate 0 0"	"$detail" "snowysnowtime/2k/spv3/warthog/glass_detail"	"$detailscale" "1"	"$detailblendmode" "2"	"$detailblendfactor" "10"	"$additive" "1"}
+"VertexLitGeneric"{	"$baseTexture" "snowysnowtime/smg_crosshair"	"$basetexturetransform" "center 0 0 scale 0.1 0.1 rotate 0 translate 0 0"	"$detail" "snowysnowtime/glass_detail"	"$detailscale" "1"	"$detailblendmode" "2"	"$detailblendfactor" "10"	"$additive" "1"}
