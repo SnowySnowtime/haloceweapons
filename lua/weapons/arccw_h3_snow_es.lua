@@ -16,8 +16,16 @@ SWEP.NotForNPCs = true
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/snowysnowtime/c_energysword.mdl"
-SWEP.WorldModel = "models/snowysnowtime/w_es.mdl"
+SWEP.WorldModel = "models/snowysnowtime/c_energysword.mdl"
 SWEP.ViewModelFOV = 60
+SWEP.MirrorWorldModel = true
+
+SWEP.WorldModelOffset = {
+    pos        =    Vector(0, 0, 0),
+    ang        =    Angle(0, 180, 180),
+    bone    =    "ValveBiped.Bip01_R_Hand",
+    scale   =   1
+}
 
 SWEP.WorldModelOffset = {
 	pos = Vector(9, 1, 2.5),
@@ -131,19 +139,23 @@ SWEP.Animations = {
     },
     ["draw"] = {
         Source = "draw",
+		SoundTable = {{s = "h3.esdeploy", t = 0.2}},
         Time = 53/30,
     },
     ["ready"] = {
         Source = "draw",
+		SoundTable = {{s = "h3.esdeploy", t = 0.2}},
         Time = 53/30,
     },
     ["bash"] = {
         Source = {"fire", "fire2"},
-        Time = 39/30,
+		SoundTable = {{s = "h3.eslungecloth", t = 0.05},{s = "h3.eslunge", t = 0.075}},
+        Time = 43/30,
     },
     ["bash2"] = {
 		Source = "fire3",
-        Time = 39/30,
+		SoundTable = {{s = "h3.eslungecloth", t = 0.37},{s = "h3.esairlunge", t = 0.03}},
+        Time = 60/30,
     },
     ["exit_inspect"] = {
         Source = "fidget",
