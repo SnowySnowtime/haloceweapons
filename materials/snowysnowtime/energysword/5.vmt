@@ -2,10 +2,10 @@
 {
 	"$basetexture" "snowysnowtime/sword_det"
 	"$detail" "snowysnowtime/sword_det"
-	"$color2" "[ 0.4 0.55 0.55 ]"
+	"$color2" "[ 0 0.75 0.75 ]"
 	"$translucent" "1"
-	"$nocull" "1"
 	"$additive" "1"
+	"$nodraw" "1"
 	"Proxies"
 	{
 	"AnimatedTexture"

@@ -2,7 +2,7 @@
 {
 	"$basetexture" "snowysnowtime/energysword/energy_sword_blade_mask"
 	"$detail" "snowysnowtime/sword_det"
-
+	"$additive" "1"
 	"$phong" "1" 
 	"$phongboost" "3"
 	"$phongexponent" "5"
@@ -11,7 +11,5 @@
 	"$phongfresnelranges" "[1 1.25 1.75]"
 	"$phongdisablehalflambert" "1"
 	"$color2" "[ 0 0 0 ]"
-	"$nocull" "1"
 	"$translucent" "1"
-	"$additive" "1"
 }

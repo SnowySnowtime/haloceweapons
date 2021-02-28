@@ -4,7 +4,6 @@
 	"$detail" "snowysnowtime/sword_det"
 	"$color2" "[ 0.3 0.2 0.2 ]"
 	"$translucent" "1"
-	"$nocull" "1"
 	"$additive" "1"
 	"Proxies"
 	{
