@@ -8,7 +8,7 @@ att.Desc_Cons = {
 "  Cannot be equipped on Shotguns."
 }
 att.AutoStats = true
-att.Slot = {"ammo_bullet","ammo_dmr_halo"}
+att.Slot = {"ammo_bullet","ammo_dmr_halo","ammo_halo"}
 
 att.ToggleStats = {
     {

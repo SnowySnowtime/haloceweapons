@@ -343,6 +343,12 @@ SWEP.Attachments = {
         FreeSlot = true
     },
 	{
+        PrintName = "Variant",
+        Slot = {"variant_br"},
+        DefaultAttName = "Factory Default",
+        FreeSlot = true
+    },
+	{
         PrintName = "Passive",
         Slot = {"halo_passive"},
 		Installed = "passive_halo_prec_wep_mult_reduced",

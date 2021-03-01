@@ -189,7 +189,7 @@ SWEP.Attachments = {
 	{
         PrintName = "Optic", -- print name
         DefaultAttName = "No Sights",
-        Slot = {"optic", "optic_lp"}, -- what kind of attachments can fit here, can be string or table
+        Slot = {"halo_optics"}, -- what kind of attachments can fit here, can be string or table
         Bone = "hood", -- relevant bone any attachments will be mostly referring to
         Offset = {
             vpos = Vector(0.1, 0, 1.65), -- offset that the attachment will be relative to the bone
@@ -204,7 +204,7 @@ SWEP.Attachments = {
 		{
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
-        Slot = {"muzzle"},
+        Slot = {"halo_muzzle"},
         Bone = "gun",
         Offset = {
             vpos = Vector(22, 0, 0.85),
@@ -213,27 +213,6 @@ SWEP.Attachments = {
             wang = Angle(-10, 0, 180)
         },
 		VMScale = Vector(1, 1, 1),
-    },
-	    {
-        PrintName = "Underbarrel",
-        Slot = {"foregrip", "ubgl", "bipod"},
-        Bone = "gun",
-        Offset = {
-            vpos = Vector(8.3, 0, -1.25),
-            vang = Angle(0, 0, 8),
-            wpos = Vector(15, 1, 0),
-            wang = Angle(-12, 0, 180)
-        },
-    },
-	{
-        PrintName = "Grip",
-        Slot = "grip",
-        DefaultAttName = "Standard Grip"
-    },	
-    {
-        PrintName = "Stock",
-        Slot = "stock",
-        DefaultAttName = "Standard Stock"
     },
 	{
         PrintName = "Tactical",
@@ -248,15 +227,11 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Ammo Type",
-        Slot = "ammo_bullet"
-    },
-		{
-        PrintName = "Firetype",
-        Slot = {"fcg"},
+        Slot = "ammo_halo"
     },
     {
         PrintName = "Perk",
-        Slot = {"perk","go_perk"},
+        Slot = {"perk"},
     },
     {
         PrintName = "Charm",

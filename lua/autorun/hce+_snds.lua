@@ -312,6 +312,69 @@ sound.Add(
 
 sound.Add(
 {
+    name = "br_fire2",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 120,
+    sound = {"h2a/br1.wav","h2a/br2.wav","h2a/br3.wav","h2a/br4.wav","h2a/br5.wav","h2a/br6.wav"}
+})
+
+sound.Add(
+{
+    name = "br_fire3",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 120,
+    sound = {"valk/arccw_haloonline/battlerifles/accuracy/fire1.wav","valk/arccw_haloonline/battlerifles/accuracy/fire2.wav","valk/arccw_haloonline/battlerifles/accuracy/fire3.wav","valk/arccw_haloonline/battlerifles/accuracy/fire4.wav","valk/arccw_haloonline/battlerifles/accuracy/fire5.wav"}
+})
+
+sound.Add(
+{
+    name = "br_fire4",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 120,
+    sound = {"valk/arccw_haloonline/battlerifles/mag/fire1.wav","valk/arccw_haloonline/battlerifles/mag/fire2.wav","valk/arccw_haloonline/battlerifles/mag/fire3.wav","valk/arccw_haloonline/battlerifles/mag/fire4.wav","valk/arccw_haloonline/battlerifles/mag/fire5.wav"}
+})
+
+sound.Add(
+{
+    name = "br_fire5",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 120,
+    sound = {"valk/arccw_haloonline/battlerifles/heavy/fire1.wav","valk/arccw_haloonline/battlerifles/heavy/fire2.wav","valk/arccw_haloonline/battlerifles/heavy/fire3.wav","valk/arccw_haloonline/battlerifles/heavy/fire4.wav","valk/arccw_haloonline/battlerifles/heavy/fire5.wav"}
+})
+
+sound.Add(
+{
+    name = "br_fire6",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 120,
+    sound = {"valk/arccw_haloonline/battlerifles/range/fire1.wav","valk/arccw_haloonline/battlerifles/range/fire2.wav","valk/arccw_haloonline/battlerifles/range/fire3.wav","valk/arccw_haloonline/battlerifles/range/fire4.wav","valk/arccw_haloonline/battlerifles/range/fire5.wav"}
+})
+
+sound.Add(
+{
+    name = "br_fire7",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 120,
+    sound = {"valk/arccw_haloonline/battlerifles/power/fire1.wav","valk/arccw_haloonline/battlerifles/power/fire2.wav","valk/arccw_haloonline/battlerifles/power/fire3.wav","valk/arccw_haloonline/battlerifles/power/fire4.wav","valk/arccw_haloonline/battlerifles/power/fire5.wav"}
+})
+
+sound.Add(
+{
+    name = "br_fire8",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 120,
+    sound = {"valk/arccw_haloonline/battlerifles/rof/fire1.wav","valk/arccw_haloonline/battlerifles/rof/fire2.wav","valk/arccw_haloonline/battlerifles/rof/fire3.wav","valk/arccw_haloonline/battlerifles/rof/fire4.wav","valk/arccw_haloonline/battlerifles/rof/fire5.wav"}
+})
+
+sound.Add(
+{
     name = "br_deploy1",
     channel = CHAN_STATIC,
     volume = 1.0,

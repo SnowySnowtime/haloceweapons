@@ -225,6 +225,7 @@ SWEP.Attachments = {
             wang = Angle(-13, 0, 180)
         },
 		VMScale = Vector(0.7, 0.7, 0.7),
+		ExcludeFlags = {"halo_m6s"},
     },
     {
         PrintName = "Underbarrel",

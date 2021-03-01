@@ -1,0 +1,26 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "snowysnowtime/valk/ho/unsc/weapons/shared/UNSC_Lettering_Decal_d"
+	"$bumpmap" "snowysnowtime/valk/shared/normal_shared"
+	"$translucent" "1"
+	"$color2" "[2 2 2]"
+	
+	"$phong" "1"
+	"$phongboost" ".5"
+	"$phongexponent" "2"
+	"$phongalbedotint" "1"
+
+	"$phongfresnelranges" "[3 5 7]"	
+	"$phongexponenttexture" "snowysnowtime/valk/shared/phongexp255"
+	"$phongdisablehalflambert" "1.00"
+
+
+
+
+
+
+	"$rimlight" "1"
+	"$rimlightexponent" "50"
+	"rimlightboost" "0.05"
+
+}

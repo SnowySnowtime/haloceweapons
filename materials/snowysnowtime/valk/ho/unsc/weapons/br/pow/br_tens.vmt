@@ -1,0 +1,15 @@
+"UnlitGeneric"
+{
+	"$basetexture" "snowysnowtime/valk/ho/unsc/weapons/br/hud/numbers_plate3"
+	"$additive" "1"
+	"$color2" "[.3 .6 1]"
+	
+	Proxies // proxies are listed inside this block
+	{
+		ArcCW_HALOCE_AR
+		{
+			resultVar 2
+			prefixstring "snowysnowtime/valk/ho/unsc/weapons/br/hud/numbers_plate"
+		}
+	}
+}

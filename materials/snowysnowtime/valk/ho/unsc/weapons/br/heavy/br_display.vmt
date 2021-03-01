@@ -1,0 +1,8 @@
+"unlitgeneric"
+{
+	"$basetexture" "snowysnowtime/valk/ho/unsc/weapons/shared/BR_display_d"
+
+	"$additive" "1"
+
+	"$color2" "[1 0 0]"
+}

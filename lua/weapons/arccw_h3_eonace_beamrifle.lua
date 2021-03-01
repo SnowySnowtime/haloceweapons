@@ -160,11 +160,6 @@ SWEP.Attachments = {
 		Integral = true, 
 		Hidden = true,
     },
-    {
-        PrintName = "Stock",
-        Slot = "stock",
-        DefaultAttName = "Standard Stock"
-    },
 	{
         PrintName = "Tactical",
         Slot = "tac",
@@ -175,10 +170,6 @@ SWEP.Attachments = {
             wpos = Vector(15.625, -0.253, -6.298),
             wang = Angle(-8.829, -0.556, 90)
         },
-    },
-    {
-        PrintName = "Ammo Type",
-        Slot = "ammo_bullet"
     },
     {
         PrintName = "Perk",
