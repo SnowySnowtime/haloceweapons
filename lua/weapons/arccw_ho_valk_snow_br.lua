@@ -77,8 +77,14 @@ SWEP.MeleeHitSound = "hceworld"
 SWEP.MeleeHitNPCSound = "hceslap"
 
 SWEP.ViewModel = "models/snowysnowtime/valk/ho/c_br.mdl"
-SWEP.WorldModel = "models/snowysnowtime/eonace/w_br55hb.mdl"
+SWEP.WorldModel = "models/snowysnowtime/valk/ho/c_br.mdl"
 SWEP.ViewModelFOV = 90
+SWEP.WorldModelOffset = {
+    pos        =    Vector(-4.75, 4.7, -3.5),
+    ang        =    Angle(-12, 0, 175),
+    bone    =    "ValveBiped.Bip01_R_Hand",
+    scale   =   1
+}
 
 SWEP.Range =  250 -- in METRES
 SWEP.Penetration = 100
@@ -221,8 +227,8 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(5.8, -0.20, 7.75), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
-            wpos = Vector(7.42, 0.43, -7.95),
-            wang = Angle(-12, -1.155, 180)
+            wpos = Vector(8, 1.3, -7.55),
+            wang = Angle(-12, -1.155, 175)
         },
 		Installed = "optic_br_scopeh3d",
 		ExcludeFlags = {"heavy"},
@@ -254,7 +260,7 @@ SWEP.Attachments = {
         FreeSlot = true,
         Bone = "gun", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(3.9, -0.8, 4.65), -- offset that the attachment will be relative to the bone
+            vpos = Vector(3, -0.95, 4.3), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
             wpos = Vector(7.15, 1.35, -5.1),
             wang = Angle(-12, 0, 180)
@@ -270,8 +276,8 @@ SWEP.Attachments = {
 		Offset = {
             vpos = Vector(-8.08, -3.745, 6.87), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
-            wpos = Vector(7.42, 0.43, -7.95),
-            wang = Angle(-12, -1.155, 180)
+            wpos = Vector(-4.9, 4.5, -3.5),
+            wang = Angle(-12, -1.155, 175)
         },
         FreeSlot = true
     },
@@ -344,22 +350,22 @@ SWEP.Animations = {
 }
 
 SWEP.Hook_GetShootSound = function(wep, sound)
-    if wep.Attachments[5].Installed == "h3_bronline" then
+    if wep.Attachments[6].Installed == "h3_bronline" then
 		return "br_fire3"
     end
-	if wep.Attachments[5].Installed == "h3_bronline_2" then
+	if wep.Attachments[6].Installed == "h3_bronline_2" then
 		return "br_fire4"
     end
-	if wep.Attachments[5].Installed == "h3_bronline_3" then
+	if wep.Attachments[6].Installed == "h3_bronline_3" then
 		return "br_fire8"
     end
-	if wep.Attachments[5].Installed == "h3_bronline_4" then
+	if wep.Attachments[6].Installed == "h3_bronline_4" then
 		return "br_fire5"
     end
-	if wep.Attachments[5].Installed == "h3_bronline_5" then
+	if wep.Attachments[6].Installed == "h3_bronline_5" then
 		return "br_fire6"
     end
-	if wep.Attachments[5].Installed == "h3_bronline_6" then
+	if wep.Attachments[6].Installed == "h3_bronline_6" then
 		return "br_fire7"
     end
 end
@@ -382,22 +388,22 @@ SWEP.Hook_BulletHit = function(wep, data) -- please fesiug help me im so ineffic
 	if data.tr.HitGroup == HITGROUP_RIGHTLEG then
 		data.damage = data.damage * 3
 	end
-	if wep.Attachments[5].Installed == "h3_bronline" then
+	if wep.Attachments[6].Installed == "h3_bronline" then
 		if data.tr.HitGroup == HITGROUP_HEAD then
 			data.damage = data.damage * 1.1
 		end
 	end
-	if wep.Attachments[5].Installed == "h3_bronline_2" then
+	if wep.Attachments[6].Installed == "h3_bronline_2" then
 		if data.tr.HitGroup == HITGROUP_HEAD then
 			data.damage = data.damage * 1.1
 		end
 	end
-	if wep.Attachments[5].Installed == "h3_bronline_3" then
+	if wep.Attachments[6].Installed == "h3_bronline_3" then
 		if data.tr.HitGroup == HITGROUP_HEAD then
 			data.damage = data.damage * 0.37
 		end
 	end
-	if wep.Attachments[5].Installed == "h3_bronline_4" then
+	if wep.Attachments[6].Installed == "h3_bronline_4" then
 		if data.tr.HitGroup == HITGROUP_HEAD then
 			data.damage = data.damage * 0.7
 		end
@@ -414,12 +420,12 @@ SWEP.Hook_BulletHit = function(wep, data) -- please fesiug help me im so ineffic
 			data.damage = data.damage * 1.3
 		end
 	end
-	if wep.Attachments[5].Installed == "h3_bronline_5" then
+	if wep.Attachments[6].Installed == "h3_bronline_5" then
 		if data.tr.HitGroup == HITGROUP_HEAD then
 			data.damage = data.damage * 6
 		end
 	end
-	if wep.Attachments[5].Installed == "h3_bronline_6" then
+	if wep.Attachments[6].Installed == "h3_bronline_6" then
 		if data.tr.HitGroup == HITGROUP_HEAD then
 			data.damage = data.damage * 1.1
 		end

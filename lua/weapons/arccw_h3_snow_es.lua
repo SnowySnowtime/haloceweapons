@@ -21,15 +21,10 @@ SWEP.ViewModelFOV = 60
 SWEP.MirrorWorldModel = true
 
 SWEP.WorldModelOffset = {
-    pos        =    Vector(0, 0, 0),
-    ang        =    Angle(0, 180, 180),
+    pos        =    Vector(1.25, -9.2, 13.5),
+    ang        =    Angle(-50, -20, 12.5),
     bone    =    "ValveBiped.Bip01_R_Hand",
-    scale   =   1
-}
-
-SWEP.WorldModelOffset = {
-	pos = Vector(9, 1, 2.5),
-	ang = Angle(0, 180, 0)
+    scale   =   1.3
 }
 
 SWEP.DefaultSkin = 0
