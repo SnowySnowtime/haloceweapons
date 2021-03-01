@@ -271,12 +271,6 @@ SWEP.Attachments = {
         },
         FreeSlot = true
     },
-	{
-        PrintName = "Passive",
-        Slot = {"halo_passive"},
-		Installed = "passive_halo_prec_wep_mult_reduced",
-		Integral = true
-    },
 }
 
 SWEP.Animations = {
@@ -364,4 +358,66 @@ SWEP.Hook_GetShootSound = function(wep, sound)
 	if wep.Attachments[5].Installed == "h3_bronline_6" then
 		return "br_fire7"
     end
+end
+
+SWEP.Hook_BulletHit = function(wep, data) -- please fesiug help me im so inefficient at coding
+    if CLIENT then return end
+
+	if data.tr.HitGroup == HITGROUP_HEAD then
+		data.damage = data.damage * 0.8
+	end
+	if data.tr.HitGroup == HITGROUP_LEFTARM then
+		data.damage = data.damage * 3
+	end
+	if data.tr.HitGroup == HITGROUP_RIGHTARM then
+		data.damage = data.damage * 3
+	end
+	if data.tr.HitGroup == HITGROUP_LEFTLEG then
+		data.damage = data.damage * 3
+	end
+	if data.tr.HitGroup == HITGROUP_RIGHTLEG then
+		data.damage = data.damage * 3
+	end
+	if wep.Attachments[5].Installed == "h3_bronline" then
+		if data.tr.HitGroup == HITGROUP_HEAD then
+			data.damage = data.damage * 1.1
+		end
+	end
+	if wep.Attachments[5].Installed == "h3_bronline_2" then
+		if data.tr.HitGroup == HITGROUP_HEAD then
+			data.damage = data.damage * 1.1
+		end
+	end
+	if wep.Attachments[5].Installed == "h3_bronline_3" then
+		if data.tr.HitGroup == HITGROUP_HEAD then
+			data.damage = data.damage * 0.37
+		end
+	end
+	if wep.Attachments[5].Installed == "h3_bronline_4" then
+		if data.tr.HitGroup == HITGROUP_HEAD then
+			data.damage = data.damage * 0.7
+		end
+		if data.tr.HitGroup == HITGROUP_LEFTARM then
+			data.damage = data.damage * 1.3
+		end
+		if data.tr.HitGroup == HITGROUP_RIGHTARM then
+			data.damage = data.damage * 1.3
+		end
+		if data.tr.HitGroup == HITGROUP_LEFTLEG then
+			data.damage = data.damage * 1.3
+		end
+		if data.tr.HitGroup == HITGROUP_RIGHTLEG then
+			data.damage = data.damage * 1.3
+		end
+	end
+	if wep.Attachments[5].Installed == "h3_bronline_5" then
+		if data.tr.HitGroup == HITGROUP_HEAD then
+			data.damage = data.damage * 6
+		end
+	end
+	if wep.Attachments[5].Installed == "h3_bronline_6" then
+		if data.tr.HitGroup == HITGROUP_HEAD then
+			data.damage = data.damage * 1.1
+		end
+	end
 end

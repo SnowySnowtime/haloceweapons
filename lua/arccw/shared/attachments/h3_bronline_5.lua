@@ -27,6 +27,7 @@ att.Mult_DamageMin = 1.75
 att.Mult_AccuracyMOA = 0.75
 att.Mult_HipDispersion = 1.5
 att.Mult_SightsDispersion = 0.35
+att.Mult_Recoil = 3
 
 att.Override_Firemodes = {
     {

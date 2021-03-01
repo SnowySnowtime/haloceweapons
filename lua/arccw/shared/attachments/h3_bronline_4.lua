@@ -49,8 +49,9 @@ att.Mult_RPM = 0.3
 att.Override_ClipSize = 30
 
 att.Mult_Damage = 2.5
-att.Mult_DamageMin = 0.6
+att.Mult_DamageMin = 0.5
 att.Mult_Range = 0.24
+att.Mult_Recoil = 3
 att.Model = "models/snowysnowtime/valk/ho/heavy_ammo.mdl"
 
 att.ActivateElements = {"heavy"}
