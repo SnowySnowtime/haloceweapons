@@ -41,9 +41,9 @@ att.AdditionalSights = {
 att.AttachSound = "attch/snow/halo/h3/x_button.wav"
 att.DetachSound = "attch/snow/halo/h3/b_button.wav"
 
-att.Mult_AccuracyMOA = 1.15
-att.Mult_HipDispersion = 1.2
-att.Mult_SightsDispersion = 1.15
+att.Mult_AccuracyMOA = 1000
+att.Mult_HipDispersion = 4
+att.Mult_SightsDispersion = 24
 
 att.Mult_RPM = 0.3
 att.Override_ClipSize = 30
