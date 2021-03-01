@@ -125,7 +125,7 @@ SWEP.ShootPitch = 100 -- pitch of shoot sound
 
 SWEP.FirstShootSound = "br_first"
 SWEP.ShootSound = "br_fire"
-SWEP.ShootSoundSilenced = "hcesup"
+SWEP.ShootSoundSilenced = "br_fire7"
 SWEP.DistantShootSound = "br_lod"
 
 SWEP.MuzzleEffect = "astw2_halo_2_muzzle_battle_rifle"

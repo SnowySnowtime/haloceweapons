@@ -1,6 +1,6 @@
 att.PrintName = "Magazine"
 att.Icon = Material("snowysnowtime/2k/ico/h3/smg_sil.png")
-att.Description = "A Varaint of the Battle Rifle which increases the Magazine size."
+att.Description = "A Variant of the Battle Rifle which increases the Magazine size."
 att.Desc_Pros = {
 	"+ Magazine Size"
 }

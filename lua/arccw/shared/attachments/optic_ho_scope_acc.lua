@@ -1,31 +1,28 @@
-att.PrintName = "2D DMR Scope"
+att.PrintName = "BR Accuracy Scope"
 att.Icon = Material("entities/tfa_hce_snow_objectiveflag.png")
-att.Description = "A Powerful 2x Scope built for the SPV3 DMR for precision aiming. Comes with an ammunitions counter."
+att.Description = "A Powerful 3x Scope built for the BR55HB SR for precision aiming. Best used with Semi-Auto weaponry."
 
-att.SortOrder = 200
+att.SortOrder = 1001
 
 att.Desc_Pros = {
     "+ Precise",
     "+ Lightweight Scope",
 }
 att.Desc_Cons = {
-	"Only available for the SPV3 SMG",
 }
 att.AutoStats = true
 att.Ignore = false
-att.Slot = {"optic","halo_optics"}
+att.Slot = "halo_optics"
 
-att.Model = "models/snowysnowtime/spv3/dmr_scope.mdl"
+att.Model = "models/snowysnowtime/valk/ho/acc_scope.mdl"
 
 att.DroppedModel = "models/Items/BoxSRounds.mdl"
 
 att.AutoStats = false
 
-att.ActivateElements = {"the"}
-
 att.AdditionalSights = {
 	{
-		Pos = Vector(0, -40, 0),
+		Pos = Vector(-3.75, -50, 0),
 		Ang = Angle(0, 0, 0),
 		GlobalPos = Vector(0, 0, 0),
 		GlobalAng = Angle(0, 0, 0),
@@ -39,10 +36,10 @@ att.AdditionalSights = {
 
 att.Mult_SightTime = 1
 
-att.AttachSound = "attch/snow/halo/h1/forward.wav"
-att.DetachSound = "attch/snow/halo/h1/back.wav"
+att.AttachSound = "attch/snow/halo/h3/x_button.wav"
+att.DetachSound = "attch/snow/halo/h3/b_button.wav"
 
-local ScopeTexture	= Material("entities/dmr_scope.png")
+local ScopeTexture	= Material("hud/scopes/br_scope.png")
 local proscopesize		= 180
 local bitchYouDontEvenKnowUs = 1
 --[[
@@ -107,7 +104,7 @@ att.Hook_DrawHUD = function(wep)
 	surface.DrawTexturedRect(icns.tl, icns.bl, scopesize, scopesize)
 
 	-- Draw surrounding
-	surface.SetDrawColor(0, 0, 0, 203)
+	surface.SetDrawColor(0, 0, 0, 128)
 	// Left
 	surface.DrawRect(0, 0, icns.tl, ScrH())
 	// Right

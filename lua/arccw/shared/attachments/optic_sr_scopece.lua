@@ -112,6 +112,6 @@ att.Hook_DrawHUD = function(wep)
 	surface.DrawRect(icns.tl, icns.br, scopesize, ScrH())
 end
 
-att.AttachSound = "attch/snow/halo/h3/x_button.wav"
-att.DetachSound = "attch/snow/halo/h3/b_button.wav"
+att.AttachSound = "attch/snow/halo/h1/forward.wav"
+att.DetachSound = "attch/snow/halo/h1/back.wav"
 att.ActivateElements = {"sr_scope"}

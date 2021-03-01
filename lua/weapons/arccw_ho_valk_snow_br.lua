@@ -3,7 +3,7 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ArcCW - Halo Online" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Battle Rifle"
+SWEP.PrintName = "HO | Battle Rifle"
 SWEP.TrueName = "BR55"
 SWEP.Trivia_Class = "Battle Rifle"
 SWEP.Trivia_Desc = "The BR55 Service Rifle is a gas-operated, magazine-fed, mid-to-long range weapon capable of semi-automatic, fully automatic, and burst-firing modes. The BR55, having a rifled barrel, is 89.9cm long and is fitted with a scope for increased accuracy. The scope is mounted on the optics rail. The safety is also located above the handle of the weapon. The weapon fires the M634 X-HP-SAP round from a 36-round magazine. Additionally, the weapon features a scope attachment capable of 2x magnification. In addition to its initial role, the BR55 battle rifle can also fulfill the role of a designated marksman rifle."
@@ -157,8 +157,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(0, 0, 0),
-    Ang = Angle(0.792, 0.017, 0),
+    Pos = Vector(-3.49, -2, -1),
+	Ang = Angle(-0.76, 0.175, 0),
     Magnification = 1.5,
 }
 
@@ -230,7 +230,7 @@ SWEP.Attachments = {
             wpos = Vector(8, 1.3, -7.55),
             wang = Angle(-12, -1.155, 175)
         },
-		Installed = "optic_br_scopeh3d",
+		Installed = "optic_ho_scope_nml",
 		ExcludeFlags = {"heavy"},
     },
     {
@@ -238,13 +238,11 @@ SWEP.Attachments = {
         Slot = "tac",
         Bone = "gun",
         Offset = {
-            vpos = Vector(12, 0, 5.7), -- offset that the attachment will be relative to the bone
-            vang = Angle(0, 0, 180),
+            vpos = Vector(15, -0.5, 5.7), -- offset that the attachment will be relative to the bone
+            vang = Angle(0, 0, 90),
             wpos = Vector(15, 0.65, -7.75),
             wang = Angle(-12, -1.2, 0),
         },
-        VMScale = Vector(0.4, 0.4, 0.4),
-		WMScale = Vector(0.4, 0.4, 0.4),
     },
     {
         PrintName = "Perk",

@@ -13,7 +13,7 @@ att.Desc_Cons = {
 }
 att.AutoStats = true
 att.Ignore = false
-att.Slot = "optic"
+att.Slot = {"optic","halo_optics"}
 
 att.Model = "models/snowysnowtime/spv3/scope.mdl"
 

@@ -1,35 +1,47 @@
-att.PrintName = "2D DMR Scope"
+att.PrintName = "CE SR Scope"
 att.Icon = Material("entities/tfa_hce_snow_objectiveflag.png")
-att.Description = "A Powerful 2x Scope built for the SPV3 DMR for precision aiming. Comes with an ammunitions counter."
+att.Description = "A Powerful 2.5x/5x/10x Scope built for precision weaponry."
 
-att.SortOrder = 200
+att.SortOrder = 198
 
 att.Desc_Pros = {
-    "+ Precise",
-    "+ Lightweight Scope",
+    "+ Sniper Optics",
+    "+ Built In Anti-Reflection Device",
 }
 att.Desc_Cons = {
-	"Only available for the SPV3 SMG",
 }
 att.AutoStats = true
 att.Ignore = false
-att.Slot = {"optic","halo_optics"}
+att.Slot = "halo_optics"
 
-att.Model = "models/snowysnowtime/spv3/dmr_scope.mdl"
+att.Model = "models/snowysnowtime/scopes/cesr_sc.mdl"
 
 att.DroppedModel = "models/Items/BoxSRounds.mdl"
 
 att.AutoStats = false
 
-att.ActivateElements = {"the"}
+att.ToggleStats = {
+    {
+        PrintName = "2.5x",
+		Magnification = 2.5,
+    },
+	{
+        PrintName = "5x",
+		Magnification = 5,
+    },
+    {
+        PrintName = "10x",
+		Magnification = 10,
+    },
+}
 
 att.AdditionalSights = {
 	{
-		Pos = Vector(0, -40, 0),
+		Pos = Vector(0, -100, 0),
 		Ang = Angle(0, 0, 0),
 		GlobalPos = Vector(0, 0, 0),
 		GlobalAng = Angle(0, 0, 0),
-		Magnification = 3,
+		Magnification = 10,
 		IgnoreExtra = false,
 		CrosshairInSights = true,
         SwitchToSound = "hce_zoomin",
@@ -42,7 +54,7 @@ att.Mult_SightTime = 1
 att.AttachSound = "attch/snow/halo/h1/forward.wav"
 att.DetachSound = "attch/snow/halo/h1/back.wav"
 
-local ScopeTexture	= Material("entities/dmr_scope.png")
+local ScopeTexture	= Material("hud/scopes/br_scope.png")
 local proscopesize		= 180
 local bitchYouDontEvenKnowUs = 1
 --[[
@@ -107,7 +119,7 @@ att.Hook_DrawHUD = function(wep)
 	surface.DrawTexturedRect(icns.tl, icns.bl, scopesize, scopesize)
 
 	-- Draw surrounding
-	surface.SetDrawColor(0, 0, 0, 203)
+	surface.SetDrawColor(0, 0, 0, 128)
 	// Left
 	surface.DrawRect(0, 0, icns.tl, ScrH())
 	// Right

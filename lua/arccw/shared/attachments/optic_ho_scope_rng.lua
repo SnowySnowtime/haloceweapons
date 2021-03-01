@@ -9,7 +9,6 @@ att.Desc_Pros = {
     "+ Lightweight Scope",
 }
 att.Desc_Cons = {
-	"Only available for the BR55HB SR",
 }
 att.AutoStats = true
 att.Ignore = false

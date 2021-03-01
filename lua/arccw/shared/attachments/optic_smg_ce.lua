@@ -7,7 +7,7 @@ att.Desc_Pros = {
 att.Desc_Cons = {
 	"Not a scope."
 }
-att.Slot = "optic"
+att.Slot = {"optic","halo_optics"}
 
 att.AutoStats = true
 att.Mult_DrawTime = 1.1
