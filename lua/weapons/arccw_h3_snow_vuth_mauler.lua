@@ -26,6 +26,7 @@ SWEP.MeleeHitNPCSound = "hceslap"
 SWEP.ViewModel = "models/snowysnowtime/vuthakral/c_hum_Mauler.mdl"
 SWEP.WorldModel = "models/snowysnowtime/vuthakral/w_mauler.mdl"
 SWEP.ViewModelFOV = 70
+SWEP.NeverPhysBullet = true
 
 --  You will need this for the journey ahead
 --  Probably should set this to your first mode

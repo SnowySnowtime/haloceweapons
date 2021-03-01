@@ -55,11 +55,12 @@ elseif GetConVar("arccw_hce_bal"):GetInt() == 2 then -- arccw
 end
 
 SWEP.Range =  100 -- in METRES
-SWEP.Penetration = 100
+SWEP.Penetration = 0
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
 SWEP.MuzzleVelocity = 6000 -- projectile or phys bullet muzzle velocity
 -- IN M/S
+SWEP.NeverPhysBullet = true
 
 SWEP.Primary.ClipSize = 1 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 1

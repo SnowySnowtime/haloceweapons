@@ -95,7 +95,7 @@ SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
 SWEP.MuzzleVelocity = 4000 -- projectile or phys bullet muzzle velocity
 -- IN M/S
-
+SWEP.NeverPhysBullet = true
 SWEP.TracerNum = 1 -- tracer every X
 SWEP.Tracer 	= "hce_sr_tracer"
 

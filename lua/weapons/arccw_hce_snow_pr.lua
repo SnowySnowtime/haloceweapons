@@ -56,7 +56,7 @@ SWEP.MeleeHitNPCSound = "hceslap"
 SWEP.ViewModel = "models/snowysnowtime/c_ce_pr.mdl"
 SWEP.WorldModel = "models/snowysnowtime/vuthakral/w_plasmarifle.mdl"
 SWEP.ViewModelFOV = 70
-
+SWEP.NeverPhysBullet = true
 SWEP.Range =  700 -- in METRES
 SWEP.Penetration = 0
 SWEP.DamageType = DMG_BULLET

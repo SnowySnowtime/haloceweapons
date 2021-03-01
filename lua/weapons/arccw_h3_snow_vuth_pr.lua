@@ -30,9 +30,10 @@ SWEP.ViewModelFOV = 60
 SWEP.Damage = 20
 SWEP.DamageMin = 20 -- damage done at maximum range
 SWEP.Range =  700 -- in METRES
-SWEP.Penetration = 25
+SWEP.Penetration = 0
 SWEP.DamageType = DMG_BULLET
 SWEP.MuzzleVelocity = 600 -- projectile or phys bullet muzzle velocity -- IN M/S
+SWEP.NeverPhysBullet = true
 
 SWEP.TracerNum = 1 -- tracer every X
 SWEP.Tracer 	= "effect_astw2_halo3_tracer_plasmarifle"

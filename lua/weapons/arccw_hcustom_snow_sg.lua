@@ -69,13 +69,13 @@ SWEP.Primary.ClipSize = 1 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 2
 SWEP.ReducedClipSize = 1
 SWEP.AutoReload = false
-
+SWEP.NeverPhysBullet = true -- theres a REASON why this weapon shouldn't have physbullets.
 SWEP.ShotgunSpreadDispersion = true -- dispersion will cause pattern to increase instead of shifting
 
 SWEP.ShotgunReload = false
 
 SWEP.Delay = 60 / 60 -- 60 / RPM.
-SWEP.Num = 200 -- number of shots per trigger pull.
+SWEP.Num = 200 -- number of shots per trigger pull. -- this is why.
 SWEP.RunawayBurst = false
 SWEP.Firemodes = {
     {

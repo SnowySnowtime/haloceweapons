@@ -5,10 +5,10 @@ att.Desc_Pros = {
 "  Tracer Colors can be changed"
 }
 att.Desc_Cons = {
-"  Cannot be equipped on Shotguns."
+"  These are physbullets."
 }
 att.AutoStats = true
-att.Slot = {"ammo_bullet","ammo_dmr_halo","ammo_halo"}
+att.Slot = {"ammo_bullet","ammo_dmr_halo","ammo_halo","ammo_shotgun"}
 
 att.ToggleStats = {
     {

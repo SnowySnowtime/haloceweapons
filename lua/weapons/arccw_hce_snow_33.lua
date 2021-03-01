@@ -31,7 +31,7 @@ SWEP.ViewModelFOV = 70
 SWEP.Damage = 27
 SWEP.DamageMin = 17 -- damage done at maximum range
 SWEP.Range =  700 -- in METRES
-SWEP.Penetration = 25
+SWEP.Penetration = 5
 SWEP.DamageType = DMG_BULLET
 SWEP.MuzzleVelocity = 600 -- projectile or phys bullet muzzle velocity
 -- IN M/S

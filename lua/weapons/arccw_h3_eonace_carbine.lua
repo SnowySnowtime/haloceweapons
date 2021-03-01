@@ -116,6 +116,8 @@ SWEP.MagID = "hs338" -- the magazine pool this gun draws from
 
 SWEP.ShootVol = 140 -- volume of shoot sound
 SWEP.ShootPitch = 100 -- pitch of shoot sound
+SWEP.AlwaysPhysBullet = true
+SWEP.PhysTracerProfile = 2
 
 SWEP.ShootSound = Sound("h3.carbine_fire")
 SWEP.ShootSoundSilenced = "weapons/arccw/m4a1/m4a1_silencer_01.wav"

@@ -76,7 +76,7 @@ SWEP.MeleeHitSound = "hceworld"
 SWEP.MeleeHitNPCSound = "hceslap"
 
 SWEP.Range =  50 -- in METRES
-SWEP.Penetration = 10
+SWEP.Penetration = 5
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
 SWEP.MuzzleVelocity = 100 -- projectile or phys bullet muzzle velocity
