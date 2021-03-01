@@ -86,8 +86,8 @@ SWEP.WorldModelOffset = {
     scale   =   1
 }
 
-SWEP.Range =  250 -- in METRES
-SWEP.Penetration = 100
+SWEP.Range =  100 -- in METRES
+SWEP.Penetration = 30
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
 SWEP.MuzzleVelocity = 700 -- projectile or phys bullet muzzle velocity
@@ -348,84 +348,69 @@ SWEP.Animations = {
 }
 
 SWEP.Hook_GetShootSound = function(wep, sound)
-    if wep.Attachments[6].Installed == "h3_bronline" then
-		return "br_fire3"
-    end
-	if wep.Attachments[6].Installed == "h3_bronline_2" then
-		return "br_fire4"
-    end
-	if wep.Attachments[6].Installed == "h3_bronline_3" then
-		return "br_fire8"
-    end
-	if wep.Attachments[6].Installed == "h3_bronline_4" then
-		return "br_fire5"
-    end
-	if wep.Attachments[6].Installed == "h3_bronline_5" then
-		return "br_fire6"
-    end
-	if wep.Attachments[6].Installed == "h3_bronline_6" then
-		return "br_fire7"
-    end
+	local brtype = {
+		["h3_bronline"] = "br_fire3",
+		["h3_bronline_2"] = "br_fire4",
+		["h3_bronline_3"] = "br_fire8",
+		["h3_bronline_4"] = "br_fire5",
+		["h3_bronline_5"] = "br_fire6",
+		["h3_bronline_6"] = "br_fire7",
+	}
+	local attslot = wep.Attachments[6].Installed
+	--print ( attslot ) keeping this for future use in other weapons
+	--print ( brtype[attslot] )
+    return brtype[attslot]
 end
 
 SWEP.Hook_BulletHit = function(wep, data) -- please fesiug help me im so inefficient at coding
     if CLIENT then return end
-
+	local brhittype = {
+		["h3_bronline"] = {
+			["HEAD"] = 0.8,
+			["LIMBS"] = 2.5,
+		},
+		["h3_bronline_2"] = {
+			["HEAD"] = 0.8,
+			["LIMBS"] = 3,
+		},
+		["h3_bronline_3"] = {
+			["HEAD"] = 0.65,
+			["LIMBS"] = 3,
+		},
+		["h3_bronline_4"] = {
+			["HEAD"] = 0.8,
+			["LIMBS"] = 2.6,
+		},
+		["h3_bronline_5"] = {
+			["HEAD"] = 6,
+			["LIMBS"] = 3,
+		},
+		["h3_bronline_6"] = {
+			["HEAD"] = 0.8,
+			["LIMBS"] = 3,
+		},
+	}
+	
+	local attslot = wep.Attachments[6].Installed
+	-- print ( attslot )
+	local dmgHead = 0.8
+	local dmgLimbs = 3
+		if attslot then 
+		dmgHead = brhittype[attslot].HEAD
+		dmgLimbs = brhittype[attslot].LIMBS
+		end
+	local HtGrpHlo = data.tr.HitGroup
+	local ezlimbs = (
+			HtGrpHlo == HITGROUP_LEFTARM or
+			HtGrpHlo == HITGROUP_RIGHTARM or
+			HtGrpHlo == HITGROUP_LEFTLEG or
+			HtGrpHlo == HITGROUP_RIGHTLEG
+		)
+	
 	if data.tr.HitGroup == HITGROUP_HEAD then
-		data.damage = data.damage * 0.8
+		data.damage = data.damage * dmgHead
 	end
-	if data.tr.HitGroup == HITGROUP_LEFTARM then
-		data.damage = data.damage * 3
-	end
-	if data.tr.HitGroup == HITGROUP_RIGHTARM then
-		data.damage = data.damage * 3
-	end
-	if data.tr.HitGroup == HITGROUP_LEFTLEG then
-		data.damage = data.damage * 3
-	end
-	if data.tr.HitGroup == HITGROUP_RIGHTLEG then
-		data.damage = data.damage * 3
-	end
-	if wep.Attachments[6].Installed == "h3_bronline" then
-		if data.tr.HitGroup == HITGROUP_HEAD then
-			data.damage = data.damage * 1.1
-		end
-	end
-	if wep.Attachments[6].Installed == "h3_bronline_2" then
-		if data.tr.HitGroup == HITGROUP_HEAD then
-			data.damage = data.damage * 1.1
-		end
-	end
-	if wep.Attachments[6].Installed == "h3_bronline_3" then
-		if data.tr.HitGroup == HITGROUP_HEAD then
-			data.damage = data.damage * 0.37
-		end
-	end
-	if wep.Attachments[6].Installed == "h3_bronline_4" then
-		if data.tr.HitGroup == HITGROUP_HEAD then
-			data.damage = data.damage * 0.7
-		end
-		if data.tr.HitGroup == HITGROUP_LEFTARM then
-			data.damage = data.damage * 1.3
-		end
-		if data.tr.HitGroup == HITGROUP_RIGHTARM then
-			data.damage = data.damage * 1.3
-		end
-		if data.tr.HitGroup == HITGROUP_LEFTLEG then
-			data.damage = data.damage * 1.3
-		end
-		if data.tr.HitGroup == HITGROUP_RIGHTLEG then
-			data.damage = data.damage * 1.3
-		end
-	end
-	if wep.Attachments[6].Installed == "h3_bronline_5" then
-		if data.tr.HitGroup == HITGROUP_HEAD then
-			data.damage = data.damage * 6
-		end
-	end
-	if wep.Attachments[6].Installed == "h3_bronline_6" then
-		if data.tr.HitGroup == HITGROUP_HEAD then
-			data.damage = data.damage * 1.1
-		end
+	if ezlimbs then
+		data.damage = data.damage * dmgLimbs
 	end
 end

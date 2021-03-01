@@ -86,7 +86,7 @@ function SWEP:Initialize()
 end
 
 SWEP.Range =  100 -- in METRES
-SWEP.Penetration = 100
+SWEP.Penetration = 35
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
 SWEP.MuzzleVelocity = 6000 -- projectile or phys bullet muzzle velocity

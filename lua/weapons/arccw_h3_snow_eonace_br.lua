@@ -80,8 +80,8 @@ SWEP.ViewModel = "models/snowysnowtime/eonace/c_hum_br55hb.mdl"
 SWEP.WorldModel = "models/snowysnowtime/eonace/w_br55hb.mdl"
 SWEP.ViewModelFOV = 70
 
-SWEP.Range =  250 -- in METRES
-SWEP.Penetration = 100
+SWEP.Range =  100 -- in METRES
+SWEP.Penetration = 30
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
 SWEP.MuzzleVelocity = 700 -- projectile or phys bullet muzzle velocity
