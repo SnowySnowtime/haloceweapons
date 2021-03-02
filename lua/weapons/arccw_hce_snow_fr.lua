@@ -33,7 +33,7 @@ SWEP.Range =  700 -- in METRES
 SWEP.Penetration = 100
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = "arccw_halo_ce_fuel_rod_launched" -- entity to fire, if any
-SWEP.MuzzleVelocity = 1000 -- projectile or phys bullet muzzle velocity
+SWEP.MuzzleVelocity = 1500 -- projectile or phys bullet muzzle velocity
 SWEP.PhysBulletDontInheritPlayerVelocity = true
 -- IN M/S
 

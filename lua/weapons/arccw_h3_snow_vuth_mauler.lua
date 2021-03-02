@@ -12,7 +12,7 @@ SWEP.Trivia_Calibre = "7.9mm Metal Bolts"
 SWEP.Trivia_Mechanism = "Gas-Operated"
 SWEP.Trivia_Year = 1994
 
-SWEP.Slot = 3
+SWEP.Slot = 1
 
 if GetConVar("arccw_truenames"):GetBool() then SWEP.PrintName = SWEP.TrueName end
 

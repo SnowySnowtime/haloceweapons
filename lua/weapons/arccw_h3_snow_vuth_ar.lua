@@ -12,7 +12,7 @@ SWEP.Trivia_Calibre = "7.62x51mm M118 FMJ-AP"
 SWEP.Trivia_Mechanism = "Automatic"
 SWEP.Trivia_Country = "never heard of her"
 
-SWEP.Slot = 3
+SWEP.Slot = 2
 
 if GetConVar("arccw_truenames"):GetBool() then SWEP.PrintName = SWEP.TrueName end
 

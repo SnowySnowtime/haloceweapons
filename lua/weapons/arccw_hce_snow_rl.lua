@@ -137,8 +137,8 @@ SWEP.HolsterAng = Angle(-40, 0, 0)
 SWEP.BarrelOffsetSighted = Vector(0, 0, -10)
 SWEP.BarrelOffsetHip = Vector(0, 0, 0)
 
-SWEP.CustomizePos = Vector(2.824, -1, -2.897)
-SWEP.CustomizeAng = Angle(12.149, 30.547, 0)
+SWEP.CustomizePos = Vector(-1, 0, 0)
+SWEP.CustomizeAng = Angle(0, 0, 0)
 
 SWEP.BarrelLength = 32
 SWEP.AttachmentElements = {
@@ -179,10 +179,6 @@ SWEP.Attachments = {
             wang = Angle(-8.829, 0, 180)
         },
     },
-    {
-        PrintName = "Firetype",
-        Slot = {"fcg"}
-    },
 	{
         PrintName = "Tactical",
         Slot = "tac",
@@ -194,10 +190,6 @@ SWEP.Attachments = {
             wang = Angle(-8.829, -0.556, 90)
         },
 		VMScale = Vector(0.1, 0.1, 0.1),
-    },
-    {
-        PrintName = "Perk",
-        Slot = {"perk","go_perk"}
     },
     {
         PrintName = "Charm",
@@ -221,7 +213,7 @@ SWEP.Attachments = {
 }
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
-    if wep.Attachments[6].Installed == "hce_anniv" or wep.Attachments[6].Installed == "hce_annivsound" then
+    if wep.Attachments[4].Installed == "hce_anniv" or wep.Attachments[4].Installed == "hce_annivsound" then
 		local annivtag = (
 			anim == "draw" or
 			anim == "reload_empty" or

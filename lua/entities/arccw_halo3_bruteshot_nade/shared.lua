@@ -1,6 +1,6 @@
 ENT.Type = "anim"
 ENT.Base = "base_entity"
-ENT.PrintName = "Rocket"
+ENT.PrintName = "Brute Shot"
 ENT.Author = ""
 ENT.Information = ""
 ENT.Spawnable = false
@@ -14,7 +14,7 @@ AddCSLuaFile()
 
 function ENT:Initialize()
     if SERVER then
-		util.SpriteTrail( self, 0, Color(255,225,200,200), false, 15, 0, 0.3, 0.01, "trails/smoke" )
+		util.SpriteTrail( self, 0, Color(255,225,200,75), false, 15, 0, 0.3, 0.01, "trails/smoke" )
         self:SetModel( self.Model )
         self:SetMoveType( MOVETYPE_VPHYSICS )
         self:SetSolid( SOLID_VPHYSICS )
@@ -24,7 +24,7 @@ function ENT:Initialize()
         local phys = self:GetPhysicsObject()
         if phys:IsValid() then
             phys:Wake()
-			phys:SetMass(1000)
+			phys:SetMass(24)
             phys:SetBuoyancyRatio(1)
             phys:EnableGravity( true )
         end
@@ -39,6 +39,47 @@ function ENT:Initialize()
             if !IsValid(self) then return end
             self:SetCollisionGroup(COLLISION_GROUP_PROJECTILE)
         end)
+end
+
+function ENT:ClientThink()
+            local emitter = ParticleEmitter(self:GetPos())
+
+            if !self:IsValid() or self:WaterLevel() > 2 then return end
+
+	local smoke = emitter:Add("effects/halo3/soft_smoke_large", self:GetPos())
+        smoke:SetGravity( Vector(math.Rand(-45, 45), math.Rand(-45, 45), math.Rand(-20, -25)) )
+        smoke:SetVelocity( self:GetAngles():Forward() * -50 )
+        smoke:SetDieTime( math.Rand(0.25,0.3) )
+        smoke:SetStartAlpha( 255 )
+        smoke:SetEndAlpha( 0 )
+        smoke:SetStartSize( 15 )
+        smoke:SetEndSize( 0 )
+        smoke:SetRoll( math.Rand(-180, 180) )
+        smoke:SetRollDelta( math.Rand(-0.2,0.2) )
+        smoke:SetColor( 135, 125, 100 )
+        smoke:SetAirResistance( 0 )
+        smoke:SetPos( self:GetPos() )
+        smoke:SetLighting( false )
+    
+	local smoke2 = emitter:Add("effects/halo3/soft_smoke_large", self:GetPos())
+        smoke2:SetGravity( Vector(math.Rand(-5, 5), math.Rand(-5, 5), math.Rand(-20, -25)) )
+        smoke2:SetVelocity( self:GetAngles():Forward() * -50 )
+        smoke2:SetDieTime( math.Rand(0.3,0.4) )
+        smoke2:SetStartAlpha( 255 )
+        smoke2:SetEndAlpha( 0 )
+        smoke2:SetStartSize( 10 )
+        smoke2:SetEndSize( 5 )
+        smoke2:SetRoll( math.Rand(-180, 180) )
+        smoke2:SetRollDelta( math.Rand(-0.2,0.2) )
+        smoke2:SetColor( 135,125,100 )
+        smoke2:SetAirResistance( 50 )
+        smoke2:SetPos( self:GetPos() )
+        smoke2:SetLighting( false )
+        emitter:Finish()
+		
+	
+		
+	return 0.01
 end
 
 function ENT:OnRemove()
@@ -67,6 +108,12 @@ function ENT:Arm()
 end
 
 function ENT:Think()
+    if SERVER then self:NextThink( self:ServerThink() or 0.1 ) end
+    if CLIENT then self:SetNextClientThink( self:ClientThink() or 0.01 ) end
+    return true
+end
+
+function ENT:ServerThink()
 
     if CurTime() >= self.at and !self.Armed then
         self:Arm()
@@ -90,7 +137,7 @@ function ENT:Think()
 
         if self.Armed then
             local phys = self:GetPhysicsObject()
-            phys:ApplyForceCenter( self:GetAngles():Forward() * 7000000 + self:GetAngles():Up() * 200000 )
+            phys:ApplyForceCenter( self:GetAngles():Forward() * 100000 + self:GetAngles():Up() * 2000 )
         end
 
         if CurTime() >= self.kt then
@@ -126,7 +173,7 @@ function ENT:Detonate()
             attacker = self.Owner
         end
 
-        util.BlastDamage(self, attacker, self:GetPos(), 256, 50)
+        util.BlastDamage(self, attacker, self:GetPos(), 100, 50)
 	 util.ScreenShake(self:GetPos(),2000,100,0.35,720)
         self:Remove()
     end

@@ -1,5 +1,5 @@
  ENT.Type 			= "anim"  
- ENT.PrintName			= "Rocket Launcher"  
+ ENT.PrintName			= "Plasma Rifle"  
  ENT.Author			= "Generic Default"  
  ENT.Contact			= "AIDS"  
  ENT.Purpose			= "SPLODE"  

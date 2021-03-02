@@ -2,7 +2,7 @@
 {
 	"$basetexture" "snowysnowtime/sword_det"
 	"$detail" "snowysnowtime/sword_det"
-	"$color2" "[ 0 0.75 0.75 ]"
+	"$color2" "[ 0.1 0.6 0.6 ]"
 	"$translucent" "1"
 	"$additive" "1"
 	"$nodraw" "1"

@@ -2332,7 +2332,7 @@ sound.Add(
 sound.Add(
 {
     name = "h3.smg_fire",
-    channel = CHAN_STATIC,
+    channel = CHAN_WEAPON,
     volume = 1.0,
     soundlevel = 80,
     sound = {"snow/weapons/smg/smg_fire1.wav","snow/weapons/smg/smg_fire2.wav","snow/weapons/smg/smg_fire3.wav","snow/weapons/smg/smg_fire4.wav","snow/weapons/smg/smg_fire5.wav","snow/weapons/smg/smg_fire6.wav","snow/weapons/smg/smg_fire7.wav","snow/weapons/smg/smg_fire8.wav","snow/weapons/smg/smg_fire9.wav","snow/weapons/smg/smg_fire10.wav","snow/weapons/smg/smg_fire11.wav","snow/weapons/smg/smg_fire12.wav","snow/weapons/smg/smg_fire13.wav"}
