@@ -1,0 +1,13 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "snowysnowtime/2k/og/h3/spike"
+	"$bumpmap" "snowysnowtime/2k/og/h3/spike_n"
+	"$detailscale" 0.1
+	"$phong" "1" 
+	"$phongboost" "54"
+	"$phongexponent" "60"
+	"$phongexponenttexture" "snowysnowtime\ma5e\phongexp255"
+	"$phongalbedotint" "1"
+	"$phongfresnelranges" "[1.5 3 5]"
+	"$phongdisablehalflambert" "1"
+}

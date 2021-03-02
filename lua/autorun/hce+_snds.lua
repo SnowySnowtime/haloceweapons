@@ -1466,20 +1466,92 @@ sound.Add(
 
 sound.Add(
 {
-    name = "hce.rlreload",
+    name = "hce.rlreload1",
     channel = CHAN_STATIC,
     volume = 1.0,
     soundlevel = 80,
-    sound = "hce/rocketlauncher_reload.wav"
+    sound = "hce/rocketlauncher_reload1.wav"
 })
 
 sound.Add(
 {
-    name = "hce.rlreloaddry",
+    name = "hce.rlreload2",
     channel = CHAN_STATIC,
     volume = 1.0,
     soundlevel = 80,
-    sound = "hce/rocket_reloadempty.wav"
+    sound = "hce/rocketlauncher_reload2.wav"
+})
+
+sound.Add(
+{
+    name = "hce.rlreload3",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = "hce/rocketlauncher_reload3.wav"
+})
+
+sound.Add(
+{
+    name = "hce.rlreload4",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = "hce/rocketlauncher_reload4.wav"
+})
+
+sound.Add(
+{
+    name = "hce.rlreload5",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = "hce/rocketlauncher_reload5.wav"
+})
+
+sound.Add(
+{
+    name = "hce.rlreloaddry1",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = "hce/rocket_reloadempty1.wav"
+})
+
+sound.Add(
+{
+    name = "hce.rlreloaddry2",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = "hce/rocket_reloadempty2.wav"
+})
+
+sound.Add(
+{
+    name = "hce.rlreloaddry3",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = "hce/rocket_reloadempty3.wav"
+})
+
+sound.Add(
+{
+    name = "hce.rlreloaddry4",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = "hce/rocket_reloadempty4.wav"
+})
+
+sound.Add(
+{
+    name = "hce.rlreloaddry5",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = "hce/rocket_reloadempty5.wav"
 })
 
 sound.Add(
@@ -1520,6 +1592,33 @@ sound.Add(
 
 sound.Add(
 {
+    name = "hce.rlspinstart",
+    channel = CHAN_USER_BASE,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = "hce/rocket_spin_start.wav"
+})
+
+sound.Add(
+{
+    name = "hce.rlspin",
+    channel = CHAN_USER_BASE,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = "hce/rocket_spin.wav"
+})
+
+sound.Add(
+{
+    name = "hce.rlspinend",
+    channel = CHAN_USER_BASE,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = "hce/rocket_spin_end.wav"
+})
+
+sound.Add(
+{
     name = "hce.rlfirer",
     channel = CHAN_STATIC,
     volume = 1.0,
@@ -1538,20 +1637,120 @@ sound.Add(
 
 sound.Add(
 {
-    name = "hcea.rlreload",
-    channel = CHAN_STATIC,
+    name = "hcea.rlspinstart",
+    channel = CHAN_USER_BASE,
     volume = 1.0,
     soundlevel = 80,
-    sound = "hcea/rocketlauncher_reload.wav"
+    sound = "hcea/rocket_spin_start.wav"
 })
 
 sound.Add(
 {
-    name = "hcea.rlreloaddry",
+    name = "hcea.rlspin",
+    channel = CHAN_USER_BASE,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = "hcea/rocket_spin.wav"
+})
+
+sound.Add(
+{
+    name = "hcea.rlspinend",
+    channel = CHAN_USER_BASE,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = "hcea/rocket_spin_end.wav"
+})
+
+sound.Add(
+{
+    name = "hcea.rlreload1",
     channel = CHAN_STATIC,
     volume = 1.0,
     soundlevel = 80,
-    sound = "hcea/rocket_reloade.wav"
+    sound = "hcea/rocketlauncher_reload1.wav"
+})
+
+
+sound.Add(
+{
+    name = "hcea.rlreload2",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = "hcea/rocketlauncher_reload2.wav"
+})
+
+sound.Add(
+{
+    name = "hcea.rlreload3",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = "hcea/rocketlauncher_reload3.wav"
+})
+
+sound.Add(
+{
+    name = "hcea.rlreload4",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = "hcea/rocketlauncher_reload4.wav"
+})
+
+sound.Add(
+{
+    name = "hcea.rlreload5",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = "hcea/rocketlauncher_reload5.wav"
+})
+
+sound.Add(
+{
+    name = "hcea.rlreloaddry1",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = "hcea/rocket_reloade1.wav"
+})
+
+sound.Add(
+{
+    name = "hcea.rlreloaddry2",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = "hcea/rocket_reloade2.wav"
+})
+
+sound.Add(
+{
+    name = "hcea.rlreloaddry3",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = "hcea/rocket_reloade3.wav"
+})
+
+sound.Add(
+{
+    name = "hcea.rlreloaddry4",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = "hcea/rocket_reloade4.wav"
+})
+
+sound.Add(
+{
+    name = "hcea.rlreloaddry5",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = "hcea/rocket_reloade5.wav"
 })
 
 sound.Add(
@@ -2884,7 +3083,59 @@ sound.Add(
 
 --Spiker
 
+sound.Add(
+{
+    name = "h3.spiker_fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = {"h3/spike_rifle1.wav","h3/spike_rifle2.wav","h3/spike_rifle3.wav","h3/spike_rifle4.wav","h3/spike_rifle5.wav","h3/spike_rifle6.wav",}
+})
 
+sound.Add(
+{
+    name = "h3.spiker_deploy",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = {"h3/spike_draw1.wav","h3/spike_draw2.wav","h3/spike_draw3.wav",}
+})
+
+sound.Add(
+{
+    name = "h3.spiker_pose1",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = {"h3/spike_pose1a.wav","h3/spike_pose1b.wav","h3/spike_pose1c.wav",}
+})
+
+sound.Add(
+{
+    name = "h3.spiker_reload1",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = {"h3/spike_reload1-1.wav","h3/spike_reload2-1.wav","h3/spike_reload3-1.wav",}
+})
+
+sound.Add(
+{
+    name = "h3.spiker_reload2",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = {"h3/spike_reload1-2.wav","h3/spike_reload2-2.wav","h3/spike_reload3-2.wav",}
+})
+
+sound.Add(
+{
+    name = "h3.spiker_reload3",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = {"h3/spike_reload1-3.wav","h3/spike_reload2-3.wav","h3/spike_reload3-3.wav",}
+})
 
 --Mauler
 
@@ -2917,7 +3168,95 @@ sound.Add(
 
 --Brute Shot
 
+sound.Add(
+{
+    name = "h3.bruteshot_fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = {"h3/brute_fire_new2_1.wav","h3/brute_fire_new2_2.wav","h3/brute_fire_new2_3.wav","h3/brute_fire_new2_4.wav","h3/brute_fire_new2_5.wav",}
+})
 
+sound.Add(
+{
+    name = "h3.bruteshot_projectile",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = {"h3/brute_shot_projectile1.wav","h3/brute_shot_projectile2.wav","h3/brute_shot_projectile3.wav","h3/brute_shot_projectile4.wav","h3/brute_shot_projectile5.wav",}
+})
+
+sound.Add(
+{
+    name = "h3.bruteshot_deploy",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = {"h3/fp_brute_shot_ready1.wav","h3/fp_brute_shot_ready2.wav","h3/fp_brute_shot_ready3.wav",}
+})
+
+sound.Add(
+{
+    name = "h3.bruteshot_pose1",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = {"h3/bruteshot_pose1a.wav","h3/bruteshot_pose1b.wav","h3/bruteshot_pose1c.wav",}
+})
+
+sound.Add(
+{
+    name = "h3.bruteshot_pose2",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = {"h3/bruteshot_pose2a.wav","h3/bruteshot_pose2b.wav","h3/bruteshot_pose2c.wav",}
+})
+
+sound.Add(
+{
+    name = "h3.bruteshot_reload1",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = {"h3/fp_brute_shot_reload1-1.wav","h3/fp_brute_shot_reload2-1.wav","h3/fp_brute_shot_reload3-1.wav",}
+})
+
+sound.Add(
+{
+    name = "h3.bruteshot_reload2",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = {"h3/fp_brute_shot_reload1-2.wav","h3/fp_brute_shot_reload2-2.wav","h3/fp_brute_shot_reload3-2.wav",}
+})
+
+sound.Add(
+{
+    name = "h3.bruteshot_reload3",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = {"h3/fp_brute_shot_reload1-3.wav","h3/fp_brute_shot_reload2-3.wav","h3/fp_brute_shot_reload3-3.wav",}
+})
+
+sound.Add(
+{
+    name = "h3.bruteshot_reload4",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = {"h3/fp_brute_shot_reload1-4.wav","h3/fp_brute_shot_reload2-4.wav","h3/fp_brute_shot_reload3-4.wav",}
+})
+
+sound.Add(
+{
+    name = "h3.bruteshot_melee",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = {"h3/brute_shot_melee1.wav","h3/brute_shot_melee2.wav","h3/brute_shot_melee3.wav",}
+})
 
 --Gravity Hammer
 

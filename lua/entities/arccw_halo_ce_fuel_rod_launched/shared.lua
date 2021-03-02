@@ -19,7 +19,6 @@ function ENT:Initialize()
         self:SetMoveType( MOVETYPE_VPHYSICS )
         self:SetSolid( SOLID_VPHYSICS )
         self:PhysicsInit( SOLID_VPHYSICS )
-        self:SetCollisionGroup( COLLISION_GROUP_PROJECTILE )
         self:DrawShadow( true )
 
         local phys = self:GetPhysicsObject()
@@ -36,6 +35,10 @@ function ENT:Initialize()
 
     self.at = CurTime() + self.ArmTime
     self.Armed = false
+		        timer.Simple(0, function()
+            if !IsValid(self) then return end
+            self:SetCollisionGroup(COLLISION_GROUP_PROJECTILE)
+        end)
 end
 
 function ENT:OnRemove()

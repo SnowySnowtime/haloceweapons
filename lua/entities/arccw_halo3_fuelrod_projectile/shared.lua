@@ -20,22 +20,24 @@ function ENT:Initialize()
         self:SetSolid( SOLID_VPHYSICS )
         self:SetMaterial( slipperymetal )
         self:PhysicsInit( SOLID_VPHYSICS )
-        self:SetCollisionGroup( COLLISION_GROUP_PROJECTILE )
         self:DrawShadow( false )
 
         local phys = self:GetPhysicsObject()
         if phys:IsValid() then
             phys:Wake()
-		phys:SetMass(2)
+			phys:SetMass(2)
             phys:SetBuoyancyRatio(0)
-	phys:EnableGravity( false )
+			phys:EnableGravity( false )
         end
 
         self.kt = CurTime() + self.FuseTime
         self.at = CurTime() + self.ArmTime
-			self.bt = CurTime() + 1
-	self.motorsound = CreateSound( self, "halo/combat_evolved/weapons/plasma_grenade_plasma_projectile_plas_grenlp1.wav")
-
+		self.bt = CurTime() + 1
+		self.motorsound = CreateSound( self, "halo/combat_evolved/weapons/plasma_grenade_plasma_projectile_plas_grenlp1.wav")
+        timer.Simple(0, function()
+            if !IsValid(self) then return end
+            self:SetCollisionGroup( COLLISION_GROUP_PROJECTILE )
+        end)
     end
 end
 

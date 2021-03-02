@@ -9,7 +9,7 @@
 	"$phongalbedotint" "1"
 	"$phongfresnelranges" "[1 1.25 1.75]"
 	"$phongdisablehalflambert" "1"
-	"$color2" "[ 1 1 1 ]"
+	"$color2" "[ 2 2 2.5 ]"
 	"$translucent" "1"
 	"$additive" "1"
 }

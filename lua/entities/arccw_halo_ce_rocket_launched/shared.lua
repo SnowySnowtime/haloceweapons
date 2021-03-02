@@ -6,7 +6,7 @@ ENT.Information = ""
 ENT.Spawnable = false
 ENT.AdminSpawnable = false
 
-ENT.Model = "models/weapons/w_missile_launch.mdl"
+ENT.Model = "models/snowysnowtime/projectiles/rocket_ce_proj.mdl"
 ENT.FuseTime = 5
 ENT.ArmTime = 0.01
 
@@ -19,7 +19,6 @@ function ENT:Initialize()
         self:SetMoveType( MOVETYPE_VPHYSICS )
         self:SetSolid( SOLID_VPHYSICS )
         self:PhysicsInit( SOLID_VPHYSICS )
-        self:SetCollisionGroup( COLLISION_GROUP_PROJECTILE )
         self:DrawShadow( true )
 
         local phys = self:GetPhysicsObject()
@@ -36,6 +35,10 @@ function ENT:Initialize()
 
     self.at = CurTime() + self.ArmTime
     self.Armed = false
+	        timer.Simple(0, function()
+            if !IsValid(self) then return end
+            self:SetCollisionGroup(COLLISION_GROUP_PROJECTILE)
+        end)
 end
 
 function ENT:OnRemove()
@@ -113,7 +116,7 @@ function ENT:Think()
         smoke:SetRollDelta( math.Rand(-0.2,0.2) )
         smoke:SetColor( 255, 255, 225 )
         smoke:SetAirResistance( 2 )
-        smoke:SetPos( self:GetPos() )
+        smoke:SetPos( self:GetPos() + (self:GetForward() * -10) )
         smoke:SetLighting( false )
 		
         local smoke2 = emitter:Add("effects/halo3/smoke_dark", self:GetPos())
@@ -128,7 +131,7 @@ function ENT:Think()
         smoke2:SetRollDelta( math.Rand(-0.2,0.2) )
         smoke2:SetColor( 255,255, 255 )
         smoke2:SetAirResistance( 50 )
-        smoke2:SetPos( self:GetPos() )
+        smoke2:SetPos( self:GetPos() + (self:GetForward() * -10) )
         smoke2:SetLighting( false )
         emitter:Finish()
         end
