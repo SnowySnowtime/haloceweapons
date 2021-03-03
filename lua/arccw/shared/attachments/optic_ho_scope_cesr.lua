@@ -54,8 +54,8 @@ att.Mult_SightTime = 1
 att.AttachSound = "attch/snow/halo/h1/forward.wav"
 att.DetachSound = "attch/snow/halo/h1/back.wav"
 
-local ScopeTexture	= Material("hud/scopes/br_scope.png")
-local proscopesize		= 180
+local ScopeTexture	= Material("hud/scopes/halo_sniper_scope.png")
+local proscopesize		= 390
 local bitchYouDontEvenKnowUs = 1
 --[[
 		How the shit?

@@ -747,6 +747,15 @@ sound.Add(
 
 sound.Add(
 {
+    name = "ar_sup_fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = {"hce/ar_fire1.wav","hce/ar_fire2.wav","hce/ar_fire3.wav","hce/ar_fire4.wav"}
+})
+
+sound.Add(
+{
     name = "ar_hce_fire2",
     channel = CHAN_STATIC,
     volume = 1.0,

@@ -1,4 +1,4 @@
-att.PrintName = "Accuracy"
+att.PrintName = "BR55-L"
 att.Icon = Material("snowysnowtime/2k/ico/h3/smg_sil.png")
 att.Description = "Improved internals and barrel length increase this weapons accuracy, at the cost of weight."
 att.Desc_Pros = {
@@ -8,7 +8,7 @@ att.Desc_Cons = {
 	"- Increased Weight (35%)"
 }
 att.SortOrder = 1000
-att.Slot = "variant_brho"
+att.Slot = "variant_brho1"
 att.Mult_AccuracyMOA = 0.75
 att.Mult_HipDispersion = 0.8
 att.Mult_MoveDispersion = 0.665

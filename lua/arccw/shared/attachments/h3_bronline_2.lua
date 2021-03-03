@@ -1,4 +1,4 @@
-att.PrintName = "Magazine"
+att.PrintName = "XBR55"
 att.Icon = Material("snowysnowtime/2k/ico/h3/smg_sil.png")
 att.Description = "A Variant of the Battle Rifle which increases the Magazine size."
 att.Desc_Pros = {
@@ -9,7 +9,7 @@ att.Desc_Cons = {
 	"- Damage Decreased (10%)"
 }
 att.SortOrder = 999
-att.Slot = "variant_brho"
+att.Slot = "variant_brho1"
 att.Mult_Damage = 0.9
 att.Mult_DamageMin = 0.9
 att.Override_ClipSize = 42

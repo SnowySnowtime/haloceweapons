@@ -1,4 +1,4 @@
-att.PrintName = "Power"
+att.PrintName = "BR85HB"
 att.Icon = Material("snowysnowtime/2k/ico/h3/smg_sil.png")
 att.Description = "Super Variant of the Battle Rifle. Boasts a Suppressor and majorly increased mag size."
 att.Desc_Pros = {
@@ -9,7 +9,7 @@ att.Desc_Cons = {
 	"- Decreased Range (60%)"
 }
 att.SortOrder = 996
-att.Slot = "variant_brho"
+att.Slot = "variant_brhou"
 att.Override_MuzzleEffect = "astw2_halo_3_muzzle_SMG_ODST"
 att.Override_MuzzleEffectAttachment = "5"
 

@@ -1,0 +1,18 @@
+"unlitgeneric"
+{
+	"$basetexture" "snowysnowtime/valk/ho/unsc/weapons/shared/Screenline_d"
+
+	"$color2" "[3 0 0]"
+	
+	"$additive" "1"
+
+	"Proxies" 
+	{
+		"TextureScroll"
+		{
+			"texturescrollvar" "$basetexturetransform"
+			"texturescrollrate" 0.35
+		                "texturescrollangle" -270.00
+		}
+	}
+}

@@ -1,4 +1,4 @@
-att.PrintName = "Range"
+att.PrintName = "BR55-S9"
 att.Icon = Material("snowysnowtime/2k/ico/h3/smg_sil.png")
 att.Description = "Variant of the Battle Rifle more akin to a Sniper Rifle. High Damage, Great Accuracy, awful fire rate."
 att.Desc_Pros = {
@@ -11,7 +11,7 @@ att.Desc_Cons = {
 }
 att.Model = "models/snowysnowtime/smg_sight.mdl"
 att.SortOrder = 996
-att.Slot = "variant_brho"
+att.Slot = "variant_brho1"
 att.Override_MuzzleEffect = "astw2_halo_3_muzzle_sniper_rifle"
 att.Override_MuzzleEffectAttachment = "6"
 att.Model = "models/snowysnowtime/valk/ho/rng_ammo.mdl"

@@ -1,0 +1,12 @@
+"unlitgeneric"
+{
+	"$basetexture" "snowysnowtime/valk/ho/unsc/weapons/shared/static_d"
+	"$nocull" "1"
+	"$additive" "1"
+
+
+	"$basetexturetransform" "center .5 .5 scale 40 40 rotate 0 translate 0 0"
+
+	"$color2" "[0.501 0 1]"
+
+}

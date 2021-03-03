@@ -1,4 +1,4 @@
-att.PrintName = "Damage"
+att.PrintName = "BR55-D7"
 att.Icon = Material("snowysnowtime/2k/ico/h3/smg_sil.png")
 att.Description = "Variant of the Battle Rifle more akin to the DMR with a high damage output."
 att.Desc_Pros = {
@@ -12,7 +12,7 @@ att.Desc_Cons = {
 	"- Decreased Hip Fire Accuracy"
 }
 att.SortOrder = 997
-att.Slot = "variant_brho"
+att.Slot = "variant_brho1"
 att.Override_MuzzleEffectAttachment = "4"
 
 att.Override_Firemodes = {
