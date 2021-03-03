@@ -15,7 +15,7 @@ att.Override_MuzzleEffectAttachment = "3"
 
 att.AttachSound = "attch/snow/halo/h3/x_button.wav"
 att.DetachSound = "attch/snow/halo/h3/b_button.wav"
-att.Model = "models/snowysnowtime/valk/ho/rof_ammo.mdl"
+att.Model = "models/snowysnowtime/ho/rof_ammo.mdl"
 
 att.Mult_RPM = 0.45
 

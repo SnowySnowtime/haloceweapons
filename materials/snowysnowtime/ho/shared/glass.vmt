@@ -1,7 +1,7 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "snowysnowtime/valk/ho/unsc/weapons/shared/glass_d"
-	"$bumpmap" "snowysnowtime/valk/shared/normal_shared"
+	"$basetexture" "snowysnowtime/ho/shared/glass_d"
+	"$bumpmap" "snowysnowtime/ho/shared/normal_shared"
 	"$additive" "1"
 	"$color2" "[.01 .01 .01]"
 	"$phong" "1"
@@ -10,10 +10,10 @@
 	"$phongalbedotint" "1"
 
 	"$phongfresnelranges" "[3 5 7]"	
-	"$phongexponenttexture" "snowysnowtime/valk/shared/phongexp255"
+	"$phongexponenttexture" "snowysnowtime/ho/shared/phongexp255"
 	"$phongdisablehalflambert" "1.00"
 
-	$envmap		"snowysnowtime/valk/shared/cin_m70_cube_grey"
+	$envmap		"snowysnowtime/ho/shared/cin_m70_cube_grey"
 	$normalmapalphaenvmapmask 1
 	$cubemaptint	"[1 1 1]"
 	$cubemappower	.1

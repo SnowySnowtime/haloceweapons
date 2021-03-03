@@ -1,0 +1,16 @@
+"UnlitGeneric"
+{
+	"$basetexture" "snowysnowtime/ho/br/hud/r_numbers_plate6"
+	"$additive" "0"
+	"$color2" "[1 0 0]"
+	
+	
+	Proxies // proxies are listed inside this block
+	{
+		ArcCW_HALOCE_AR
+		{
+			resultVar 1
+			prefixstring "snowysnowtime/ho/br/hud/r_numbers_plate"
+		}
+	}
+}

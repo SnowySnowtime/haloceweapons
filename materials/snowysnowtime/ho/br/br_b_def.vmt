@@ -1,12 +1,10 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "snowysnowtime/ho/shared/BattleRifle_a_d"
-	"$bumpmap" "snowysnowtime/ho/shared/BattleRifle_a_n"
+	"$basetexture" "snowysnowtime/ho/shared/br_def_b"
+	"$bumpmap" "snowysnowtime/ho/shared/BattleRifle_b_n"
 	"$AmbientOcclusion" "1"
 
 	"$blendtintbybasealpha" "1"
-
-	"$color2" "[0.4 0.4 0.4]"
 
 	"$phong" "1"
 	"$phongboost" "30"

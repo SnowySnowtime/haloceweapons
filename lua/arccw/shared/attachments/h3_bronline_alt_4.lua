@@ -26,8 +26,8 @@ att.Override_Firemodes = {
 
 att.AdditionalSights = {
 	{
-		Pos = Vector(-3.49, -2, -0.55),
-		Ang = Angle(-0.76, 0.175, 0),
+		Pos = Vector(-3.725, 0, -0.7),
+		Ang = Angle(-0.515, 0.15, 0),
 		GlobalPos = Vector(0, 0, 0),
 		GlobalAng = Angle(0, 0, 0),
 		Magnification = 2,
@@ -52,7 +52,7 @@ att.Mult_Damage = 2.5
 att.Mult_DamageMin = 0.5
 att.Mult_Range = 0.24
 att.Mult_Recoil = 3
-att.Model = "models/snowysnowtime/valk/ho/heavy_ammo.mdl"
+att.Model = "models/snowysnowtime/ho/dmg_ammo.mdl"
 
 att.ActivateElements = {"dmg"}
 att.GivesFlags = {"dmg"}

@@ -14,7 +14,7 @@ att.Mult_Damage = 0.9
 att.Mult_DamageMin = 0.9
 att.Override_ClipSize = 42
 att.Override_MuzzleEffectAttachment = "3"
-att.Model = "models/snowysnowtime/valk/ho/mag_ammo.mdl"
+att.Model = "models/snowysnowtime/ho/mag_ammo.mdl"
 
 att.AttachSound = "attch/snow/halo/h3/x_button.wav"
 att.DetachSound = "attch/snow/halo/h3/b_button.wav"

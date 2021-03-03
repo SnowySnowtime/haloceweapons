@@ -1,7 +1,7 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "snowysnowtime/valk/ho/unsc/weapons/shared/UNSC_Vector_Decal_d"
-	"$bumpmap" "snowysnowtime/valk/shared/normal_shared"
+	"$basetexture" "snowysnowtime/ho/shared/UNSC_Vector_Decal_d"
+	"$bumpmap" "snowysnowtime/ho/shared/normal_shared"
 	"$translucent" "1"
 	"$color2" "[2 2 2]"
 	
@@ -11,7 +11,7 @@
 	"$phongalbedotint" "1"
 
 	"$phongfresnelranges" "[3 5 7]"	
-	"$phongexponenttexture" "snowysnowtime/valk/shared/phongexp255"
+	"$phongexponenttexture" "snowysnowtime/ho/shared/phongexp255"
 	"$phongdisablehalflambert" "1.00"
 
 

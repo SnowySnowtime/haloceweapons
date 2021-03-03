@@ -1,0 +1,6 @@
+"unlitgeneric"
+{
+	"$basetexture" "snowysnowtime/ho/shared/BR_display_d"
+	"$additive" "1"
+	"$color2" "[1 0 0]"
+}

@@ -78,7 +78,7 @@ SWEP.MeleeHitNPCSound = "hceslap"
 
 SWEP.ViewModel = "models/snowysnowtime/ho/c_br_p2.mdl"
 SWEP.WorldModel = "models/snowysnowtime/ho/c_br_p2.mdl"
-SWEP.ViewModelFOV = 90
+SWEP.ViewModelFOV = 75
 SWEP.WorldModelOffset = {
     pos        =    Vector(-4.75, 4.7, -3.5),
     ang        =    Angle(-12, 0, 175),
@@ -195,30 +195,70 @@ SWEP.AttachmentElements = {
         WMBodygroups = {{ind = 0, bg = 1}},
 		NameChange = "BR55-A58",
 		TrueNameChange = "BR55-A58",
+		AttPosMods = {
+             [1] = {
+                vpos = Vector(5.3, 0, 7.85), -- offset that the attachment will be relative to the bone
+				vang = Angle(0, 0, 0),
+				wpos = Vector(8, 1.3, -7.55),
+				wang = Angle(-12, -1.155, 175)
+				},
+		},
     },
 	["mag2"] = {
 		VMBodygroups = {{ind = 0, bg = 2}},
         WMBodygroups = {{ind = 0, bg = 2}},
 		NameChange = "BR-C89 Vault",
 		TrueNameChange = "BR-C89 Vault",
+		AttPosMods = {
+             [1] = {
+                vpos = Vector(5.3, 0, 7.43), -- offset that the attachment will be relative to the bone
+				vang = Angle(0, 0, 0),
+				wpos = Vector(8, 1.3, -7.55),
+				wang = Angle(-12, -1.155, 175)
+				},
+		},
     },
 	["rof2"] = {
 		VMBodygroups = {{ind = 0, bg = 5}},
         WMBodygroups = {{ind = 0, bg = 5}},
 		NameChange = "BR55-R38 Hailstorm",
 		TrueNameChange = "BR55-R38 Hailstorm",
+		AttPosMods = {
+             [1] = {
+                vpos = Vector(5.0, 0, 7.8), -- offset that the attachment will be relative to the bone
+				vang = Angle(0, 0, 0),
+				wpos = Vector(8, 1.3, -7.55),
+				wang = Angle(-12, -1.155, 175)
+				},
+		},
     },
 	["dmg"] = {
 		VMBodygroups = {{ind = 0, bg = 3}},
         WMBodygroups = {{ind = 0, bg = 3}},
 		NameChange = "BR55-D9",
 		TrueNameChange = "BR55-D9",
+		AttPosMods = {
+             [2] = {
+                vpos = Vector(3.7, -0.65, 4.824), -- offset that the attachment will be relative to the bone
+				vang = Angle(0, 0, 0),
+				wpos = Vector(8, 1.3, -7.55),
+				wang = Angle(-12, -1.155, 175)
+				},
+		},
     },
 	["rng2"] = {
 		VMBodygroups = {{ind = 0, bg = 4}},
         WMBodygroups = {{ind = 0, bg = 4}},
 		NameChange = "BR55 SPR",
 		TrueNameChange = "BR55 SPR",
+		AttPosMods = {
+             [1] = {
+                vpos = Vector(5.35, 0, 7.55), -- offset that the attachment will be relative to the bone
+				vang = Angle(0, 0, 0),
+				wpos = Vector(8, 1.3, -7.55),
+				wang = Angle(-12, -1.155, 175)
+				},
+		},
     },
 	["pow"] = {
 		VMBodygroups = {{ind = 0, bg = 6}},
@@ -237,7 +277,7 @@ SWEP.Attachments = {
         Slot = {"halo_optics"}, -- what kind of attachments can fit here, can be string or table
         Bone = "gun", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(5.8, -0.20, 7.75), -- offset that the attachment will be relative to the bone
+            vpos = Vector(5.4, 0, 7.8), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
             wpos = Vector(8, 1.3, -7.55),
             wang = Angle(-12, -1.155, 175)
@@ -284,6 +324,19 @@ SWEP.Attachments = {
         DefaultAttName = "Standard Issue",
 		Bone = "gun", -- relevant bone any attachments will be mostly referring to
 		Offset = {
+            vpos = Vector(0, 0, 0), -- offset that the attachment will be relative to the bone
+            vang = Angle(0, 0, 0),
+            wpos = Vector(-4.9, 4.5, -3.5),
+            wang = Angle(-12, -1.155, 175)
+        },
+        FreeSlot = true
+    },
+	{
+        PrintName = "Animation Set",
+        Slot = {"anim_br"},
+        DefaultAttName = "Halo 3 Anims",
+		Bone = "gun", -- relevant bone any attachments will be mostly referring to
+		Offset = {
             vpos = Vector(-8.08, -3.745, 6.87), -- offset that the attachment will be relative to the bone
             vang = Angle(0, 0, 0),
             wpos = Vector(-4.9, 4.5, -3.5),
@@ -304,9 +357,9 @@ SWEP.Animations = {
 	["enter_sight"] = {
 		Source = "aim",
 	},
-	["exit_sight"] = {
+	["exit_sights"] = {
 		Source = "aim",
-		Time = 1/30,
+		Time = 1/1,
 	},
 	["enter_inspect"] = {
 		Source = "pose1",
@@ -349,6 +402,69 @@ SWEP.Animations = {
     },
     ["reload_empty"] = {
         Source = "reload",
+        Time = 57/30,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+        Checkpoints = {12, 31, 48},
+        FrameRate = 30,
+        LHIK = true,
+        LHIKIn = 0.5,
+        LHIKOut = 0.5,
+    },
+	["idle_85"] = {
+        Source = "idle_85",
+        Time = 99/30
+    },
+	["idle_sights_85"] = {
+		Source = "aim_85",
+	},
+	["enter_sight_85"] = {
+		Source = "aim_85",
+	},
+	["exit_sights_85"] = {
+		Source = "aim_85",
+		Time = 1/1,
+	},
+	["enter_inspect_85"] = {
+		Source = "pose1_85",
+	},
+	["exit_inspect_85"] = {
+		Source = "pose2_85",
+		Time = 87/30,
+	},
+	["fire_iron_85"] = {
+        Source = {"aim_85"},
+		Time = 1/30,
+    },
+    ["draw_85"] = {
+        Source = "draw_85",
+        Time = 18/30,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 0.25,
+    },
+    ["fire_85"] = {
+        Source = { "fire0_85","fire1_85","fire2_85" },
+        Time = 5/30,
+    },
+	["bash_85"] = {
+        Source = {"melee1_85","melee2_85"},
+		Time = 29/30,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 0.6,
+    },
+    ["reload_85"] = {
+        Source = "reload_85",
+        Time = 57/30,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+        Checkpoints = {12, 31, 48},
+        FrameRate = 30,
+        LHIK = true,
+        LHIKIn = 0.5,
+        LHIKOut = 0.5,
+    },
+    ["reload_empty_85"] = {
+        Source = "reload_85",
         Time = 57/30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         Checkpoints = {12, 31, 48},
@@ -420,4 +536,27 @@ SWEP.Hook_BulletHit = function(wep, data) -- please fesiug help me im so ineffic
 	if ezlimbs then
 		data.damage = data.damage * dmgLimbs
 	end
+end
+
+SWEP.Hook_TranslateAnimation = function(wep, anim)
+    if wep.Attachments[7].Installed == "h3_bronline_anim" then
+		local annivtag = (
+			anim == "idle" or
+			anim == "idle_sights" or
+			anim == "enter_sight" or
+			anim == "exit_sight" or
+			anim == "enter_inspect" or
+			anim == "exit_inspect" or
+			anim == "fire_iron" or
+			anim == "draw" or
+			anim == "fire" or
+			anim == "bash" or
+			anim == "reload" or
+			anim == "reload_empty"
+		)
+		
+		if annivtag then
+			return anim .. "_85" -- lol
+		end
+    end
 end

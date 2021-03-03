@@ -1,0 +1,6 @@
+"unlitgeneric"
+{
+	"$basetexture" "snowysnowtime/ho/shared/BattleRifle_display_d"
+	"$AmbientOcclusion" "1"
+
+}

@@ -14,7 +14,7 @@ att.SortOrder = 996
 att.Slot = "variant_brho1"
 att.Override_MuzzleEffect = "astw2_halo_3_muzzle_sniper_rifle"
 att.Override_MuzzleEffectAttachment = "6"
-att.Model = "models/snowysnowtime/valk/ho/rng_ammo.mdl"
+att.Model = "models/snowysnowtime/ho/rng_ammo_t2.mdl"
 
 att.AttachSound = "attch/snow/halo/h3/x_button.wav"
 att.DetachSound = "attch/snow/halo/h3/b_button.wav"

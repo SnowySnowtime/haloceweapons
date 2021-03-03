@@ -9,7 +9,7 @@ att.Desc_Cons = {
 	"- Decreased Range (60%)"
 }
 att.SortOrder = 996
-att.Slot = "variant_brhou"
+att.Slot = "variant_brho1"
 att.Override_MuzzleEffect = "astw2_halo_3_muzzle_SMG_ODST"
 att.Override_MuzzleEffectAttachment = "5"
 
@@ -19,6 +19,6 @@ att.DetachSound = "attch/snow/halo/h3/b_button.wav"
 att.Mult_RPM = 1.1
 att.Mult_Range = 0.7
 att.Mult_Damage = 1.25
-att.Model = "models/snowysnowtime/valk/ho/pwr_ammo.mdl"
+att.Model = "models/snowysnowtime/ho/pwr_ammo.mdl"
 
 att.ActivateElements = {"pow"}

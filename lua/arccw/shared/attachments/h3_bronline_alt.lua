@@ -16,7 +16,7 @@ att.Mult_SightsDispersion = 0.35
 att.Mult_Speed = 0.70
 att.Add_BarrelLength = 10
 att.Override_MuzzleEffectAttachment = "1"
-att.Model = "models/snowysnowtime/valk/ho/acc_ammo.mdl"
+att.Model = "models/snowysnowtime/ho/acc_ammo.mdl"
 
 att.Override_Firemodes = {
     {
