@@ -24,7 +24,7 @@ function ENT:Initialize()
         local phys = self:GetPhysicsObject()
         if phys:IsValid() then
             phys:Wake()
-			phys:SetMass(24000)
+			phys:SetMass(2.4)
             phys:SetBuoyancyRatio(0)
             phys:EnableGravity( true )
         end

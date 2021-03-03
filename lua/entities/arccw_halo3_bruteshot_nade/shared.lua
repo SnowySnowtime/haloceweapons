@@ -24,9 +24,9 @@ function ENT:Initialize()
         local phys = self:GetPhysicsObject()
         if phys:IsValid() then
             phys:Wake()
-			phys:SetMass(24)
-            phys:SetBuoyancyRatio(1)
-            phys:EnableGravity( true )
+			phys:SetMass(1.4)
+            phys:SetBuoyancyRatio(0)
+            phys:EnableGravity( false )
         end
 
         self.kt = CurTime() + self.FuseTime
@@ -137,7 +137,11 @@ function ENT:ServerThink()
 
         if self.Armed then
             local phys = self:GetPhysicsObject()
-            phys:ApplyForceCenter( self:GetAngles():Forward() * 100000 + self:GetAngles():Up() * 2000 )
+            phys:ApplyForceCenter( self:GetAngles():Forward() * 500 )
+				        timer.Simple(0.2, function()
+            if !IsValid(self) then return end
+			phys:ApplyForceCenter( self:GetAngles():Forward() * -10 + self:GetAngles():Up() * -10 )
+			end)
         end
 
         if CurTime() >= self.kt then

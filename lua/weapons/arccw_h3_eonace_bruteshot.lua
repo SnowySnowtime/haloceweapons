@@ -84,7 +84,7 @@ SWEP.Range =  20 -- in METRES
 SWEP.Penetration = 100
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = "arccw_halo3_bruteshot_nade" -- entity to fire, if any
-SWEP.MuzzleVelocity = 100 -- projectile or phys bullet muzzle velocity
+SWEP.MuzzleVelocity = 2000 -- projectile or phys bullet muzzle velocity
 -- IN M/S
 
 SWEP.TracerNum = 1 -- tracer every X

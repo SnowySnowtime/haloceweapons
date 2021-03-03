@@ -24,7 +24,7 @@ function ENT:Initialize()
         local phys = self:GetPhysicsObject()
         if phys:IsValid() then
             phys:Wake()
-			phys:SetMass(24000)
+			phys:SetMass(2.4)
             phys:SetBuoyancyRatio(0)
             phys:EnableGravity( false )
         end
@@ -90,9 +90,8 @@ function ENT:Think()
 
         if self.Armed then
             local phys = self:GetPhysicsObject()
-            phys:ApplyForceCenter( self:GetAngles():Forward() * 7000000 )
+            phys:ApplyForceCenter( self:GetAngles():Forward() * 700 )
         end
-
         if CurTime() >= self.kt then
             self:Detonate()
         end
