@@ -2,8 +2,6 @@
 {
 	"$basetexture" "snowysnowtime/ho/shared/BR_display_d"
 
-	"$additive" "1"
-
 	"$color2" "[0 0 2]"
 
 

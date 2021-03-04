@@ -1,7 +1,6 @@
 "UnlitGeneric"
 {
 	"$basetexture" "snowysnowtime/ho/br/hud/l_numbers_plate3"
-	"$additive" "1"
 	"$color2" "[0 0 1]"
 	
 	Proxies // proxies are listed inside this block
