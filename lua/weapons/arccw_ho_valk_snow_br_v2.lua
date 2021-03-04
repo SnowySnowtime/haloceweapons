@@ -216,6 +216,12 @@ SWEP.AttachmentElements = {
 				wpos = Vector(8, 1.3, -7.55),
 				wang = Angle(-12, -1.155, 175)
 				},
+			[2] = {
+                vpos = Vector(8, -0.65, 4.824), -- offset that the attachment will be relative to the bone
+				vang = Angle(0, 0, 0),
+				wpos = Vector(8, 1.3, -7.55),
+				wang = Angle(-12, -1.155, 175)
+				},
 		},
     },
 	["rof2"] = {

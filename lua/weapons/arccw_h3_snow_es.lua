@@ -69,9 +69,14 @@ SWEP.HoldtypeActive = "knife"
 SWEP.Primary.ClipSize = -1
 
 SWEP.AttachmentElements = {
+["sword"] = {
+        VMBodygroups = {{ind = 0, bg = 1}},
+        WMBodygroups = {{ind = 0, bg = 1}},
+    },
 }
 
 SWEP.Attachments = {
+<<<<<<< Updated upstream
 	{
         PrintName = "Optic", -- print name
         DefaultAttName = "10x Scope",
@@ -124,6 +129,20 @@ SWEP.Attachments = {
             wpos = Vector(6, 2.4, -3.5),
             wang = Angle(-10.393, 0, 180)
         },
+=======
+{
+        PrintName = "Model",
+        Slot = {"model_es"},
+        DefaultAttName = "Halo 3 Model",
+		Bone = "frame blades", -- relevant bone any attachments will be mostly referring to
+		Offset = {
+            vpos = Vector(-0.01, 0, 0.005), -- offset that the attachment will be relative to the bone
+            vang = Angle(0, 0, 0),
+            wpos = Vector(-4.9, 4.5, -3.5),
+            wang = Angle(-12, -1.155, 175)
+        },
+        FreeSlot = true
+>>>>>>> Stashed changes
     },
 }
 
