@@ -47,9 +47,9 @@ SWEP.Tracer = "effect_arccw_halo_ce_tracer_ar"
 SWEP.MeleeTime = 1.1
 
 SWEP.ChamberSize = 0-- how many rounds can be chambered.
-SWEP.Primary.ClipSize = 2 -- DefaultClip is automatically set.
-SWEP.ExtendedClipSize = 6
-SWEP.ReducedClipSize = 2
+SWEP.Primary.ClipSize = 100 -- DefaultClip is automatically set.
+SWEP.ExtendedClipSize = 100
+SWEP.ReducedClipSize = 100
 
 SWEP.ShotgunReload = true
 
@@ -263,6 +263,10 @@ if engine.ActiveGamemode() == "terrortown" then
         desc = "A powerful sniper rifle. Uses typical rifle ammo, \nbut isn't lethal at point blank.\nPurchased weapons come with full attachments."
     };
     SWEP.Icon = "entities/arccw_h3_eonace_beamrifle.png"
+end
+
+if engine.ActiveGamemode() == "nzombies" then
+SWEP.Attachments = nil
 end
 
 -- nZombies Stuff

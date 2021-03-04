@@ -62,9 +62,9 @@ SWEP.MuzzleVelocity = 6000 -- projectile or phys bullet muzzle velocity
 -- IN M/S
 SWEP.NeverPhysBullet = true
 
-SWEP.Primary.ClipSize = 1 -- DefaultClip is automatically set.
-SWEP.ExtendedClipSize = 1
-SWEP.ReducedClipSize = 1
+SWEP.Primary.ClipSize = 100 -- DefaultClip is automatically set.
+SWEP.ExtendedClipSize = 100
+SWEP.ReducedClipSize = 100
 
 SWEP.Delay = 60 / 750 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
@@ -326,7 +326,7 @@ SWEP.Animations = {
     },
 	["bash"] = {
         Source = "melee",
-		Time = 44/30,
+		Time = 30/30,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.6,
@@ -359,15 +359,18 @@ SWEP.Animations = {
     },
 }
 
+if engine.ActiveGamemode() == "nzombies" then
+SWEP.Attachments = nil
+end
+
 -- nZombies Stuff
 SWEP.NZWonderWeapon		= false	-- Is this a Wonder-Weapon? If true, only one player can have it at a time. Cheats aren't stopped, though.
 --SWEP.NZRePaPText		= "your text here"	-- When RePaPing, what should be shown? Example: Press E to your text here for 2000 points.
-SWEP.NZPaPName				= "God Pistol"
-SWEP.NZPaPReplacement 	= "arccw_hre_snow_fml_m6d"	-- If Pack-a-Punched, replace this gun with the entity class shown here.
+SWEP.NZPaPName				= "Pocket Pulverizer"
 SWEP.NZPreventBox		= false	-- If true, this gun won't be placed in random boxes GENERATED. Users can still place it in manually.
 SWEP.NZTotalBlackList	= false	-- if true, this gun can't be placed in the box, even manually, and can't be bought off a wall, even if placed manually. Only code can give this gun.
 
-SWEP.Primary.MaxAmmo = 120
+SWEP.Primary.MaxAmmo = 1
 -- Max Ammo function
 
 function SWEP:NZMaxAmmo()
@@ -382,6 +385,14 @@ end
 -- PaP Function
 function SWEP:OnPaP()
 self.Ispackapunched = 1
-self.PrintName = "God Pistol"
+self.PrintName = "Pocket Pulverizer"
+self.Primary.MaxAmmo = 2
+self.Delay_Accel        = 0
+self.Delay_Decel        = 0
+self.Delay_Min      = 60 / 900
+self.Delay_Max      = 60 / 900
+self.Heat_Accel         = 0.10
+self.Heat_Decel         = 0.5
+self.BatteryConsumption     = 1/1000
 return true
 end

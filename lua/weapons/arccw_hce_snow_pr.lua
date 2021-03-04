@@ -75,9 +75,9 @@ SWEP.Tracer 	= "effect_astw2_halo_ce_tracer_pr"
 SWEP.ImpactEffect = "effect_astw2_halo_ce_impact_pr"
 
 SWEP.ChamberSize = 0-- how many rounds can be chambered.
-SWEP.Primary.ClipSize = 1 -- DefaultClip is automatically set.
-SWEP.ExtendedClipSize = 1
-SWEP.ReducedClipSize = 1
+SWEP.Primary.ClipSize = 100 -- DefaultClip is automatically set.
+SWEP.ExtendedClipSize = 100
+SWEP.ReducedClipSize = 100
 
 SWEP.Recoil = 0.2
 SWEP.RecoilSide = 0.2
@@ -325,16 +325,20 @@ SWEP.Animations = {
     },
 }
 
+if engine.ActiveGamemode() == "nzombies" then
+SWEP.Attachments = nil
+end
+
 SWEP.Rarity = "Legendary"
 -- nZombies Stuff
 SWEP.NZWonderWeapon		= false	-- Is this a Wonder-Weapon? If true, only one player can have it at a time. Cheats aren't stopped, though.
 --SWEP.NZRePaPText		= "your text here"	-- When RePaPing, what should be shown? Example: Press E to your text here for 2000 points.
-SWEP.NZPaPName				= "Scarab Gun"
+SWEP.NZPaPName				= "The Vaporizer"
 --SWEP.NZPaPReplacement 	= ""	-- If Pack-a-Punched, replace this gun with the entity class shown here.
 SWEP.NZPreventBox		= false	-- If true, this gun won't be placed in random boxes GENERATED. Users can still place it in manually.
 SWEP.NZTotalBlackList	= false	-- if true, this gun can't be placed in the box, even manually, and can't be bought off a wall, even if placed manually. Only code can give this gun.
 
-SWEP.Primary.MaxAmmo = 400
+SWEP.Primary.MaxAmmo = 1
 -- Max Ammo function
 
 function SWEP:NZMaxAmmo()
@@ -349,9 +353,14 @@ end
 -- PaP Function
 function SWEP:OnPaP()
 self.Ispackapunched = 1
-self.PrintName = "Scarab Gun"
-self.Primary.MaxAmmo = 1000
-self.Delay = 60 / 400
-self.ShootEntity = "scarab_beam"
+self.PrintName = "The Vaporizer"
+self.Primary.MaxAmmo = 200
+self.Delay_Accel        = 0.15
+self.Delay_Decel        = 0.6
+self.Delay_Min      = 0.1555555
+self.Delay_Max      = 0.07
+self.Heat_Accel         = 0.07
+self.Heat_Decel         = 0.4
+self.BatteryConsumption     = 1/800
 return true
 end

@@ -458,6 +458,10 @@ sound.Add({
 	sound = 			"m6_reanim/anal_bolt2.wav"
 })
 
+if engine.ActiveGamemode() == "nzombies" then
+SWEP.Attachments = nil
+end
+
 -- nZombies Stuff
 SWEP.NZWonderWeapon		= false	-- Is this a Wonder-Weapon? If true, only one player can have it at a time. Cheats aren't stopped, though.
 --SWEP.NZRePaPText		= "your text here"	-- When RePaPing, what should be shown? Example: Press E to your text here for 2000 points.

@@ -93,7 +93,7 @@ SWEP.Range = 200 -- in METRES
 SWEP.Penetration = 200
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
-SWEP.MuzzleVelocity = 4000 -- projectile or phys bullet muzzle velocity
+SWEP.MuzzleVelocity = 1100 -- projectile or phys bullet muzzle velocity
 -- IN M/S
 SWEP.NeverPhysBullet = true
 SWEP.TracerNum = 1 -- tracer every X
@@ -381,6 +381,10 @@ SWEP.Animations = {
         LHIKOut = 0.5,
     },
 }
+
+if engine.ActiveGamemode() == "nzombies" then
+SWEP.Attachments = nil
+end
 
 -- nZombies Stuff
 SWEP.NZWonderWeapon		= false	-- Is this a Wonder-Weapon? If true, only one player can have it at a time. Cheats aren't stopped, though.

@@ -85,7 +85,7 @@ SWEP.Range = 200 -- in METRES
 SWEP.Penetration = 200
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
-SWEP.MuzzleVelocity = 4000 -- projectile or phys bullet muzzle velocity
+SWEP.MuzzleVelocity = 1100 -- projectile or phys bullet muzzle velocity
 -- IN M/S
 
 SWEP.NeverPhysBullet = true
@@ -420,6 +420,10 @@ if engine.ActiveGamemode() == "terrortown" then
         desc = "A powerful sniper rifle. Uses typical rifle ammo, \nbut isn't lethal at point blank.\nPurchased weapons come with full attachments."
     };
     SWEP.Icon = "entities/arccw_hce_snow_sr.png"
+end
+
+if engine.ActiveGamemode() == "nzombies" then
+SWEP.Attachments = nil
 end
 
 -- nZombies Stuff

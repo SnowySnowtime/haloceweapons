@@ -40,7 +40,7 @@ SWEP.MeleeHitSound = "hceworld"
 SWEP.MeleeHitNPCSound = "hceslap"
 
 SWEP.Primary.ClipSize = 5
-SWEP.ExtendedClipSize = 4
+SWEP.ExtendedClipSize = 10
 
 SWEP.Damage = 40
 SWEP.DamageMin = 45 -- damage done at maximum range
@@ -252,15 +252,19 @@ SWEP.Animations = {
     },
 }
 
+if engine.ActiveGamemode() == "nzombies" then
+SWEP.Attachments = nil
+end
+
 -- nZombies Stuff
 SWEP.NZWonderWeapon		= false	-- Is this a Wonder-Weapon? If true, only one player can have it at a time. Cheats aren't stopped, though.
 --SWEP.NZRePaPText		= "your text here"	-- When RePaPing, what should be shown? Example: Press E to your text here for 2000 points.
-SWEP.NZPaPName				= "M420 SPANKr"
+SWEP.NZPaPName				= "Flak"
 --SWEP.NZPaPReplacement 	= ""	-- If Pack-a-Punched, replace this gun with the entity class shown here.
 SWEP.NZPreventBox		= false	-- If true, this gun won't be placed in random boxes GENERATED. Users can still place it in manually.
 SWEP.NZTotalBlackList	= false	-- if true, this gun can't be placed in the box, even manually, and can't be bought off a wall, even if placed manually. Only code can give this gun.
 
-SWEP.Primary.MaxAmmo = 10
+SWEP.Primary.MaxAmmo = 30
 -- Max Ammo function
 
 function SWEP:NZMaxAmmo()
@@ -275,9 +279,17 @@ end
 -- PaP Function
 function SWEP:OnPaP()
 self.Ispackapunched = 1
-self.PrintName = "M420 SPANKr"
+self.PrintName = "Flak"
 self.MagExtender = true
-self.Primary.MaxAmmo = 20
-self.Delay = 60 / 150
+self.Primary.MaxAmmo = 60
+self.Delay = 60 / 200
+self.Firemodes = {
+    {
+        Mode = 2,
+    },
+    {
+        Mode = 0
+    }
+}
 return true
 end

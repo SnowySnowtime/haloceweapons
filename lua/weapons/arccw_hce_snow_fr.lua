@@ -41,7 +41,9 @@ SWEP.TracerNum = 0 -- tracer every X
 SWEP.TracerName 	= "hce_sr_tracer"
 
 SWEP.ChamberSize = 0-- how many rounds can be chambered.
-SWEP.ReducedClipSize = 1
+SWEP.Primary.ClipSize = 100 -- DefaultClip is automatically set.
+SWEP.ExtendedClipSize = 100
+SWEP.ReducedClipSize = 100
 
 SWEP.Delay_Accel        = 0.2
 SWEP.Delay_Decel        = 0.5
@@ -266,15 +268,19 @@ SWEP.Animations = {
     },
 }
 
+if engine.ActiveGamemode() == "nzombies" then
+SWEP.Attachments = nil
+end
+
 -- nZombies Stuff
 SWEP.NZWonderWeapon		= false	-- Is this a Wonder-Weapon? If true, only one player can have it at a time. Cheats aren't stopped, though.
 --SWEP.NZRePaPText		= "your text here"	-- When RePaPing, what should be shown? Example: Press E to your text here for 2000 points.
-SWEP.NZPaPName				= "M420 SPANKr"
+SWEP.NZPaPName				= "Plasma Cannon"
 --SWEP.NZPaPReplacement 	= ""	-- If Pack-a-Punched, replace this gun with the entity class shown here.
 SWEP.NZPreventBox		= false	-- If true, this gun won't be placed in random boxes GENERATED. Users can still place it in manually.
 SWEP.NZTotalBlackList	= false	-- if true, this gun can't be placed in the box, even manually, and can't be bought off a wall, even if placed manually. Only code can give this gun.
 
-SWEP.Primary.MaxAmmo = 100
+SWEP.Primary.MaxAmmo = 1
 -- Max Ammo function
 
 function SWEP:NZMaxAmmo()
@@ -289,9 +295,13 @@ end
 -- PaP Function
 function SWEP:OnPaP()
 self.Ispackapunched = 1
-self.PrintName = "M420 SPANKr"
+self.PrintName = "Plasma Cannon"
 self.MagExtender = true
-self.Primary.MaxAmmo = 20
-self.Delay = 60 / 150
+self.Primary.MaxAmmo = 2
+self.Heat_Accel     = 0.30
+self.Heat_Decel     = 0.34
+self.Delay_Min          = 0.25
+self.Delay_Max          = 0.25
+self.BatteryConsumption     = 1/100
 return true
 end
