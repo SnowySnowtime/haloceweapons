@@ -15,7 +15,7 @@ AddCSLuaFile( "shared.lua" )
 
 function ENT:Initialize()   
 
-self.flightvector = self.Entity:GetForward() * (126/4)
+self.flightvector = self.Entity:GetForward() * (126/2)
 self.timeleft = CurTime() + 900
 self.Owner = self:GetOwner()
 self.Entity:SetModel( "models/snowysnowtime/projectiles/plasma_projectile.mdl" )
@@ -64,6 +64,12 @@ end
 		end
 	
 		if tr.Hit then
+				local dmg = DamageInfo()
+					dmg:SetDamageType(DMG_BURN)
+					dmg:SetAttacker(self.Owner)
+					dmg:SetInflictor(self)
+					dmg:SetDamage(22)
+					util.BlastDamageInfo( dmg, tr.HitPos, 1 )
 				local effectdata = EffectData()
 					effectdata:SetOrigin(tr.HitPos)			// Where it hits
 					effectdata:SetNormal(tr.HitNormal)		// Direction of particles
@@ -72,9 +78,7 @@ end
 					effectdata:SetRadius(tr.MatType)		// What texture it hits
 					effectdata:SetMagnitude(10)			// Length of explosion trails
 					util.Effect( "effect_astw2_halo_ce_impact_pr", effectdata )
-					util.BlastDamage(self.Entity, self:OwnerGet(), tr.HitPos, 0, 15)
 					util.Decal("FadingScorch", tr.HitPos + tr.HitNormal, tr.HitPos - tr.HitNormal)
-			self:Explosion()
 			self.Entity:EmitSound( "shared/plasma_hit"..math.random(1,3)..".wav", SNDLVL_512dB, 100, 4 )
 			self.Entity:Remove()	
 		end
@@ -85,21 +89,6 @@ end
 	self.Entity:NextThink( CurTime() )
 	return true
 	
-end
- 
- function ENT:Explosion()
-	local shake = ents.Create("env_shake")
-		shake:SetOwner(self.Owner)
-		shake:SetPos(self.Entity:GetPos())
-		shake:SetKeyValue("amplitude", "1000")	// Power of the shake
-		shake:SetKeyValue("radius", "30")		// Radius of the shake
-		shake:SetKeyValue("duration", "1.5")	// Time of shake
-		shake:SetKeyValue("frequency", "155")	// How har should the screenshake be
-		shake:SetKeyValue("spawnflags", "4")	// Spawnflags(In Air)
-		shake:Spawn()
-		shake:Activate()
-		shake:Fire("StartShake", "", 0)
-
 end
 
 function ENT:OwnerGet()
