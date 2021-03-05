@@ -17,7 +17,7 @@ att.AttachSound = "attch/snow/halo/h3/x_button.wav"
 att.DetachSound = "attch/snow/halo/h3/b_button.wav"
 att.Model = "models/snowysnowtime/ho/rof_ammo_t2.mdl"
 
-att.Mult_RPM = 0.45
+att.Mult_RPM = 0.433
 
 att.Mult_Damage = 1.7
 att.Mult_DamageMin = 1.6

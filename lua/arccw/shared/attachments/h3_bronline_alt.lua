@@ -18,11 +18,12 @@ att.Add_BarrelLength = 10
 att.Override_MuzzleEffectAttachment = "1"
 att.Model = "models/snowysnowtime/ho/acc_ammo.mdl"
 
+att.Mult_RPM = 0.75
 att.Override_Firemodes = {
     {
-        Mode = -3,
+        Mode = -2,
 		RunawayBurst = true,
-		PostBurstDelay = 0.315,
+		PostBurstDelay = 0.265,
     },
 	{
         Mode = 1,

@@ -1,4 +1,4 @@
-att.PrintName = "BR55-D9"
+att.PrintName = "M395-D33 THORN"
 att.Icon = Material("snowysnowtime/2k/ico/h3/smg_sil.png")
 att.Description = "Variant of the Battle Rifle more akin to the DMR with a high damage output."
 att.Desc_Pros = {

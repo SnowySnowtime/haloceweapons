@@ -1,4 +1,4 @@
-att.PrintName = "BR85HB"
+att.PrintName = "BR55-G2 Triple Threat"
 att.Icon = Material("snowysnowtime/2k/ico/h3/smg_sil.png")
 att.Description = "Super Variant of the Battle Rifle. Boasts a Suppressor and majorly increased mag size."
 att.Desc_Pros = {
