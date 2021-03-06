@@ -1,0 +1,13 @@
+"VertexlitGeneric"
+{
+	$basetexture	"snowysnowtime\energysword\vuthakral\handle_dif"
+	$bumpmap	"snowysnowtime\energysword\vuthakral\handle_n"
+
+	$selfillum		1
+	$selfillummask	"snowysnowtime\energysword\vuthakral\handle_illum"
+
+	$phong		1
+	$phongboost	6
+	$phongexponent	27
+	$phongfresnelranges	"[ 0.042 2 1 ]"
+}

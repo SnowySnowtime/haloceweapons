@@ -1,0 +1,16 @@
+"UnlitGeneric"
+{
+	"$basetexture" "snowysnowtime/energysword/h2a/blood/emis"
+	"$additive" "1"
+	"$decal" "1"
+	"$normalmapalphaenvmapmask" "1"
+
+	"$phong" "1" 
+	"$phongboost" "3"
+	"$phongexponent" "5"
+	"$phongexponenttexture" "snowysnowtime\ma5e\phongexp255"
+	"$phongalbedotint" "1"
+	"$phongfresnelranges" "[1 1.25 1.75]"
+	"$phongdisablehalflambert" "1"
+	"$nocull" "1"
+}

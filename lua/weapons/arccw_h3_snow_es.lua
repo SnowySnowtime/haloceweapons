@@ -9,6 +9,8 @@ SWEP.Trivia_Class = "Melee Weapon"
 SWEP.Trivia_Desc = "The Type-1 Energy Weapon/Sword (T-1 EW/S), commonly known as the energy sword or the plasma sword, is a traditional Sangheili close-quarters weapon. The energy sword is intended to express its owner's personal skill, clerical honor, and combat viability."
 SWEP.Trivia_Manufacturer = "Covenant"
 
+SWEP.RenderGroup = RENDERGROUP_TRANSLUCENT
+
 SWEP.Slot = 0
 
 SWEP.NotForNPCs = true
@@ -16,16 +18,9 @@ SWEP.NotForNPCs = true
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/snowysnowtime/c_energysword.mdl"
-SWEP.WorldModel = "models/snowysnowtime/c_energysword.mdl"
+SWEP.WorldModel = "models/snowysnowtime/w_energysword.mdl"
 SWEP.ViewModelFOV = 60
 SWEP.MirrorWorldModel = true
-
-SWEP.WorldModelOffset = {
-    pos        =    Vector(1, -12.5, 17.75),
-    ang        =    Angle(-50, -20, 12.5),
-    bone    =    "ValveBiped.Bip01_R_Hand",
-    scale   =   1.2
-}
 
 SWEP.DefaultSkin = 0
 SWEP.DefaultWMSkin = 0
@@ -51,7 +46,7 @@ SWEP.Melee2Gesture = ACT_HL2MP_GESTURE_RANGE_ATTACK_MELEE2
 
 SWEP.MeleeSwingSound = ""
 SWEP.MeleeMissSound = ""
-SWEP.MeleeHitSound = "customedition/sword_hit_env4.wav"
+SWEP.MeleeHitSound = "energysword_envimp"
 SWEP.MeleeHitNPCSound = "energysword_swingimp"
 
 SWEP.NotForNPCs = true
@@ -69,9 +64,13 @@ SWEP.HoldtypeActive = "knife"
 SWEP.Primary.ClipSize = -1
 
 SWEP.AttachmentElements = {
-["sword"] = {
+	["sword"] = {
         VMBodygroups = {{ind = 0, bg = 1}},
         WMBodygroups = {{ind = 0, bg = 1}},
+    },
+	["bloodsword"] = {
+        VMBodygroups = {{ind = 0, bg = 2}},
+        WMBodygroups = {{ind = 0, bg = 2}},
     },
 }
 
@@ -98,13 +97,7 @@ SWEP.Animations = {
     },
     ["draw"] = {
         Source = "draw",
-		SoundTable = {{s = "h3.esdeploy", t = 0.2}},
-        Time = 53/30,
-    },
-    ["ready"] = {
-        Source = "draw",
-		SoundTable = {{s = "h3.esdeploy", t = 0.2}},
-        Time = 53/30,
+		SoundTable = {{s = "h3.esdeploy", t = 0.05}},
     },
     ["bash"] = {
         Source = {"fire", "fire2"},
@@ -132,6 +125,9 @@ SWEP.BashAng = Angle(35, -30, 0)
 
 SWEP.HolsterPos = Vector(0, -3, -2)
 SWEP.HolsterAng = Angle(-10, 0, 0)
+
+SWEP.CustomizePos = Vector(0, 0, 0)
+SWEP.CustomizeAng = Angle(0, 0, 0)
 
 if engine.ActiveGamemode() == "terrortown" then
     SWEP.Kind = WEAPON_EQUIP1
