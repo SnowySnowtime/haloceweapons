@@ -4,7 +4,7 @@ SWEP.Category = "ArcCW - Halo Combat Evolved" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "Plasma Pistol"
-SWEP.TrueName = "Type-25 PP"
+SWEP.TrueName = "Type-25 Plasma Pistol"
 SWEP.Trivia_Class = "Pistol"
 SWEP.Trivia_Desc = "The Type-25 Directed Energy Pistol (Type-25 DEP), also known as the plasma pistol, is a Covenant infantry firearm, carried commonly by the smaller species, such as the Unggoy, Kig-Yar, and the Yanme'e, but is occasionally used by larger species such as the Sangheili and Jiralhanae; as such it is the most commonly encountered Covenant energy weapon. While weak on its own, the plasma pistol has a wide variety of functions and becomes deadly in large numbers. "
 SWEP.Trivia_Manufacturer = "Misriah Armory"
@@ -57,8 +57,8 @@ end
 SWEP.Range =  100 -- in METRES
 SWEP.Penetration = 0
 SWEP.DamageType = DMG_BULLET
-SWEP.ShootEntity = nil -- entity to fire, if any
-SWEP.MuzzleVelocity = 6000 -- projectile or phys bullet muzzle velocity
+SWEP.ShootEntity = "plasmapistol_hce" -- entity to fire, if any
+SWEP.MuzzleVelocity = 108 -- projectile or phys bullet muzzle velocity
 -- IN M/S
 SWEP.NeverPhysBullet = true
 

@@ -60,7 +60,7 @@ SWEP.ViewModelFOV = 70
 SWEP.Range =  700 -- in METRES
 SWEP.Penetration = 0
 SWEP.DamageType = DMG_BULLET
-SWEP.ShootEntity = "plasma_hce" -- entity to fire, if any
+SWEP.ShootEntity = "plasmarifle_hce" -- entity to fire, if any
 SWEP.MuzzleVelocity = 126 -- projectile or phys bullet muzzle velocity
 -- IN M/S
 SWEP.PhysBulletMuzzleVelocity = 80 -- override phys bullet muzzle velocity
