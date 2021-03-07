@@ -69,7 +69,7 @@ end
 					dmg:SetAttacker(self.Owner)
 					dmg:SetInflictor(self)
 					dmg:SetDamage(22)
-					util.BlastDamageInfo( dmg, tr.HitPos, 1 )
+					util.BlastDamageInfo( dmg, tr.HitPos, 12 )
 				local effectdata = EffectData()
 					effectdata:SetOrigin(tr.HitPos)			// Where it hits
 					effectdata:SetNormal(tr.HitNormal)		// Direction of particles
