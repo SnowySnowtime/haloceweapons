@@ -32,7 +32,8 @@ SWEP.DamageMin = 20 -- damage done at maximum range
 SWEP.Range =  700 -- in METRES
 SWEP.Penetration = 0
 SWEP.DamageType = DMG_BULLET
-SWEP.MuzzleVelocity = 600 -- projectile or phys bullet muzzle velocity -- IN M/S
+SWEP.ShootEntity = "plasmarifle_h3" -- entity to fire, if any
+SWEP.MuzzleVelocity = 126 -- projectile or phys bullet muzzle velocity -- IN M/S
 SWEP.NeverPhysBullet = true
 
 SWEP.TracerNum = 1 -- tracer every X
