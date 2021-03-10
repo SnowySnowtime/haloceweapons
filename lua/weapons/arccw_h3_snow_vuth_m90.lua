@@ -95,7 +95,7 @@ SWEP.ShotgunSpreadDispersion = true -- dispersion will cause pattern to increase
 
 SWEP.ShotgunReload = true
 
-SWEP.Delay = 60 / 55 -- 60 / RPM.
+SWEP.Delay = 60 / 60 -- 60 / RPM.
 SWEP.Num = 15 -- number of shots per trigger pull.
 SWEP.RunawayBurst = false
 SWEP.Firemodes = {

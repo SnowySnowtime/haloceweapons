@@ -2,25 +2,36 @@ SWEP.Base						= "arccw_base"
 SWEP.PrintName					= "ArcCW Halo Plasma Sub-Base"
 SWEP.Spawnable					= false
 
+SWEP.ChamberSize = 0
+SWEP.Primary.ClipSize = 2
+SWEP.ExtendedClipSize = 2
+SWEP.ReducedClipSize = 2
+
+SWEP.ForceDefaultClip = 1
+SWEP.ForceDefaultAmmo = 0
+
 SWEP.ArcCW_Halo = {}
-SWEP.ArcCW_Halo.Plasma = true
-SWEP.ArcCW_Halo.Accel = true
+SWEP.ArcCW_Halo_Plasma = true
+SWEP.ArcCW_Halo_Accel = true
 
-SWEP.Delay_Accel = 0.2
-SWEP.Delay_Decel = 0.5
+SWEP.Delay_Accel    = 0.2
+SWEP.Delay_Decel    = 0.5
 
-SWEP.Heat_Accel = 0.1
-SWEP.Heat_Decel = 0.4
+SWEP.Heat_Accel     = 0.1
+SWEP.Heat_Decel     = 0.4
 SWEP.Heat_DecelOH   = nil
 
 SWEP.Delay_Min = 0.166666666666667	-- 360 -- 6
 SWEP.Delay_Max = 0.111111111111111	-- 540 -- 9
 
-SWEP.BatteryConsumption = 1/400
+SWEP.BatteryConsumption = 1/400     -- amount battery is depleted per shot
 
-SWEP.Delay_Penalty      = 0
-SWEP.Heat_Penalty       = 0
-SWEP.Heat_Threshold     = 0.25
+SWEP.Delay_Penalty      = 0         -- percent fire rate is penalized (at full depletion)
+SWEP.Heat_Penalty       = 0         -- percent heat recovery is penalized (at full depletion)
+SWEP.Heat_Threshold     = 0.25      -- percent until gun stabilizes
+
+SWEP.Misfire_Threshold  = 0         -- percent depleted until we can misfire
+SWEP.Misfire_Chance     = 0         -- percent chance to misfire (at full depletion)
 
 function SWEP:AccelerationPercent()
     local timetoreach = 0
@@ -35,7 +46,7 @@ function SWEP:SetAcceleration( time )
 end
 
 SWEP.Hook_ModifyRPM = function(wep, delay)
-    if wep.ArcCW_Halo.Accel then
+    if wep.ArcCW_Halo_Accel then
         local firerate_min = wep.Delay_Min
         local firerate_max = wep.Delay_Max
         
@@ -43,16 +54,30 @@ SWEP.Hook_ModifyRPM = function(wep, delay)
 
         local returnthatvalue = ( firerate_min ) - ( firerate_diff * ( wep:AccelerationPercent() ) )
 
-        return returnthatvalue * ( 1 + ( wep.Delay_Penalty * ( 1 - wep:GetBatteryLevel() ) ) ) * ( 1 / wep:GetBuff_Mult("Mult_RPM") )
+        returnthatvalue = returnthatvalue * ( 1 + ( wep.Delay_Penalty * ( 1 - wep:GetBatteryLevel() ) ) ) 
+        
+        returnthatvalue = returnthatvalue * ( 1 / wep:GetBuff_Mult("Mult_RPM") )
+
+        return returnthatvalue
     end
 end
 
 SWEP.Hook_FireBullets = function(wep)
-	wep:SetBatteryLevel( math.max( 0, wep:GetBatteryLevel() - wep.BatteryConsumption ) )
+	wep:SetBatteryLevel( math.Clamp( wep:GetBatteryLevel() - wep.BatteryConsumption, 0, 1 ) )
 	wep:SetHeatLevel( wep:GetHeatLevel() + wep.Heat_Accel )
 
     if wep:GetBatteryLevel() <= 0 then
         wep:SetClip1(0)
+    else
+        wep:SetClip1(1)
+    end
+
+    if wep.Misfire_Threshold and
+    ( 1 - wep.Misfire_Threshold ) >= wep:GetBatteryLevel() and
+    wep.Misfire_Chance * ( 1 - wep:GetBatteryLevel() ) > math.Rand(0, 1) then
+        wep:PlayAnimation("misfire", 1)
+        wep:SetWeaponOpDelay(CurTime() + wep:GetAnimKeyTime("misfire"))
+        return false
     end
 end
 
@@ -67,16 +92,18 @@ SWEP.Hook_Think = function(wep)
 		end
     end
 
-    if wep.ArcCW_Halo.Accel then
-        if wep:GetNextPrimaryFire() > CurTime() and !wep:GetReloading() then
+    if wep.ArcCW_Halo_Accel then
+        if wep:GetNextPrimaryFireSlowdown() >= CurTime() and !wep:GetReloading() then
             wep:SetAcceleration( wep:GetAccelTime() + FrameTime() )
         else
-            wep:SetAcceleration( wep:GetAccelTime() - FrameTime()/wep.Delay_Decel )
+            wep:SetAcceleration( wep:GetAccelTime() - math.min(FrameTime(), CurTime() - wep:GetNextPrimaryFireSlowdown())/wep.Delay_Decel )
         end
     end
     
     local decel = wep.Heat_Decel
     if wep:GetDischarging() and wep.Heat_DecelOH then decel = wep.Heat_DecelOH end
+    decel = decel * ( 1 - ( wep.Heat_Penalty * ( 1 - wep:GetBatteryLevel() ) ) ) 
+
 	wep:SetHeatLevel(math.Clamp(wep:GetHeatLevel() - (decel * FrameTime()), 0, 1) )
 end
 
@@ -123,6 +150,16 @@ SWEP.Hook_DrawHUD = function(wep)
     surface.SetTextPos( ScrW()/2-175,
     ScrH()/2 + ss+s2*4 ) 
                         surface.DrawText("RPM: " .. math.Round(60/wep:GetFiringDelay()) .. "rpm")
+    surface.SetTextPos( ScrW()/2-175,
+    ScrH()/2 + ss+s2*5 ) 
+                        surface.DrawText("MISFIRE CHANCE: " .. math.Round( wep.Misfire_Chance * ( 1 - wep:GetBatteryLevel() )*100, 1) .. "% " .. math.Round(math.Rand(0, 1)*100, 1) )
+
+
+                        
+
+    --[[if wep.Misfire_Threshold and
+    ( 1 - wep.Misfire_Threshold ) >= wep:GetBatteryLevel() and
+    math.Rand(0, 1) > ( wep.Misfire_Chance * (1 - wep:GetBatteryLevel())) then]]
 end
 
 SWEP.Hook_ShouldNotFire = function(wep)
@@ -136,7 +173,7 @@ SWEP.Hook_DryFire = function(wep, sound)
 end
 
 SWEP.Hook_FiremodeBars = function(wep)
-    if !wep.ArcCW_Halo.Accel then return end
+    if !wep.ArcCW_Halo_Accel then return end
     local awesome = math.ceil( wep:AccelerationPercent()*7 )
     local thebars = ""
 
@@ -158,6 +195,12 @@ SWEP.Hook_GetHUDData = function(wep, data)
     data.heat_level = wep:GetHeatLevel()
     data.heat_maxlevel = 1
     data.heat_locked = wep:GetDischarging()
+end
+
+SWEP.Hook_PreReload = function(wep)
+    if wep:GetBatteryLevel() >= 1 then
+        return true
+    end
 end
 
 SWEP.Hook_PostReload = function(wep)

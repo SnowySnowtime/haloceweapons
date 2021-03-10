@@ -372,8 +372,8 @@ SWEP.Animations = {
         LHIKOut = 0,
     },
     ["sgreload_finish"] = {
-        Source = "reloadempty",
-        Time = 41/30,
+        Source = "reloadexit",
+        Time = 23/30,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.4,
@@ -408,8 +408,8 @@ SWEP.Animations = {
         LHIKOut = 0,
     },
     ["sgreload_finish_anniv"] = {
-        Source = "anniv_reloadempty",
-        Time = 41/30,
+        Source = "anniv_reloadexit",
+        Time = 23/30,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.4,

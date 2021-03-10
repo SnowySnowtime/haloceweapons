@@ -40,11 +40,6 @@ SWEP.TracerNum = 1 -- tracer every X
 SWEP.Tracer 	= "effect_astw2_halo3_tracer_plasmarifle"
 SWEP.ImpactEffect = "effect_astw2_halo3_impact_plasmarifle"
 
-SWEP.ChamberSize = 0-- how many rounds can be chambered.
-SWEP.Primary.Clisize = 2 -- DefaultClip is automatically set.
-SWEP.ExtendedClisize = 2
-SWEP.ReducedClisize = 2
-
 SWEP.Recoil = 0.2
 SWEP.RecoilSide = 0.2
 

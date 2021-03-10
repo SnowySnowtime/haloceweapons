@@ -40,20 +40,17 @@ SWEP.PhysBulletDontInheritPlayerVelocity = true
 SWEP.TracerNum = 0 -- tracer every X
 SWEP.TracerName 	= "hce_sr_tracer"
 
-SWEP.ChamberSize = 0-- how many rounds can be chambered.
-SWEP.Primary.Clisize = 2 -- DefaultClip is automatically set.
-SWEP.ExtendedClisize = 2
-SWEP.ReducedClisize = 2
+-- Fesiug's Plasma subbase
+SWEP.Heat_Accel     = 0.3
+SWEP.Heat_Decel     = 0.18
 
-SWEP.Delay_Accel        = 0.2
-SWEP.Delay_Decel        = 0.5
-SWEP.Heat_Accel     = 0.37
-SWEP.Heat_Decel     = 0.34
-SWEP.Delay_Min          = 0.5
-SWEP.Delay_Max          = 0.5
-SWEP.BatteryConsumption     = 3/100
+SWEP.BatteryConsumption     = 0.036
+SWEP.Heat_Threshold     = 0.3
 
-SWEP.Delay = 60 / 270 -- 60 / RPM.
+SWEP.ArcCW_Halo = SWEP.ArcCW_Halo or {}
+SWEP.ArcCW_Halo_Accel = false
+
+SWEP.Delay = 60 / 132 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {

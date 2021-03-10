@@ -74,11 +74,6 @@ SWEP.TracerNum = 1 -- tracer every X
 SWEP.Tracer 	= "effect_astw2_halo_ce_tracer_pr"
 SWEP.ImpactEffect = "effect_astw2_halo_ce_impact_pr"
 
-SWEP.ChamberSize = 0-- how many rounds can be chambered.
-SWEP.Primary.Clisize = 2 -- DefaultClip is automatically set.
-SWEP.ExtendedClisize = 2
-SWEP.ReducedClisize = 2
-
 -- Fesiug's Plasma subbase
 SWEP.Delay_Accel        = 1.8
 SWEP.Delay_Decel        = 0.25
@@ -87,10 +82,12 @@ SWEP.Delay_Max      = 60 / 600
 
 SWEP.Heat_Accel         = 0.08
 SWEP.Heat_Decel         = 0.3
-SWEP.BatteryConsumption     = 1/400
+SWEP.BatteryConsumption     = 0.005
 
 SWEP.Delay_Penalty      = 0.2
 SWEP.Heat_Penalty       = 0.2
+SWEP.Misfire_Threshold  = 0.9
+SWEP.Misfire_Chance     = 0.5
 
 SWEP.Delay = 60 / 360 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
@@ -287,7 +284,6 @@ SWEP.Animations = {
     },
 	["fire_iron"] = {
         Source = "fire",
-		Time = 0.6,
     },
     ["draw"] = {
         Source = "draw",
@@ -298,7 +294,13 @@ SWEP.Animations = {
     },
     ["fire"] = {
         Source = "fire",
-        Time = 30/30,
+    },
+    ["misfire"] = {
+        Source = "misfire",
+		SoundTable = {{s = {"hce/plasma_misfire1.wav","hce/plasma_misfire2.wav","hce/plasma_misfire3.wav"}, t = 0}},
+    },
+    ["reload"] = {
+        Source = "draw",
     },
 	["inspect"] = {
         Source = "fidget",

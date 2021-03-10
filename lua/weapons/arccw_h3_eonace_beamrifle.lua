@@ -46,22 +46,18 @@ SWEP.TracerNum = 1 -- tracer every X
 SWEP.Tracer = "effect_arccw_halo_ce_tracer_ar"
 SWEP.MeleeTime = 1.1
 
-SWEP.ChamberSize = 0-- how many rounds can be chambered.
-SWEP.Primary.Clisize = 2 -- DefaultClip is automatically set.
-SWEP.ExtendedClisize = 2
-SWEP.ReducedClisize = 2
+-- Fesiug's Plasma subbase
+SWEP.Heat_Accel     = 0.7
+SWEP.Heat_Decel     = 0.575
+SWEP.Heat_DecelOH   = 0.3
 
-SWEP.ShotgunReload = true
-
-SWEP.Delay_Accel        = 0
-SWEP.Delay_Decel        = 0
-SWEP.Heat_Accel     = 0.65
-SWEP.Heat_Decel     = 0.45
-SWEP.Delay_Min          = 0.2
-SWEP.Delay_Max          = 0.2
 SWEP.BatteryConsumption     = 1/10
+SWEP.Heat_Threshold     = 0.1
 
-SWEP.Delay = 60 / 1000 -- 60 / RPM.
+SWEP.ArcCW_Halo = SWEP.ArcCW_Halo or {}
+SWEP.ArcCW_Halo_Accel = false
+
+SWEP.Delay = 0.4 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {

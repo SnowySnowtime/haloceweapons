@@ -32,7 +32,6 @@ if GetConVar("arccw_hce_bal"):GetInt() == 0 then -- HaloCW
 	SWEP.HipDispersion = 0.09
 	SWEP.MoveDispersion = 0
 	SWEP.JumpDispersion = 0
-	SWEP.ChamberSize = 0
 elseif GetConVar("arccw_hce_bal"):GetInt() == 1 then -- halo purist
 	SWEP.Recoil = 0
 	SWEP.RecoilSide = 0
@@ -42,7 +41,6 @@ elseif GetConVar("arccw_hce_bal"):GetInt() == 1 then -- halo purist
 	SWEP.HipDispersion = 0
 	SWEP.MoveDispersion = 0
 	SWEP.JumpDispersion = 0
-	SWEP.ChamberSize = 0
 elseif GetConVar("arccw_hce_bal"):GetInt() == 2 then -- arccw
     SWEP.Recoil = 0.5
 	SWEP.RecoilSide = 0.5
@@ -51,7 +49,6 @@ elseif GetConVar("arccw_hce_bal"):GetInt() == 2 then -- arccw
 	SWEP.AccuracyMOA = 0.06
 	SWEP.HipDispersion = 100
 	SWEP.MoveDispersion = 350
-	SWEP.ChamberSize = 1
 end
 
 SWEP.Range =  100 -- in METRES
@@ -62,11 +59,7 @@ SWEP.MuzzleVelocity = 108 -- projectile or phys bullet muzzle velocity
 -- IN M/S
 SWEP.NeverPhysBullet = true
 
-SWEP.Primary.Clisize = 2 -- DefaultClip is automatically set.
-SWEP.ExtendedClisize = 2
-SWEP.ReducedClisize = 2
-
-SWEP.Delay = 1 / 30 -- That outta do it!
+SWEP.Delay = 60 / 600 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
@@ -157,12 +150,15 @@ SWEP.CustomizeAng = Angle(12.149, 30.547, 0)
 
 -- Fesiug's Plasma subbase
 SWEP.Heat_Accel         = 0.16
-SWEP.Heat_Decel         = 0.5
+SWEP.Heat_Decel         = 0.65
 
-SWEP.BatteryConsumption     = 1/500
+SWEP.BatteryConsumption     = 0.002
+
+SWEP.Misfire_Threshold  = 0.9
+SWEP.Misfire_Chance     = 0.5
 
 SWEP.ArcCW_Halo = SWEP.ArcCW_Halo or {}
-SWEP.ArcCW_Halo.Accel = false
+SWEP.ArcCW_Halo_Accel = false
 
 SWEP.BarrelLength = 17
 SWEP.AttachmentElements = {
@@ -296,7 +292,6 @@ SWEP.Attachments = {
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
-        Time = 59/30
     },
 	["fire_iron"] = {
         Source = "fire",
@@ -311,14 +306,19 @@ SWEP.Animations = {
 	},
     ["draw"] = {
         Source = "draw",
-        Time = 34/30,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.25,
     },
     ["fire"] = {
         Source = "fire",
-        Time = 10/30,
+    },
+    ["misfire"] = {
+        Source = "misfire",
+		SoundTable = {{s = {"hce/plasma_misfire1.wav","hce/plasma_misfire2.wav","hce/plasma_misfire3.wav"}, t = 0}},
+    },
+    ["reload"] = {
+        Source = "draw",
     },
 	["bash"] = {
         Source = "melee",
@@ -331,24 +331,6 @@ SWEP.Animations = {
         Source = "reload",
         Time = 50/30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
-    },
-    ["reload"] = {
-        Source = "reload",
-        Time = 50/30,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
-        Checkpoints = {24, 33, 51, 58, 62, 74, 80},
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
-    },
-    ["reload_empty"] = {
-        Source = "reloadempty",
-        Time = 66/30,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
-        Checkpoints = {24, 33, 51},
         LHIK = true,
         LHIKIn = 0.5,
         LHIKOut = 0.5,
