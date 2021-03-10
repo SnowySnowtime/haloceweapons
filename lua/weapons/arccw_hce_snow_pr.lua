@@ -75,21 +75,22 @@ SWEP.Tracer 	= "effect_astw2_halo_ce_tracer_pr"
 SWEP.ImpactEffect = "effect_astw2_halo_ce_impact_pr"
 
 SWEP.ChamberSize = 0-- how many rounds can be chambered.
-SWEP.Primary.ClipSize = 100 -- DefaultClip is automatically set.
-SWEP.ExtendedClipSize = 100
-SWEP.ReducedClipSize = 100
-
-SWEP.Recoil = 0.2
-SWEP.RecoilSide = 0.2
+SWEP.Primary.Clisize = 2 -- DefaultClip is automatically set.
+SWEP.ExtendedClisize = 2
+SWEP.ReducedClisize = 2
 
 -- Fesiug's Plasma subbase
-SWEP.Delay_Accel        = 0.4
-SWEP.Delay_Decel        = 0.6
-SWEP.Delay_Min      = 0.2555555
-SWEP.Delay_Max      = 0.0999
-SWEP.Heat_Accel         = 0.1
-SWEP.Heat_Decel         = 0.4
+SWEP.Delay_Accel        = 1.8
+SWEP.Delay_Decel        = 0.25
+SWEP.Delay_Min      = 60 / 420
+SWEP.Delay_Max      = 60 / 600
+
+SWEP.Heat_Accel         = 0.08
+SWEP.Heat_Decel         = 0.3
 SWEP.BatteryConsumption     = 1/400
+
+SWEP.Delay_Penalty      = 0.2
+SWEP.Heat_Penalty       = 0.2
 
 SWEP.Delay = 60 / 360 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
@@ -126,6 +127,15 @@ SWEP.ShellScale = 1.5
 
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 3 -- which attachment to put the case effect on
+
+SWEP.O_Hook_Override_MuzzleEffectAttachment = function(wep, data)
+    local shot = wep:GetNthShot()
+    if (shot % 2 == 1) then -- odd
+        data.current = 1
+    else                    -- even
+        data.current = 2
+    end
+end
 
 SWEP.SightTime = 0.35
 SWEP.SpeedMult = 0.85

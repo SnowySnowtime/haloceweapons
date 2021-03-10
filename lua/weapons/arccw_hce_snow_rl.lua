@@ -63,7 +63,7 @@ SWEP.TracerName 	= "hce_sr_tracer"
 SWEP.ChamberSize = 0-- how many rounds can be chambered.
 SWEP.ReducedClipSize = 1
 
-SWEP.Delay = 60 / 35 -- 60 / RPM.
+SWEP.Delay = 60 / 30 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {

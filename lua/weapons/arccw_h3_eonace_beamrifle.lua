@@ -47,9 +47,9 @@ SWEP.Tracer = "effect_arccw_halo_ce_tracer_ar"
 SWEP.MeleeTime = 1.1
 
 SWEP.ChamberSize = 0-- how many rounds can be chambered.
-SWEP.Primary.ClipSize = 100 -- DefaultClip is automatically set.
-SWEP.ExtendedClipSize = 100
-SWEP.ReducedClipSize = 100
+SWEP.Primary.Clisize = 2 -- DefaultClip is automatically set.
+SWEP.ExtendedClisize = 2
+SWEP.ReducedClisize = 2
 
 SWEP.ShotgunReload = true
 

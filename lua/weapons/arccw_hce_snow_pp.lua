@@ -62,11 +62,11 @@ SWEP.MuzzleVelocity = 108 -- projectile or phys bullet muzzle velocity
 -- IN M/S
 SWEP.NeverPhysBullet = true
 
-SWEP.Primary.ClipSize = 100 -- DefaultClip is automatically set.
-SWEP.ExtendedClipSize = 100
-SWEP.ReducedClipSize = 100
+SWEP.Primary.Clisize = 2 -- DefaultClip is automatically set.
+SWEP.ExtendedClisize = 2
+SWEP.ReducedClisize = 2
 
-SWEP.Delay = 60 / 750 -- 60 / RPM.
+SWEP.Delay = 1 / 30 -- That outta do it!
 SWEP.Num = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
@@ -156,15 +156,11 @@ SWEP.CustomizePos = Vector(2.824, -5, 0.897)
 SWEP.CustomizeAng = Angle(12.149, 30.547, 0)
 
 -- Fesiug's Plasma subbase
-SWEP.Delay_Accel        = 0
-SWEP.Delay_Decel        = 0
-SWEP.Delay_Min      = 60 / 750
-SWEP.Delay_Max      = 60 / 750
 SWEP.Heat_Accel         = 0.16
 SWEP.Heat_Decel         = 0.5
+
 SWEP.BatteryConsumption     = 1/500
 
-SWEP.Plasma_DischargeTime = 1.5
 SWEP.ArcCW_Halo = SWEP.ArcCW_Halo or {}
 SWEP.ArcCW_Halo.Accel = false
 

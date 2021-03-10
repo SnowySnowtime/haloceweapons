@@ -41,9 +41,9 @@ SWEP.TracerNum = 0 -- tracer every X
 SWEP.TracerName 	= "hce_sr_tracer"
 
 SWEP.ChamberSize = 0-- how many rounds can be chambered.
-SWEP.Primary.ClipSize = 100 -- DefaultClip is automatically set.
-SWEP.ExtendedClipSize = 100
-SWEP.ReducedClipSize = 100
+SWEP.Primary.Clisize = 2 -- DefaultClip is automatically set.
+SWEP.ExtendedClisize = 2
+SWEP.ReducedClisize = 2
 
 SWEP.Delay_Accel        = 0.2
 SWEP.Delay_Decel        = 0.5

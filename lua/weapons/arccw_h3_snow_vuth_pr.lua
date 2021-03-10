@@ -41,21 +41,25 @@ SWEP.Tracer 	= "effect_astw2_halo3_tracer_plasmarifle"
 SWEP.ImpactEffect = "effect_astw2_halo3_impact_plasmarifle"
 
 SWEP.ChamberSize = 0-- how many rounds can be chambered.
-SWEP.Primary.ClipSize = 100 -- DefaultClip is automatically set.
-SWEP.ExtendedClipSize = 100
-SWEP.ReducedClipSize = 100
+SWEP.Primary.Clisize = 2 -- DefaultClip is automatically set.
+SWEP.ExtendedClisize = 2
+SWEP.ReducedClisize = 2
 
 SWEP.Recoil = 0.2
 SWEP.RecoilSide = 0.2
 
+SWEP.Delay_Accel        = 0.8
+SWEP.Delay_Decel        = 0.6
 
-SWEP.Delay_Accel        = 0.2
-SWEP.Delay_Decel        = 0.5
-SWEP.Heat_Accel     = 0.1
-SWEP.Heat_Decel     = 0.4
-SWEP.Delay_Min          = 0.166666666666667
-SWEP.Delay_Max          = 0.111111111111111
-SWEP.BatteryConsumption     = 1/400
+SWEP.Heat_Accel     = 0.15
+SWEP.Heat_Decel     = 0.8525
+SWEP.Heat_DecelOH   = 0.35
+
+SWEP.Delay_Min          = 60 / 360
+SWEP.Delay_Max          = 60 / 540
+
+SWEP.BatteryConsumption     = 0.0025
+SWEP.Heat_Threshold     = 0.1
 
 SWEP.Delay = 60 / 360 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
