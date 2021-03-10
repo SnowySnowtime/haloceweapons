@@ -327,7 +327,6 @@ SWEP.Animations = {
 	},
 	["exit_sights"] = {
 		Source = "aim",
-		Time = 1/1,
 	},
 	["enter_inspect"] = {
 		Source = "pose1",
