@@ -1,0 +1,41 @@
+VertexLitGeneric
+{
+	"$basetexture" "snowysnowtime/eonace/mcc/skins/zealot"
+	"$bumpmap" "snowysnowtime/eonace/mcc/skins/zealot_n"
+
+ 	$phong		1
+	$phongexponent	10
+	$phongboost	64
+    $phongfresnelranges	"[ 0.22 0.15 1 ]"
+	"$phongexponenttexture" "snowysnowtime\ma5e\phongexp255"
+	"$phongalbedotint" "1"
+
+	$rimlight	1
+	$rimlightboost	1.4
+	$rimlightexponent	2.4
+	$rimmask	1
+	
+	$lightwarptexture	"snowysnowtime\2k\h3\lw_metaldull"
+
+	$envmap		"env_cubemap"
+	$normalmapalphaenvmapmask 1
+	$cubemaptint	"[ -1 0.2 0.2 ]"
+	$cubemappower	0.3
+
+	$detail		"snowysnowtime\eonace\vuthakral\T57B\airlock_field"
+	$detailscale	0.5
+	$detailblendmode	2
+	$detailblendfactor	0.4
+
+	$color2		"[ 0.8 0.7 0.85 ]"
+
+	Proxies
+	{
+		drc_ReflectionTint
+		{
+			resultVar $envmaptint
+		}
+	}
+}
+
+

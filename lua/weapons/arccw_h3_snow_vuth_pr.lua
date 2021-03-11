@@ -97,6 +97,15 @@ SWEP.ShellScale = 1.5
 SWEP.MuzzleEffectAttachment = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectAttachment = 2 -- which attachment to put the case effect on
 
+SWEP.O_Hook_Override_MuzzleEffectAttachment = function(wep, data)
+    local shot = wep:GetNthShot()
+    if (shot % 2 == 1) then -- odd
+        data.current = 1
+    else                    -- even
+        data.current = 2
+    end
+end
+
 SWEP.SightTime = 0.35
 SWEP.SpeedMult = 0.85
 SWEP.SightedSpeedMult = 0.25

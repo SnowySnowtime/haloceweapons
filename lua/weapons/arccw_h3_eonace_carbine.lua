@@ -185,6 +185,22 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 0, bg = 2}},
         WMBodygroups = {{ind = 0, bg = 2}},
     },
+	["mcc"] = {
+        VMSkin = 1,
+        WMSkin = 1,
+    },
+	["schism"] = {
+        VMSkin = 2,
+        WMSkin = 2,
+    },
+	["stripes"] = {
+        VMSkin = 3,
+        WMSkin = 3,
+    },
+	["zealot"] = {
+        VMSkin = 4,
+        WMSkin = 4,
+    },
 }
 
 SWEP.Attachments = {

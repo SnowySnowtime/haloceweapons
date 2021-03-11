@@ -1,0 +1,35 @@
+VertexLitGeneric
+{
+	"$basetexture" "snowysnowtime/eonace/mcc/skins/zealot"
+	"$bumpmap" "snowysnowtime/eonace/mcc/skins/zealot_n"
+
+ 	$phong		1
+	$phongexponent	44
+	$phongboost	13
+                 
+                 "$phongfresnelranges" "[ 0.05 0.3 1 ]" 
+	
+	$lightwarptexture	"snowysnowtime\2k\h3\lw_metaldull"
+
+	$envmap		"env_cubemap"
+	$normalmapalphaenvmapmask 1
+	$cubemaptint	"[ 0 0 0 ]"
+	$cubemappower	.15
+
+	$color2		"[ 1 1 1 ]"
+
+	Proxies
+	{
+		drc_ReflectionTint
+		{
+			resultVar $envmaptint
+		}
+		Clamp 
+		{
+			min 1
+			max 1
+			srcVar1 "$color"
+			resultVar "$color"
+		}
+	}
+}
