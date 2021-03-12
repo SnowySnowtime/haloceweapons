@@ -115,7 +115,7 @@ function SWEP:DoTriggerDelay()
             self:SetHeatLevel(1)
         end
         return
-    elseif self:GetNextPrimaryFire() < CurTime() and self.LastTriggerTime == 0 and shouldHold then
+    elseif self:GetNextPrimaryFire() < CurTime() and !self:GetReloading() and self.LastTriggerTime == 0 and shouldHold then
         self.FUCK = 0
         -- We haven't played the animation yet. Pull it!
         local anim = self:SelectAnimation("trigger")
