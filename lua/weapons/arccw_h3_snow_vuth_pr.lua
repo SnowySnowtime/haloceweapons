@@ -43,6 +43,11 @@ SWEP.ImpactEffect = "effect_astw2_halo3_impact_plasmarifle"
 SWEP.Recoil = 0.2
 SWEP.RecoilSide = 0.2
 
+-- Fesiug's Plasma subbase
+SWEP.ArcCW_Halo_Heat    = true
+SWEP.ArcCW_Halo_Battery = true
+SWEP.ArcCW_Halo_Accel   = true
+
 SWEP.Delay_Accel        = 0.8
 SWEP.Delay_Decel        = 0.6
 

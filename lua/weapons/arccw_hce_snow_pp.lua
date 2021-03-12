@@ -60,6 +60,10 @@ SWEP.MuzzleVelocity = 108 -- projectile or phys bullet muzzle velocity
 SWEP.NeverPhysBullet = true
 
 -- Fesiug's Plasma subbase
+SWEP.ArcCW_Halo_Heat    = true
+SWEP.ArcCW_Halo_Battery = true
+SWEP.ArcCW_Halo_Accel   = false
+
 SWEP.Heat_Accel         = 0.16
 SWEP.Heat_Decel         = 0.65
 
@@ -67,9 +71,6 @@ SWEP.BatteryConsumption     = 0.002
 
 SWEP.Misfire_Threshold  = 0.9
 SWEP.Misfire_Chance     = 0.5
-
-SWEP.ArcCW_Halo = SWEP.ArcCW_Halo or {}
-SWEP.ArcCW_Halo_Accel = false
 
 -- Funnymode activated
 SWEP.TriggerDelay = true

@@ -41,14 +41,15 @@ SWEP.TracerNum = 0 -- tracer every X
 SWEP.TracerName 	= "hce_sr_tracer"
 
 -- Fesiug's Plasma subbase
+SWEP.ArcCW_Halo_Heat    = true
+SWEP.ArcCW_Halo_Battery = true
+SWEP.ArcCW_Halo_Accel   = false
+
 SWEP.Heat_Accel     = 0.3
 SWEP.Heat_Decel     = 0.18
 
 SWEP.BatteryConsumption     = 0.036
 SWEP.Heat_Threshold     = 0.3
-
-SWEP.ArcCW_Halo = SWEP.ArcCW_Halo or {}
-SWEP.ArcCW_Halo_Accel = false
 
 SWEP.Delay = 60 / 132 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.

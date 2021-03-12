@@ -47,15 +47,16 @@ SWEP.Tracer = "effect_arccw_halo_ce_tracer_ar"
 SWEP.MeleeTime = 1.1
 
 -- Fesiug's Plasma subbase
+SWEP.ArcCW_Halo_Heat    = true
+SWEP.ArcCW_Halo_Battery = true
+SWEP.ArcCW_Halo_Accel   = false
+
 SWEP.Heat_Accel     = 0.7
 SWEP.Heat_Decel     = 0.575
 SWEP.Heat_DecelOH   = 0.3
 
 SWEP.BatteryConsumption     = 1/10
 SWEP.Heat_Threshold     = 0.1
-
-SWEP.ArcCW_Halo = SWEP.ArcCW_Halo or {}
-SWEP.ArcCW_Halo_Accel = false
 
 SWEP.Delay = 0.4 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.

@@ -75,6 +75,10 @@ SWEP.Tracer 	= "effect_astw2_halo_ce_tracer_pr"
 SWEP.ImpactEffect = "effect_astw2_halo_ce_impact_pr"
 
 -- Fesiug's Plasma subbase
+SWEP.ArcCW_Halo_Heat    = true
+SWEP.ArcCW_Halo_Battery = true
+SWEP.ArcCW_Halo_Accel   = true
+
 SWEP.Delay_Accel        = 1.8
 SWEP.Delay_Decel        = 0.25
 SWEP.Delay_Min      = 60 / 420
