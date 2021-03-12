@@ -5,7 +5,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Particle Carbine"
 SWEP.TrueName = "Type-52 Carbine"
-SWEP.Trivia_Class = "Carbome"
+SWEP.Trivia_Class = "Carbine"
 SWEP.Trivia_Desc = "The Particle Carbine is a battery-powered, directed-energy weapon that fires ionized particles at its targets (Similarly to the Beam Rifle)."
 SWEP.Trivia_Manufacturer = "Iruiru Armory"
 SWEP.Trivia_Calibre = "Ionized Accelerated Hydrogen Particles"
