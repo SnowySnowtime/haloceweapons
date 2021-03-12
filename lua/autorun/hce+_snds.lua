@@ -3351,3 +3351,43 @@ sound.Add(
     soundlevel = 80,
     sound = {"spv3/reload1-2.wav","spv3/reload2-2.wav","spv3/reload3-2.wav"}
 })
+
+--
+-- SPV3 Carbine
+--
+
+sound.Add(
+{
+    name = "spvcarb_fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 115,
+    sound = {"spv3/carb/particle_carbine_1.wav","spv3/carb/particle_carbine_2.wav","spv3/carb/particle_carbine_3.wav"}
+})
+
+sound.Add(
+{
+    name = "spvcarb_deploy",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 115,
+    sound = {"spv3/carb/ready.wav"}
+})
+
+sound.Add(
+{
+    name = "spv3oh_start",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 115,
+    sound = {"spv3/carb/overheat.wav"}
+})
+
+sound.Add(
+{
+    name = "spv3oh_exit",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 115,
+    sound = {"spv3/carb/overheat_exit.wav"}
+})

@@ -1,0 +1,36 @@
+VertexLitGeneric
+{
+	"$basetexture" "snowysnowtime\2k\h3\glass"
+	"$bumpmap" "snowysnowtime\2k\h3\glass"
+	"$translucent" "1"
+	"$additive" "1"
+	"$decal" "1"
+
+                 "$phong" "1" 
+                "$phongexponent" "44"
+                 "$phongboost" "13"
+                 
+                 "$phongfresnelranges" "[ 0 0 0 ]" 
+
+	$detail 		"snowysnowtime\spv3\carbine\illum1"
+	$detailscale	1
+	$detailblendmode	5
+	
+	"$phongexponenttexture" "snowysnowtime\ma5e\phongexp255"
+
+	Proxies
+	{
+		drc_ReflectionTint
+		{
+			resultVar $envmaptint
+		}
+		Sine
+		{
+			sineperiod	1.69
+			sinemin		0.3
+			sinemax		1
+			timeoffset		0.3
+			resultvar		$detailblendfactor
+		}
+	}
+}
