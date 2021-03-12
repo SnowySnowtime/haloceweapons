@@ -108,11 +108,8 @@ SWEP.Hook_Think = function(wep)
 end
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
-    if wep:GetDischarging() then
-        if anim == "idle" then
-            --return "idle_vent"
-            return false
-        end
+    if wep:GetDischarging() and anim == "idle" then
+        return "idle_vent"
     end
 end
 
@@ -132,34 +129,32 @@ SWEP.Hook_DrawHUD = function(wep)
         surface.DrawText(text)
     end
 
-    local ss = ScreenScale(24)
-    local s2 = ScreenScale(12)
+    if true then
+        local ss = ScreenScale(24)
+        local s2 = ScreenScale(12)
 
-    local f = wep:GetDischarging() and 0 or 1
-    surface.SetTextColor(255, 255*f, 255*f, 255)
-    surface.SetFont("ArcCW_20")
-    surface.SetTextPos( ScrW()/2-175,
-    ScrH()/2 + ss+s2*1 ) 
-                        surface.DrawText("ACCEL PERCENT: " .. math.Round(wep:AccelerationPercent()*100) .. "%")
-    surface.SetTextPos( ScrW()/2-175,
-    ScrH()/2 + ss+s2*2 ) 
-                        surface.DrawText("ACCEL TIME: " .. math.Round(wep:GetAccelTime(), 2))
-    surface.SetTextPos( ScrW()/2-175,
-    ScrH()/2 + ss+s2*3 ) 
-                        surface.DrawText("HEAT LEVEL: " .. math.Round(wep:GetHeatLevel()*100) .. "%")
-    surface.SetTextPos( ScrW()/2-175,
-    ScrH()/2 + ss+s2*4 ) 
-                        surface.DrawText("RPM: " .. math.Round(60/wep:GetFiringDelay()) .. "rpm")
-    surface.SetTextPos( ScrW()/2-175,
-    ScrH()/2 + ss+s2*5 ) 
-                        surface.DrawText("MISFIRE CHANCE: " .. math.Round( wep.Misfire_Chance * ( 1 - wep:GetBatteryLevel() )*100, 1) .. "% " .. math.Round(math.Rand(0, 1)*100, 1) )
-
-
-                        
-
-    --[[if wep.Misfire_Threshold and
-    ( 1 - wep.Misfire_Threshold ) >= wep:GetBatteryLevel() and
-    math.Rand(0, 1) > ( wep.Misfire_Chance * (1 - wep:GetBatteryLevel())) then]]
+        local f = wep:GetDischarging() and 0 or 1
+        surface.SetTextColor(255, 255*f, 255*f, 255)
+        surface.SetFont("ArcCW_20")
+        surface.SetTextPos( ScrW()/2-175,
+        ScrH()/2 + ss+s2*1 ) 
+                            surface.DrawText("ACCEL PERCENT: " .. math.Round(wep:AccelerationPercent()*100) .. "%")
+        surface.SetTextPos( ScrW()/2-175,
+        ScrH()/2 + ss+s2*2 ) 
+                            surface.DrawText("ACCEL TIME: " .. math.Round(wep:GetAccelTime(), 2))
+        surface.SetTextPos( ScrW()/2-175,
+        ScrH()/2 + ss+s2*3 ) 
+                            surface.DrawText("HEAT LEVEL: " .. math.Round(wep:GetHeatLevel()*100) .. "%")
+        surface.SetTextPos( ScrW()/2-175,
+        ScrH()/2 + ss+s2*4 ) 
+                            surface.DrawText("RPM: " .. math.Round(60/wep:GetFiringDelay()) .. "rpm")
+        surface.SetTextPos( ScrW()/2-175,
+        ScrH()/2 + ss+s2*5 ) 
+                            surface.DrawText("MISFIRE CHANCE: " .. math.Round( wep.Misfire_Chance * ( 1 - wep:GetBatteryLevel() )*100, 1) .. "% " .. math.Round(math.Rand(0, 1)*100, 1) )
+        surface.SetTextPos( ScrW()/2-175,
+        ScrH()/2 + ss+s2*6 ) 
+                            surface.DrawText("FUCK: " .. tostring(wep.FUCK) )
+    end
 end
 
 SWEP.Hook_ShouldNotFire = function(wep)

@@ -280,7 +280,6 @@ SWEP.Attachments = {
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
-        Time = 88/30,
     },
 	["fire_iron"] = {
         Source = "fire",
@@ -315,6 +314,7 @@ SWEP.Animations = {
     },
     ["enter_vent"] = {
         Source = "overheat_start",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Time = 59/30,
         LHIK = true,
         LHIKIn = 0.5,
@@ -330,7 +330,6 @@ SWEP.Animations = {
     ["exit_vent"] = {
         Source = "overheat_finish",
         Time = 35/30,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.5,

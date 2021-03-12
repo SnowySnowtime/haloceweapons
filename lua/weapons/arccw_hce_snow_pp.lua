@@ -59,6 +59,73 @@ SWEP.MuzzleVelocity = 108 -- projectile or phys bullet muzzle velocity
 -- IN M/S
 SWEP.NeverPhysBullet = true
 
+-- Fesiug's Plasma subbase
+SWEP.Heat_Accel         = 0.16
+SWEP.Heat_Decel         = 0.65
+
+SWEP.BatteryConsumption     = 0.002
+
+SWEP.Misfire_Threshold  = 0.9
+SWEP.Misfire_Chance     = 0.5
+
+SWEP.ArcCW_Halo = SWEP.ArcCW_Halo or {}
+SWEP.ArcCW_Halo_Accel = false
+
+-- Funnymode activated
+SWEP.TriggerDelay = true
+SWEP.FUCK = 0
+function SWEP:GetTriggerDelta()
+    local shouldHold = self:GetOwner():KeyDown(IN_ATTACK) and (!self.Sprinted or self:GetState() != ArcCW.STATE_SPRINT)
+
+    if self.LastTriggerTime == -1 then return 0 end
+    if self.FUCK > 0 then return 1 end
+    return math.Clamp((CurTime() - self.LastTriggerTime) / self.LastTriggerDuration, 0, 0.99)
+end
+function SWEP:DoTriggerDelay()
+    local shouldHold = self:GetOwner():KeyDown(IN_ATTACK) and (!self.Sprinted or self:GetState() != ArcCW.STATE_SPRINT) and !self:GetReloading() and !self:GetDischarging()
+
+    if self.LastTriggerTime == -1 then
+        if !shouldHold then
+            self.LastTriggerTime = 0 -- Good to fire again
+            self.LastTriggerDuration = 0
+        end
+        return
+    end
+
+    if self:GetBurstCount() > 0 and self:GetCurrentFiremode().Mode == 1 then
+        self.FUCK = 0
+        self.LastTriggerTime = -1 -- Cannot fire again until trigger released
+        self.LastTriggerDuration = 0
+    elseif self.LastTriggerTime > 0 and !shouldHold then
+        self.FUCK = 1
+        -- Attack key is released. Stop the animation and clear progress
+        self:PrimaryAttack()
+        if math.Clamp((CurTime() - self.LastTriggerTime) / self.LastTriggerDuration, 0, 1) == 1 then
+            self.FUCK = 2
+            self:SetDischarging(true)
+            self:SetHeatLevel(1)
+        end
+        self.LastTriggerTime = 0
+        self.LastTriggerDuration = 0
+        return
+    elseif self:GetNextPrimaryFire() < CurTime() and self.LastTriggerTime == 0 and shouldHold then
+        self.FUCK = 0
+        -- We haven't played the animation yet. Pull it!
+        local anim = self:SelectAnimation("trigger")
+        self:EmitSound( "hce/ppistol_charge.wav", 65, nil, nil, CHAN_WEAPON )
+        self:PlayAnimation(anim, self:GetBuff_Mult("Mult_TriggerDelayTime"), true, 0)
+        self.LastTriggerTime = CurTime()
+        self.LastTriggerDuration = self:GetAnimKeyTime(anim, true) * self:GetBuff_Mult("Mult_TriggerDelayTime")
+    end
+end
+
+SWEP.Hook_SelectFireAnimation = function(wep, anim)
+    if wep.FUCK == 2 then return "fire_overcharged" end
+end
+SWEP.Hook_GetShootSound = function(wep, anim)
+    if wep.FUCK == 2 then return "hce/ppistol_chargefire.wav" end
+end
+
 SWEP.Delay = 60 / 600 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
@@ -147,18 +214,6 @@ SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 
 SWEP.CustomizePos = Vector(2.824, -5, 0.897)
 SWEP.CustomizeAng = Angle(12.149, 30.547, 0)
-
--- Fesiug's Plasma subbase
-SWEP.Heat_Accel         = 0.16
-SWEP.Heat_Decel         = 0.65
-
-SWEP.BatteryConsumption     = 0.002
-
-SWEP.Misfire_Threshold  = 0.9
-SWEP.Misfire_Chance     = 0.5
-
-SWEP.ArcCW_Halo = SWEP.ArcCW_Halo or {}
-SWEP.ArcCW_Halo_Accel = false
 
 SWEP.BarrelLength = 17
 SWEP.AttachmentElements = {
@@ -293,8 +348,11 @@ SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
     },
-	["fire_iron"] = {
-        Source = "fire",
+    ["idle_overcharged"] = {
+        Source = "overcharging_jitter",
+    },
+    ["trigger"] = {
+        Source = "overcharging",
     },
 	["exit_inspect"] = {
 		Source = "fidget",
@@ -313,6 +371,9 @@ SWEP.Animations = {
     ["fire"] = {
         Source = "fire",
     },
+    ["fire_overcharged"] = {
+        Source = "overcharged_fire",
+    },
     ["misfire"] = {
         Source = "misfire",
 		SoundTable = {{s = {"hce/plasma_misfire1.wav","hce/plasma_misfire2.wav","hce/plasma_misfire3.wav"}, t = 0}},
@@ -328,11 +389,24 @@ SWEP.Animations = {
         LHIKOut = 0.6,
     },
     ["enter_vent"] = {
-        Source = "reload",
-        Time = 50/30,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+        Source = "overheat_start",
+		SoundTable = {{s = "hce/plasmap_overheat.wav", t = 0}},
         LHIK = true,
         LHIKIn = 0.5,
+        LHIKOut = 0,
+    },
+    ["idle_vent"] = {
+        Source = "overheat_loop",
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 0,
+    },
+    ["exit_vent"] = {
+        Source = "overheat_finish",
+		SoundTable = {{s = "hce/plasmap_overheatexit.wav", t = 0}},
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        LHIK = true,
+        LHIKIn = 0,
         LHIKOut = 0.5,
     },
 }
