@@ -1,14 +1,14 @@
 VertexLitGeneric
 {
-	"$basetexture" "snowysnowtime\spv3\carbine\bg"
+	"$basetexture" "snowysnowtime/ho/shared/Screenline_d"
 	"$bumpmap" "snowysnowtime\2k\h3\glass"
-	"$selfillum" "1"
-	"$translucent" "0"
-	"$additive" "0"
+	$selfillum 1
+	"$translucent" "1"
+	"$additive" "1"
 	"$decal" "1"
 
-	$colourfrom    "[ 0 0.15 0.3 ]"
-    $colourto        "[ 0.3 0 0 ]"
+	$colourfrom    "[ 0 1 3 ]"
+    $colourto        "[ 2 0 0 ]"
     $colourmul    1
 
     Proxies
@@ -23,5 +23,11 @@ VertexLitGeneric
             minVal    .035
             maxVal    .035
         }
+		"TextureScroll"
+		{
+			"texturescrollvar" "$basetexturetransform"
+			"texturescrollrate" 0.35
+		                "texturescrollangle" -270.00
+		}
     }
 }

@@ -1,6 +1,6 @@
 UnlitGeneric
 {
-    $basetexture    "snowysnowtime\spv3\carbine\overlay"
+    $basetexture    "snowysnowtime\spv3\carbine\illum1"
     $additive 1
     $phong        0
     $blendtintbybasealpha    0

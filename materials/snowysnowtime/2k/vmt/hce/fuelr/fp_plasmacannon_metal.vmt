@@ -11,7 +11,9 @@ VertexLitGeneric
 
                  "$phong" "1" 
                 "$phongexponent" "44"
-                 "$phongboost" "13"
+                 "$phongboost" "256"
                  
-                 "$phongfresnelranges" "[ 0.05 0.3 1 ]" 
+                 "$phongfresnelranges" "[ 0.05 0.3 1 ]"
+				 $phongexponenttexture "snowysnowtime\ma5e\phongexp255"
+				 $phongalbedotint 1
 }

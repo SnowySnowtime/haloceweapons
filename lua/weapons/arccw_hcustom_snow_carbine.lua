@@ -11,7 +11,7 @@ SWEP.Trivia_Manufacturer = "Iruiru Armory"
 SWEP.Trivia_Calibre = "Ionized Accelerated Hydrogen Particles"
 SWEP.Trivia_Mechanism = "Semi-Auto"
 
-SWEP.Slot = 4
+SWEP.Slot = 2
 
 if GetConVar("arccw_truenames"):GetBool() then SWEP.PrintName = SWEP.TrueName end
 
@@ -222,9 +222,16 @@ SWEP.Animations = {
         Source = {"fire"},
         Time = 18/30,
     },
+	["reload"] = {
+        Source = "draw",
+		SoundTable = {{s = "spvcarb_deploy", t = 0.01}},
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 0.25,
+    },
 	["enter_vent"] = {
 		Source = "overheat_start",
-		SoundTable = {{s = "spv3oh_start", t = 0.02}},
+		SoundTable = {{s = "spv3oh_start", t = 0.01}},
         LHIK = true,
         LHIKIn = 0.5,
         LHIKOut = 0,

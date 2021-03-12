@@ -7,11 +7,13 @@ VertexLitGeneric
 
                  "$phong" "1" 
                 "$phongexponent" "29"
-                 "$phongboost" "7"
+                 "$phongboost" "32"
                  
                  "$phongfresnelranges" "[ 0.08 0.6 2 ]" 
 
 	$detail	"snowysnowtime/2k/h3/fuelrod/flak_detail"
+	$phongexponenttexture "snowysnowtime\ma5e\phongexp255"
+	$phongalbedotint 1
 	$detailscale	6
 	$detailblendmode	0
 	$detailblendfactor	0.7

@@ -4,7 +4,7 @@
 
 	"$color2" "[0 3 0]"
 	
-"$additive" "1"
+	"$additive" "1"
 
 	"Proxies" 
 	{
@@ -15,6 +15,4 @@
 		                "texturescrollangle" -270.00
 		}
 	}
-
-
 }
