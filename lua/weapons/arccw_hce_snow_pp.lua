@@ -85,6 +85,7 @@ end
 function SWEP:DoTriggerDelay()
     local shouldHold = self:GetOwner():KeyDown(IN_ATTACK) and (!self.Sprinted or self:GetState() != ArcCW.STATE_SPRINT) and !self:GetReloading() and !self:GetDischarging()
 
+    self.FUCK = 0
     if self.LastTriggerTime == -1 then
         if !shouldHold then
             self.LastTriggerTime = 0 -- Good to fire again
@@ -93,6 +94,8 @@ function SWEP:DoTriggerDelay()
         return
     end
 
+    local readyq = math.Clamp((CurTime() - self.LastTriggerTime) / self.LastTriggerDuration, 0, 1) == 1
+
     if self:GetBurstCount() > 0 and self:GetCurrentFiremode().Mode == 1 then
         self.FUCK = 0
         self.LastTriggerTime = -1 -- Cannot fire again until trigger released
@@ -100,14 +103,17 @@ function SWEP:DoTriggerDelay()
     elseif self.LastTriggerTime > 0 and !shouldHold then
         self.FUCK = 1
         -- Attack key is released. Stop the animation and clear progress
-        self:PrimaryAttack()
-        if math.Clamp((CurTime() - self.LastTriggerTime) / self.LastTriggerDuration, 0, 1) == 1 then
+        self:StopSound("hce/ppistol_charge.wav")
+        if readyq then
             self.FUCK = 2
-            self:SetDischarging(true)
-            self:SetHeatLevel(1)
         end
         self.LastTriggerTime = 0
         self.LastTriggerDuration = 0
+        self:PrimaryAttack()
+        if readyq then
+            self:SetDischarging(true)
+            self:SetHeatLevel(1)
+        end
         return
     elseif self:GetNextPrimaryFire() < CurTime() and self.LastTriggerTime == 0 and shouldHold then
         self.FUCK = 0
@@ -123,7 +129,7 @@ end
 SWEP.Hook_SelectFireAnimation = function(wep, anim)
     if wep.FUCK == 2 then return "fire_overcharged" end
 end
-SWEP.Hook_GetShootSound = function(wep, anim)
+SWEP.Hook_GetShootSound = function(wep, fsound)
     if wep.FUCK == 2 then return "hce/ppistol_chargefire.wav" end
 end
 

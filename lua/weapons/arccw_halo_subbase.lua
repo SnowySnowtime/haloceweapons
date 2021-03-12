@@ -142,7 +142,7 @@ SWEP.Hook_DrawHUD = function(wep)
         end
     end
 
-    if true then
+    if GetConVar("arccw_dev_debug"):GetBool() then
         local ss = ScreenScale(24)
         local s2 = ScreenScale(12)
 
