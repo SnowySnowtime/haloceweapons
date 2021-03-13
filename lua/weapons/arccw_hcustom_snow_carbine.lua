@@ -11,7 +11,7 @@ SWEP.Trivia_Manufacturer = "Iruiru Armory"
 SWEP.Trivia_Calibre = "Ionized Accelerated Hydrogen Particles"
 SWEP.Trivia_Mechanism = "Semi-Auto"
 
-SWEP.Slot = 2
+SWEP.Slot = 3
 
 if GetConVar("arccw_truenames"):GetBool() then SWEP.PrintName = SWEP.TrueName end
 
@@ -62,9 +62,9 @@ SWEP.ArcCW_Halo_Accel   = false
 
 SWEP.Heat_Accel     = 0.14
 SWEP.Heat_Decel     = 0.35
-SWEP.Heat_DecelOH   = 0.25
+SWEP.Heat_DecelOH   = 0.225
 
-SWEP.BatteryConsumption     = 1/100
+SWEP.BatteryConsumption     = 1/120
 SWEP.Heat_Threshold     = 0.1
 
 SWEP.Delay = 60/900 -- 60 / RPM.
