@@ -310,10 +310,6 @@ SWEP.Animations = {
         Source = "idle",
         Time = 4
     },
-	["fire_iron"] = {
-        Source = "fire",
-		Time = 3
-    },
     ["draw"] = {
         Source = "draw",
         Time = 1,

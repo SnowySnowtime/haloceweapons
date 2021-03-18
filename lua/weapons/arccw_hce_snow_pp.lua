@@ -54,7 +54,7 @@ end
 SWEP.Range =  100 -- in METRES
 SWEP.Penetration = 0
 SWEP.DamageType = DMG_BULLET
-SWEP.ShootEntity = "plasmapistol_hce" -- entity to fire, if any
+SWEP.ShootEntity = nil -- entity to fire, if any
 SWEP.MuzzleVelocity = 108 -- projectile or phys bullet muzzle velocity
 -- IN M/S
 SWEP.NeverPhysBullet = true
@@ -67,7 +67,10 @@ SWEP.ArcCW_Halo_Accel   = false
 SWEP.Heat_Accel         = 0.16
 SWEP.Heat_Decel         = 0.65
 
-SWEP.BatteryConsumption     = 0.002
+SWEP.BatteryConsumption = 0.002
+
+SWEP.Charge_Time        = 0.6
+SWEP.Charge_Mult        = 45
 
 SWEP.Misfire_Threshold  = 0.9
 SWEP.Misfire_Chance     = 0.5
@@ -94,7 +97,7 @@ function SWEP:DoTriggerDelay()
         return
     end
 
-    local readyq = math.Clamp((CurTime() - self.LastTriggerTime) / self.LastTriggerDuration, 0, 1) == 1
+    local readyq = math.Clamp(( CurTime() - self.LastTriggerTime ) / self.LastTriggerDuration, 0, 1 ) == 1
 
     if self:GetBurstCount() > 0 and self:GetCurrentFiremode().Mode == 1 then
         self.FUCK = 0
@@ -117,15 +120,16 @@ function SWEP:DoTriggerDelay()
         return
     elseif self:GetNextPrimaryFire() < CurTime() and !self:GetReloading() and self.LastTriggerTime == 0 and shouldHold then
         self.FUCK = 0
-        -- We haven't played the animation yet. Pull it!
-        local anim = self:SelectAnimation("trigger")
         self:EmitSound( "hce/ppistol_charge.wav", 65, nil, nil, CHAN_WEAPON )
-        self:PlayAnimation(anim, self:GetBuff_Mult("Mult_TriggerDelayTime"), true, 0)
         self.LastTriggerTime = CurTime()
-        self.LastTriggerDuration = self:GetAnimKeyTime(anim, true) * self:GetBuff_Mult("Mult_TriggerDelayTime")
+        self.LastTriggerDuration = self.Charge_Time
+    end
+
+    if readyq then
+        local anim = self:SelectAnimation("trigger")
+        self:PlayAnimation(anim, 1, true, 0)
     end
 end
-
 SWEP.Hook_SelectFireAnimation = function(wep, anim)
     if wep.FUCK == 2 then return "fire_overcharged" end
 end
@@ -160,7 +164,7 @@ SWEP.ShootPitch = 100 -- pitch of shoot sound
 
 SWEP.ShootSound = "plasma_fire"
 SWEP.ShootSoundSilenced = "hcesup"
-SWEP.DistantShootSound = "m6d_lod"
+SWEP.DistantShootSound = nil
 
 SWEP.TracerNum = 1 -- tracer every X
 SWEP.Tracer = "effect_astw2_halo_ce_tracer_pp"

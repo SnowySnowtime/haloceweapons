@@ -199,6 +199,9 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKOut = 0.25,
     },
+    ["reload"] = {
+        Source = "deploy",
+    },
 	["enter_inspect"] = {
 		Source = "pose1",
 		Time = 88/30

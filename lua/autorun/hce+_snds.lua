@@ -2025,7 +2025,7 @@ sound.Add(
 sound.Add(
 {
     name = "plasma_fire",
-    channel = CHAN_WEAPON,
+    channel = CHAN_STATIC,
     volume = 1.0,
     soundlevel = 80,
     sound = {"hce/plasma_fire_1.wav","hce/plasma_fire_2.wav","hce/plasma_fire_3.wav","hce/plasma_fire_4.wav","hce/plasma_fire_5.wav"},
