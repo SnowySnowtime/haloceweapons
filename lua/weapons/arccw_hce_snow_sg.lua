@@ -98,6 +98,7 @@ SWEP.RunawayBurst = false
 SWEP.Firemodes = {
     {
         Mode = 1,
+        PrintName = "PUMP"
     },
     {
         Mode = 0
