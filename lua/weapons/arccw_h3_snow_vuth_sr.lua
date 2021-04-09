@@ -168,7 +168,7 @@ SWEP.RejectAttachments = {
     ["acwatt_perk_beefficient"] = true, -- never heard of her
 }
 
-SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_RPG
+SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 SWEP.ActivePos = Vector(0, -2.5, -1)
 SWEP.ActiveAng = Angle(0, 0, 0)

@@ -92,7 +92,7 @@ SWEP.Firemodes = {
         Mode = -2,
 		RunawayBurst = true,
 		AutoBurst = true,
-		PostBurstDelay = 0.17,
+		PostBurstDelay = 60 / 420,
     },
     {
         Mode = 0,
@@ -149,8 +149,8 @@ SWEP.IronSightStruct = {
 }
 
 SWEP.HoldtypeHolstered = "normal"
-SWEP.HoldtypeActive = "pistol"
-SWEP.HoldtypeSights = "revolver"
+SWEP.HoldtypeActive = "duel"
+SWEP.HoldtypeSights = "duel"
 
 SWEP.RejectAttachments = {
     ["ammo_cerberus"] = true, -- fuck cerberus
@@ -158,7 +158,7 @@ SWEP.RejectAttachments = {
     ["acwatt_perk_beefficient"] = true, -- never heard of her
 }
 
-SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_RPG
+SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_DUEL
 
 SWEP.ActivePos = Vector(0, 3, 1)
 SWEP.ActiveAng = Angle(0, 0, 0)
@@ -323,9 +323,7 @@ SWEP.Animations = {
     ["reload"] = {
         Source = "reload",
         Time = 3,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
-        Checkpoints = {24, 33, 51, 58, 62, 74, 80},
-        FrameRate = 30,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_DUEL,
         LHIK = true,
         LHIKIn = 0.5,
         LHIKOut = 0.5,
@@ -333,9 +331,7 @@ SWEP.Animations = {
     ["reload_empty"] = {
         Source = "reload",
         Time = 3,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
-        Checkpoints = {24, 33, 51},
-        FrameRate = 30,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_DUEL,
         LHIK = true,
         LHIKIn = 0.5,
         LHIKOut = 0.5,

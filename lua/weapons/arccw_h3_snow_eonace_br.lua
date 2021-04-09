@@ -168,7 +168,7 @@ SWEP.RejectAttachments = {
 
 SWEP.MeleeTime = 1.2
 
-SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_RPG
+SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 SWEP.ActivePos = Vector(0, 0, 0)
 SWEP.ActiveAng = Angle(0, 0, 0)

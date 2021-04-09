@@ -163,7 +163,7 @@ SWEP.RejectAttachments = {
 
 SWEP.MeleeTime = 1.2
 
-SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_RPG
+SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SMG1
 
 SWEP.ActivePos = Vector(0, -3, 0)
 SWEP.ActiveAng = Angle(0, 0, 0)
@@ -315,7 +315,7 @@ SWEP.Animations = {
     ["reload"] = {
         Source = "reload",
         Time = 55/30,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
         Checkpoints = {7, 29, 43},
         FrameRate = 30,
         LHIK = true,
@@ -325,7 +325,7 @@ SWEP.Animations = {
     ["reload_empty"] = {
         Source = "reload",
         Time = 55/30,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
         Checkpoints = {7, 29, 43},
         FrameRate = 30,
         LHIK = true,

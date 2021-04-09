@@ -13,10 +13,6 @@ SWEP.Trivia_Mechanism = "Semi-Auto"
 
 SWEP.Slot = 3
 
-SWEP.VElements = {
-	["numerals"] = { type = "Quad", bone = "frame gun", rel = "", pos = Vector(3.37, 0, 6.26), angle = Angle(0, -90, 60), size = 0.0057, draw_func = nil},
-}
-
 if GetConVar("arccw_truenames"):GetBool() then SWEP.PrintName = SWEP.TrueName end
 
 SWEP.UseHands = true
@@ -165,7 +161,7 @@ SWEP.RejectAttachments = {
 
 SWEP.MeleeTime = 1.2
 
-SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_RPG
+SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 SWEP.ActivePos = Vector(0, 0, 1)
 SWEP.ActiveAng = Angle(0, 0, 0)
