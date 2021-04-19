@@ -145,15 +145,11 @@ if engine.ActiveGamemode() == "terrortown" then
     SWEP.Melee2Damage = 105
 end
 
-if engine.ActiveGamemode() == "nzombies" then
-SWEP.Attachments = nil
-end
-
 -- nZombies Stuff
 SWEP.NZWonderWeapon		= true	-- Is this a Wonder-Weapon? If true, only one player can have it at a time. Cheats aren't stopped, though.
 --SWEP.NZRePaPText		= "your text here"	-- When RePaPing, what should be shown? Example: Press E to your text here for 2000 points.
 SWEP.NZPaPName				= "Zealot"
---SWEP.NZPaPReplacement 	= ""	-- If Pack-a-Punched, replace this gun with the entity class shown here.
+SWEP.NZPaPReplacement 	= "arccw_h3_snow_es_h2a"	-- If Pack-a-Punched, replace this gun with the entity class shown here.
 SWEP.NZPreventBox		= false	-- If true, this gun won't be placed in random boxes GENERATED. Users can still place it in manually.
 SWEP.NZTotalBlackList	= false	-- if true, this gun can't be placed in the box, even manually, and can't be bought off a wall, even if placed manually. Only code can give this gun.
 
@@ -163,7 +159,7 @@ self.Ispackapunched = 1
 self.PrintName = "Zealot"
 self.MeleeDamage = 210
 self.Melee2Damage = 600
-self.MeleeTime = 0.5
-self.Melee2Time = 1.2
+self.MeleeTime = 0.15
+self.Melee2Time = 0.3
 return true
 end

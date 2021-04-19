@@ -143,10 +143,6 @@ if engine.ActiveGamemode() == "terrortown" then
     SWEP.Melee2Damage = 105
 end
 
-if engine.ActiveGamemode() == "nzombies" then
-SWEP.Attachments = nil
-end
-
 -- nZombies Stuff
 SWEP.NZWonderWeapon		= true	-- Is this a Wonder-Weapon? If true, only one player can have it at a time. Cheats aren't stopped, though.
 --SWEP.NZRePaPText		= "your text here"	-- When RePaPing, what should be shown? Example: Press E to your text here for 2000 points.
@@ -161,7 +157,5 @@ self.Ispackapunched = 1
 self.PrintName = "Zealot"
 self.MeleeDamage = 210
 self.Melee2Damage = 600
-self.MeleeTime = 0.5
-self.Melee2Time = 1.2
 return true
 end

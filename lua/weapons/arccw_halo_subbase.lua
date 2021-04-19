@@ -237,3 +237,9 @@ SWEP.Hook_GetHUDData = function(wep, data)
     data.heat_maxlevel = 1
     data.heat_locked = wep:GetDischarging()
 end
+
+if engine.ActiveGamemode() == "nzombies" then
+RunConsoleCommand("arccw_attinv_onlyinspect", "1")
+else
+RunConsoleCommand("arccw_attinv_onlyinspect", "0")
+end
