@@ -182,7 +182,7 @@ end
 
 SWEP.Hook_FiremodeBars = function(wep)
     if !wep.ArcCW_Halo_Accel then return end
-    local awesome = math.ceil( wep:AccelerationPercent()*7 )
+    local awesome = math.ceil( math.Round(wep:AccelerationPercent(), 2)*7 )
     local thebars = ""
 
     for i = 1, awesome do
