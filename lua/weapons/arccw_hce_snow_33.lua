@@ -245,7 +245,3 @@ SWEP.Animations = {
 		SoundTable = {{s = "needler_reload", t = 0}},
     },
 }
-
-if engine.ActiveGamemode() == "nzombies" then
-SWEP.Attachments = nil
-end

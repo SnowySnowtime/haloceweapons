@@ -340,10 +340,6 @@ SWEP.Animations = {
     },
 }
 
-if engine.ActiveGamemode() == "nzombies" then
-SWEP.Attachments = nil
-end
-
 SWEP.Rarity = "Legendary"
 -- nZombies Stuff
 SWEP.NZWonderWeapon		= false	-- Is this a Wonder-Weapon? If true, only one player can have it at a time. Cheats aren't stopped, though.
