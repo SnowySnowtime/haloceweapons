@@ -1,0 +1,10 @@
+"UnlitGeneric"
+{
+	"$basetexture" "snowysnowtime/energysword/h2a/glow"
+	"$color2" "[ 0.7 0.5 0.7 ]"
+
+	"$translucent"	1
+	"$nodecal"		1
+	"$additive"		1
+	"$nocull"		1
+}

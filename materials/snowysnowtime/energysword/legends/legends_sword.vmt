@@ -1,0 +1,18 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "snowysnowtime/energysword/legends/blade_legend"
+	"$bumpmap" "snowysnowtime/energysword/legends/blade_legend_n"
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[0.01 0.01 0.01]"
+	"$envmapfresnel" "1"
+	"$normalmapalphaenvmapmask" "1"
+
+	"$phong" "1" 
+	"$phongboost" "2"
+	"$phongexponent" "5"
+	"$phongexponenttexture" "snowysnowtime\ma5e\phongexp255"
+	"$phongalbedotint" "1"
+	"$phongfresnelranges" "[1 1.25 1.75]"
+	"$phongdisablehalflambert" "1"
+	"$nocull" "1"
+}

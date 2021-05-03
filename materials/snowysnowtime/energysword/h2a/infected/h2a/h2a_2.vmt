@@ -1,0 +1,24 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" 	"snowysnowtime/2k/h3/glass"
+	"$additive" "1"
+
+	"$halflambert" "1"
+	"$phongfresnelranges"	"[0 0 0]"	// dummy
+
+	"$color2"		"[0 0 0]"
+
+	"$alphatest"		"1"
+	"$ambientocclusion"	"0"
+
+	"$phong"				"1"
+	"$phongboost"			"0"
+
+	$emissiveBlendEnabled 1
+	$emissiveBlendTexture	"snowysnowtime/sword_det"
+	$emissiveBlendBaseTexture	"snowysnowtime/sword_det"
+	$emissiveBlendFlowTexture	"snowysnowtime/energysword/h2a/sword_z"
+	$emissiveBlendTint "[1 0.5 3]"
+	$emissiveBlendStrength 1
+	$emissiveBlendScrollVector "[-0.1 0.1]"
+}

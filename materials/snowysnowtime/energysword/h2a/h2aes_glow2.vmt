@@ -1,6 +1,5 @@
 "UnlitGeneric"
 {
-	"$nodraw" "1"
 	"$basetexture" "snowysnowtime/energysword/h2a/glow"
 	"$color2" "[ 0.1 0.4 0.5 ]"
 

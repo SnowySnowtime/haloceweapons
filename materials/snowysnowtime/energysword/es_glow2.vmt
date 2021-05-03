@@ -3,7 +3,7 @@
 	$no_draw 0
 	"$basetexture" "snowysnowtime/energysword/glow2"
 	"$bumpmap" "snowysnowtime\2k\h3\glass"
-	"$color2" "[ 0.2 0.1 0.3 ]"
+	"$color2" "[ 0.5 0.4 0.6 ]"
 
 	$translucent	1
 	$nodecal		1

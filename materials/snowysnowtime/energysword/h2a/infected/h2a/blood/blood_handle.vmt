@@ -1,0 +1,21 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "snowysnowtime/energysword/h2a/blood/handle_dif"
+	"$bumpmap" "snowysnowtime/energysword/h2a/handle_n"
+	"$selfillum" "1"
+	"$selfillummask" "snowysnowtime/energysword/h2a/blood/emis"
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[0.01 0.01 0.01]"
+	"$envmapfresnel" "1"
+	"$normalmapalphaenvmapmask" "1"
+
+	"$phong" "1" 
+	"$phongboost" "3"
+	"$phongexponent" "5"
+	"$phongexponenttexture" "snowysnowtime\ma5e\phongexp255"
+	"$phongalbedotint" "1"
+	"$phongfresnelranges" "[1 1.25 1.75]"
+	"$phongdisablehalflambert" "1"
+	"$nocull" "1"
+}
+

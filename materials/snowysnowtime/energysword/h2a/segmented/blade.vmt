@@ -1,0 +1,37 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" 	"snowysnowtime/invis"
+	"$detail" "snowysnowtime/energysword/h2a/segmented/blade"
+	$detailscale	1
+	$detailblendmode	5
+	"$additive" "1"
+
+	"$halflambert" "1"
+	"$phongfresnelranges"	"[0 0 0]"	// dummy
+
+	"$color2"		"[1 1 1]"
+
+	"$alphatest"		"1"
+	"$ambientocclusion"	"0"
+
+	"$phong"				"1"
+	"$phongboost"			"0"
+
+	$emissiveBlendEnabled 1
+	$emissiveBlendTexture	"snowysnowtime/energysword/h2a/energy"
+	$emissiveBlendBaseTexture	"snowysnowtime/sword_det"
+	$emissiveBlendFlowTexture	"snowysnowtime/energysword/h2a/segmented/sword_z"
+	$emissiveBlendTint "[3 3 12]"
+	$emissiveBlendStrength 1
+	$emissiveBlendScrollVector "[-0.2 0.2]"
+	"Proxies"
+	{
+	"Sine"
+	{
+	"sineperiod"	3
+	"sinemin"		0.3
+	"sinemax"		0.5
+	"timeoffset"		0
+	"resultvar"		$detailblendfactor
+	}
+}

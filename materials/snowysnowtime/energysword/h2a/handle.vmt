@@ -1,0 +1,16 @@
+"VertexlitGeneric"
+{
+	$basetexture	"models\vuthakral\halo\weapons\EnergySword\handle_dif"
+	"$bumpmap"	"models\vuthakral\halo\weapons\EnergySword\handle_n"
+	"$selfillum"		1
+	"$selfillummask"	"models\vuthakral\halo\weapons\EnergySword\handle_illum"
+
+	"$phong" "1" 
+	"$phongboost" "3"
+	"$phongexponent" "5"
+	"$phongexponenttexture" "snowysnowtime\ma5e\phongexp255"
+	"$phongalbedotint" "1"
+	"$phongfresnelranges" "[1 1.25 1.75]"
+	"$phongdisablehalflambert" "1"
+	"$nocull" "1"
+}

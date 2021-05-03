@@ -1,15 +1,26 @@
-"UnlitGeneric"
+"VertexLitGeneric"
 {
 	"$basetexture" "snowysnowtime/energysword/energy_sword_blade_mask"
 	"$detail" "snowysnowtime/sword_det"
-	"$phong" "1" 
-	"$phongboost" "3"
-	"$phongexponent" "5"
-	"$phongexponenttexture" "snowysnowtime\ma5e\phongexp255"
-	"$phongalbedotint" "1"
-	"$phongfresnelranges" "[1 1.25 1.75]"
-	"$phongdisablehalflambert" "1"
-	"$color2" "[ 2 2 2.5 ]"
-	"$translucent" "1"
+	"$selfillum" "1"
 	"$additive" "1"
+
+	"$halflambert" "1"
+	"$phongfresnelranges"	"[0 0 0]"	// dummy
+
+	"$color2"		"[0.6 0.6 0.6]"
+
+	"$alphatest"		"1"
+	"$ambientocclusion"	"0"
+
+	"$phong"				"1"
+	"$phongboost"			"0"
+
+	$emissiveBlendEnabled 1
+	$emissiveBlendTexture	"snowysnowtime/sword_plasma"
+	$emissiveBlendBaseTexture	"snowysnowtime/energysword/energy_sword_blade_mask"
+	$emissiveBlendFlowTexture	"snowysnowtime/energysword/h3_flowmap"
+	$emissiveBlendTint "[0.9 0.1 3]"
+	$emissiveBlendStrength 0.6
+	$emissiveBlendScrollVector "[0.2 -0.2]"
 }

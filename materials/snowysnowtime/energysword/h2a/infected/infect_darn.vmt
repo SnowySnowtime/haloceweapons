@@ -1,0 +1,24 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "snowysnowtime/energysword/h2a/infected/energy"
+	"$detail" "snowysnowtime/energysword/h2a/infected/energy"
+	"$detailscale" "32"
+	"$color2" "[ 0 0 0 ]"
+	"$translucent" "1"
+	"$additive" "0"
+	"Proxies"
+	{
+	"AnimatedTexture"
+	{
+	"animatedTextureVar" "$basetexture"
+	"animatedTextureFrameNumVar" "$frame"
+	"animatedTextureFrameRate" "30"
+	}
+	"TextureScroll"
+    {
+    "texturescrollvar" "$basetexturetransform"
+    "texturescrollrate" -0.3
+    "texturescrollangle" -40
+	"texturescale" 2
+    }
+}

@@ -1,4 +1,5 @@
 VertexlitGeneric
 {
-	$nodraw 1
+	"$basetexture" "snowysnowtime\2k\h3\glass"
+	"$additive" "1"
 }

@@ -1,22 +1,26 @@
-"UnlitGeneric"
+"VertexLitGeneric"
 {
-	"$basetexture" "snowysnowtime/sword_plasma"
+	"$basetexture" "snowysnowtime/energysword/energy_sword_blade_mask"
 	"$detail" "snowysnowtime/sword_det"
-	"$color2" "[ 0.45 0.05 0.25 ]"
+	"$selfillum" "1"
 	"$additive" "1"
-	"$nodraw" "1"
-	"Proxies"
-	{
-	"AnimatedTexture"
-	{
-	"animatedTextureVar" "$basetexture"
-	"animatedTextureFrameNumVar" "$frame"
-	"animatedTextureFrameRate" "20"
-	}
-	"TextureScroll"
-    {
-    "texturescrollvar" "$basetexturetransform"
-    "texturescrollrate" -0.10
-    "texturescrollangle" 0
-    }	
+
+	"$halflambert" "1"
+	"$phongfresnelranges"	"[0 0 0]"	// dummy
+
+	"$color2"		"[0 0 0]"
+
+	"$alphatest"		"1"
+	"$ambientocclusion"	"0"
+
+	"$phong"				"1"
+	"$phongboost"			"0"
+
+	$emissiveBlendEnabled 1
+	$emissiveBlendTexture	"snowysnowtime/sword_det"
+	$emissiveBlendBaseTexture	"snowysnowtime/energysword/energy_sword_blade_mask"
+	$emissiveBlendFlowTexture	"snowysnowtime/energysword/energy_sword_blade_mask"
+	$emissiveBlendTint "[0.5 0.5 0.5]"
+	$emissiveBlendStrength 0.8
+	$emissiveBlendScrollVector "[-0.1 -0.1]"
 }
