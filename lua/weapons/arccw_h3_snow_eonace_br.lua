@@ -209,16 +209,16 @@ SWEP.AttachmentElements = {
         WMSkin = 6,
     },
 	["desert"] = {
-        VMSkin = 7,
-        WMSkin = 7,
+        VMSkin = 12,
+        WMSkin = 12,
     },
 	["great"] = {
-        VMSkin = 8,
-        WMSkin = 8,
-    },
-	["hazardpay"] = {
         VMSkin = 9,
         WMSkin = 9,
+    },
+	["hazardpay"] = {
+        VMSkin = 11,
+        WMSkin = 11,
     },
 	["117"] = {
         VMSkin = 10,
@@ -229,16 +229,16 @@ SWEP.AttachmentElements = {
         WMSkin = 11,
     },
 	["red"] = {
-        VMSkin = 12,
-        WMSkin = 12,
+        VMSkin = 7,
+        WMSkin = 7,
     },
 	["gray"] = {
-        VMSkin = 13,
-        WMSkin = 13,
+        VMSkin = 8,
+        WMSkin = 8,
     },
 	["mcc"] = {
-        VMSkin = 14,
-        WMSkin = 14,
+        VMSkin = 13,
+        WMSkin = 13,
     },
 	["brmuzzle"] = {
         VMBodygroups = {{ind = 1, bg = 1}},
