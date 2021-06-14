@@ -223,11 +223,20 @@ sound.Add(
 
 sound.Add(
 {
-    name = "bm_zoom",
+    name = "bm_zoomin",
     channel = CHAN_STATIC,
     volume = 1.0,
     soundlevel = 80,
     sound = "snow/weapons/beam_rifle/beam_rifle_zoom_in.wav"
+})
+
+sound.Add(
+{
+    name = "bm_zoomout",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = "snow/weapons/beam_rifle/beam_rifle_zoom_out.wav"
 })
 
 sound.Add(
@@ -499,4 +508,22 @@ sound.Add(
     volume = 1.0,
     soundlevel = 80,
     sound = "hce/zoom_out.wav"
+})
+
+sound.Add(
+{
+    name = "h3_zoomin",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = "snow/weapons/battle_rifle/battle_rifle_zoom_in.wav"
+})
+
+sound.Add(
+{
+    name = "h3_zoomout",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    soundlevel = 80,
+    sound = "snow/weapons/battle_rifle/battle_rifle_zoom_out.wav"
 })

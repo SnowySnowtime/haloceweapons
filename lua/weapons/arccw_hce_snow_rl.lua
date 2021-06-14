@@ -170,7 +170,7 @@ SWEP.Attachments = {
 	{
         PrintName = "Optic", -- print name
         DefaultAttName = "10x Scope",
-        Slot = {"optic", "optic_lp"}, -- what kind of attachments can fit here, can be string or table
+        Slot = {"optic", "optic_lp", "hce_m41scope"}, -- what kind of attachments can fit here, can be string or table
         Bone = "frame gun", -- relevant bone any attachments will be mostly referring to
         Offset = {
             vpos = Vector(12, -2.5, 2), -- offset that the attachment will be relative to the bone
@@ -178,6 +178,8 @@ SWEP.Attachments = {
             wpos = Vector(6, 2, -4.4),
             wang = Angle(-8.829, 0, 180)
         },
+		Installed = "optic_rocket_scope_ce",
+		Integral = true, 
     },
 	{
         PrintName = "Tactical",

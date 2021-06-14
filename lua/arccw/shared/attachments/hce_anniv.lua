@@ -12,3 +12,4 @@ att.Free = true
 
 att.ActivateElements = {"anniv"}
 att.GivesFlags = {"anniv"}
+att.Anniv = true

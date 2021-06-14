@@ -4,7 +4,7 @@ SWEP.Category = "ArcCW - Halo 3" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "SMG"
-SWEP.TrueName = "M7 SMG"
+SWEP.TrueName = "M7/Caseless SMG"
 SWEP.Trivia_Class = "SMG"
 SWEP.Trivia_Desc = "The M7/Caseless Submachine Gun, more simply known as the SMG, is a United Nations Space Command infantry and special operations weapon. Sustained fire tends to cause the muzzle to ''walk'' upwards as recoil compounds."
 SWEP.Trivia_Manufacturer = "Misriah Armory"
@@ -210,6 +210,14 @@ SWEP.AttachmentElements = {
 
 SWEP.ExtraSightDist = 15
 
+SWEP.Hook_NameChange = function(wep, name)
+
+    if wep:GetBuff_Override("M7S") and GetConVar("arccw_truenames"):GetBool() then
+        return "M7S Caseless SMG"
+    elseif GetConVar("arccw_truenames"):GetBool() then return "M7/Caseless SMG"
+    end
+end
+
 SWEP.Attachments = {
 	{
         PrintName = "Optic", -- print name
@@ -295,6 +303,7 @@ SWEP.Attachments = {
     },
 	{
         PrintName = "Variant",
+		DefaultAttName = "M7 SMG",
 		Bone = "gun", -- relevant bone any attachments will be mostly referring to
         Slot = {"override_e"},
 		Offset = {

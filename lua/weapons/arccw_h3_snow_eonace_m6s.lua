@@ -4,7 +4,7 @@ SWEP.Category = "ArcCW - Halo 3" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "Automag"
-SWEP.TrueName = "M6C"
+SWEP.TrueName = "M6C/SOCOM"
 SWEP.Trivia_Class = "Pistol"
 SWEP.Trivia_Desc = "The M6C/SOCOM variant is a special issued handgun to the UNSC's special operations units. The M6C/SOCOM variant has an integrated sound suppressor, and muzzle brake. It is the secondary weapon of special forces Orbital Drop Shock Troopers and is used in operations that rely on stealth rather than direct engagements. In lieu of the KFA-2 sight used on the M6D PDWS, the M6C/SOCOM utilizes the VnSLS/V 6E smart linked 4× scope, enabling the user to eliminate targets at long range while incurring limited recoil due to the integral sound suppressor and compensator. It has a considerably high rate of fire with an long effective range, being able to hit a target accurately at about fifty meters. The M6C/SOCOM is, like its M6C counterpart, weaker than the standard-issue M6G PDWS due to lower efficiency against shielded and heavily armored targets."
 SWEP.Trivia_Manufacturer = "Misriah Armory"
@@ -190,14 +190,11 @@ SWEP.AttachmentElements = {
 SWEP.ExtraSightDist = 10
 
 SWEP.Hook_NameChange = function(wep, name)
-    local desig = ""
 
-    -- gog i hayte true names
-    if GetConVar("arccw_truenames"):GetBool() and wep.Attachments[11].Installed == "h3_m6s" then
-        desig = "/SOCOM"
+	if wep:GetBuff_Override("SOCOM") then
+        return "M6C/SOCOM"
+    else return "M6C PDWS"
     end
-
-    return name .. desig
 end
 
 SWEP.Attachments = {
@@ -300,6 +297,14 @@ SWEP.Attachments = {
 		Installed = "h3_m6s"
     },
 }
+
+SWEP.Hook_NameChange = function(wep, name)
+
+    if wep:GetBuff_Override("SOCOM") and GetConVar("arccw_truenames"):GetBool() then
+        return "M6C/SOCOM"
+    elseif GetConVar("arccw_truenames"):GetBool() then return "M6C PDWS"
+    end
+end
 
 SWEP.Animations = {
     ["idle"] = {

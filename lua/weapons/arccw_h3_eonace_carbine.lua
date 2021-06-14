@@ -207,7 +207,7 @@ SWEP.Attachments = {
 	{
         PrintName = "Optic", -- print name
         DefaultAttName = "No Sights",
-        Slot = {"halo_optics"}, -- what kind of attachments can fit here, can be string or table
+        Slot = {"halo_optics", "carbinescope"}, -- what kind of attachments can fit here, can be string or table
         Bone = "hood", -- relevant bone any attachments will be mostly referring to
         Offset = {
             vpos = Vector(0.1, 0, 1.65), -- offset that the attachment will be relative to the bone
@@ -217,7 +217,7 @@ SWEP.Attachments = {
         },
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(2.6, 0, 0),
-        InstalledEles = {"rail"}
+		Installed = "optic_carbine",
     },
 		{
         PrintName = "Muzzle",

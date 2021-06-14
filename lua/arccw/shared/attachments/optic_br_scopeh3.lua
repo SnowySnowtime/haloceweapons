@@ -29,9 +29,9 @@ att.AdditionalSights = {
 		GlobalAng = Angle(0, 0, 0),
 		Magnification = 2,
 		IgnoreExtra = false,
-		CrosshairInSights = true,
-        SwitchToSound = "hce_zoomin",
-        SwitchFromSound = "hce_zoomout",
+		CrosshairInSights = false,
+        SwitchToSound = "h3_zoomin",
+        SwitchFromSound = "h3_zoomout",
 	}
 }
 
@@ -41,8 +41,8 @@ att.AttachSound = "attch/snow/halo/h3/x_button.wav"
 att.DetachSound = "attch/snow/halo/h3/b_button.wav"
 att.ActivateElements = {"brscope"}
 
-local ScopeTexture	= Material("hud/scopes/br_scope.png")
-local proscopesize		= 180
+local ScopeTexture	= Material("hud/scopes/battle_rifle_scope")
+local proscopesize		= 140
 local bitchYouDontEvenKnowUs = 1
 --[[
 		How the shit?
@@ -71,8 +71,8 @@ att.Hook_DrawHUD = function(wep)
 
 	-- Draw textured 2D scope
 	local sightcolor = {
-		r = 255,--GetConVar("arccw_scope_r"):GetInt(),
-		g = 255,--GetConVar("arccw_scope_g"):GetInt(),
+		r = 100,--GetConVar("arccw_scope_r"):GetInt(),
+		g = 150,--GetConVar("arccw_scope_g"):GetInt(),
 		b = 255,--GetConVar("arccw_scope_b"):GetInt(),
 	}
 
@@ -106,7 +106,7 @@ att.Hook_DrawHUD = function(wep)
 	surface.DrawTexturedRect(icns.tl, icns.bl, scopesize, scopesize)
 
 	-- Draw surrounding
-	surface.SetDrawColor(0, 0, 0, 128)
+	surface.SetDrawColor(0, 0, 0, 136)
 	// Left
 	surface.DrawRect(0, 0, icns.tl, ScrH())
 	// Right

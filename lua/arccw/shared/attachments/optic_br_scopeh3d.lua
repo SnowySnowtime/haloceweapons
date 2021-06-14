@@ -32,7 +32,7 @@ att.AdditionalSights = {
 att.ScopeGlint = false
 
 att.Holosight = true
-att.HolosightReticle = Material("entities/battle_rifle_scope.png")
+att.HolosightReticle = Material("hud/scopes/battle_rifle_scope_3d.png")
 att.HolosightNoFlare = true
 att.HolosightSize = 6
 att.HolosightBone = "holosight"

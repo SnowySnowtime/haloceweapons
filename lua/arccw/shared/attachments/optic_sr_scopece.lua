@@ -1,8 +1,8 @@
 att.PrintName = "Sniper Scope"
 att.Icon = Material("entities/tfa_hce_snow_objectiveflag.png")
-att.Description = "A powerful 5x-10x scope made for the SRS99C-S2 AM Rifle"
+att.Description = "A powerful 2x-10x scope made for the SRS99C-S2 AM Rifle"
 
-att.SortOrder = 1000
+att.SortOrder = 2.5
 
 att.Desc_Pros = {
     "+ Precise",
@@ -27,7 +27,7 @@ att.AdditionalSights = {
 		GlobalAng = Angle(0, 0, 0),
 		Magnification = 10,
 		IgnoreExtra = false,
-		CrosshairInSights = true,
+		CrosshairInSights = false,
         SwitchToSound = "hce_zoomin",
         SwitchFromSound = "hce_zoomout",
 	}
@@ -35,8 +35,8 @@ att.AdditionalSights = {
 
 att.Mult_SightTime = 1
 
-local ScopeTexture	= Material("hud/scopes/halo_sniper_scope.png")
-local proscopesize		= 390
+local ScopeTexture	= Material("hud/scopes/ce_sniper_scope")
+local proscopesize		= 535
 local bitchYouDontEvenKnowUs = 1
 --[[
 		How the shit?
@@ -65,8 +65,8 @@ att.Hook_DrawHUD = function(wep)
 
 	-- Draw textured 2D scope
 	local sightcolor = {
-		r = 255,--GetConVar("arccw_scope_r"):GetInt(),
-		g = 255,--GetConVar("arccw_scope_g"):GetInt(),
+		r = 100,--GetConVar("arccw_scope_r"):GetInt(),
+		g = 175,--GetConVar("arccw_scope_g"):GetInt(),
 		b = 255,--GetConVar("arccw_scope_b"):GetInt(),
 	}
 
