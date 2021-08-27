@@ -3391,3 +3391,86 @@ sound.Add(
     soundlevel = 115,
     sound = {"spv3/carb/overheat_exit.wav"}
 })
+
+--Halo infinite--
+
+
+--VK78
+
+sound.Add( {
+	name = "hce.m6h_eject_quartervol",
+	channel = CHAN_AUTO,
+	volume = 0.08,
+	level = 56,
+	pitch = { 98.5, 101.5 },
+	sound = { "infinite/vk78/click0.wav", 
+	"infinite/vk78/click1.wav", 
+	"infinite/vk78/click2.wav" }
+} )
+
+sound.Add( {
+	name = "hce.dmr_melee1",
+	channel = CHAN_AUTO,
+	volume = 0.52,
+	level = 56,
+	pitch = { 98.5, 101.5 },
+	sound = { "infinite/vk78/melee1-0.wav", 
+	"infinite/vk78/melee1-1.wav", 
+	"infinite/vk78/melee1-2.wav" }
+} )
+
+sound.Add( {
+	name = "hce.dmr_melee2",
+	channel = CHAN_AUTO,
+	volume = 0.52,
+	level = 56,
+	pitch = { 98.5, 101.5 },
+	sound = { "infinite/vk78/melee2-0.wav", 
+	"infinite/vk78/melee2-1.wav", 
+	"infinite/vk78/melee2-2.wav" }
+} )
+
+sound.Add( {
+	name = "hce.ma5d_ready",
+	channel = CHAN_AUTO,
+	volume = 0.99,
+	level = 40,
+	pitch = { 97.5, 102.5 },
+	sound = { "infinite/vk78/ready0.wav",
+	"infinite/vk78/ready1.wav",
+	"infinite/vk78/ready2.wav",
+	"infinite/vk78/ready4.wav",
+	"infinite/vk78/ready5.wav" }
+} )
+
+sound.Add( {
+	name = "hce.vk78_fire",
+	channel = CHAN_WEAPON,
+	volume = 1,
+	level = 90,
+	pitch = { 95, 105 },
+	sound = { ")infinite/vk78/fire0.wav", 
+	")infinite/vk78/fire1.wav", 
+	")infinite/vk78/fire3.wav", 
+	")infinite/vk78/fire4.wav", 
+	")infinite/vk78/fire6.wav" }
+} )
+
+sound.Add( {
+	name = "hce.vk78_ready",
+	channel = CHAN_AUTO,
+	volume = 1,
+	level = 40,
+	pitch = { 97.5, 102.5 },
+	sound = { "infinite/vk78/ready.wav" }
+} )
+
+sound.Add( {
+	name = "hce.vk78_reload",
+	channel = CHAN_AUTO,
+	volume = 1,
+	level = 40,
+	pitch = { 98.5, 101.5 },
+	sound = { ")infinite/vk78/reload1.wav", 
+	")infinite/vk78/reload2.wav" }
+} )

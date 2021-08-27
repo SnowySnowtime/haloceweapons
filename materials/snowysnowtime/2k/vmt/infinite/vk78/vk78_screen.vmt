@@ -1,0 +1,7 @@
+UnlitGeneric
+{
+	"$basetexture"	"models\debug\debugwhite"
+
+	$color2	"[ .05 .05 .05 ]"
+}
+

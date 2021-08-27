@@ -3,6 +3,8 @@
 	"$basetexture" "snowysnowtime/compass"
 	"$additive" "1"
 	
+	$model 1
+
 	$angle		 0
 	$translate		 "[0 0]"
 	$center		 "[.5 .5]"

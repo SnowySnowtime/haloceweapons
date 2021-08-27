@@ -1,6 +1,6 @@
 att.PrintName = "Heirloom"
 att.Icon = Material("snowysnowtime/2k/ico/h3/sr_wood.png", "mips" )
-att.Description = "wood"
+att.Description = "Made to look like the good old times."
 att.Desc_Pros = {
     "  Purely Cosmetic"
 }
