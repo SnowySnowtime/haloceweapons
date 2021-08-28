@@ -5,7 +5,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "SMG"
 SWEP.TrueName = "M7 SMG"
-SWEP.Trivia_Class = "SMG"
+SWEP.Trivia_Class = "Halo Online | SMG"
 SWEP.Trivia_Desc = "The M7/Caseless Submachine Gun, more simply known as the SMG, is a United Nations Space Command infantry and special operations weapon. Sustained fire tends to cause the muzzle to ''walk'' upwards as recoil compounds. "
 SWEP.Trivia_Manufacturer = "Misriah Armory"
 SWEP.Trivia_Calibre = "5x23mm M443 Caseless Full Metal Jacket"
@@ -143,8 +143,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-3.03, -5, 0.8),
-    Ang = Angle(0.514, 0, 0),
+    Pos = Vector(-3.13, -2, 0.45),
+    Ang = Angle(-0.05, 0, 0),
     Magnification = 1.1,
 }
 
@@ -169,9 +169,129 @@ SWEP.CustomizeAng = Angle(12.149, 30.547, 0)
 
 SWEP.BarrelLength = 24
 SWEP.AttachmentElements = {
-    ["grip"] = {
+    ["acc_body"] = {
+        VMBodygroups = {{ind = 0, bg = 1}},
+        WMBodygroups = {{ind = 0, bg = 1}},
+    },
+	["ammo_body"] = {
+        VMBodygroups = {{ind = 0, bg = 2}},
+        WMBodygroups = {{ind = 0, bg = 2}},
+    },
+	["dmg_body"] = {
+        VMBodygroups = {{ind = 0, bg = 3}},
+        WMBodygroups = {{ind = 0, bg = 3}},
+    },
+	["pwr_body"] = {
+        VMBodygroups = {{ind = 0, bg = 4}},
+        WMBodygroups = {{ind = 0, bg = 4}},
+    },
+	["rng_body"] = {
+        VMBodygroups = {{ind = 0, bg = 5}},
+        WMBodygroups = {{ind = 0, bg = 5}},
+    },
+	["rof_body"] = {
+        VMBodygroups = {{ind = 0, bg = 6}},
+        WMBodygroups = {{ind = 0, bg = 6}},
+    },
+	["v1_body"] = {
+        VMBodygroups = {{ind = 0, bg = 7}},
+        WMBodygroups = {{ind = 0, bg = 7}},
+    },
+	["v2_body"] = {
+        VMBodygroups = {{ind = 0, bg = 8}},
+        WMBodygroups = {{ind = 0, bg = 8}},
+    },
+	["v3_body"] = {
+        VMBodygroups = {{ind = 0, bg = 9}},
+        WMBodygroups = {{ind = 0, bg = 9}},
+    },
+	["v4_body"] = {
+        VMBodygroups = {{ind = 0, bg = 10}},
+        WMBodygroups = {{ind = 0, bg = 10}},
+    },
+	["v5_body"] = {
+        VMBodygroups = {{ind = 0, bg = 11}},
+        WMBodygroups = {{ind = 0, bg = 11}},
+    },
+	["def_barrel"] = {
         VMBodygroups = {{ind = 1, bg = 1}},
         WMBodygroups = {{ind = 1, bg = 1}},
+    },
+	["acc_barrel"] = {
+        VMBodygroups = {{ind = 1, bg = 2}},
+        WMBodygroups = {{ind = 1, bg = 2}},
+    },
+	["dmg_barrel"] = {
+        VMBodygroups = {{ind = 1, bg = 3}},
+        WMBodygroups = {{ind = 1, bg = 3}},
+    },
+	["pwr_barrel"] = {
+        VMBodygroups = {{ind = 1, bg = 4}},
+        WMBodygroups = {{ind = 1, bg = 4}},
+    },
+	["rng_barrel"] = {
+        VMBodygroups = {{ind = 1, bg = 5}},
+        WMBodygroups = {{ind = 1, bg = 5}},
+    },
+	["rof_barrel"] = {
+        VMBodygroups = {{ind = 1, bg = 6}},
+        WMBodygroups = {{ind = 1, bg = 6}},
+    },
+	["v2_barrel"] = {
+        VMBodygroups = {{ind = 1, bg = 7}},
+        WMBodygroups = {{ind = 1, bg = 7}},
+    },
+	["v3_barrel"] = {
+        VMBodygroups = {{ind = 1, bg = 8}},
+        WMBodygroups = {{ind = 1, bg = 8}},
+    },
+	["v4_barrel"] = {
+        VMBodygroups = {{ind = 1, bg = 9}},
+        WMBodygroups = {{ind = 1, bg = 9}},
+    },
+	["v5_barrel"] = {
+        VMBodygroups = {{ind = 1, bg = 10}},
+        WMBodygroups = {{ind = 1, bg = 10}},
+    },
+	["def_stock"] = {
+        VMBodygroups = {{ind = 2, bg = 1}},
+        WMBodygroups = {{ind = 2, bg = 1}},
+    },
+	["acc_stock"] = {
+        VMBodygroups = {{ind = 2, bg = 2}},
+        WMBodygroups = {{ind = 2, bg = 2}},
+    },
+	["dmg_stock"] = {
+        VMBodygroups = {{ind = 2, bg = 3}},
+        WMBodygroups = {{ind = 2, bg = 3}},
+    },
+	["rng_stock"] = {
+        VMBodygroups = {{ind = 2, bg = 4}},
+        WMBodygroups = {{ind = 2, bg = 4}},
+    },
+	["rof_stock"] = {
+        VMBodygroups = {{ind = 2, bg = 5}},
+        WMBodygroups = {{ind = 2, bg = 5}},
+    },
+	["v1_stock"] = {
+        VMBodygroups = {{ind = 2, bg = 6}},
+        WMBodygroups = {{ind = 2, bg = 6}},
+    },
+	["v2_stock"] = {
+        VMBodygroups = {{ind = 2, bg = 7}},
+        WMBodygroups = {{ind = 2, bg = 7}},
+    },
+	["v3_stock"] = {
+        VMBodygroups = {{ind = 2, bg = 8}},
+        WMBodygroups = {{ind = 2, bg = 8}},
+    },
+	["v4_stock"] = {
+        VMBodygroups = {{ind = 2, bg = 9}},
+        WMBodygroups = {{ind = 2, bg = 9}},
+    },
+	["v5_stock"] = {
+        VMBodygroups = {{ind = 2, bg = 10}},
+        WMBodygroups = {{ind = 2, bg = 10}},
     },
 }
 
@@ -191,37 +311,24 @@ SWEP.Attachments = {
         },
         CorrectivePos = Vector(0, 0, 0),
         CorrectiveAng = Angle(0, 0, 0),
-        InstalledEles = {"mount"}
     },
 	{
-        PrintName = "Muzzle",
+        PrintName = "Body | Main Stats",
+        DefaultAttName = "Standard Issue",
+        Slot = {"variant_smgho"}
+    },
+	{
+        PrintName = "Muzzle | Side Stats",
         DefaultAttName = "Standard Muzzle",
-        Slot = {"muzzle"},
-        Bone = "frame gun",
-        Offset = {
-            vpos = Vector(7.5, 0, 3.45),
-            vang = Angle(0, 0, 0),
-            wpos = Vector(10, 2, -3.9),
-            wang = Angle(-2.829, -4.9, 180)
-        },
-		VMScale = Vector(1, 1, 1),
+		Installed = "ho_smg_defbarrel",
+		ExcludeFlags = {"v1_body"},
+        Slot = {"barrel_smgho"}
     },
     {
-        PrintName = "Underbarrel",
-        Slot = {"foregrip", "style_pistol"},
-        Bone = "frame gun",
-        Offset = {
-            vpos = Vector(7, 0, 2),
-            vang = Angle(0, 0, 0),
-            wpos = Vector(17, 0.6, -4.676),
-            wang = Angle(-10, 0, 180)
-        },		
-        InstalledEles = {"grip"},	
-		WMScale = Vector (0,0,0)
-    },	
-    {
-        PrintName = "Stock",
-        Slot = "stock",
+        PrintName = "Stock | Movement Stats",
+        Slot = "stock_smgho",
+		Installed = "ho_smg_defstock",
+		ExcludeFlags = {"pwr_body"},
         DefaultAttName = "Standard Stock"
     },
 	{

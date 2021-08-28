@@ -9,7 +9,7 @@ att.AutoStats = true
 att.Slot = "ammo_spv3"
 
 att.Mult_Damage = 0.8
-att.Mult_DamageMinc = 0.45
+att.Mult_DamageMin = 0.45
 att.Mult_Recoil = 1.2
 att.Mult_AccuracyMOA = 1.1
 att.Mult_RecoilSide = 1.3

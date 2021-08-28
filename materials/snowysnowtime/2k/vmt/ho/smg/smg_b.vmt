@@ -1,0 +1,27 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "snowysnowtime/2k/ho/smg/smg_b"
+	"$bumpmap" "snowysnowtime/2k/ho/smg/smg_b_n"
+	"$selfillum" "1"
+	"$selfillummask" "snowysnowtime/2k/ho/smg/smg_b_i"
+	"$envmap" "snowysnowtime/cyborg_reflection_armor"
+	"$envmaptint" "[ 1 1 1 ]"
+	"$cubemaptint"	"[ 0 0 0 ]"
+	"$cubemappower"	0.025
+	"$envmapfresnel" "1"
+	"$normalmapalphaenvmapmask" "1"
+	"$phong" "1" 
+	"$phongboost" "400"
+	"$phongexponent" "40"
+	"$phongexponenttexture" "snowysnowtime\ma5e\phongexp255"
+	"$phongalbedotint" "1"
+	"$phongfresnelranges" "[1.5 3 5]"
+	"$phongdisablehalflambert" "1"
+	"Proxies"
+	{
+		drc_ReflectionTint
+		{
+			resultVar $envmaptint
+		}
+	}
+}

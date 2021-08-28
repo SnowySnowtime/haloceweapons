@@ -1,14 +1,14 @@
 VertexLitGeneric
 {
 	"$basetexture"	"snowysnowtime\2k\infinite\vk78\s\wood"
-  	"$bumpmap"	"snowysnowtime\2k\infinite\vk78\vk_n"
+  	"$bumpmap"	"snowysnowtime\2k\infinite\vk78\s\vk_wood_n"
 
 //	$lightwarptexture	"models\vuthakral\halo\weapons\lw_metaldull_dark"
 
 	$phong		1
-	$phongboost	12
+	$phongboost	8
 	$phongfresnelranges	"[ 0.15 0.8 1 ]" 
-	$phongexponenttexture	"snowysnowtime\2k\infinite\vk78\vk_exp"
+	$phongexponenttexture	"snowysnowtime\2k\infinite\vk78\s\vk_wood_exp"
 
 	$detail		"snowysnowtime\2k\infinite\vk78\worn_metal"
 	$detailscale	5

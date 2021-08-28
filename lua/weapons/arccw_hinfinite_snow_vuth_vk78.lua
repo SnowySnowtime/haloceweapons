@@ -88,7 +88,7 @@ SWEP.Primary.ClipSize = 20 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 40
 SWEP.ReducedClipSize = 12
 
-SWEP.Delay = 60 / 420 -- 60 / RPM.
+SWEP.Delay = 60 / 380 -- 60 / RPM.
 SWEP.Num = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
@@ -114,7 +114,7 @@ SWEP.ShootSound = Sound("drc.vk78_fire")
 SWEP.ShootSoundSilenced = "br_fire7"
 SWEP.DistantShootSound = "br_lod"
 
-SWEP.MuzzleEffect = "astw2_halo_3_muzzle_assault_rifle"
+SWEP.MuzzleEffect = "astw2_halo_ce_muzzle_assault_rifle"
 SWEP.ShellModel = "models/shells/shell_338mag.mdl"
 SWEP.ShellPitch = 80
 SWEP.ShellScale = 1.5
@@ -152,7 +152,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.ActivePos = Vector(0, -2, 1.5)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
-SWEP.HolsterPos = Vector(3, -3, -0.5)
+SWEP.HolsterPos = Vector(2, -1, 2)
 SWEP.HolsterAng = Angle(-10, 30, -10)
 
 SWEP.BarrelOffsetSighted = Vector(0, 0, -1)
