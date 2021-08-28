@@ -3466,11 +3466,22 @@ sound.Add( {
 } )
 
 sound.Add( {
-	name = "hce.vk78_reload",
+	name = "hce.vk78_reload1",
 	channel = CHAN_AUTO,
 	volume = 1,
 	level = 40,
 	pitch = { 98.5, 101.5 },
-	sound = { ")infinite/vk78/reload1.wav", 
-	")infinite/vk78/reload2.wav" }
+	sound = { ")infinite/vk78/reload0-1.wav", 
+	")infinite/vk78/reload1-1.wav",
+	")infinite/vk78/reload2-1.wav", }
+} )
+sound.Add( {
+	name = "hce.vk78_reload2",
+	channel = CHAN_AUTO,
+	volume = 1,
+	level = 40,
+	pitch = { 98.5, 101.5 },
+	sound = { ")infinite/vk78/reload0-2.wav", 
+	")infinite/vk78/reload1-2.wav",
+	")infinite/vk78/reload2-2.wav", }
 } )

@@ -138,9 +138,9 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-3.375, -3, 0),
+    Pos = Vector(-4.3, -11, 1),
     Ang = Angle(0, 0, 0),
-    Magnification = 1.1,
+    Magnification = 1.3,
 }
 
 SWEP.HoldtypeHolstered = "passive"
@@ -203,30 +203,61 @@ SWEP.AttachmentElements = {
         VMSkin = 10,
         WMSkin = 10,
     },
+	["vkmuzzle"] = {
+        VMBodygroups = {{ind = 5, bg = 1}},
+        WMBodygroups = {{ind = 5, bg = 1}},
+    },
+	["vkoptic"] = {
+        VMBodygroups = {{ind = 4, bg = 1}},
+        WMBodygroups = {{ind = 4, bg = 1}},
+    },
 }
-
+SWEP.GuaranteeLaser = true
 SWEP.ExtraSightDist = 5
--- Attachments aren't complete because I'm waiting for Mammal to reanimate this weapon. Don't touch this for now, it's moot.
 SWEP.Attachments = {
 	{
         PrintName = "Optic", -- print name
-        DefaultAttName = "10x Scope",
+        DefaultAttName = "3x Smart Scope",
         Slot = {"optic", "optic_lp"}, -- what kind of attachments can fit here, can be string or table
-        Bone = "gun", -- relevant bone any attachments will be mostly referring to
+        Bone = "W_Main", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(10, 0, 7.4), -- offset that the attachment will be relative to the bone
-            vang = Angle(0, 0, 0),
+            vpos = Vector(0, -4.4, 2), -- offset that the attachment will be relative to the bone
+            vang = Angle(90, 0, -90),
             wpos = Vector(6, 2, -4.4),
-            wang = Angle(-8.829, 0, 180)
+            wang = Angle(0, 0, 0)
         },
         CorrectivePos = Vector(0, 0, 0),
-        CorrectiveAng = Angle(0, 0, 0),
-        InstalledEles = {"mount"}
+        CorrectiveAng = Angle(0, 0, 0)
+    },
+	{
+        PrintName = "Muzzle",
+        DefaultAttName = "Standard Muzzle",
+        Slot = {"muzzle"},
+        Bone = "W_Main",
+        Offset = {
+            vpos = Vector(0, -3.2, 22),
+            vang = Angle(90, 0, -90),
+            wpos = Vector(25, 0.9, -9.25),
+            wang = Angle(-12, -1.155, 180)
+        },
+		VMScale = Vector(1, 1, 1),
+		InstalledEles = {"vkmuzzle"}
+    },
+	{
+        PrintName = "Tactical",
+        Slot = "tac",
+        Bone = "W_Main",
+        Offset = {
+            vpos = Vector(1.15, -3.15, 15), -- offset that the attachment will be relative to the bone
+            vang = Angle(90, 0, 0),
+            wpos = Vector(6, 1.25, -3),
+            wang = Angle(-8.829, -0.556, 90)
+        },
     },
 	{
         PrintName = "Underbarrel",
-        Slot = {"foregrip", "bipod", "style_pistol"},
-        Bone = "gun",
+        Slot = {"foregrip", "bipod"},
+        Bone = "W_Main",
         Offset = {
             vpos = Vector(14, 0, 2),
             vang = Angle(0, 0, 0),
@@ -247,17 +278,6 @@ SWEP.Attachments = {
 	{
         PrintName = "Firetype",
         Slot = {"fcg","fcg_smg"}
-    },
-	{
-        PrintName = "Tactical",
-        Slot = "tac",
-        Bone = "gun",
-        Offset = {
-            vpos = Vector(17, -0.8, 5), -- offset that the attachment will be relative to the bone
-            vang = Angle(0, 0, 90),
-            wpos = Vector(6, 1.25, -3),
-            wang = Angle(-8.829, -0.556, 90)
-        },
     },
     {
         PrintName = "Ammo Type",
@@ -296,32 +316,33 @@ SWEP.Attachments = {
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
-        Time = 97/30
+        Time = 1/30
     },
 	["fire_iron"] = {
-        Source = "fire",
+        Source = "iron",
+		Time = 10/30
     },
     ["draw"] = {
         Source = "draw",
-        Time = 18/30,
+        Time = 30/30,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.25,
     },
     ["fire"] = {
-        Source = { "fire0"},
-		Time = 17/30,
+        Source = { "fire"},
+		Time = 13/30,
     },
 	["bash"] = {
-        Source = { "melee", "melee1" },
-		Time = 35/30,
+        Source = { "melee" },
+		Time = 48/48,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.2,
     },
     ["reload"] = {
         Source = "reload",
-        Time = 53/30,
+        Time = 89/35,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Checkpoints = {24, 33, 51},
         FrameRate = 30,
@@ -331,7 +352,7 @@ SWEP.Animations = {
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-        Time = 75/30,
+        Time = 115/35,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Checkpoints = {24, 33, 51},
         LHIK = true,
