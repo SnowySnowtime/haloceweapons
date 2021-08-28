@@ -19,7 +19,14 @@ if GetConVar("arccw_truenames"):GetBool() then SWEP.PrintName = SWEP.TrueName en
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/snowysnowtime/vuthakral/infinite/c_hum_vk78.mdl"
-SWEP.WorldModel = "models/snowysnowtime/vuthakral/w_ma5c.mdl"
+SWEP.MirrorVMWM = true
+
+SWEP.WorldModelOffset = {
+    pos = Vector(-8, 5, -4),
+    ang = Angle(-16, 0, 180),
+    bone = "ValveBiped.Bip01_R_Hand",
+    scale = 1
+}
 SWEP.ViewModelFOV = 70
 
 --  You will need this for the journey ahead
@@ -207,6 +214,10 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 5, bg = 1}},
         WMBodygroups = {{ind = 5, bg = 1}},
     },
+	["vkirons"] = {
+        VMBodygroups = {{ind = 6, bg = 1}},
+        WMBodygroups = {{ind = 6, bg = 1}},
+    },
 	["vkoptic"] = {
         VMBodygroups = {{ind = 4, bg = 1}},
         WMBodygroups = {{ind = 4, bg = 1}},
@@ -221,13 +232,14 @@ SWEP.Attachments = {
         Slot = {"optic", "optic_lp"}, -- what kind of attachments can fit here, can be string or table
         Bone = "W_Main", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(0, -4.4, 2), -- offset that the attachment will be relative to the bone
+            vpos = Vector(0, -4.6, 2), -- offset that the attachment will be relative to the bone
             vang = Angle(90, 0, -90),
             wpos = Vector(6, 2, -4.4),
             wang = Angle(0, 0, 0)
         },
         CorrectivePos = Vector(0, 0, 0),
-        CorrectiveAng = Angle(0, 0, 0)
+        CorrectiveAng = Angle(0, 0, 0),
+		InstalledEles = {"vkirons", "vkoptic"}
     },
 	{
         PrintName = "Muzzle",
@@ -259,8 +271,8 @@ SWEP.Attachments = {
         Slot = {"foregrip", "bipod"},
         Bone = "W_Main",
         Offset = {
-            vpos = Vector(14, 0, 2),
-            vang = Angle(0, 0, 0),
+            vpos = Vector(0, -0.4, 15),
+            vang = Angle(90, 0, -90),
             wpos = Vector(13, 0.6, -3.5),
             wang = Angle(-10, 0, 180),
         },		
@@ -291,10 +303,10 @@ SWEP.Attachments = {
         PrintName = "Charm",
         Slot = "charm",
         FreeSlot = true,
-        Bone = "gun", -- relevant bone any attachments will be mostly referring to
+        Bone = "W_Main", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(3.5, -0.6, 5.25), -- offset that the attachment will be relative to the bone
-            vang = Angle(0, 0, 10),
+            vpos = Vector(0.65, -1.85, 3.6), -- offset that the attachment will be relative to the bone
+            vang = Angle(90, 0, -90),
             wpos = Vector(6, 2.4, -3.5),
             wang = Angle(-10.393, 0, 180)
         },
