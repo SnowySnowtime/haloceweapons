@@ -83,7 +83,7 @@ SWEP.MuzzleVelocity = 100 -- projectile or phys bullet muzzle velocity
 -- IN M/S
 
 SWEP.TracerNum = 1 -- tracer every X
-
+SWEP.Tracer = "effect_astw2_halo3_tracer_br" -- tracer every X
 SWEP.Primary.ClipSize = 60 -- DefaultClip is automatically set.
 SWEP.ExtendedClipSize = 80
 SWEP.ReducedClipSize = 48
@@ -164,8 +164,8 @@ SWEP.HolsterAng = Angle(-10, 30, -10)
 SWEP.BarrelOffsetSighted = Vector(0, 0, -1)
 SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 
-SWEP.CustomizePos = Vector(1.824, -1.5, -0.897)
-SWEP.CustomizeAng = Angle(12.149, 30.547, 0)
+SWEP.CustomizePos = Vector(20, -15, 1.897)
+SWEP.CustomizeAng = Angle(12.149, 90, 0)
 
 SWEP.BarrelLength = 24
 SWEP.AttachmentElements = {
@@ -325,7 +325,7 @@ SWEP.Attachments = {
         Slot = {"barrel_smgho"}
     },
     {
-        PrintName = "Stock | Movement Stats",
+        PrintName = "Stock | Visual",
         Slot = "stock_smgho",
 		Installed = "ho_smg_defstock",
 		ExcludeFlags = {"pwr_body"},
@@ -430,35 +430,40 @@ SWEP.Animations = {
 
 sound.Add({
 	name = 			"ArcCW_Halo_Reanim_SMG.Out",
-	channel = 		CHAN_ITEM,
+	channel = 		CHAN_STATIC,
 	volume = 		1.0,
+	pitch = { 98.5, 101.5 },
 	sound = 			{ "snow/weapons/smg/smg_fp/smg_reload/reload0-1.wav","snow/weapons/smg/smg_fp/smg_reload/reload0-2.wav","snow/weapons/smg/smg_fp/smg_reload/reload0-3.wav" },
 })
 
 sound.Add({
 	name = 			"ArcCW_Halo_Reanim_SMG.In1",
-	channel = 		CHAN_ITEM,
+	channel = 		CHAN_STATIC,
 	volume = 		1.0,
+	pitch = { 98.5, 101.5 },
 	sound = 			{ "halo_smg_reanim/in1-1.wav","halo_smg_reanim/in2-1.wav","halo_smg_reanim/in3-1.wav" },
 })
 
 sound.Add({
 	name = 			"ArcCW_Halo_Reanim_SMG.In2",
-	channel = 		CHAN_ITEM,
+	channel = 		CHAN_STATIC,
 	volume = 		1.0,
+	pitch = { 98.5, 101.5 },
 	sound = 			{ "halo_smg_reanim/in1-2.wav","halo_smg_reanim/in2-2.wav","halo_smg_reanim/in3-2.wav" },
 })
 
 sound.Add({
 	name = 			"ArcCW_Halo_Reanim_SMG.Bolt1",
-	channel = 		CHAN_ITEM,
+	channel = 		CHAN_STATIC,
 	volume = 		1.0,
+	pitch = { 98.5, 101.5 },
 	sound = 			"halo_smg_reanim/bolt1.wav"
 })
 
 sound.Add({
 	name = 			"ArcCW_Halo_Reanim_SMG.Bolt2",
-	channel = 		CHAN_ITEM,
+	channel = 		CHAN_STATIC,
 	volume = 		1.0,
+	pitch = { 98.5, 101.5 },
 	sound = 			"halo_smg_reanim/Bolt2.wav"
 })
