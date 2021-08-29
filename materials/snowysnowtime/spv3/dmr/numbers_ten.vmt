@@ -2,9 +2,7 @@
 {
 	"$basetexture" "snowysnowtime/2k/h3/br/hud/numbers_plate3"
 	"$additive" "1"
-	"$color2" "[.58 .58 .1]"
 	$decal "1"
-	
 	Proxies // proxies are listed inside this block
 	{
 	ArcCW_HALOCE_AR
@@ -12,7 +10,7 @@
 			resultVar 2
 			prefixstring "snowysnowtime/ma5e/hud/numbers_plate"
 		}
-	drc_EnergyColour
+	drc_PlayerColor
 		{
 			resultVar		$color2 // pass the player color value to Gmod
 			default		1 1 1 // unused for now.

@@ -10,7 +10,7 @@
 			resultVar 1
 			prefixstring "snowysnowtime/ma5e/hud/numbers_plate"
 		}
-	drc_EnergyColour
+	drc_PlayerColor
 		{
 			resultVar		$color2 // pass the player color value to Gmod
 			default		1 1 1 // unused for now.

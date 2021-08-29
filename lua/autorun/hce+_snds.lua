@@ -359,8 +359,8 @@ sound.Add(
 {
     name = "br_fire7",
     channel = CHAN_STATIC,
-    volume = 1.0,
-    soundlevel = 120,
+    volume = 0.65,
+    soundlevel = 85,
     sound = {"valk/arccw_haloonline/battlerifles/power/fire1.wav","valk/arccw_haloonline/battlerifles/power/fire2.wav","valk/arccw_haloonline/battlerifles/power/fire3.wav","valk/arccw_haloonline/battlerifles/power/fire4.wav","valk/arccw_haloonline/battlerifles/power/fire5.wav"}
 })
 
@@ -3445,15 +3445,28 @@ sound.Add( {
 
 sound.Add( {
 	name = "hce.vk78_fire",
-	channel = CHAN_WEAPON,
+	channel = CHAN_STATIC,
 	volume = 1,
-	level = 90,
+	level = 100,
 	pitch = { 95, 105 },
 	sound = { ")infinite/vk78/fire0.wav", 
 	")infinite/vk78/fire1.wav", 
 	")infinite/vk78/fire3.wav", 
 	")infinite/vk78/fire4.wav", 
 	")infinite/vk78/fire6.wav" }
+} )
+
+sound.Add( {
+	name = "vk78_sup",
+	channel = CHAN_STATIC,
+	volume = 1,
+	level = 80,
+	pitch = { 95, 105 },
+	sound = { ")valk/arccw_haloonline/dmrs/pwr/fire1.wav", 
+	")valk/arccw_haloonline/dmrs/pwr/fire2.wav", 
+	")valk/arccw_haloonline/dmrs/pwr/fire3.wav", 
+	")valk/arccw_haloonline/dmrs/pwr/fire4.wav", 
+	")valk/arccw_haloonline/dmrs/pwr/fire5.wav" }
 } )
 
 sound.Add( {

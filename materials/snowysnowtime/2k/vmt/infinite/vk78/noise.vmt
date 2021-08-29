@@ -1,0 +1,19 @@
+"unlitgeneric"
+{
+	"$basetexture" "snowysnowtime/ho/shared/static_d"
+	"$nocull" "1"
+	"$additive" "1"
+	"$decal" "1"
+
+	"$color2" "[.1 .3 .4]"
+	"Proxies" 
+	{
+		"TextureScroll"
+		{
+			"texturescrollvar" "$basetexturetransform"
+			"texturescrollrate" 0.01
+		    "texturescrollangle" 0.00
+			"texturescale"		12
+		}
+	}
+}

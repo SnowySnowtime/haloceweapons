@@ -1,0 +1,18 @@
+"unlitgeneric"
+{
+	"$basetexture" "snowysnowtime/ho/shared/Screenline_d"
+	"$color2" "[.1 1 3]"
+	"$decal" 	"1"
+	"$additive" "1"
+
+	"Proxies" 
+	{
+		"TextureScroll"
+		{
+			"texturescrollvar" "$basetexturetransform"
+			"texturescrollrate" 0.35
+		    "texturescrollangle" -270.00
+			"texturescale"		0.7
+		}
+	}
+}

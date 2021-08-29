@@ -19,6 +19,7 @@ if GetConVar("arccw_truenames"):GetBool() then SWEP.PrintName = SWEP.TrueName en
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/snowysnowtime/vuthakral/infinite/c_hum_vk78.mdl"
+SWEP.WorldModel = "models/snowysnowtime/vuthakral/infinite/c_hum_vk78.mdl"
 SWEP.MirrorVMWM = true
 
 SWEP.WorldModelOffset = {
@@ -33,8 +34,8 @@ SWEP.ViewModelFOV = 70
 --  Probably should set this to your first mode
 	SWEP.Recoil = 1
 	SWEP.RecoilSide = 0.5
-	SWEP.Damage = 25
-	SWEP.DamageMin = 15
+	SWEP.Damage = 30
+	SWEP.DamageMin = 20
 	SWEP.AccuracyMOA = 10
 	SWEP.HipDispersion = 25
 	SWEP.JumpDispersion = 0
@@ -134,11 +135,6 @@ SWEP.SpeedMult = 1
 SWEP.SightedSpeedMult = 0.25
 SWEP.MeleeTime = 1
 
-SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
-    -- [0] = "bulletchamber",
-    -- [1] = "bullet1"
-}
-
 SWEP.ProceduralRegularFire = false
 SWEP.ProceduralIronFire = false
 
@@ -156,7 +152,7 @@ SWEP.HoldtypeSights = "rpg"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
-SWEP.ActivePos = Vector(0, -2, 0.5)
+SWEP.ActivePos = Vector(0, -1, 0.5)
 SWEP.ActiveAng = Angle(2, 0, 0)
 
 SWEP.HolsterPos = Vector(1, -2, 2)
@@ -232,7 +228,7 @@ SWEP.Attachments = {
         Slot = {"optic", "optic_lp"}, -- what kind of attachments can fit here, can be string or table
         Bone = "W_Main", -- relevant bone any attachments will be mostly referring to
         Offset = {
-            vpos = Vector(0, -4.6, 2), -- offset that the attachment will be relative to the bone
+            vpos = Vector(0, -4.5, 2), -- offset that the attachment will be relative to the bone
             vang = Angle(90, 0, -90),
             wpos = Vector(6, 2, -4.4),
             wang = Angle(0, 0, 0)
@@ -241,6 +237,9 @@ SWEP.Attachments = {
         CorrectiveAng = Angle(0, 0, 0),
 		InstalledEles = {"vkirons", "vkoptic"}
     },
+	["exit_inspect"] = {
+		Source = "fidget",
+	},
 	{
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
@@ -330,6 +329,9 @@ SWEP.Animations = {
         Source = "idle",
         Time = 1/30
     },
+	["exit_inspect"] = {
+		Source = "fidget",
+	},
 	["fire_iron"] = {
         Source = "iron",
 		Time = 10/30
