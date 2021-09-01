@@ -2499,6 +2499,15 @@ sound.Add(
     sound = { "snow/weapons/magnum/magnum_eject/ejectshell.wav","snow/weapons/magnum/magnum_eject/ejectshell2.wav","snow/weapons/magnum/magnum_eject/ejectshell3.wav","snow/weapons/magnum/magnum_eject/ejectshell4.wav" },
 })
 
+sound.Add(
+{
+    name = "h3.halo_eject_rifle_quartervol",
+    channel = CHAN_STATIC,
+    volume = 0.2,
+    soundlevel = 80,
+    sound = { "snow/weapons/magnum/magnum_eject/ejectshell.wav","snow/weapons/magnum/magnum_eject/ejectshell2.wav","snow/weapons/magnum/magnum_eject/ejectshell3.wav","snow/weapons/magnum/magnum_eject/ejectshell4.wav" },
+})
+
 --Magnum
 
 sound.Add(
@@ -3401,6 +3410,17 @@ sound.Add( {
 	name = "hce.m6h_eject_quartervol",
 	channel = CHAN_AUTO,
 	volume = 0.08,
+	level = 56,
+	pitch = { 98.5, 101.5 },
+	sound = { "infinite/vk78/click0.wav", 
+	"infinite/vk78/click1.wav", 
+	"infinite/vk78/click2.wav" }
+} )
+
+sound.Add( {
+	name = "hce.m6h_eject_quarterervol",
+	channel = CHAN_AUTO,
+	volume = 0.04,
 	level = 56,
 	pitch = { 98.5, 101.5 },
 	sound = { "infinite/vk78/click0.wav", 

@@ -1,0 +1,16 @@
+"UnlitGeneric"
+{
+	"$basetexture" "snowysnowtime/2k/h3/br/hud/numbers_plate2"
+	"$basetexturetransform" "center .5 .5 scale 0.525 0.525 rotate 0 translate 0 0"
+	"$color2" "[0.2 0.5 2]"
+	"$additive" "1"
+	$decal "1"
+	Proxies // proxies are listed inside this block
+	{
+		ArcCW_HALOCE_AR
+		{
+			resultVar 1
+			prefixstring "snowysnowtime/ma5e/hud/numbers_plate"
+		}
+	}
+}

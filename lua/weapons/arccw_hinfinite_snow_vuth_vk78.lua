@@ -146,6 +146,17 @@ SWEP.IronSightStruct = {
     Magnification = 1.3,
 }
 
+SWEP.BodyDamageMults =
+{
+    [HITGROUP_HEAD] = 1.25,
+    [HITGROUP_CHEST] = 1,
+    [HITGROUP_STOMACH] = 1,
+    [HITGROUP_LEFTARM] = 1,
+    [HITGROUP_RIGHTARM] = 1,
+    [HITGROUP_LEFTLEG] = 1,
+    [HITGROUP_RIGHTLEG] = 1,
+}
+
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "ar2"
 SWEP.HoldtypeSights = "rpg"
@@ -217,6 +228,38 @@ SWEP.AttachmentElements = {
 	["vkoptic"] = {
         VMBodygroups = {{ind = 4, bg = 1}},
         WMBodygroups = {{ind = 4, bg = 1}},
+    },
+	["countcolor"] = {
+        VMBodygroups = {{ind = 8, bg = 1}},
+        WMBodygroups = {{ind = 8, bg = 1}},
+    },
+	["ce"] = {
+        VMBodygroups = {{ind = 8, bg = 2}},
+        WMBodygroups = {{ind = 8, bg = 2}},
+    },
+	["ce_c"] = {
+        VMBodygroups = {{ind = 8, bg = 3}},
+        WMBodygroups = {{ind = 8, bg = 3}},
+    },
+	["h3"] = {
+        VMBodygroups = {{ind = 8, bg = 4}},
+        WMBodygroups = {{ind = 8, bg = 4}},
+    },
+	["h3_c"] = {
+        VMBodygroups = {{ind = 8, bg = 5}},
+        WMBodygroups = {{ind = 8, bg = 5}},
+    },
+	["og"] = {
+        VMBodygroups = {{ind = 8, bg = 6}},
+        WMBodygroups = {{ind = 8, bg = 6}},
+    },
+	["og_c"] = {
+        VMBodygroups = {{ind = 8, bg = 7}},
+        WMBodygroups = {{ind = 8, bg = 7}},
+    },
+	["counter_off"] = {
+        VMBodygroups = {{ind = 8, bg = 8}},
+        WMBodygroups = {{ind = 8, bg = 8}},
     },
 }
 SWEP.GuaranteeLaser = true
@@ -317,10 +360,10 @@ SWEP.Attachments = {
         FreeSlot = true
     },
 	{
-        PrintName = "Passive",
-        Slot = {"halo_passive"},
-		Installed = "passive_halo_prec_wep_mult_reduced",
-		Integral = true
+        PrintName = "Ammo Counter",
+        Slot = {"hivk_counter"},
+        DefaultAttName = "Stylized",
+        FreeSlot = true
     },
 }
 

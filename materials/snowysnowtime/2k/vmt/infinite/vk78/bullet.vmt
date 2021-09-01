@@ -1,0 +1,39 @@
+VertexLitGeneric
+{
+	"$basetexture"	"models\debug\debugwhite"
+  	"$bumpmap"	"snowysnowtime\2k\infinite\vk78\fake_n"
+
+//	$lightwarptexture	"models\vuthakral\halo\weapons\lw_metaldull_dark"
+
+	$phong		1
+	$phongboost	8
+	$phongexponent "15"
+	$phongfresnelranges	"[ 0.15 0.8 1 ]" 
+	$phongexponenttexture "snowysnowtime\ma5e\phongexp255"
+	$phongalbedotint "1"
+	$color2	"[1 0.7 0.15]"
+	$envmap "snowysnowtime/cyborg_reflection_armor"
+	$envmaptint "[ 1 1 1 ]"
+	$cubemaptint	"[ 1 0.6 0.2 ]"
+	$cubemappower	8
+
+	$phongalbedotint	1
+
+	$rimlight	1
+	$rimlightpower	0.1
+	$rimmask	1
+
+	$nocull	1
+
+	Proxies
+	{
+		drc_ScalingRimLight
+		{
+		}
+		drc_ReflectionTint
+		{
+			resultVar $envmaptint
+		}
+	}
+}
+
