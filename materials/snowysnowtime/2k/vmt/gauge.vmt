@@ -1,7 +1,8 @@
 "UnlitGeneric"
 {
-	"$basetexture" "snowysnowtime/heatguage"
-	"$translucent" "1"
+	"$basetexture" "snowysnowtime/heatguage_onlya"
+	"$translucent" "0"
 	"$nocull" "1"
 	"$additive" "1"
+	$color2 "{ 102 102 255 }"
 }

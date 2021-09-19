@@ -2503,7 +2503,7 @@ sound.Add(
 {
     name = "h3.halo_eject_rifle_quartervol",
     channel = CHAN_STATIC,
-    volume = 0.2,
+    volume = 0.05,
     soundlevel = 80,
     sound = { "snow/weapons/magnum/magnum_eject/ejectshell.wav","snow/weapons/magnum/magnum_eject/ejectshell2.wav","snow/weapons/magnum/magnum_eject/ejectshell3.wav","snow/weapons/magnum/magnum_eject/ejectshell4.wav" },
 })
